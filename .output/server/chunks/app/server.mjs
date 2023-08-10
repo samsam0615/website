@@ -336,7 +336,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-icar-c5cf9615.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-icar-7d96da75.mjs').then((m) => m.default || m)
   },
   {
     name: "cuhk-iport",
@@ -352,7 +352,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-8724a41d.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-3b16b931.mjs').then((m) => m.default || m)
   },
   {
     name: "resource",
@@ -368,7 +368,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/staff-525e1a24.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/staff-b9f0bae7.mjs').then((m) => m.default || m)
   },
   {
     name: "test",

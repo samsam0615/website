@@ -32,7 +32,8 @@ export default {
   border-radius: 20px;
   background-color: white;
   width: 300px;
-  height: 325px;
+  height: 300px;
+  max-height: 40vw;
   padding: 0 0;
   /* background: blue; */
 }

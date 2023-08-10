@@ -13,7 +13,7 @@
                 &#x2022;&emsp;美國麻省理工學院學士、碩士及博士<br>
                 &#x2022;&emsp;研究領域：多語言語音、語言處理、人機互動模型、大數據分析等<br>
             </StaffNameCard>
-            <StaffNameCard :image="'image/staff/icon2_1200_circle.jpg'" :title="'蒙美玲教授'" :color="'orange'">
+            <StaffNameCard :image="'image/staff/icon2_1200_circle.jpg'" :title="'任揚教授'" :color="'orange'">
                 &#x2022;&emsp;香港中文大學機械與自動化工程學系教授<br>
                 &#x2022;&emsp;香港中文大學深圳研究院院長<br>
                 &#x2022;&emsp;中大賽馬會「智」為未來計劃首席負責人<br>

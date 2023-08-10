@@ -59,7 +59,7 @@ const _sfc_main$2 = {
   props: ["title", "image"]
 };
 function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "picture-frame-container" }, _attrs))} data-v-8bbc8800><div class="description-image-container" data-v-8bbc8800><img${ssrRenderAttr("src", $props.image)} data-v-8bbc8800></div><div class="title" data-v-8bbc8800><label data-v-8bbc8800>${ssrInterpolate($props.title)}</label></div><div class="overlay" data-v-8bbc8800><div class="text" data-v-8bbc8800>`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "picture-frame-container" }, _attrs))} data-v-21206e75><div class="description-image-container" data-v-21206e75><img${ssrRenderAttr("src", $props.image)} data-v-21206e75></div><div class="title" data-v-21206e75><label data-v-21206e75>${ssrInterpolate($props.title)}</label></div><div class="overlay" data-v-21206e75><div class="text" data-v-21206e75>`);
   ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
   _push(`</div></div></div>`);
 }
@@ -69,13 +69,13 @@ _sfc_main$2.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/PictureFrame.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender$2], ["__scopeId", "data-v-8bbc8800"]]);
+const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender$2], ["__scopeId", "data-v-21206e75"]]);
 const _sfc_main$1 = {
   name: "UpCounter",
   props: ["image", "text1", "text2", "number"]
 };
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "upcounter-container" }, _attrs))} data-v-64a29f2d><div style="${ssrRenderStyle({ "width": "60px", "height": "60px", "display": "flex" })}" data-v-64a29f2d><img${ssrRenderAttr("src", $props.image)} style="${ssrRenderStyle({ "width": "60px", "object-fit": "contain" })}" data-v-64a29f2d></div><label data-v-64a29f2d>${ssrInterpolate($props.text1)}</label><span data-v-64a29f2d>${ssrInterpolate($props.number)}</span><label data-v-64a29f2d>${ssrInterpolate($props.text2)}</label></div>`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "upcounter-container" }, _attrs))} data-v-541e2ec2><div style="${ssrRenderStyle({ "width": "60px", "height": "60px", "display": "flex" })}" data-v-541e2ec2><img${ssrRenderAttr("src", $props.image)} style="${ssrRenderStyle({ "width": "60px", "object-fit": "contain" })}" data-v-541e2ec2></div><label data-v-541e2ec2>${ssrInterpolate($props.text1)}</label><span data-v-541e2ec2>${ssrInterpolate($props.number)}</span><label data-v-541e2ec2>${ssrInterpolate($props.text2)}</label></div>`);
 }
 const _sfc_setup$1 = _sfc_main$1.setup;
 _sfc_main$1.setup = (props, ctx) => {
@@ -83,7 +83,7 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/UpCounter.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const __nuxt_component_3 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-64a29f2d"]]);
+const __nuxt_component_3 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-541e2ec2"]]);
 const _sfc_main = {
   name: "IndexPage"
 };
@@ -138,7 +138,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     }),
     _: 1
   }, _parent));
-  _push(`</div></div></div><div class="promote-container promote-container-2"><div class="promote-container-content text-container" onclick=""><div class="description-box-title" style="${ssrRenderStyle({ "padding": "30px", "font-size": "30px", "font-weight": "500" })}"><label>\u6211\u5011\u7684\u6210\u679C</label></div><div style="${ssrRenderStyle({ "display": "flex", "justify-content": "center", "width": "100%", "gap": "50px", "padding-top": "20px" })}">`);
+  _push(`</div></div></div><div class="promote-container promote-container-2"><div class="promote-container-content text-container" onclick=""><div class="description-box-title" style="${ssrRenderStyle({ "padding": "30px", "font-size": "30px", "font-weight": "500" })}"><label>\u6211\u5011\u7684\u6210\u679C</label></div><div style="${ssrRenderStyle({ "display": "flex", "justify-content": "center", "width": "100%", "gap": "50px", "padding-top": "20px", "flex-wrap": "wrap" })}">`);
   _push(ssrRenderComponent(_component_UpCounter, {
     text1: "\u8209\u8FA6",
     text2: "\u5B78\u751F\u8A13\u7DF4\u73ED",
@@ -174,4 +174,4 @@ _sfc_main.setup = (props, ctx) => {
 const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { index as default };
-//# sourceMappingURL=index-8724a41d.mjs.map
+//# sourceMappingURL=index-3b16b931.mjs.map

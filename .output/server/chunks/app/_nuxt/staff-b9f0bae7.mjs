@@ -100,7 +100,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   }, _parent));
   _push(ssrRenderComponent(_component_StaffNameCard, {
     image: "image/staff/icon2_1200_circle.jpg",
-    title: "\u8499\u7F8E\u73B2\u6559\u6388",
+    title: "\u4EFB\u63DA\u6559\u6388",
     color: "orange"
   }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -184,4 +184,4 @@ _sfc_main.setup = (props, ctx) => {
 const staff = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { staff as default };
-//# sourceMappingURL=staff-525e1a24.mjs.map
+//# sourceMappingURL=staff-b9f0bae7.mjs.map

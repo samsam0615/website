@@ -23,6 +23,7 @@ export default {
     width: 100%;
     height: 100%;
     padding: 5px 5px;
+    flex-basis: 20%;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
@@ -48,32 +49,9 @@ export default {
     font-size: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .upcounter-container{
-        flex: 0 0 23%;
-        max-width: 100px;
-        max-height: 100px;
-    }
-    .upcounter-container-wrapper{
-        max-height: 150px;
-    }
-    .upcounter-container span{
-        font-size: 17px;
-        color: orange;
-    }
-    .upcounter-container label{
-        font-size: 10px;
-    }
-    .upcounter-container-wrapper{
-        padding: 0;
-    }
-    .upcounter-container{
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-    .upcounter-container{
-        flex: 0 0 23%;
+        flex-basis: 49%;
         max-width: 200px;
         max-height: 200px;
     }
@@ -89,14 +67,5 @@ export default {
     }
     .upcounter-container{
     }
-}
-
-@media screen and (min-width: 1921px){
-    .upcounter-container{
-        flex: 0 0 23%;
-        width: 250px;
-        height: 250px;
-    }
-
 }
 </style>

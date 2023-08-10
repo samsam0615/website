@@ -272,9 +272,9 @@ const _sfc_main$4 = {
   }
 };
 function _sfc_ssrRender$4(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "test" }, _attrs))} data-v-6238c8b4><span data-v-6238c8b4></span><!--[-->`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "test" }, _attrs))} data-v-201ac6fd><span data-v-201ac6fd></span><!--[-->`);
   ssrRenderList($props.list, (item, index) => {
-    _push(`<div class="${ssrRenderClass([{ active: Math.floor($data.pos) == index }, "btnContainer"])}" data-v-6238c8b4><div class="btn" data-v-6238c8b4><img${ssrRenderAttr("src", $props.list[index])} style="${ssrRenderStyle({ "height": "100%" })}" data-v-6238c8b4></div></div>`);
+    _push(`<div class="${ssrRenderClass([{ active: Math.floor($data.pos) == index }, "btnContainer"])}" data-v-201ac6fd><div class="btn" data-v-201ac6fd><img${ssrRenderAttr("src", $props.list[index])} style="${ssrRenderStyle({ "height": "100%" })}" data-v-201ac6fd></div></div>`);
   });
   _push(`<!--]--></div>`);
 }
@@ -284,7 +284,7 @@ _sfc_main$4.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/PageCatalog3.vue");
   return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$4], ["__scopeId", "data-v-6238c8b4"]]);
+const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$4], ["__scopeId", "data-v-201ac6fd"]]);
 const _sfc_main$3 = {
   name: "TextTitle",
   props: ["image"],
@@ -630,4 +630,4 @@ _sfc_main.setup = (props, ctx) => {
 const cuhkIcar = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-2d5a77a5"]]);
 
 export { cuhkIcar as default };
-//# sourceMappingURL=cuhk-icar-c5cf9615.mjs.map
+//# sourceMappingURL=cuhk-icar-7d96da75.mjs.map

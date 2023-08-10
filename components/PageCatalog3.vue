@@ -120,8 +120,8 @@ export default {
     position: sticky;
     z-index: 0;
     width: 50px;
-    max-width: 50px;
-    min-width: 50px;
+    max-width: 60px;
+    min-width: 60px;
     height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
@@ -154,13 +154,16 @@ export default {
   }
 
   .test .btnContainer.active .btn img{
-    width: 30px;
+    width: 50px;
     height: auto;
+    overflow: hidden;
   }
 
   .test .btnContainer.active .btn{
-    width: 50px;
-    height: 50px;
+    min-width: 70px;
+    max-width: 70px;
+    max-height: 70px;
+    min-height: 70px;
   }
 
   .test .btn{
@@ -174,14 +177,14 @@ export default {
   .test .btn{
     background: orange; 
     border-radius: 50%;  
-    padding: 10px;
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .test .btn img{
     width: 0;
-    height: 0;
-    height: 0;
+    height: auto;
     transition: all .3s ease-out;
   }
 </style>

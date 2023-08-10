@@ -28,7 +28,7 @@
         <div class="description-box-title" style="padding: 30px; font-size: 30px; font-weight: 500">
           <label>我們的成果</label>
         </div>
-        <div style="display: flex; justify-content: center; width: 100%; gap: 50px; padding-top: 20px">
+        <div style="display: flex; justify-content: center; width: 100%; gap: 50px; padding-top: 20px; flex-wrap: wrap">
           <UpCounter :text1='"舉辦"' :text2='"學生訓練班"' :image='"image/materials/work_history.png"' :number='"5"' />
           <UpCounter :text1='"舉辦"' :text2='"教師工作坊"' :image='"image/materials/teacher2.png"' :number='"6"' />
           <UpCounter :text1='"舉辦"' :text2='"本地中學使用"' :image='"image/materials/school2.png"' :number='"238"' />
