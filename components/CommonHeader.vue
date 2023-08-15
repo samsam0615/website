@@ -53,7 +53,7 @@
       </li> -->
       <li>
         <NuxtLink to="/resource">
-          其他資源
+          iShare
         </NuxtLink>
       </li>
       <li ref="submenu1">
@@ -64,6 +64,16 @@
           <li>
             <a href="https://beta.eduairhk.com" target="_blank">
               iPort ePlatform
+            </a>
+          </li>
+          <li>
+            <a href="https://ipython.eduairhk.com" target="_blank">
+              iPython
+            </a>
+          </li>
+          <li>
+            <a href="https://itrain.eduairhk.com" target="_blank">
+              iTrain
             </a>
           </li>
         </ul>
@@ -109,6 +119,7 @@ export default {
     position: fixed;
     height: 60px;
     z-index: 999;
+    padding: 0 10px;
     width: 100%;
     display: flex;
     flex-direction: row;

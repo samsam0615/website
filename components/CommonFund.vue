@@ -1,7 +1,7 @@
 <template>
   <div class="fund">
       Funded by&nbsp;
-      <img src="@/assets/image/logo_cuhk3.png" style="position: relative; width: 90px; margin-top: 5px">
+      <nuxt-img src="@/assets/image/logo_cuhk3.png" style="position: relative; width: 90px; margin-top: 5px"/>
   </div>
 </template>
 

@@ -17,6 +17,7 @@
             <ResourceItem v-for="item in focusClass"
               :key="item.name"
               :text='item.name'
+              :url='item.url'
               @click="setFocus(item)"
               @touchleave="setFocus(item)"
               :class="{active: focus == item}"/>

@@ -1,7 +1,7 @@
 <template>
   <div class="resourceItem" @click.prevent="click" @touchleave.prevent="touchleave">
     <div>
-      {{text}}
+      <img :src="'https://www.google.com/s2/favicons?sz=64&domain=' + url" :alt="text.charAt(0)" style="width: 50%; height: 50%; font-size: 30px" >
     </div>
   </div>
 </template>
@@ -10,22 +10,28 @@
 export default {
   name: 'ResourceItem',
   props: {
-    text: String
+    text: String,
+    url: String,
   },
   methods: {
+    data(){
+      return {
+        src: null
+      }
+    },
     click () {
       this.$emit('click')
     },
     touchleave () {
       this.$emit('touchleave')
-    }
+    },
   }
 }
 </script>
 
 <style>
 .resourceItem{
-    flex-basis: 33%;
+    flex-basis: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,15 +39,15 @@ export default {
 }
 
 .resourceItem div{
-    width: 95px;
-    height: 95px;
+    width: 80px;
+    height: 80px;
+    margin: 10px 20px;
     font-size: 17px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 3px;
-    background: #fbfbfb;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+    border-radius: 50%;
+    background: #f2f3f5;
     text-align: center;
     cursor: pointer;
     transition: background 0.5s;

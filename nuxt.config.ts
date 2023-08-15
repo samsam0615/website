@@ -8,4 +8,10 @@ export default defineNuxtConfig({
     // You can extend webpack config here
     transpile: ['vue-pdf'],
   },
+  modules: [
+    '@nuxt/image',
+  ],
+  image: {
+    // Options
+  }
 })

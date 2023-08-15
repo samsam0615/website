@@ -12,10 +12,10 @@
             <div>{{item.size}}</div>
             <div>
                 <a :href="item.url" style="height: 80%" v-if="item.action == 'download'">
-                    <img :src="'image/materials/icon_download.png'" height="80%">
+                    <nuxt-img :src="'icon_download.png'" style="height: 80%" />
                 </a>
                 <a style="height: 80%; cursor: pointer" v-if="item.action == 'clipboard'" @click="copy(item.url)">
-                    <img :src="'image/materials/icon_copy.png'" height="80%">
+                    <nuxt-img :src="'icon_copy.png'" style="height: 80%" />
                 </a>
             </div>     
         </div>
