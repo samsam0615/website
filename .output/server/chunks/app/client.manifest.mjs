@@ -1,8 +1,8 @@
 const client_manifest = {
-  "_components.37838d6d.js": {
+  "_components.86981e6b.js": {
     "resourceType": "script",
     "module": true,
-    "file": "components.37838d6d.js",
+    "file": "components.86981e6b.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -87,7 +87,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-404.5cd02ea6.js",
+    "file": "error-404.3f6d2631.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -107,7 +107,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-500.b1a96641.js",
+    "file": "error-500.8f989873.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -136,7 +136,7 @@ const client_manifest = {
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
-    "file": "entry.75baa14b.js",
+    "file": "entry.916473b8.js",
     "isEntry": true,
     "src": "node_modules/nuxt/dist/app/entry.js",
     "_globalCSS": true
@@ -162,9 +162,9 @@ const client_manifest = {
       "timeline.1dea26a8.png"
     ],
     "css": [],
-    "file": "company.04d5e5ba.js",
+    "file": "company.523c2ef3.js",
     "imports": [
-      "_components.37838d6d.js",
+      "_components.86981e6b.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -188,9 +188,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "contact.5229fb5e.js",
+    "file": "contact.45ab54fe.js",
     "imports": [
-      "_components.37838d6d.js",
+      "_components.86981e6b.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -220,9 +220,9 @@ const client_manifest = {
       "gif_line2.81f158a0.gif"
     ],
     "css": [],
-    "file": "cuhk-icar.61e50ce0.js",
+    "file": "cuhk-icar.0c05feb0.js",
     "imports": [
-      "_components.37838d6d.js",
+      "_components.86981e6b.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -286,9 +286,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "cuhk-iport.356a8a1b.js",
+    "file": "cuhk-iport.1ad795b6.js",
     "imports": [
-      "_components.37838d6d.js",
+      "_components.86981e6b.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -310,9 +310,9 @@ const client_manifest = {
       "intro.9ccedcb0.mp4"
     ],
     "css": [],
-    "file": "index.6292d58c.js",
+    "file": "index.13ebe948.js",
     "imports": [
-      "_components.37838d6d.js",
+      "_components.86981e6b.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -328,23 +328,23 @@ const client_manifest = {
   },
   "pages/resource.css": {
     "resourceType": "style",
-    "file": "resource.9d2c5b76.css",
+    "file": "resource.8a3be048.css",
     "src": "pages/resource.css"
   },
   "pages/resource.vue": {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "resource.934060f4.js",
+    "file": "resource.43ba3b8c.js",
     "imports": [
-      "_components.37838d6d.js",
+      "_components.86981e6b.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/resource.vue"
   },
-  "resource.9d2c5b76.css": {
-    "file": "resource.9d2c5b76.css",
+  "resource.8a3be048.css": {
+    "file": "resource.8a3be048.css",
     "resourceType": "style"
   },
   "pages/staff.css": {
@@ -356,9 +356,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "staff.b3f1efeb.js",
+    "file": "staff.91f5e55e.js",
     "imports": [
-      "_components.37838d6d.js",
+      "_components.86981e6b.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -371,7 +371,7 @@ const client_manifest = {
   "pages/test.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "test.43306f56.js",
+    "file": "test.c796b7f1.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],

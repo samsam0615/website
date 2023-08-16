@@ -76,7 +76,7 @@ const defaultExternalJson = {
     },
     {
       imageURL: "",
-      name: "Teacheable Machine (\u5716\u7247, \u59FF\u52E2)",
+      name: "Teacheable Machine",
       url: "https://teachablemachine.withgoogle.com/",
       description: "Teachable Machine\u662F\u7531Google\u57FA\u65BCAI\u958B\u767C\u7684\u7DB2\u9801\u61C9\u7528\u3002\u7528\u6236\u53EA\u9700\u8F38\u5165\u5716\u50CF\u3001\u8072\u97F3\u6216\u59FF\u52E2\u7B49\u6578\u64DA\uFF0C\u4FBF\u53EF\u8A13\u7DF4AI\uFF0C\u751F\u6210\u81EA\u5DF1\u7368\u5275\u7684\u6A5F\u5668\u5B78\u7FD2\u6A21\u578B\uFF0C\u9069\u5408\u521D\u5B78\u8005\u548C\u6559\u5E2B\u4F7F\u7528\uFF0C\u6709\u52A9\u4ED6\u5011\u6DF1\u5165\u4E86\u89E3\u6A5F\u5668\u5B78\u7FD2\u6280\u8853\u7684\u61C9\u7528\u548C\u539F\u7406\u3002"
     },
@@ -96,7 +96,7 @@ const defaultExternalJson = {
     },
     {
       imageURL: "",
-      name: "Teacheable Machine (\u97F3\u8A0A)",
+      name: "Teacheable Machine",
       url: "https://teachablemachine.withgoogle.com/",
       description: "Teachable Machine\u662F\u7531Google\u57FA\u65BCAI\u958B\u767C\u7684\u7DB2\u9801\u61C9\u7528\u3002\u7528\u6236\u53EA\u9700\u9304\u88FD\u7C21\u77ED\u7684\u97F3\u8A0A\u6A23\u672C\uFF0C\u85C9\u6B64\u8A13\u7DF4AI\u6A21\u578B\u5C07\u97F3\u8A0A\u5206\u985E\u3002"
     }
@@ -262,4 +262,4 @@ _sfc_main.setup = (props, ctx) => {
 const resource = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { resource as default };
-//# sourceMappingURL=resource-729897bc.mjs.map
+//# sourceMappingURL=resource-c6dc0b45.mjs.map

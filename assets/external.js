@@ -15,7 +15,7 @@ export default {
     },
     {
       imageURL: '',
-      name: 'Teacheable Machine (圖片, 姿勢)',
+      name: 'Teacheable Machine',
       url: 'https://teachablemachine.withgoogle.com/',
       description: 'Teachable Machine是由Google基於AI開發的網頁應用。用戶只需輸入圖像、聲音或姿勢等數據，便可訓練AI，生成自己獨創的機器學習模型，適合初學者和教師使用，有助他們深入了解機器學習技術的應用和原理。'
     },
@@ -35,7 +35,7 @@ export default {
     },
     {
       imageURL: '',
-      name: 'Teacheable Machine (音訊)',
+      name: 'Teacheable Machine',
       url: 'https://teachablemachine.withgoogle.com/',
       description: 'Teachable Machine是由Google基於AI開發的網頁應用。用戶只需錄製簡短的音訊樣本，藉此訓練AI模型將音訊分類。'
     }

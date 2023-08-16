@@ -23,7 +23,7 @@
               :class="{active: focus == item}"/>
           </template>
         </div>
-        <div class="resourceDescriptor">
+        <div class="resourceDescriptor" >
           <template v-if="focus != null">
             <div class="title">{{focus.name}}</div>
             <div class="description" style="font-size: 16px; line-height: 24px">{{focus.description}}</div>
@@ -108,7 +108,7 @@ export default {
 
 .resourceSelector{
     display: flex;
-    width: 40%;
+    width: 500px;
     height: 100%;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -116,7 +116,7 @@ export default {
 }
 
 .resourceDescriptor{
-    width: 40%;
+    width: 400px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -128,6 +128,8 @@ export default {
     align-items: center;
     height: 20%;
     font-size: 25px;
+    padding-bottom: 10px;
+    white-space: break-spaces;
 }
 
 .resourceDescriptor .media a{
