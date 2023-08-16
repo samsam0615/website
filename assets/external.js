@@ -104,13 +104,13 @@ export default {
       name: 'Stable Diffusion',
       url: 'https://stablediffusionweb.com/',
       imageURL: '',
-      description: 'Random Face Generator 是一個基於人工智能技術開發的人臉生成器，能夠隨機生成具有多種不同特徵和風格的人臉圖像。使用者可以透過調整多個參數，例如年齡、性別、種族、面部特徵等，生成符合自己需求的人臉圖像。'
+      description: 'Stable Diffusion 是一個AI生成圖片的工具, 透過輸入文字來描述圖片的特徵, 就可以產生一些AI圖片。'
     },
     {
       name: 'Clipdrop',
       url: 'https://clipdrop.co/uncrop',
       imageURL: '',
-      description: 'Clipdrop是一個“取消裁剪”的AI工具，它使用 AI 技術來編輯圖像的長寬比，通過擴展或調整主體或背景來修改照片的構圖，可以生成符合所需寬高比的新版本圖像。 Stable Diffusion 是一個AI生成圖片的工具, 透過輸入文字來描述圖片的特徵, 就可以產生一些AI圖片。'
+      description: 'Clipdrop是一個“取消裁剪”的AI工具，它使用 AI 技術來編輯圖像的長寬比，通過擴展或調整主體或背景來修改照片的構圖，可以生成符合所需寬高比的新版本圖像。'
     }
   ],
   advance: [
