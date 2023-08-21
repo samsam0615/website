@@ -2,7 +2,7 @@
   <Title>其他資源</Title>
   <div class = "pageContent-container">
     <div class="text-container"  onclick="">
-      <label class="subTitle"  ref="resource">其他資源</label><br><br>
+      <label class="subTitle"  ref="resource">iShare</label><br><br>
       <div class="resourceContainer">
         <div class="resourceType">
           <label :class="{active: externalJson != null && externalJson['vision'] == focusClass}" @click="setFocusClass('vision')">視覺</label>
@@ -67,6 +67,7 @@ export default {
     },
     setFocusClass (className) {
       this.focusClass = this.externalJson[className]
+      this.focus = this.focusClass[0]
     }
   }
 }

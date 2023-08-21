@@ -11,7 +11,7 @@
 *{box-sizing: border-box;}
 
 body{
-    font-family: Arial, sans-serif;
+    font-family: "Gill Sans", sans-serif;
     min-width: 100%;
     
 }

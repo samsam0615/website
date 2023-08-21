@@ -1,7 +1,11 @@
 <template>
   <div class="resourceItem" @click.prevent="click" @touchleave.prevent="touchleave">
-    <div>
+    <div class="image">
       <img :src="'https://www.google.com/s2/favicons?sz=64&domain=' + url" :alt="text.charAt(0)" style="width: 50%; height: 50%; font-size: 30px" >
+    </div>
+    <div style="text-align: center; min-height: 40px"> 
+          {{text}}
+
     </div>
   </div>
 </template>
@@ -33,12 +37,13 @@ export default {
 .resourceItem{
     flex-basis: 20%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5px;
 }
 
-.resourceItem div{
+.resourceItem .image{
     width: 80px;
     height: 80px;
     margin: 10px 20px;
@@ -53,11 +58,11 @@ export default {
     transition: background 0.5s;
 }
 
-.resourceItem div:hover{
+.resourceItem .image:hover{
     background: rgb(235,235,235);
 }
 
-.resourceItem.active div{
+.resourceItem.active .image{
     background: rgb(200,200,200);
 }
 

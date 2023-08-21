@@ -50,7 +50,7 @@ const _sfc_main$1 = {
   }
 };
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "resourceItem" }, _attrs))}><div><img${ssrRenderAttr("src", "https://www.google.com/s2/favicons?sz=64&domain=" + $props.url)}${ssrRenderAttr("alt", $props.text.charAt(0))} style="${ssrRenderStyle({ "width": "50%", "height": "50%", "font-size": "30px" })}"></div></div>`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "resourceItem" }, _attrs))}><div class="image"><img${ssrRenderAttr("src", "https://www.google.com/s2/favicons?sz=64&domain=" + $props.url)}${ssrRenderAttr("alt", $props.text.charAt(0))} style="${ssrRenderStyle({ "width": "50%", "height": "50%", "font-size": "30px" })}"></div><div style="${ssrRenderStyle({ "text-align": "center", "min-height": "40px" })}">${ssrInterpolate($props.text)}</div></div>`);
 }
 const _sfc_setup$1 = _sfc_main$1.setup;
 _sfc_main$1.setup = (props, ctx) => {
@@ -209,6 +209,7 @@ const _sfc_main = {
     },
     setFocusClass(className) {
       this.focusClass = this.externalJson[className];
+      this.focus = this.focusClass[0];
     }
   }
 };
@@ -228,7 +229,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     }),
     _: 1
   }, _parent));
-  _push(`<div class="pageContent-container"><div class="text-container" onclick=""><label class="subTitle">\u5176\u4ED6\u8CC7\u6E90</label><br><br><div class="resourceContainer"><div class="resourceType"><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["vision"] == $data.focusClass })}">\u8996\u89BA</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["hear"] == $data.focusClass })}">\u807D\u89BA</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["speak"] == $data.focusClass })}">\u8A9E\u97F3</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["read"] == $data.focusClass })}">\u7406\u89E3</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["create"] == $data.focusClass })}">\u5275\u4F5C</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["advance"] == $data.focusClass })}">\u9032\u968E</label></div><div class="resourceSelector unselectable">`);
+  _push(`<div class="pageContent-container"><div class="text-container" onclick=""><label class="subTitle">iShare</label><br><br><div class="resourceContainer"><div class="resourceType"><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["vision"] == $data.focusClass })}">\u8996\u89BA</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["hear"] == $data.focusClass })}">\u807D\u89BA</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["speak"] == $data.focusClass })}">\u8A9E\u97F3</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["read"] == $data.focusClass })}">\u7406\u89E3</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["create"] == $data.focusClass })}">\u5275\u4F5C</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["advance"] == $data.focusClass })}">\u9032\u968E</label></div><div class="resourceSelector unselectable">`);
   if ($data.externalJson != null) {
     _push(`<!--[-->`);
     ssrRenderList($data.focusClass, (item) => {
@@ -262,4 +263,4 @@ _sfc_main.setup = (props, ctx) => {
 const resource = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { resource as default };
-//# sourceMappingURL=resource-c6dc0b45.mjs.map
+//# sourceMappingURL=resource-4afbb42f.mjs.map
