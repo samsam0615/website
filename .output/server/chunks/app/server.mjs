@@ -356,12 +356,12 @@ const _routes = [
     component: () => import('./_nuxt/index-b13b43bd.mjs').then((m) => m.default || m)
   },
   {
-    name: "resource",
-    path: "/resource",
+    name: "ishare",
+    path: "/ishare",
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/resource-037b4464.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/ishare-ec43e238.mjs').then((m) => m.default || m)
   },
   {
     name: "staff",
@@ -1079,7 +1079,7 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
     _: 1
   }, _parent));
   _push(`</li><li>`);
-  _push(ssrRenderComponent(_component_NuxtLink, { to: "/resource" }, {
+  _push(ssrRenderComponent(_component_NuxtLink, { to: "/ishare" }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
         _push2(` iShare `);
