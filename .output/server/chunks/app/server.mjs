@@ -337,7 +337,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-icar-5c8a5a49.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-icar-e758a8ba.mjs').then((m) => m.default || m)
   },
   {
     name: "cuhk-iport",
@@ -345,7 +345,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-iport-2d30f7a1.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-iport-721a3253.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -353,7 +353,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-3b16b931.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-b13b43bd.mjs').then((m) => m.default || m)
   },
   {
     name: "resource",
@@ -361,7 +361,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/resource-4afbb42f.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/resource-037b4464.mjs').then((m) => m.default || m)
   },
   {
     name: "staff",
@@ -953,13 +953,22 @@ const _sfc_main$4 = {
   name: "CommonHeader",
   data() {
     return {
-      isExpand: false
+      isExpand: false,
+      isTop: true
     };
   },
   mounted() {
     let self = this;
     this.$router.afterEach((to, from, next) => {
       self.isExpand = false;
+    });
+    document.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+      if (scrollY === 0) {
+        this.isTop = true;
+      } else {
+        this.isTop = false;
+      }
     });
   },
   methods: {
@@ -972,7 +981,7 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   const _component_NuxtLink = __nuxt_component_0$1;
   _push(`<div${ssrRenderAttrs(mergeProps({
     ref: "menubar",
-    class: ["menubar menubar2 unselectable", { expand: $data.isExpand }]
+    class: ["menubar unselectable", { expand: $data.isExpand, menubar1: $data.isTop, menubar2: !$data.isTop }]
   }, _attrs))}><div class="layer" style="${ssrRenderStyle({ "height": "100%" })}">`);
   _push(ssrRenderComponent(_component_NuxtLink, {
     to: "/",
@@ -1082,7 +1091,7 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
     }),
     _: 1
   }, _parent));
-  _push(`</li><li><a class="subMenuBtn"> 學習平台 </a><ul class="subMenu"><li><a href="https://beta.eduairhk.com" target="_blank"> iPort ePlatform </a></li><li><a href="https://ipython.eduairhk.com" target="_blank"> iPython <div class="border"> 敬請期待 </div></a></li><li><a href="https://itrain.eduairhk.com" target="_blank"> iTrain <div class="border"> 敬請期待 </div></a></li></ul></li></ul></div>`);
+  _push(`</li><li><a class="subMenuBtn"> 學習平台 </a><ul class="subMenu"><li><a href="https://iport.eduairhk.com" target="_blank"> iPort ePlatform </a></li><li><a href="https://ipython.eduairhk.com" target="_blank"> iPython </a></li><li><a href="https://itrain.eduairhk.com" target="_blank"> iTrain </a></li></ul></li></ul></div>`);
 }
 const _sfc_setup$4 = _sfc_main$4.setup;
 _sfc_main$4.setup = (props, ctx) => {

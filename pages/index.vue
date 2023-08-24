@@ -29,10 +29,10 @@
           <label>我們的成果</label>
         </div>
         <div style="display: flex; justify-content: center; width: 100%; gap: 50px; padding-top: 20px; flex-wrap: wrap">
-          <UpCounter :text1='"舉辦"' :text2='"學生訓練班"' :image='"image/materials/work_history.png"' :number='"5"' />
-          <UpCounter :text1='"舉辦"' :text2='"教師工作坊"' :image='"image/materials/teacher2.png"' :number='"6"' />
-          <UpCounter :text1='"舉辦"' :text2='"本地中學使用"' :image='"image/materials/school2.png"' :number='"238"' />
-          <UpCounter :text1='"覆蓋"' :text2='"學生"' :image='"image/materials/people.png"' :number='"2560"' />
+          <UpCounter :text1='"舉辦"' :text2='"學生訓練班"' :image='"image/materials/work_history.png"' :number='5' />
+          <UpCounter :text1='"舉辦"' :text2='"教師工作坊"' :image='"image/materials/teacher2.png"' :number='6' />
+          <UpCounter :text1='"舉辦"' :text2='"本地中學使用"' :image='"image/materials/school2.png"' :number='238' />
+          <UpCounter :text1='"覆蓋"' :text2='"學生"' :image='"image/materials/people.png"' :number='2560' />
         </div>
       </div>
     </div>
@@ -41,7 +41,10 @@
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  mounted(){
+    
+  }
 }
 </script>
 

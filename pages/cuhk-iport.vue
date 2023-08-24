@@ -14,7 +14,7 @@
         3. 應用該AI模型去操作虛擬或實體的iPort
       </div>
       <span>CUHK iPort編程平台</span>
-      <a href="https://beta.eduairhk.com" target="_blank" class="btn">前往 iPort編程平台</a>
+      <a href="https://iport.eduairhk.com" target="_blank" class="btn">前往 iPort編程平台</a>
       <div>
       </div>
       <span>CUHK iPort實用資源總匯</span>

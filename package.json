@@ -20,6 +20,7 @@
     "@emailjs/browser": "^3.11.0",
     "vue-pdf": "^4.3.0",
     "vue-pdf-embed": "^1.1.6",
+    "vue3-count-to": "^1.1.2",
     "vue3-pdf-app": "^1.0.3",
     "vue3-pdfjs": "^0.1.6"
   }

@@ -63,6 +63,7 @@
     "vue": "3.3.4",
     "vue-bundle-renderer": "1.0.3",
     "vue-router": "4.2.4",
+    "vue3-count-to": "1.1.2",
     "xss": "1.0.14"
   }
 }

@@ -157,6 +157,7 @@ export default {
     flex-direction: column;
     align-items: center;
     padding: 60px 60px;
+    animation: fadeIn 1s ease-in-out; 
   }
 
   .cuhkicar-container{

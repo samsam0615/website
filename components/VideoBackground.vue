@@ -14,7 +14,10 @@
 
 <script>
 export default {
-  name: 'VideoBackground'
+  name: 'VideoBackground',
+  mounted(){
+    this.$refs.myVideo.play()
+  }
 }
 </script>
 

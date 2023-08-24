@@ -83,9 +83,18 @@ body{
     align-items: center;
     flex-grow: 1;
     height: max-content;
-    animation: fadeIn 2s;
+    animation: fadeIn 1s ease-in-out;
     overflow: hidden;
     max-width: 1366px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 1200px) {

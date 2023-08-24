@@ -114,6 +114,7 @@ export default {
     flex-wrap: wrap;
     align-content: flex-start;
     padding: 20px;
+    overflow-y: auto;
 }
 
 .resourceDescriptor{

@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template>
-  <div ref="menubar" class="menubar menubar2 unselectable" :class="{expand: isExpand}">
+  <div ref="menubar" class="menubar unselectable" :class="{expand: isExpand, menubar1: isTop, menubar2: !isTop}">
     <div class="layer" style="height: 100%">
       <NuxtLink to="/" style="text-decoration: none">
         <div class="logo-container" style="position: relative; width: 180px; height: 60px; display:flex; justify-content:center; align-items: center; cursor: pointer;">
@@ -62,33 +62,28 @@
         </a>
         <ul class="subMenu">
           <li>
-            <a href="https://beta.eduairhk.com" target="_blank">
+            <a href="https://iport.eduairhk.com" target="_blank">
               iPort ePlatform
             </a>
           </li>
           <li>
             <a href="https://ipython.eduairhk.com" target="_blank">
               iPython 
-              <div class="border">
+              <!-- <div class="border">
                 敬請期待
-              </div>
+              </div> -->
             </a>
           </li>
           <li>
             <a href="https://itrain.eduairhk.com" target="_blank">
               iTrain
-              <div class="border">
+              <!-- <div class="border">
                 敬請期待
-              </div>
+              </div> -->
             </a>
           </li>
         </ul>
       </li>
-      <!-- <li>
-        <a href="https://beta.eduairhk.com" target="_blank">
-          網上編程平台
-        </a>
-      </li> -->
     </ul>
   </div>
 </template>
@@ -99,13 +94,21 @@ export default {
   data() {
       return {
           isExpand: false,
+          isTop: true,
       };
   },
   mounted(){
     let self = this;
     this.$router.afterEach((to, from, next) => {
         self.isExpand = false;
-        
+    })
+    document.addEventListener('scroll', ()=> {
+      const scrollY = window.scrollY;
+       if (scrollY === 0) {
+        this.isTop = true;
+       } else{
+        this.isTop = false;
+       }
     })
   },
   methods:{
@@ -284,9 +287,11 @@ export default {
     box-shadow: 0px 1px 5px gray;
     top: 0;
     left: 0;
+    padding: 0 10px;
     white-space: nowrap;
     font-size: 18px;
-    overflow-y: scroll;
+        overflow: auto;
+
   }
 
   .menubar .layer{
@@ -442,6 +447,8 @@ export default {
   .menubar2 ul li:hover >a{
       color: white;
   }
+
+
 /*   .menubar .layer .btn{
     display: block;
   }
@@ -556,4 +563,20 @@ export default {
     }
 }
  */
+
+  .menubar1 {
+      background-color: rgba(255,255,255,0.7); 
+  }
+  .menubar1.expand {
+      background-color: rgb(255,255,255); 
+  }
+  .menubar1 .subMenu{
+      background-color: rgba(255,255,255,0.9);
+  }
+  .menubar1 ul li:hover{
+      background-color: rgb(147, 39, 159);
+  }
+  .menubar1 ul li:hover >a{
+      color: white;
+  }
 </style>
