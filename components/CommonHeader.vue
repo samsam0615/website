@@ -46,13 +46,8 @@
           CUHK iPort
         </NuxtLink>
       </li>
-<!--         <li>
-        <NuxtLink to="/resource">
-          iPython
-        </NuxtLink>
-      </li> -->
       <li>
-        <NuxtLink to="/resource">
+        <NuxtLink to="/ishare">
           iShare
         </NuxtLink>
       </li>
