@@ -1,8 +1,11 @@
 <template>
   <Title>其他資源</Title>
+  <Meta name="description" content="多個網上免費的AI 學習資源，好玩之餘又不用註冊登記，助你輕鬆愉快體驗AI的奇妙。"/>
   <div class = "pageContent-container">
     <div class="text-container"  onclick="">
-      <label class="subTitle"  ref="resource">iShare</label><br><br>
+      <label class="subTitle"  ref="resource">iShare</label><br>
+      <div class="pageDescription">苦苦搜尋網上免費的AI 學習資源，好玩之餘又不想註冊登記？iShare幫你輕鬆愉快體驗AI的奇妙。</div>
+      <br><br>
       <div class="resourceContainer">
         <div class="resourceType">
           <label :class="{active: externalJson != null && externalJson['vision'] == focusClass}" @click="setFocusClass('vision')">視覺</label>

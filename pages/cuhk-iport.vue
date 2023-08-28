@@ -1,5 +1,6 @@
 <template>
   <Title>CUHK iPort</Title>
+  <Meta name="description" content="CUHK iPort是為實現AI物聯網（AIoT）而設的AI教學套件，讓學生輕鬆創建不同AI機械項目。"/>
   <div class="pageContent-container" style="flex-direction: row; justify-content: flex-start; align-items: flex-start; padding: 60px " >
     <PageCatalog @click="scroll" :title='"CUHK iPort"' :list='["iPort是甚麽？", "如何使用iPort？", "iPort編程平台", "iPort資源總匯"]' />
     <div class="page-content" ref="content">

@@ -1,5 +1,6 @@
 <template>
   <Title>CUHK iCar</Title>
+  <Meta name="description" content="CUHK iCar是專爲初中學生而設的AI教學套件，讓學生輕鬆透過積木編程掌握AI。"/>
   <div class="cuhkicar-wrapper">
     <PageCatalog2 @click="scroll" :title='"CUHK iCar"' :list='["iCar是甚麼？", "如何使用iCar？", "道德困境實驗", "人面識別追蹤實驗", "手畫線循跡實驗", "iCar資源總匯"]'/>
     <PageCatalog3 @click="scroll" :title='"CUHK iCar"' 

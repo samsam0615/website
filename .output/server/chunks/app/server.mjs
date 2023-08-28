@@ -321,7 +321,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/company-951198b3.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/company-79c449eb.mjs').then((m) => m.default || m)
   },
   {
     name: "contact",
@@ -329,7 +329,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/contact-c287b36b.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/contact-18b2dcab.mjs').then((m) => m.default || m)
   },
   {
     name: "cuhk-icar",
@@ -337,7 +337,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-icar-e758a8ba.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-icar-3c38d5b1.mjs').then((m) => m.default || m)
   },
   {
     name: "cuhk-iport",
@@ -345,7 +345,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-iport-721a3253.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-iport-e1315f93.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -353,7 +353,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-b13b43bd.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-12415a79.mjs').then((m) => m.default || m)
   },
   {
     name: "ishare",
@@ -361,7 +361,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/ishare-ec43e238.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/ishare-24afefc0.mjs').then((m) => m.default || m)
   },
   {
     name: "staff",
@@ -369,7 +369,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/staff-b9f0bae7.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/staff-5ec40169.mjs').then((m) => m.default || m)
   },
   {
     name: "test",
