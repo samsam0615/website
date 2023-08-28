@@ -3,7 +3,7 @@ import { T as Title } from './components-d2ce98ee.mjs';
 import { useSSRContext, withCtx, createTextVNode, mergeProps, resolveComponent } from 'vue';
 import { ssrRenderComponent, ssrRenderStyle, ssrRenderAttrs, ssrRenderAttr, ssrInterpolate, ssrRenderSlot } from 'vue/server-renderer';
 import { _ as _export_sfc } from '../server.mjs';
-import { CountTo } from 'vue3-count-to';
+import * as CountTo from 'vue3-count-to';
 import 'vue-bundle-renderer/runtime';
 import 'h3';
 import 'devalue';
@@ -112,7 +112,7 @@ const _sfc_main$1 = {
 };
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_countTo = resolveComponent("countTo");
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "upcounter-container" }, _attrs))} data-v-ae01fd6d><div style="${ssrRenderStyle({ "width": "60px", "height": "60px", "display": "flex" })}" data-v-ae01fd6d><img${ssrRenderAttr("src", $props.image)} style="${ssrRenderStyle({ "width": "60px", "object-fit": "contain" })}" data-v-ae01fd6d></div><label data-v-ae01fd6d>${ssrInterpolate($props.text1)}</label>`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "upcounter-container" }, _attrs))} data-v-d8867fd7><div style="${ssrRenderStyle({ "width": "60px", "height": "60px", "display": "flex" })}" data-v-d8867fd7><img${ssrRenderAttr("src", $props.image)} style="${ssrRenderStyle({ "width": "60px", "object-fit": "contain" })}" data-v-d8867fd7></div><label data-v-d8867fd7>${ssrInterpolate($props.text1)}</label>`);
   _push(ssrRenderComponent(_component_countTo, {
     startVal: 0,
     endVal: $props.number,
@@ -120,7 +120,7 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
     autoplay: false,
     ref: "upcounter"
   }, null, _parent));
-  _push(`<label data-v-ae01fd6d>${ssrInterpolate($props.text2)}</label></div>`);
+  _push(`<label data-v-d8867fd7>${ssrInterpolate($props.text2)}</label></div>`);
 }
 const _sfc_setup$1 = _sfc_main$1.setup;
 _sfc_main$1.setup = (props, ctx) => {
@@ -128,7 +128,7 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/UpCounter.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const __nuxt_component_3 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-ae01fd6d"]]);
+const __nuxt_component_3 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-d8867fd7"]]);
 const _sfc_main = {
   name: "IndexPage",
   mounted() {
@@ -221,4 +221,4 @@ _sfc_main.setup = (props, ctx) => {
 const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { index as default };
-//# sourceMappingURL=index-12415a79.mjs.map
+//# sourceMappingURL=index-a812d461.mjs.map

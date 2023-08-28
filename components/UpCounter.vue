@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { CountTo } from 'vue3-count-to';
+import * as CountTo from 'vue3-count-to';
 
 export default {
   name: 'UpCounter',
