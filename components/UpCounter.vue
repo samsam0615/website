@@ -4,14 +4,13 @@
         <img :src='image' style="width: 60px; object-fit: contain;">
     </div>
     <label>{{text1}}</label>
-    <countTo :startVal='0' :endVal='number' :duration='4000' :autoplay='false' ref="upcounter"></countTo>
-    <!-- <span>{{number}}</span> -->
+    <!-- <vue3-count-to :startVal='0' :endVal='number' :duration='4000' :autoplay='false' ref="upcounter" /> -->
+    <span>{{number}}</span>
     <label>{{text2}}</label>
   </div>
 </template>
 
 <script>
-import * as CountTo from 'vue3-count-to';
 
 export default {
   name: 'UpCounter',
@@ -21,7 +20,7 @@ export default {
     event: null
   }),
   components:{
-    CountTo
+    
   },
   methods:{
     startCounter(){
@@ -36,13 +35,13 @@ export default {
     }
   },
   mounted(){
-    let self = this
+/*     let self = this
     this.startCounter();
     this.event = document.addEventListener('scroll', (e)=>{
         if(self.$refs.upcounter){
             this.startCounter();
         }
-    })
+    }) */
   },
   unmounted(){
     document.removeEventListener('scroll', this.event)

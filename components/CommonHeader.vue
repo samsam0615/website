@@ -64,17 +64,17 @@
           <li>
             <a href="https://ipython.eduairhk.com" target="_blank">
               iPython 
-              <!-- <div class="border">
+              <div class="border">
                 敬請期待
-              </div> -->
+              </div>
             </a>
           </li>
           <li>
             <a href="https://itrain.eduairhk.com" target="_blank">
               iTrain
-              <!-- <div class="border">
+              <div class="border">
                 敬請期待
-              </div> -->
+              </div>
             </a>
           </li>
         </ul>
@@ -117,12 +117,19 @@ export default {
 <style>
 
 .border{
-  border: 1px solid #6d0e77; padding: 2px; border-radius: 5px; font-size: 12px; margin-left: 5px; text-align: center
+  border: 1px solid #6d0e77; 
+  border-radius: 5px; 
+  font-size: 12px; 
+  margin-left: 5px; 
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  text-indent: 0;
 }
 
-  .subMenu li:hover .border{
-      border: 1px solid white;
-  }
+.subMenu li:hover .border{
+  border: 1px solid white;
+}
 
 @media screen and (min-width: 1025px) {
   .menubar{

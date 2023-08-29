@@ -353,7 +353,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-a812d461.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-7cc8c2b5.mjs').then((m) => m.default || m)
   },
   {
     name: "ishare",
@@ -1091,7 +1091,7 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
     }),
     _: 1
   }, _parent));
-  _push(`</li><li><a class="subMenuBtn"> 學習平台 </a><ul class="subMenu"><li><a href="https://iport.eduairhk.com" target="_blank"> iPort ePlatform </a></li><li><a href="https://ipython.eduairhk.com" target="_blank"> iPython </a></li><li><a href="https://itrain.eduairhk.com" target="_blank"> iTrain </a></li></ul></li></ul></div>`);
+  _push(`</li><li><a class="subMenuBtn"> 學習平台 </a><ul class="subMenu"><li><a href="https://iport.eduairhk.com" target="_blank"> iPort ePlatform </a></li><li><a href="https://ipython.eduairhk.com" target="_blank"> iPython <div class="border"> 敬請期待 </div></a></li><li><a href="https://itrain.eduairhk.com" target="_blank"> iTrain <div class="border"> 敬請期待 </div></a></li></ul></li></ul></div>`);
 }
 const _sfc_setup$4 = _sfc_main$4.setup;
 _sfc_main$4.setup = (props, ctx) => {
