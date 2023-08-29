@@ -1,16 +1,16 @@
 <template>
   <Title>CUHK iPort</Title>
   <Meta name="description" content="CUHK iPort是為實現AI物聯網（AIoT）而設的AI教學套件，讓學生輕鬆創建不同AI機械項目。"/>
-  <div class="pageContent-container" style="flex-direction: row; justify-content: flex-start; align-items: flex-start; padding: 60px; overflow: visible;" >
+  <div class="pageContent-container" style="flex-direction: row; justify-content: flex-start; align-items: flex-start; padding: 30px; overflow: visible;" >
     <PageCatalog @click="scroll" :title='"CUHK iPort"' :list='["CUHK iPort是甚麽？", "CUHK iPort能做甚麼？", "如何使用CUHK iPort？", "CUHK iPort編程平台", "CUHK iPort資源總匯"]' />
     <div class="page-content" ref="content">
       <span>CUHK iPort是甚麽？</span>
       <div>
         CUHK iPort是由中大團隊開發的AI教學套件。師生可省略複雜的硬件搭綫步驟，使用iPort編程平台，套用於Teachable Machine訓練的AI模型，無須編程即可實現AI物聯網（AIoT） ， 建立不同的AI項目。
       </div>
-      <img src="@/assets/image/iport/image1.png" style="position: relative; width: 500px; margin-top: 5px">
+      <img src="@/assets/image/iport/image1.png" style="position: relative; max-width: 500px; width: 100%; margin-top: 5px">
       <span>CUHK iPort能做甚麼？</span>
-      <div style="display: flex; gap: 20px">
+      <div style="display: flex; gap: 15px; flex-wrap: wrap">
         <OrangeDescription :image="'image/iport/image6.gif'">馬達控制</OrangeDescription>
         <OrangeDescription :image="'image/iport/image5.png'">文字顯示</OrangeDescription>
         <OrangeDescription :image="'image/iport/image52.png'">聲音輸出</OrangeDescription>
@@ -19,8 +19,6 @@
       </div>
       <span>如何使用CUHK iPort？</span>
       <div style="display: flex; gap: 20px; flex-direction: column">
-        <!-- <Youtube src="https://www.youtube.com/watch?v=jNQXAC9IVRw" /> -->
-        
         <OrangeVideo :image="'image/iport/image7.gif'" :title="'在Teachable Machine訓練AI模型及生成連結'" :number="1">
           <a class="orangeBtn" href="https://teachablemachine.withgoogle.com/" target="_blank">前往Teachable Machine</a>
         </OrangeVideo>

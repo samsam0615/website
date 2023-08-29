@@ -1,5 +1,5 @@
 <template>
-    <div style="display: flex; flex-direction: column; border-radius: 40px; border: 3px solid orange; padding: 0 0; height: max-content; width: 600px; box-sizing: border-box"> 
+    <div style="display: flex; flex-direction: column; border-radius: 40px; border: 3px solid orange; padding: 0 0; height: max-content; width: 100%; max-width: 600px; box-sizing: border-box"> 
         <label style="padding: 20px 40px; display: flex; gap: 20px"> 
             <a style="font-size: 40px; font-weight: 600; color: orange; ">{{number}}</a>
             {{title}}
@@ -17,7 +17,3 @@ export default {
   props: ['title', 'image', 'number']
 }
 </script>
-
-<style scoped>
-
-</style>
