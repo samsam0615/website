@@ -345,7 +345,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-iport-e1315f93.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-iport-2c5e0490.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -353,7 +353,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-7cc8c2b5.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-456735d8.mjs').then((m) => m.default || m)
   },
   {
     name: "ishare",

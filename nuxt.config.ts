@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   },
   build: {
     // You can extend webpack config here
-    transpile: ['vue-pdf'],
+    transpile: ['vue-pdf', 'Youtube', 'vue3-count-to'],
   },
   modules: [
     '@nuxt/image',

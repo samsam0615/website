@@ -32,6 +32,7 @@ export default {
     position: sticky;
     width: 350px;
     top: 110px;
+    left: 0l
   }
 
   @media screen and (max-width: 1200px) {
