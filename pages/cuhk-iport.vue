@@ -1,37 +1,33 @@
 <template>
   <Title>CUHK iPort</Title>
   <Meta name="description" content="CUHK iPort是為實現AI物聯網（AIoT）而設的AI教學套件，讓學生輕鬆創建不同AI機械項目。"/>
-  <div class="pageContent-container" style="flex-direction: row; justify-content: flex-start; align-items: flex-start; padding: 30px; overflow: visible;" >
-    <PageCatalog @click="scroll" :title='"CUHK iPort"' :list='["CUHK iPort是甚麽？", "CUHK iPort能做甚麼？", "如何使用CUHK iPort？", "CUHK iPort編程平台", "CUHK iPort資源總匯"]' />
+  <PageCatalog4 :list='["CUHK iPort", "功能介紹", "使用說明", "實驗範例", "編程平台", "實用資源總匯"]' style="z-index: 1"/>
+  <div class="pageContent-container" style="z-index: 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 30px; overflow: visible; width: 1000px; max-width: 100%" >
     <div class="page-content" ref="content">
-      <span>CUHK iPort是甚麽？</span>
-      <div>
+      <span class="title">CUHK iPort</span>
+      <div class="text-content" style="display: flex; justify-content: center; width: 100%"> 
+      <iPortImage/>
+      </div>
+      <span class="title">功能介紹</span>
+      <div class="text-content">
         CUHK iPort是由中大團隊開發的AI教學套件。師生可省略複雜的硬件搭綫步驟，使用iPort編程平台，套用於Teachable Machine訓練的AI模型，無須編程即可實現AI物聯網（AIoT） ， 建立不同的AI項目。
+        <nuxt-img src="iportDesc4.png" style="width: 100%; max-width: 900px;"/>
       </div>
-      <img src="@/assets/image/iport/image1.png" style="position: relative; max-width: 500px; width: 100%; margin-top: 5px">
-      <span>CUHK iPort能做甚麼？</span>
-      <div style="display: flex; gap: 15px; flex-wrap: wrap">
-        <OrangeDescription :image="'image/iport/image6.gif'">馬達控制</OrangeDescription>
-        <OrangeDescription :image="'image/iport/image5.png'">文字顯示</OrangeDescription>
-        <OrangeDescription :image="'image/iport/image52.png'">聲音輸出</OrangeDescription>
-        <OrangeDescription :image="'image/iport/image3.gif'">燈光展示</OrangeDescription>
-        <OrangeDescription :image="'image/iport/image22.gif'">開關控制</OrangeDescription>
+      <span class="title">使用說明</span>
+      <div class="text-content">
+        <iPortVideoPlayer />
       </div>
-      <span>如何使用CUHK iPort？</span>
-      <div style="display: flex; gap: 20px; flex-direction: column">
-        <OrangeVideo :image="'image/iport/image7.gif'" :title="'在Teachable Machine訓練AI模型及生成連結'" :number="1">
-          <a class="orangeBtn" href="https://teachablemachine.withgoogle.com/" target="_blank">前往Teachable Machine</a>
-        </OrangeVideo>
-        <OrangeVideo :image="'image/iport/image8.gif'" :title="'將AI模型的連結複製至iPort編程平台'" :number="2">
-          <a class="orangeBtn" href="https://iport.eduairhk.com/" target="_blank">前往CUHK iPort編程平台</a>
-        </OrangeVideo>
-        <OrangeVideo :image="'image/iport/image9.gif'" :title="'應用該AI模型去控制不同硬件'" :number="3">
-        </OrangeVideo>
+      <span class="title">實驗範例</span>
+      <div class="text-content">
+        即將推出
       </div>
-      <span>CUHK iPort編程平台</span>
-      <a href="https://iport.eduairhk.com" target="_blank" class="btn">前往 iPort編程平台</a>
-      <span>CUHK iPort實用資源總匯</span>
-      <div>
+      <span class="title">編程平台</span>
+      <div class="text-content">
+        <a href="https://iport.eduairhk.com" target="_blank" class="btn">前往CUHK iPort編程平台</a>
+      </div>
+      
+      <span class="title">實用資源總匯</span>
+      <div class="text-content">
         即將推出
       </div>
     </div>
@@ -59,11 +55,13 @@
   }
 
   .btn{
+    font-size: 16px;
     display: flex; width: max-content; height: 50px; align-items: center; width: 200px; justify-content: center; border-radius: 10px; border: 3px solid orange; color: orange; text-decoration: none
   }
 
   .btn:hover{
-    background: #ececec;
+    background: orange;
+    color: white;
   }
 
   .orangeBtn{
@@ -80,6 +78,16 @@
   .orangeBtn:hover{
     background: rgb(235, 153, 0);
   }
+
+  .page-content .text-content{
+    position: relative;
+    font-size: 20px;
+    line-height: 40px;
+    max-width: 100%;
+    padding: 0 0 20px 0;
+    width: calc(100% );
+  }
+
   
 </style>
 
