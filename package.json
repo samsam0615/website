@@ -14,10 +14,13 @@
     "@nuxt/image": "^1.0.0-rc.1",
     "@nuxt/image-edge": "^1.0.0-rc.1-28180077.d51e794",
     "@types/node": "^18.17.0",
-    "nuxt": "^3.6.5"
+    "nuxt": "^3.6.5",
+    "nuxt-simple-sitemap": "^3.2.6",
+    "sitemap": "^7.1.1"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@nuxtjs/sitemap": "^2.4.0",
     "vue-pdf": "^4.3.0",
     "vue-pdf-embed": "^1.1.6",
     "vue3-count-to": "^1.1.2",

@@ -2,15 +2,15 @@ globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:pr
 import { Server as Server$1 } from 'node:http';
 import { Server } from 'node:https';
 import destr from 'destr';
-import { defineEventHandler, handleCacheHeaders, createEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseStatus, setResponseHeader, getRequestHeaders, createError, lazyEventHandler, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent } from 'h3';
+import { defineEventHandler, handleCacheHeaders, createEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseStatus, setResponseHeader, getRequestHeaders, createError, getRequestHost, getRequestProtocol, setHeader, getHeader, getQuery as getQuery$1, lazyEventHandler, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent } from 'h3';
 import { createFetch as createFetch$1, Headers } from 'ofetch';
 import { createCall, createFetch } from 'unenv/runtime/fetch/index';
 import { createHooks } from 'hookable';
 import { snakeCase } from 'scule';
 import { klona } from 'klona';
-import defu, { defuFn } from 'defu';
+import defu, { defuFn, defu as defu$1 } from 'defu';
 import { hash } from 'ohash';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, withLeadingSlash, withoutTrailingSlash } from 'ufo';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, withLeadingSlash, withoutTrailingSlash, hasProtocol, withBase, withTrailingSlash, withHttps } from 'ufo';
 import { createStorage, prefixStorage } from 'unstorage';
 import { toRouteMatcher, createRouter } from 'radix3';
 import { promises } from 'node:fs';
@@ -44,7 +44,71 @@ const _inlineRuntimeConfig = {
       }
     }
   },
-  "public": {},
+  "public": {
+    "site": {
+      "_context": {
+        "defaultLocale": "defaults",
+        "trailingSlash": "defaults",
+        "titleSeparator": "defaults",
+        "name": "package.json",
+        "indexable": "system",
+        "debug": "nuxt:config:site",
+        "url": "nuxt:config:site"
+      },
+      "defaultLocale": "en",
+      "trailingSlash": false,
+      "titleSeparator": "|",
+      "name": "nuxt-app",
+      "indexable": true,
+      "debug": false,
+      "url": "https://eduairhk.com"
+    }
+  },
+  "nuxt-simple-sitemap": {
+    "version": "3.2.6",
+    "moduleConfig": {
+      "autoLastmod": true,
+      "xsl": "/__sitemap__/style.xsl",
+      "xslTips": true,
+      "cacheTtl": 3600000,
+      "defaultSitemapsChunkSize": 1000,
+      "runtimeCacheStorage": "default",
+      "autoAlternativeLangPrefixes": "",
+      "credits": true,
+      "defaults": {},
+      "xslColumns": [
+        {
+          "label": "URL",
+          "width": "50%"
+        },
+        {
+          "label": "Images",
+          "width": "25%",
+          "select": "count(image:image)"
+        },
+        {
+          "label": "Last Updated",
+          "width": "25%",
+          "select": "concat(substring(sitemap:lastmod,0,11),concat(' ', substring(sitemap:lastmod,12,5)),concat(' ', substring(sitemap:lastmod,20,6)))"
+        }
+      ],
+      "include": [],
+      "exclude": [],
+      "sitemaps": "",
+      "sitemapName": "sitemap.xml",
+      "dynamicUrlsApiEndpoint": "/api/_sitemap-urls",
+      "urls": [],
+      "debug": false,
+      "discoverImages": true
+    },
+    "buildTimeMeta": {
+      "isNuxtContentDocumentDriven": false,
+      "hasApiRoutesUrl": false,
+      "hasPrerenderedRoutesPayload": false,
+      "prerenderSitemap": false,
+      "version": "3.2.6"
+    }
+  },
   "ipx": {
     "dir": "../public",
     "domains": [],
@@ -69,7 +133,18 @@ function useRuntimeConfig(event) {
   event.context.nitro.runtimeConfig = runtimeConfig;
   return runtimeConfig;
 }
-_deepFreeze(klona(appConfig));
+const _sharedAppConfig = _deepFreeze(klona(appConfig));
+function useAppConfig(event) {
+  if (!event) {
+    return _sharedAppConfig;
+  }
+  if (event.context.nitro.appConfig) {
+    return event.context.nitro.appConfig;
+  }
+  const appConfig$1 = klona(appConfig);
+  event.context.nitro.appConfig = appConfig$1;
+  return appConfig$1;
+}
 function _getEnv(key) {
   const envKey = snakeCase(key).toUpperCase();
   return destr(
@@ -667,20 +742,6 @@ const assets = {
     "size": 248069,
     "path": "../public/logo_cuhk3.png"
   },
-  "/sitemap.xml": {
-    "type": "application/xml",
-    "etag": "\"56e-koh/DpL5Xa2tjYtjbvNXixWWY+A\"",
-    "mtime": "2023-09-06T02:09:15.331Z",
-    "size": 1390,
-    "path": "../public/sitemap.xml"
-  },
-  "/sitemap_index.xml": {
-    "type": "application/xml",
-    "etag": "\"53e-JNKoV9tS/bcrKQiEOo6SmE8BKNY\"",
-    "mtime": "2023-09-06T02:09:39.496Z",
-    "size": 1342,
-    "path": "../public/sitemap_index.xml"
-  },
   "/image/cuhk-icar.html": {
     "type": "text/html; charset=utf-8",
     "etag": "\"30ca8-6UGSMCuDrs7CsvkTompqTg+yZGo\"",
@@ -793,269 +854,241 @@ const assets = {
     "size": 8618,
     "path": "../public/image/youtube.png"
   },
-  "/_nuxt/company.1839bc12.js": {
-    "type": "application/javascript",
-    "etag": "\"f9b-w3AwfyUGWCSlroVdQG05BpwduX8\"",
-    "mtime": "2023-09-06T02:10:01.165Z",
-    "size": 3995,
-    "path": "../public/_nuxt/company.1839bc12.js"
-  },
   "/_nuxt/company.a6140f02.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"b88-ATB/fv8/QOsC9D5Az4lDaFB7uc4\"",
-    "mtime": "2023-09-06T02:10:01.147Z",
+    "mtime": "2023-09-06T02:32:55.947Z",
     "size": 2952,
     "path": "../public/_nuxt/company.a6140f02.css"
   },
-  "/_nuxt/components.2230566f.js": {
+  "/_nuxt/company.faab4bcf.js": {
     "type": "application/javascript",
-    "etag": "\"57a-ElaisgrLcHFQhAewRxw0GHNI7K0\"",
-    "mtime": "2023-09-06T02:10:01.164Z",
+    "etag": "\"f9b-MQAtUWDeDcD5+XYjoepVP3sMSp4\"",
+    "mtime": "2023-09-06T02:32:55.966Z",
+    "size": 3995,
+    "path": "../public/_nuxt/company.faab4bcf.js"
+  },
+  "/_nuxt/components.8b411a19.js": {
+    "type": "application/javascript",
+    "etag": "\"57a-dBzotszQJMfdBMmlyvl8aeXjECg\"",
+    "mtime": "2023-09-06T02:32:55.964Z",
     "size": 1402,
-    "path": "../public/_nuxt/components.2230566f.js"
+    "path": "../public/_nuxt/components.8b411a19.js"
   },
   "/_nuxt/contact.015868bf.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"7bb-HnZSY0IEjXsJg9AnCSqiIp53oYs\"",
-    "mtime": "2023-09-06T02:10:01.147Z",
+    "mtime": "2023-09-06T02:32:55.947Z",
     "size": 1979,
     "path": "../public/_nuxt/contact.015868bf.css"
   },
-  "/_nuxt/contact.60c186c0.js": {
+  "/_nuxt/contact.3154b964.js": {
     "type": "application/javascript",
-    "etag": "\"d75-sKdZv+8n2ZsjHNneVU27cZNHNo4\"",
-    "mtime": "2023-09-06T02:10:01.170Z",
+    "etag": "\"d75-WqnPk4LP0JluA5NGdmWlz/Ij8gk\"",
+    "mtime": "2023-09-06T02:32:55.964Z",
     "size": 3445,
-    "path": "../public/_nuxt/contact.60c186c0.js"
+    "path": "../public/_nuxt/contact.3154b964.js"
   },
   "/_nuxt/cuhk-icar.117e8924.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"144e-hJEYKLDUXWz0e6TLHxd3ureJh0E\"",
-    "mtime": "2023-09-06T02:10:01.147Z",
+    "mtime": "2023-09-06T02:32:55.947Z",
     "size": 5198,
     "path": "../public/_nuxt/cuhk-icar.117e8924.css"
   },
-  "/_nuxt/cuhk-icar.8aa63df4.js": {
+  "/_nuxt/cuhk-icar.abfc9b86.js": {
     "type": "application/javascript",
-    "etag": "\"374a-vppJn1KcScHKCZHHSkSwau6i8Rc\"",
-    "mtime": "2023-09-06T02:10:01.172Z",
+    "etag": "\"374a-az+qQ5bEQgMNxk1Q42U9Xktd6AM\"",
+    "mtime": "2023-09-06T02:32:55.966Z",
     "size": 14154,
-    "path": "../public/_nuxt/cuhk-icar.8aa63df4.js"
+    "path": "../public/_nuxt/cuhk-icar.abfc9b86.js"
   },
-  "/_nuxt/cuhk-iport-old.0a87f30b.css": {
-    "type": "text/css; charset=utf-8",
-    "etag": "\"7b4-8U8p0E3X2ick5ANvDV8k0qf9Ijk\"",
-    "mtime": "2023-09-06T02:10:01.148Z",
-    "size": 1972,
-    "path": "../public/_nuxt/cuhk-iport-old.0a87f30b.css"
-  },
-  "/_nuxt/cuhk-iport-old.d623a41a.js": {
+  "/_nuxt/cuhk-iport.27ded85a.js": {
     "type": "application/javascript",
-    "etag": "\"13be-uBqudB1J7nQ4tLxhqURIsCTw0DQ\"",
-    "mtime": "2023-09-06T02:10:01.166Z",
-    "size": 5054,
-    "path": "../public/_nuxt/cuhk-iport-old.d623a41a.js"
-  },
-  "/_nuxt/cuhk-iport.1bf9435d.js": {
-    "type": "application/javascript",
-    "etag": "\"221d-Ve/p0hQtN6k0BVlPdKa3psmBI78\"",
-    "mtime": "2023-09-06T02:10:01.166Z",
+    "etag": "\"221d-wx71B9sWq8v6Ce1f4uS3OAZ82c8\"",
+    "mtime": "2023-09-06T02:32:55.966Z",
     "size": 8733,
-    "path": "../public/_nuxt/cuhk-iport.1bf9435d.js"
+    "path": "../public/_nuxt/cuhk-iport.27ded85a.js"
   },
   "/_nuxt/cuhk-iport.adb73e27.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"1070-vd4POmWuv1ZjTslmPYExkcCSGeA\"",
-    "mtime": "2023-09-06T02:10:01.152Z",
+    "mtime": "2023-09-06T02:32:55.947Z",
     "size": 4208,
     "path": "../public/_nuxt/cuhk-iport.adb73e27.css"
-  },
-  "/_nuxt/entry.0371513c.js": {
-    "type": "application/javascript",
-    "etag": "\"1dd67e-R4x1zoOziO1JQ1uaWl9fp911nIc\"",
-    "mtime": "2023-09-06T02:10:01.194Z",
-    "size": 1955454,
-    "path": "../public/_nuxt/entry.0371513c.js"
   },
   "/_nuxt/entry.17d2c478.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"167a-2NsXWB/8/kUjZ8m4JYLj8pT8Vyc\"",
-    "mtime": "2023-09-06T02:10:01.146Z",
+    "mtime": "2023-09-06T02:32:55.947Z",
     "size": 5754,
     "path": "../public/_nuxt/entry.17d2c478.css"
   },
-  "/_nuxt/error-404.23f2309d.css": {
-    "type": "text/css; charset=utf-8",
-    "etag": "\"e2e-ivsbEmi48+s9HDOqtrSdWFvddYQ\"",
-    "mtime": "2023-09-06T02:10:01.146Z",
-    "size": 3630,
-    "path": "../public/_nuxt/error-404.23f2309d.css"
-  },
-  "/_nuxt/error-404.3e8fb790.js": {
+  "/_nuxt/entry.d19f36b2.js": {
     "type": "application/javascript",
-    "etag": "\"8ad-bmIlqVv/L1sdMZpPuXAppfC9Uw0\"",
-    "mtime": "2023-09-06T02:10:01.171Z",
+    "etag": "\"1dda77-hBL76wYs/APeH4vG33uP8EBu5u0\"",
+    "mtime": "2023-09-06T02:32:55.973Z",
+    "size": 1956471,
+    "path": "../public/_nuxt/entry.d19f36b2.js"
+  },
+  "/_nuxt/error-404.205420e8.js": {
+    "type": "application/javascript",
+    "etag": "\"8ad-M9/NQJCNr2/7STMKSAuZR+4EraY\"",
+    "mtime": "2023-09-06T02:32:55.964Z",
     "size": 2221,
-    "path": "../public/_nuxt/error-404.3e8fb790.js"
+    "path": "../public/_nuxt/error-404.205420e8.js"
   },
-  "/_nuxt/error-500.1fa09ebd.js": {
-    "type": "application/javascript",
-    "etag": "\"756-ObLTNlUrm8UJTbYjYcVpGVXH+Ik\"",
-    "mtime": "2023-09-06T02:10:01.166Z",
-    "size": 1878,
-    "path": "../public/_nuxt/error-500.1fa09ebd.js"
-  },
-  "/_nuxt/error-500.aa16ed4d.css": {
+  "/_nuxt/error-404.7fc72018.css": {
     "type": "text/css; charset=utf-8",
-    "etag": "\"79e-7j4Tsx89siDo85YoIs0XqsPWmPI\"",
-    "mtime": "2023-09-06T02:10:01.147Z",
+    "etag": "\"e2e-iNt1cqPQ0WDudfCTZVQd31BeRGs\"",
+    "mtime": "2023-09-06T02:32:55.947Z",
+    "size": 3630,
+    "path": "../public/_nuxt/error-404.7fc72018.css"
+  },
+  "/_nuxt/error-500.0ac675e5.js": {
+    "type": "application/javascript",
+    "etag": "\"756-m7+GR3+AQ2Hy0fOTGGubj5SqDtI\"",
+    "mtime": "2023-09-06T02:32:55.964Z",
+    "size": 1878,
+    "path": "../public/_nuxt/error-500.0ac675e5.js"
+  },
+  "/_nuxt/error-500.c5df6088.css": {
+    "type": "text/css; charset=utf-8",
+    "etag": "\"79e-ByRo+49BgcevWdRjJy3CMx2IA5k\"",
+    "mtime": "2023-09-06T02:32:55.947Z",
     "size": 1950,
-    "path": "../public/_nuxt/error-500.aa16ed4d.css"
+    "path": "../public/_nuxt/error-500.c5df6088.css"
   },
   "/_nuxt/gif_face2.b084def7.gif": {
     "type": "image/gif",
     "etag": "\"6c4e47-Jxplg5GU2VXswrGeWpxE0yDz014\"",
-    "mtime": "2023-09-06T02:10:01.197Z",
+    "mtime": "2023-09-06T02:32:55.987Z",
     "size": 7097927,
     "path": "../public/_nuxt/gif_face2.b084def7.gif"
   },
   "/_nuxt/gif_line2.81f158a0.gif": {
     "type": "image/gif",
     "etag": "\"6c4e1e-Km/FBAiQEZkyOVBLHQuekhAL04U\"",
-    "mtime": "2023-09-06T02:10:01.197Z",
+    "mtime": "2023-09-06T02:32:55.987Z",
     "size": 7097886,
     "path": "../public/_nuxt/gif_line2.81f158a0.gif"
   },
   "/_nuxt/gif_moral2.520ac47b.gif": {
     "type": "image/gif",
     "etag": "\"4a8d42-NqqYMGLDHjeUx0Xs7qnMqsTQO8M\"",
-    "mtime": "2023-09-06T02:10:01.187Z",
+    "mtime": "2023-09-06T02:32:55.983Z",
     "size": 4885826,
     "path": "../public/_nuxt/gif_moral2.520ac47b.gif"
   },
   "/_nuxt/iCarF.0923d21e.png": {
     "type": "image/png",
     "etag": "\"2699-4wLivRXwiDjnO+/b2bDZQbncMCA\"",
-    "mtime": "2023-09-06T02:10:01.146Z",
+    "mtime": "2023-09-06T02:32:55.946Z",
     "size": 9881,
     "path": "../public/_nuxt/iCarF.0923d21e.png"
   },
   "/_nuxt/iCarL.d12c0858.png": {
     "type": "image/png",
     "etag": "\"18df-V9VO5fclO7PmBMTJGrqD+HcUla0\"",
-    "mtime": "2023-09-06T02:10:01.146Z",
+    "mtime": "2023-09-06T02:32:55.946Z",
     "size": 6367,
     "path": "../public/_nuxt/iCarL.d12c0858.png"
   },
   "/_nuxt/iCarR.25d12606.png": {
     "type": "image/png",
     "etag": "\"18cd-wQwdUTlno1tkMbIEyGSl9bYurGo\"",
-    "mtime": "2023-09-06T02:10:01.146Z",
+    "mtime": "2023-09-06T02:32:55.946Z",
     "size": 6349,
     "path": "../public/_nuxt/iCarR.25d12606.png"
   },
-  "/_nuxt/image1.fe8d41a6.png": {
-    "type": "image/png",
-    "etag": "\"46c98-Utqk5fF9EuKAJaLo9Y28Ikr4JJM\"",
-    "mtime": "2023-09-06T02:10:01.146Z",
-    "size": 289944,
-    "path": "../public/_nuxt/image1.fe8d41a6.png"
-  },
-  "/_nuxt/index.7f194789.js": {
+  "/_nuxt/index.70dfaea6.js": {
     "type": "application/javascript",
-    "etag": "\"fa9-ZNOOcgTfTdyJmmo63e5BJQvOnLs\"",
-    "mtime": "2023-09-06T02:10:01.166Z",
+    "etag": "\"fa9-PEk7M+pvydPWCSH+WjBObNAQbXo\"",
+    "mtime": "2023-09-06T02:32:55.966Z",
     "size": 4009,
-    "path": "../public/_nuxt/index.7f194789.js"
+    "path": "../public/_nuxt/index.70dfaea6.js"
   },
   "/_nuxt/index.97031884.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"dd3-wCoFrwWNEwjWvBUoeqGhcJ6yi3g\"",
-    "mtime": "2023-09-06T02:10:01.164Z",
+    "mtime": "2023-09-06T02:32:55.947Z",
     "size": 3539,
     "path": "../public/_nuxt/index.97031884.css"
   },
   "/_nuxt/intro.9ccedcb0.mp4": {
     "type": "video/mp4",
     "etag": "\"371b7e-U0G09FnGS9UyRPHCqAmnK7v6VnA\"",
-    "mtime": "2023-09-06T02:10:01.168Z",
+    "mtime": "2023-09-06T02:32:55.968Z",
     "size": 3611518,
     "path": "../public/_nuxt/intro.9ccedcb0.mp4"
   },
-  "/_nuxt/ishare.26335187.js": {
+  "/_nuxt/ishare.30388133.js": {
     "type": "application/javascript",
-    "etag": "\"2426-IQulJ2IG6cV0lvcTS8KuU3KqOsY\"",
-    "mtime": "2023-09-06T02:10:01.165Z",
+    "etag": "\"2426-c9YIt34ZEB0J9I0JG/oaHzz2bpo\"",
+    "mtime": "2023-09-06T02:32:55.964Z",
     "size": 9254,
-    "path": "../public/_nuxt/ishare.26335187.js"
+    "path": "../public/_nuxt/ishare.30388133.js"
   },
   "/_nuxt/ishare.66604c69.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"bcb-09qaxhCRPjNHUH4WEZu8JfjtoHU\"",
-    "mtime": "2023-09-06T02:10:01.164Z",
+    "mtime": "2023-09-06T02:32:55.950Z",
     "size": 3019,
     "path": "../public/_nuxt/ishare.66604c69.css"
   },
   "/_nuxt/logo.24b58023.png": {
     "type": "image/png",
     "etag": "\"254e-A5svQTFkdqMjKDJyJqJ7Fju5D1w\"",
-    "mtime": "2023-09-06T02:10:01.146Z",
+    "mtime": "2023-09-06T02:32:55.946Z",
     "size": 9550,
     "path": "../public/_nuxt/logo.24b58023.png"
   },
   "/_nuxt/logo_app.f7db2ddf.png": {
     "type": "image/png",
     "etag": "\"dadb-YL/QWSetbbTQbH4Y455xEY7mW+o\"",
-    "mtime": "2023-09-06T02:10:01.136Z",
+    "mtime": "2023-09-06T02:32:55.945Z",
     "size": 56027,
     "path": "../public/_nuxt/logo_app.f7db2ddf.png"
   },
   "/_nuxt/logo_blockly.010a26d0.png": {
     "type": "image/png",
     "etag": "\"1c196-OUx43J93OfzzLZugsNmONZhir2Y\"",
-    "mtime": "2023-09-06T02:10:01.146Z",
+    "mtime": "2023-09-06T02:32:55.935Z",
     "size": 115094,
     "path": "../public/_nuxt/logo_blockly.010a26d0.png"
   },
   "/_nuxt/logo_remote.8d6d1574.png": {
     "type": "image/png",
     "etag": "\"5380-nHhmc1zcYPPIhGRWAiY6zDGA2g8\"",
-    "mtime": "2023-09-06T02:10:01.146Z",
+    "mtime": "2023-09-06T02:32:55.946Z",
     "size": 21376,
     "path": "../public/_nuxt/logo_remote.8d6d1574.png"
   },
-  "/_nuxt/nuxt-img.5dffb315.js": {
+  "/_nuxt/nuxt-img.97862713.js": {
     "type": "application/javascript",
-    "etag": "\"1b61-4bmAXnpQqsJOBtszSBBLtYIKlAk\"",
-    "mtime": "2023-09-06T02:10:01.164Z",
+    "etag": "\"1b61-Ypxw2dORmIH4GIIb+yJ9tsAPFfA\"",
+    "mtime": "2023-09-06T02:32:55.964Z",
     "size": 7009,
-    "path": "../public/_nuxt/nuxt-img.5dffb315.js"
+    "path": "../public/_nuxt/nuxt-img.97862713.js"
   },
-  "/_nuxt/staff.8ed7d09d.js": {
+  "/_nuxt/staff.9f6d19a7.js": {
     "type": "application/javascript",
-    "etag": "\"1089-ahGwiF8DL2prwkLPg+FWWkz4fCY\"",
-    "mtime": "2023-09-06T02:10:01.165Z",
+    "etag": "\"1089-Wuc4+5i4HWp90q01Qs49ElOjRTk\"",
+    "mtime": "2023-09-06T02:32:55.964Z",
     "size": 4233,
-    "path": "../public/_nuxt/staff.8ed7d09d.js"
+    "path": "../public/_nuxt/staff.9f6d19a7.js"
   },
   "/_nuxt/staff.e56f84ab.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"7b0-si8GjGBaBAM8pN6W/dgxQfoUes4\"",
-    "mtime": "2023-09-06T02:10:01.164Z",
+    "mtime": "2023-09-06T02:32:55.963Z",
     "size": 1968,
     "path": "../public/_nuxt/staff.e56f84ab.css"
-  },
-  "/_nuxt/test.e821bd82.js": {
-    "type": "application/javascript",
-    "etag": "\"213-vpMj3qN1tnTmNlNFYKdGbgtgFTI\"",
-    "mtime": "2023-09-06T02:10:01.164Z",
-    "size": 531,
-    "path": "../public/_nuxt/test.e821bd82.js"
   },
   "/_nuxt/timeline.1dea26a8.png": {
     "type": "image/png",
     "etag": "\"16070-5fPKH13vVOzoS3/CbnABMmH10+M\"",
-    "mtime": "2023-09-06T02:10:01.146Z",
+    "mtime": "2023-09-06T02:32:55.945Z",
     "size": 90224,
     "path": "../public/_nuxt/timeline.1dea26a8.png"
   },
@@ -1192,27 +1225,6 @@ const assets = {
     "size": 4027,
     "path": "../public/image/cuhk-icar_files/logo_think.png"
   },
-  "/image/gif/gif_face2.gif": {
-    "type": "image/gif",
-    "etag": "\"6c4e47-Jxplg5GU2VXswrGeWpxE0yDz014\"",
-    "mtime": "1979-12-31T16:00:00.000Z",
-    "size": 7097927,
-    "path": "../public/image/gif/gif_face2.gif"
-  },
-  "/image/gif/gif_line2.gif": {
-    "type": "image/gif",
-    "etag": "\"6c4e1e-Km/FBAiQEZkyOVBLHQuekhAL04U\"",
-    "mtime": "1979-12-31T16:00:00.000Z",
-    "size": 7097886,
-    "path": "../public/image/gif/gif_line2.gif"
-  },
-  "/image/gif/gif_moral2.gif": {
-    "type": "image/gif",
-    "etag": "\"4a8d42-NqqYMGLDHjeUx0Xs7qnMqsTQO8M\"",
-    "mtime": "1979-12-31T16:00:00.000Z",
-    "size": 4885826,
-    "path": "../public/image/gif/gif_moral2.gif"
-  },
   "/image/iport/image1.png": {
     "type": "image/png",
     "etag": "\"46c98-Utqk5fF9EuKAJaLo9Y28Ikr4JJM\"",
@@ -1289,6 +1301,27 @@ const assets = {
     "mtime": "2023-08-29T10:51:27.372Z",
     "size": 4567877,
     "path": "../public/image/iport/image9.gif"
+  },
+  "/image/gif/gif_face2.gif": {
+    "type": "image/gif",
+    "etag": "\"6c4e47-Jxplg5GU2VXswrGeWpxE0yDz014\"",
+    "mtime": "1979-12-31T16:00:00.000Z",
+    "size": 7097927,
+    "path": "../public/image/gif/gif_face2.gif"
+  },
+  "/image/gif/gif_line2.gif": {
+    "type": "image/gif",
+    "etag": "\"6c4e1e-Km/FBAiQEZkyOVBLHQuekhAL04U\"",
+    "mtime": "1979-12-31T16:00:00.000Z",
+    "size": 7097886,
+    "path": "../public/image/gif/gif_line2.gif"
+  },
+  "/image/gif/gif_moral2.gif": {
+    "type": "image/gif",
+    "etag": "\"4a8d42-NqqYMGLDHjeUx0Xs7qnMqsTQO8M\"",
+    "mtime": "1979-12-31T16:00:00.000Z",
+    "size": 4885826,
+    "path": "../public/image/gif/gif_moral2.gif"
   },
   "/image/materials/book.png": {
     "type": "image/png",
@@ -1507,27 +1540,6 @@ const assets = {
     "size": 403,
     "path": "../public/image/materials/work_history.png"
   },
-  "/image/media/img0.jpg": {
-    "type": "image/jpeg",
-    "etag": "\"7690e-RUQA8WY0Nkfer45kh16ZzBepAQs\"",
-    "mtime": "2023-06-12T09:12:11.592Z",
-    "size": 485646,
-    "path": "../public/image/media/img0.jpg"
-  },
-  "/image/media/img1.jpg": {
-    "type": "image/jpeg",
-    "etag": "\"a21f2-YT6fGrz3E6igorsP9Ki4rGkmOe0\"",
-    "mtime": "2023-06-12T09:12:11.595Z",
-    "size": 664050,
-    "path": "../public/image/media/img1.jpg"
-  },
-  "/image/media/intro.mp4": {
-    "type": "video/mp4",
-    "etag": "\"371b7e-U0G09FnGS9UyRPHCqAmnK7v6VnA\"",
-    "mtime": "2023-06-12T09:12:11.705Z",
-    "size": 3611518,
-    "path": "../public/image/media/intro.mp4"
-  },
   "/image/staff/2.jpg": {
     "type": "image/jpeg",
     "etag": "\"2a0c-9QA3SjW/F8zaFqUOr/hZ3zljvL8\"",
@@ -1576,6 +1588,27 @@ const assets = {
     "mtime": "2023-06-12T09:12:11.590Z",
     "size": 59898,
     "path": "../public/image/staff/icon2_1200_circle.webp"
+  },
+  "/image/media/img0.jpg": {
+    "type": "image/jpeg",
+    "etag": "\"7690e-RUQA8WY0Nkfer45kh16ZzBepAQs\"",
+    "mtime": "2023-06-12T09:12:11.592Z",
+    "size": 485646,
+    "path": "../public/image/media/img0.jpg"
+  },
+  "/image/media/img1.jpg": {
+    "type": "image/jpeg",
+    "etag": "\"a21f2-YT6fGrz3E6igorsP9Ki4rGkmOe0\"",
+    "mtime": "2023-06-12T09:12:11.595Z",
+    "size": 664050,
+    "path": "../public/image/media/img1.jpg"
+  },
+  "/image/media/intro.mp4": {
+    "type": "video/mp4",
+    "etag": "\"371b7e-U0G09FnGS9UyRPHCqAmnK7v6VnA\"",
+    "mtime": "2023-06-12T09:12:11.705Z",
+    "size": 3611518,
+    "path": "../public/image/media/intro.mp4"
   }
 };
 
@@ -1677,6 +1710,828 @@ const _f4b49z = eventHandler((event) => {
   return readAsset(id);
 });
 
+function createSiteConfigStack() {
+  const stack = [];
+  function push(input) {
+    if (!input || typeof input !== "object" || Object.keys(input).length === 0)
+      return;
+    if (!input._context) {
+      let lastFunctionName = new Error("tmp").stack?.split("\n")[2].split(" ")[5];
+      if (lastFunctionName?.includes("/"))
+        lastFunctionName = "anonymous";
+      input._context = lastFunctionName;
+    }
+    stack.push(input);
+  }
+  function get() {
+    const siteConfig = {
+      _context: {}
+    };
+    for (const o in stack) {
+      for (const k in stack[o]) {
+        const key = k;
+        const val = stack[o][k];
+        if (!k.endsWith("context") && typeof val !== "undefined") {
+          siteConfig[k] = val;
+          siteConfig._context[key] = stack[o]._context?.[key] || stack[o]._context || "anonymous";
+        }
+      }
+    }
+    return normalizeSiteConfig(siteConfig);
+  }
+  return {
+    stack,
+    push,
+    get
+  };
+}
+
+function normalizeSiteConfig(config) {
+  if (typeof config.indexable !== "undefined")
+    config.indexable = String(config.indexable) !== "false";
+  if (typeof config.trailingSlash !== "undefined")
+    config.trailingSlash = String(config.trailingSlash) !== "false";
+  if (config.url && !hasProtocol(config.url, { acceptRelative: true, strict: false }))
+    config.url = withHttps(config.url);
+  return config;
+}
+function resolveSitePath(pathOrUrl, options) {
+  let path = pathOrUrl;
+  if (hasProtocol(pathOrUrl, { strict: false, acceptRelative: true })) {
+    const parsed = parseURL(pathOrUrl);
+    path = parsed.pathname;
+  }
+  const base = withLeadingSlash(options.base);
+  if (base !== "/" && path.startsWith(base)) {
+    path = path.slice(base.length);
+  }
+  const origin = options.absolute ? options.siteUrl : "";
+  const baseWithOrigin = options.withBase ? withBase(base, origin || "/") : origin;
+  const resolvedUrl = withBase(path, baseWithOrigin);
+  return path === "/" && !options.withBase ? withTrailingSlash(resolvedUrl) : fixSlashes(options.trailingSlash, resolvedUrl);
+}
+function fixSlashes(trailingSlash, pathOrUrl) {
+  const $url = parseURL(pathOrUrl);
+  const isFileUrl = $url.pathname.includes(".");
+  if (isFileUrl)
+    return pathOrUrl;
+  const fixedPath = trailingSlash ? withTrailingSlash($url.pathname) : withoutTrailingSlash($url.pathname);
+  return `${$url.protocol ? `${$url.protocol}//` : ""}${$url.host || ""}${fixedPath}${$url.search || ""}${$url.hash || ""}`;
+}
+
+function useSiteConfig(e) {
+  e.context.siteConfig = e.context.siteConfig || createSiteConfigStack();
+  return e.context.siteConfig.get();
+}
+
+function useNitroOrigin(e) {
+  const cert = process.env.NITRO_SSL_CERT;
+  const key = process.env.NITRO_SSL_KEY;
+  let host = process.env.NITRO_HOST || process.env.HOST || false;
+  let port;
+  let protocol = cert && key || !false ? "https" : "http";
+  if (!e) ; else {
+    host = getRequestHost(e, { xForwardedHost: true }) || host;
+    protocol = getRequestProtocol(e, { xForwardedProto: true }) || protocol;
+  }
+  if (typeof host === "string" && host.includes(":")) {
+    port = host.split(":").pop();
+    host = host.split(":")[0];
+  }
+  port = port ? `:${port}` : "";
+  return `${protocol}://${host}${port}/`;
+}
+
+function updateSiteConfig(e, input) {
+  e.context.siteConfig = e.context.siteConfig || createSiteConfigStack();
+  e.context.siteConfig.push(input);
+}
+
+function createSitePathResolver(e, options = {}) {
+  const siteConfig = useSiteConfig(e);
+  const nitroOrigin = useNitroOrigin(e);
+  const nuxtBase = useRuntimeConfig().app.baseURL || "/";
+  return (path) => {
+    return resolveSitePath(path, {
+      ...options,
+      siteUrl: options.canonical !== false || false ? siteConfig.url : nitroOrigin,
+      trailingSlash: siteConfig.trailingSlash,
+      base: nuxtBase
+    });
+  };
+}
+
+const _zOc7zo = defineEventHandler((e) => {
+  if (!e.context.siteConfig) {
+    const appConfig = useAppConfig();
+    const nitroOrigin = useNitroOrigin(e);
+    e.context.siteConfigNitroOrigin = nitroOrigin;
+    const { public: publicRuntimeConfig } = useRuntimeConfig();
+    updateSiteConfig(e, {
+      _context: "nitro:init",
+      url: nitroOrigin
+    });
+    updateSiteConfig(e, publicRuntimeConfig.site);
+    if (appConfig.site) {
+      updateSiteConfig(e, {
+        _context: "app:config",
+        ...appConfig.site
+      });
+    }
+    if (e.context._nitro.routeRules.site) {
+      updateSiteConfig(e, {
+        _context: "route-rules",
+        ...e.context._nitro.routeRules.site
+      });
+    }
+  }
+});
+
+const _HdyRPs = defineEventHandler(async (e) => {
+  setHeader(e, "Content-Type", "application/xslt+xml");
+  setHeader(e, "Cache-Control", "max-age=600, must-revalidate");
+  const fixPath = createSitePathResolver(e, { absolute: false, withBase: true });
+  const { version, moduleConfig } = useRuntimeConfig()["nuxt-simple-sitemap"];
+  const { name: siteName, url: siteUrl } = useSiteConfig(e);
+  const referrer = getHeader(e, "Referer") || "/";
+  const isNotIndexButHasIndex = referrer !== fixPath("/sitemap.xml") && parseURL(referrer).pathname.endsWith("-sitemap.xml");
+  const sitemapName = parseURL(referrer).pathname.split("/").pop()?.split("-sitemap")[0] || void 0;
+  const canonicalQuery = getQuery(referrer).canonical;
+  const isShowingCanonical = typeof canonicalQuery !== "undefined" && canonicalQuery !== "false";
+  const conditionalTips = [
+    'You are looking at a <a href="https://developer.mozilla.org/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/An_Overview" style="color: #398465" target="_blank">XML stylesheet</a>. Read the  <a href="nuxtseo.com/sitemap/guides/customising-ui" style="color: #398465" target="_blank">docs</a> to learn how to customize it.',
+    `URLs missing? Check the <a href="${withQuery("/api/__sitemap__/debug", { sitemap: sitemapName })}" style="color: #398465" target="_blank">debug endpoint</a>`
+  ];
+  if (!isShowingCanonical) {
+    const canonicalPreviewUrl = withQuery(referrer, { canonical: "" });
+    conditionalTips.push(`Your canonical site URL is <strong>${siteUrl}</strong>.`);
+    conditionalTips.push(`You can preview your canonical sitemap by visiting <a href="${canonicalPreviewUrl}" style="color: #398465; white-space: nowrap;">${fixPath(canonicalPreviewUrl)}?canonical</a>`);
+  } else {
+    conditionalTips.push(`You are viewing the canonical sitemap. You can switch to using the request origin: <a href="${fixPath(referrer)}" style="color: #398465; white-space: nowrap ">${fixPath(referrer)}</a>`);
+  }
+  let columns = [...moduleConfig.xslColumns];
+  if (!columns.length) {
+    columns = [
+      { label: "URL", width: "50%" },
+      { label: "Images", width: "25%", select: "count(image:image)" },
+      { label: "Last Updated", width: "25%", select: "concat(substring(sitemap:lastmod,0,11),concat(' ', substring(sitemap:lastmod,12,5)),concat(' ', substring(sitemap:lastmod,20,6)))" }
+    ];
+  }
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="2.0"
+                xmlns:html="http://www.w3.org/TR/REC-html40"
+                xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+                xmlns:sitemap="http://www.sitemaps.org/schemas/sitemap/0.9"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes"/>
+  <xsl:template match="/">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <title>XML Sitemap</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <style type="text/css">
+          body {
+            font-family: Inter, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #333;
+          }
+
+          table {
+            border: none;
+            border-collapse: collapse;
+          }
+
+          .bg-yellow-200 {
+            background-color: #fef9c3;
+          }
+
+          .p-5 {
+            padding: 1.25rem;
+          }
+
+          .rounded {
+            border-radius: 4px;
+            }
+
+          .shadow {
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+          }
+
+          #sitemap tr:nth-child(odd) td {
+            background-color: #f8f8f8 !important;
+          }
+
+          #sitemap tbody tr:hover td {
+            background-color: #fff;
+          }
+
+          #sitemap tbody tr:hover td, #sitemap tbody tr:hover td a {
+            color: #000;
+          }
+
+          .expl a {
+            color: #398465
+            font-weight: 600;
+          }
+
+          .expl a:visited {
+            color: #398465
+          }
+
+          a {
+            color: #000;
+            text-decoration: none;
+          }
+
+          a:visited {
+            color: #777;
+          }
+
+          a:hover {
+            text-decoration: underline;
+          }
+
+          td {
+            font-size: 12px;
+          }
+
+          .text-2xl {
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1.25;
+          }
+
+          th {
+            text-align: left;
+            padding-right: 30px;
+            font-size: 12px;
+          }
+
+          thead th {
+            border-bottom: 1px solid #000;
+          }
+          .fixed { position: fixed; }
+          .right-2 { right: 2rem; }
+          .top-2 { top: 2rem; }
+          .w-30 { width: 30rem; }
+          p { margin: 0; }
+          li { padding-bottom: 0.5rem; line-height: 1.5; }
+          h1 { margin: 0; }
+          .mb-5 { margin-bottom: 1.25rem; }
+        </style>
+      </head>
+      <body>
+        <div style="grid-template-columns: 1fr 1fr; display: grid; margin: 3rem;">
+            <div>
+             <div id="content">
+          <h1 class="text-2xl mb-5">${siteName} XML Sitemap</h1>
+          ${isNotIndexButHasIndex ? `<p style="font-size: 12px; margin-bottom: 1rem;"><a href="${fixPath("/sitemap_index.xml")}">${fixPath("/sitemap_index.xml")}</a></p>` : ""}
+          <xsl:if test="count(sitemap:sitemapindex/sitemap:sitemap) &gt; 0">
+            <p class="expl" style="margin-bottom: 1rem;">
+              This XML Sitemap Index file contains
+              <xsl:value-of select="count(sitemap:sitemapindex/sitemap:sitemap)"/> sitemaps.
+            </p>
+            <table id="sitemap" cellpadding="3">
+              <thead>
+                <tr>
+                  <th width="75%">Sitemap</th>
+                  <th width="25%">Last Modified</th>
+                </tr>
+              </thead>
+              <tbody>
+                <xsl:for-each select="sitemap:sitemapindex/sitemap:sitemap">
+                  <xsl:variable name="sitemapURL">
+                    <xsl:value-of select="sitemap:loc"/>
+                  </xsl:variable>
+                  <tr>
+                    <td>
+                      <a href="{$sitemapURL}">
+                        <xsl:value-of select="sitemap:loc"/>
+                      </a>
+                    </td>
+                    <td>
+                      <xsl:value-of
+                        select="concat(substring(sitemap:lastmod,0,11),concat(' ', substring(sitemap:lastmod,12,5)),concat(' ', substring(sitemap:lastmod,20,6)))"/>
+                    </td>
+                  </tr>
+                </xsl:for-each>
+              </tbody>
+            </table>
+          </xsl:if>
+          <xsl:if test="count(sitemap:sitemapindex/sitemap:sitemap) &lt; 1">
+            <p class="expl" style="margin-bottom: 1rem;">
+              This XML Sitemap contains
+              <xsl:value-of select="count(sitemap:urlset/sitemap:url)"/> URLs.
+            </p>
+            <table id="sitemap" cellpadding="3">
+              <thead>
+                <tr>
+                  ${columns.map((c) => `<th width="${c.width}">${c.label}</th>`).join("\n")}
+                </tr>
+              </thead>
+              <tbody>
+                <xsl:variable name="lower" select="'abcdefghijklmnopqrstuvwxyz'"/>
+                <xsl:variable name="upper" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
+                <xsl:for-each select="sitemap:urlset/sitemap:url">
+                  <tr>
+                    <td>
+                      <xsl:variable name="itemURL">
+                        <xsl:value-of select="sitemap:loc"/>
+                      </xsl:variable>
+                      <a href="{$itemURL}">
+                        <xsl:value-of select="sitemap:loc"/>
+                      </a>
+                    </td>
+                    ${columns.filter((c) => c.label !== "URL").map((c) => `<td>
+<xsl:value-of select="${c.select}"/>
+</td>`).join("\n")}
+                  </tr>
+                </xsl:for-each>
+              </tbody>
+            </table>
+          </xsl:if>
+        </div>
+        </div>
+                    ${""}
+        </div>
+      </body>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>
+`;
+});
+
+async function resolveUrls(urls) {
+  if (typeof urls === "function")
+    urls = urls();
+  urls = await urls;
+  return urls;
+}
+async function resolveAsyncDataSources(input) {
+  const { hasPrerenderedRoutesPayload, isNuxtContentDocumentDriven } = input.buildTimeMeta;
+  const entries = [];
+  entries.push({
+    context: "pages",
+    urls: input.pages
+  });
+  if (input.prerenderUrls) {
+    entries.push({
+      context: "prerender",
+      urls: input.prerenderUrls
+    });
+  }
+  if (input.extraRoutes.prerenderUrls.length) {
+    entries.push({
+      context: "nuxt-config.nitro-prerender",
+      urls: input.extraRoutes.prerenderUrls
+    });
+  }
+  if (input.extraRoutes.routeRules.length) {
+    entries.push({
+      context: "nuxt-config.route-rules",
+      urls: input.extraRoutes.routeRules
+    });
+  }
+  entries.push({
+    context: "nuxt-config.module",
+    path: "urls",
+    urls: await resolveUrls(input.moduleConfig.urls)
+  });
+  function doFetch(url, timeout = 8e3) {
+    const context = "api";
+    const start = Date.now();
+    const timeoutController = new AbortController();
+    const abortRequestTimeout = setTimeout(() => timeoutController.abort(), timeout);
+    let isHtmlResponse = false;
+    return globalThis.$fetch(url, {
+      responseType: "json",
+      signal: timeoutController.signal,
+      headers: {
+        Accept: "application/json"
+      },
+      onResponse({ response }) {
+        if (typeof response._data === "string" && response._data.startsWith("<!DOCTYPE html>"))
+          isHtmlResponse = true;
+      }
+    }).then((urls) => {
+      const timeTakenMs = Date.now() - start;
+      if (isHtmlResponse) {
+        entries.push({
+          context,
+          timeTakenMs,
+          urls: [],
+          path: url,
+          error: "Received HTML response instead of JSON"
+        });
+      } else {
+        entries.push({
+          context,
+          timeTakenMs,
+          path: url,
+          urls
+        });
+      }
+    }).catch((err) => {
+      entries.push({
+        context,
+        urls: [],
+        path: url,
+        error: err
+      });
+    }).finally(() => {
+      abortRequestTimeout && clearTimeout(abortRequestTimeout);
+    });
+  }
+  const waitables = [];
+  async function loadSitemapSources(sitemap) {
+    if (sitemap.urls) {
+      entries.push({
+        context: "nuxt-config.module",
+        path: `sitemaps.${sitemap.sitemapName}.urls`,
+        urls: await resolveUrls(sitemap.urls)
+      });
+    }
+    if (sitemap.dynamicUrlsApiEndpoint)
+      waitables.push(doFetch(sitemap.dynamicUrlsApiEndpoint));
+  }
+  if (input.buildTimeMeta.hasApiRoutesUrl)
+    waitables.push(doFetch(input.moduleConfig.dynamicUrlsApiEndpoint));
+  if (!input.sitemap && typeof input.moduleConfig.sitemaps === "object") {
+    for (const entry of Object.entries(input.moduleConfig.sitemaps)) {
+      const [sitemapName, sitemap] = entry;
+      await loadSitemapSources({
+        sitemapName,
+        ...sitemap
+      });
+    }
+  } else if (input.sitemap) {
+    await loadSitemapSources(input.sitemap);
+  }
+  if (hasPrerenderedRoutesPayload)
+    waitables.push(doFetch(input.canonicalUrlResolver("/__sitemap__/routes.json"), 1500));
+  if (isNuxtContentDocumentDriven)
+    waitables.push(doFetch("/api/__sitemap__/document-driven-urls", 4e3));
+  await Promise.all(waitables);
+  return entries;
+}
+
+function createFilter(options = {}) {
+  const include = options.include || [];
+  const exclude = options.exclude || [];
+  if (include.length === 0 && exclude.length === 0)
+    return () => true;
+  return function(path) {
+    for (const v of [{ rules: exclude, result: false }, { rules: include, result: true }]) {
+      const regexRules = v.rules.filter((r) => r instanceof RegExp);
+      if (regexRules.some((r) => r.test(path)))
+        return v.result;
+      const stringRules = v.rules.filter((r) => typeof r === "string");
+      if (stringRules.length > 0) {
+        const routes = {};
+        for (const r of stringRules) {
+          if (r === path)
+            return v.result;
+          routes[r] = true;
+        }
+        const routeRulesMatcher = toRouteMatcher(createRouter({ routes, strictTrailingSlash: false }));
+        if (routeRulesMatcher.matchAll(path).length > 0)
+          return Boolean(v.result);
+      }
+    }
+    return include.length === 0;
+  };
+}
+
+function mergeOnKey(arr, key) {
+  const res = {};
+  arr.forEach((item) => {
+    const k = item[key];
+    res[k] = defu$1(item, res[k] || {});
+  });
+  return Object.values(res);
+}
+
+async function normaliseSitemapData(data, options) {
+  const {
+    defaults,
+    exclude,
+    include,
+    autoLastmod,
+    autoI18n
+  } = options.moduleConfig;
+  const combinedInclude = [...options.sitemap?.include || [], ...include || []];
+  const combinedExclude = [...options.sitemap?.exclude || [], ...exclude || []];
+  const urlFilter = createFilter({ include: combinedInclude, exclude: combinedExclude });
+  function resolve(s) {
+    if (!s)
+      return;
+    s = typeof s === "string" ? s : s.toString();
+    if (hasProtocol(s, { acceptRelative: true, strict: false }))
+      return s;
+    return options.canonicalUrlResolver(s);
+  }
+  const defaultEntryData = defu$1(options.sitemap?.defaults, defaults);
+  if (autoLastmod)
+    defaultEntryData.lastmod = defaultEntryData.lastmod || /* @__PURE__ */ new Date();
+  let entries = data.map((e) => typeof e === "string" ? { loc: e } : e).map((e) => {
+    e = { ...e };
+    if (e.url) {
+      e.loc = e.url;
+      delete e.url;
+    }
+    e.loc = fixSlashes(false, e.loc);
+    e = defu$1(e, defaultEntryData);
+    return e;
+  }).map((e) => {
+    const routeRules = options.getRouteRulesForPath(e.loc);
+    if (routeRules.index === false)
+      return false;
+    return defu$1(routeRules.sitemap || {}, e);
+  });
+  if (autoI18n?.locales) {
+    const entriesByLoc = entries.reduce((acc, e) => {
+      const match = e.loc.match(new RegExp(`^/(${autoI18n.locales.map((l) => l.code).join("|")})(.*)`));
+      let loc = e.loc;
+      let prefix = null;
+      if (match) {
+        loc = match[2] || "/";
+        prefix = match[1];
+      }
+      acc[loc] = acc[loc] || [];
+      acc[loc].push({ entry: e, prefix });
+      return acc;
+    }, {});
+    Object.entries(entriesByLoc).forEach(([loc, childEntry]) => {
+      autoI18n.locales.map((l) => l.code).forEach((prefix) => {
+        if (!childEntry.map((e) => e.prefix).filter(Boolean).includes(prefix)) {
+          if (autoI18n.strategy === "prefix")
+            entries.push({ ...childEntry[0].entry, loc: joinURL(`/${prefix}`, loc) });
+          else if (autoI18n.strategy === "prefix_except_default")
+            entries.push({ ...childEntry[0].entry, loc: prefix === autoI18n.defaultLocale ? loc : joinURL(`/${prefix}`, loc) });
+        }
+      });
+    });
+    entries.map((e) => {
+      let withoutPrefix = e.loc.replace(new RegExp(`^/(${autoI18n.locales.map((l) => l.code).join("|")})(.*)`), "$2");
+      withoutPrefix = withoutPrefix || "/";
+      let xDefault = e.loc;
+      if (autoI18n.strategy === "prefix") {
+        xDefault = joinURL("/", autoI18n.defaultLocale, withoutPrefix);
+      } else if (autoI18n.strategy === "prefix_except_default") {
+        xDefault = withoutPrefix;
+      }
+      e.alternatives = e.alternatives || [
+        ...autoI18n.locales.map((locale) => {
+          const isDefault = locale.code === autoI18n.defaultLocale;
+          let href = "";
+          if (autoI18n.strategy === "prefix") {
+            href = joinURL(locale.code, withoutPrefix);
+          } else if (autoI18n.strategy === "prefix_except_default") {
+            if (isDefault) {
+              href = withoutPrefix;
+            } else {
+              href = joinURL("/", locale.code, withoutPrefix);
+            }
+          }
+          const hreflang = locale.iso || locale.code;
+          return {
+            hreflang,
+            href
+          };
+        }),
+        { hreflang: "x-default", href: xDefault }
+      ];
+      return e;
+    });
+    if (autoI18n.strategy === "prefix") {
+      entries = entries.filter((e) => e.loc.match(new RegExp(`^/(${autoI18n.locales.map((l) => l.code).join("|")})(.*)`)));
+    }
+  }
+  const filteredEntries = entries.filter((e) => e && urlFilter(e.loc));
+  function normaliseEntry(e) {
+    if (e.lastmod) {
+      const date = normaliseDate(e.lastmod);
+      if (date)
+        e.lastmod = date;
+      else
+        delete e.lastmod;
+    }
+    if (!e.lastmod)
+      delete e.lastmod;
+    e.loc = resolve(e.loc);
+    if (e.alternatives) {
+      e.alternatives = mergeOnKey(e.alternatives.map((e2) => {
+        const a = { ...e2 };
+        a.href = resolve(typeof a.href === "string" ? a.href : a.href.href);
+        return a;
+      }), "hreflang");
+    }
+    if (e.images) {
+      e.images = mergeOnKey(e.images.map((i) => {
+        i = { ...i };
+        i.loc = resolve(i.loc);
+        return i;
+      }), "loc");
+    }
+    if (e.videos) {
+      e.videos = e.videos.map((v) => {
+        v = { ...v };
+        v.contentLoc = resolve(v.contentLoc);
+        return v;
+      });
+    }
+    return e;
+  }
+  function normaliseEntries(entries2) {
+    return mergeOnKey(entries2.map(normaliseEntry), "loc").sort((a, b) => {
+      if (a.loc > b.loc)
+        return 1;
+      if (a.loc < b.loc)
+        return -1;
+      return 0;
+    }).sort((a, b) => {
+      const aSegments = a.loc.split("/").length;
+      const bSegments = b.loc.split("/").length;
+      if (aSegments > bSegments)
+        return 1;
+      if (aSegments < bSegments)
+        return -1;
+      return 0;
+    });
+  }
+  const ctx = { urls: normaliseEntries(filteredEntries), sitemapName: options.sitemap?.sitemapName || "sitemap" };
+  if (options.callHook)
+    await options.callHook(ctx);
+  return normaliseEntries(ctx.urls);
+}
+function normaliseDate(date) {
+  const d = typeof date === "string" ? new Date(date) : date;
+  if (!(d instanceof Date))
+    return false;
+  const z = (n) => `0${n}`.slice(-2);
+  return `${d.getUTCFullYear()}-${z(d.getUTCMonth() + 1)}-${z(d.getUTCDate())}T${z(d.getUTCHours())}:${z(d.getUTCMinutes())}:${z(d.getUTCSeconds())}+00:00`;
+}
+
+function wrapSitemapXml(input, { xsl, credits, version }) {
+  input.unshift(`<?xml version="1.0" encoding="UTF-8"?>${xsl ? `<?xml-stylesheet type="text/xsl" href="${xsl}"?>` : ""}`);
+  if (credits)
+    input.push(`<!-- XML Sitemap generated by Nuxt Simple Sitemap V${version} -->`);
+  return input.join("\n");
+}
+function escapeValueForXml(value) {
+  if (value === true || value === false)
+    return value ? "yes" : "no";
+  return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
+}
+
+async function buildSitemap(options) {
+  const sitemapsConfig = options.moduleConfig.sitemaps;
+  const sources = await resolveAsyncDataSources(options);
+  let entries = await normaliseSitemapData(sources.map((e) => e.urls).flat(), options);
+  if (sitemapsConfig === true && options.moduleConfig.defaultSitemapsChunkSize)
+    entries = entries.slice(Number(options.sitemap?.sitemapName) * options.moduleConfig.defaultSitemapsChunkSize, (Number(options.sitemap?.sitemapName) + 1) * options.moduleConfig.defaultSitemapsChunkSize);
+  const resolveKey = (k) => {
+    switch (k) {
+      case "images":
+        return "image";
+      case "videos":
+        return "video";
+      default:
+        return k;
+    }
+  };
+  const handleArray = (key, arr) => {
+    if (arr.length === 0)
+      return false;
+    key = resolveKey(key);
+    if (key === "alternatives") {
+      return arr.map((obj) => [
+        `        <xhtml:link rel="alternate" ${Object.entries(obj).map(([sk, sv]) => `${sk}="${escapeValueForXml(sv)}"`).join(" ")} />`
+      ].join("\n")).join("\n");
+    }
+    return arr.map((obj) => [
+      `        <${key}:${key}>`,
+      ...Object.entries(obj).map(([sk, sv]) => `            <${key}:${sk}>${escapeValueForXml(sv)}</${key}:${sk}>`),
+      `        </${key}:${key}>`
+    ].join("\n")).join("\n");
+  };
+  return wrapSitemapXml([
+    '<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ...entries?.map((e) => `    <url>
+${Object.keys(e).map((k) => Array.isArray(e[k]) ? handleArray(k, e[k]) : `        <${k}>${escapeValueForXml(e[k])}</${k}>`).filter((l) => l !== false).join("\n")}
+    </url>`) ?? [],
+    "</urlset>"
+  ], {
+    xsl: options.moduleConfig.xsl ? options.relativeBaseUrlResolver(options.moduleConfig.xsl) : false,
+    credits: options.moduleConfig.credits,
+    version: options.buildTimeMeta.version
+  });
+}
+
+async function setupCache(e, key) {
+  const { moduleConfig, buildTimeMeta } = useRuntimeConfig()["nuxt-simple-sitemap"];
+  const useCache = moduleConfig.runtimeCacheStorage && moduleConfig.cacheTtl && moduleConfig.cacheTtl > 0;
+  const baseCacheKey = moduleConfig.runtimeCacheStorage === "default" ? `/cache/nuxt-simple-sitemap${buildTimeMeta.version}` : `/nuxt-simple-sitemap/${buildTimeMeta.version}`;
+  const cache = prefixStorage(useStorage(), `${baseCacheKey}/sitemaps`);
+  let xSitemapCacheHeader = "MISS";
+  let xSitemapCacheExpires = 0;
+  const purge = typeof getQuery$1(e).purge !== "undefined";
+  let cachedSitemap = false;
+  if (useCache && await cache.hasItem(key)) {
+    const { value, expiresAt } = await cache.getItem(key);
+    if (expiresAt > Date.now()) {
+      if (purge) {
+        xSitemapCacheHeader = "PURGE";
+        await cache.removeItem(key);
+      } else {
+        xSitemapCacheHeader = "HIT";
+        xSitemapCacheExpires = expiresAt;
+        cachedSitemap = value;
+      }
+    } else {
+      await cache.removeItem(key);
+    }
+  }
+  setHeader(e, "x-sitemap-cache", xSitemapCacheHeader);
+  setHeader(e, "x-sitemap-cache-expires", xSitemapCacheExpires.toString());
+  return {
+    cachedSitemap,
+    cache: async (sitemap) => {
+      if (useCache)
+        await cache.setItem(key, { value: sitemap, expiresAt: Date.now() + (moduleConfig.cacheTtl || 0) });
+    }
+  };
+}
+
+const pages = [
+  {
+    "loc": "/company",
+    "lastmod": "2023-08-28T13:00:46.527Z"
+  },
+  {
+    "loc": "/contact",
+    "lastmod": "2023-08-28T13:01:11.071Z"
+  },
+  {
+    "loc": "/cuhk-icar",
+    "lastmod": "2023-08-29T10:41:40.791Z"
+  },
+  {
+    "loc": "/cuhk-iport",
+    "lastmod": "2023-09-04T09:55:15.499Z"
+  },
+  {
+    "loc": "/",
+    "lastmod": "2023-08-29T09:26:24.272Z"
+  },
+  {
+    "loc": "/ishare",
+    "lastmod": "2023-08-28T13:02:05.893Z"
+  },
+  {
+    "loc": "/staff",
+    "lastmod": "2023-08-10T03:28:07.033Z"
+  }
+];
+
+const routeRules = [];
+const prerenderUrls = [];
+const extraRoutes = { routeRules, prerenderUrls };
+
+const _TU69yw = defineEventHandler(async (e) => {
+  const { moduleConfig, buildTimeMeta } = useRuntimeConfig()["nuxt-simple-sitemap"];
+  if (moduleConfig.sitemaps) {
+    return sendRedirect(e, withBase("/sitemap_index.xml", useRuntimeConfig().app.baseURL), 301);
+  }
+  const { cachedSitemap, cache } = await setupCache(e, "sitemap", getQuery$1(e).purge);
+  let sitemap = cachedSitemap;
+  if (!cachedSitemap) {
+    const nitro = useNitroApp();
+    const callHook = async (ctx2) => {
+      await nitro.hooks.callHook("sitemap:resolved", ctx2);
+    };
+    const canonicalQuery = getQuery$1(e).canonical;
+    const isShowingCanonical = typeof canonicalQuery !== "undefined" && canonicalQuery !== "false";
+    sitemap = await buildSitemap({
+      moduleConfig,
+      extraRoutes,
+      buildTimeMeta,
+      canonicalUrlResolver: createSitePathResolver(e, { canonical: isShowingCanonical || !false, absolute: true, withBase: true }),
+      relativeBaseUrlResolver: createSitePathResolver(e, { absolute: false, withBase: true }),
+      getRouteRulesForPath,
+      callHook,
+      pages
+    });
+    const ctx = { sitemap, sitemapName: "sitemap" };
+    await nitro.hooks.callHook("sitemap:output", ctx);
+    sitemap = ctx.sitemap;
+    await cache(sitemap);
+  }
+  setHeader(e, "Content-Type", "text/xml; charset=UTF-8");
+  setHeader(e, "Cache-Control", "max-age=600, must-revalidate");
+  return sitemap;
+});
+
 const _BUmDx6 = lazyEventHandler(() => {
   const opts = useRuntimeConfig().ipx;
   const ipxOptions = {
@@ -1697,6 +2552,9 @@ const _lazy_6CIL7R = () => import('../handlers/renderer.mjs').then(function (n) 
 const handlers = [
   { route: '', handler: _f4b49z, lazy: false, middleware: true, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_6CIL7R, lazy: true, middleware: false, method: undefined },
+  { route: '', handler: _zOc7zo, lazy: false, middleware: true, method: undefined },
+  { route: '/__sitemap__/style.xsl', handler: _HdyRPs, lazy: false, middleware: false, method: undefined },
+  { route: '/sitemap.xml', handler: _TU69yw, lazy: false, middleware: false, method: undefined },
   { route: '/_ipx/**', handler: _BUmDx6, lazy: false, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_6CIL7R, lazy: true, middleware: false, method: undefined }
 ];
