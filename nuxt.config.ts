@@ -10,8 +10,9 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxt/image',
+    'nuxt-simple-sitemap'
   ],
-  image: {
-    // Options
-  }
+  site: {
+    url: 'https://eduairhk.com',
+  },
 })
