@@ -1,5 +1,5 @@
 import { T as Title, M as Meta } from './components-d2ce98ee.mjs';
-import { useSSRContext, withCtx, createTextVNode, mergeProps } from 'vue';
+import { useSSRContext, withCtx, createTextVNode, defineComponent, ref, createElementBlock, mergeProps } from 'vue';
 import { ssrRenderComponent, ssrRenderStyle, ssrRenderAttrs, ssrRenderClass, ssrRenderAttr } from 'vue/server-renderer';
 import { _ as _export_sfc } from '../server.mjs';
 import { _ as __nuxt_component_4 } from './nuxt-img-0e8c7b1b.mjs';
@@ -189,8 +189,31 @@ _sfc_main$1.setup = (props, ctx) => {
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 const __nuxt_component_5 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-fb17c1a8"]]);
+const __nuxt_component_6 = /* @__PURE__ */ defineComponent({
+  name: "ClientOnly",
+  inheritAttrs: false,
+  // eslint-disable-next-line vue/require-prop-types
+  props: ["fallback", "placeholder", "placeholderTag", "fallbackTag"],
+  setup(_, { slots, attrs }) {
+    const mounted = ref(false);
+    return (props) => {
+      var _a;
+      if (mounted.value) {
+        return (_a = slots.default) == null ? void 0 : _a.call(slots);
+      }
+      const slot = slots.fallback || slots.placeholder;
+      if (slot) {
+        return slot();
+      }
+      const fallbackStr = props.fallback || props.placeholder || "";
+      const fallbackTag = props.fallbackTag || props.placeholderTag || "span";
+      return createElementBlock(fallbackTag, attrs, fallbackStr);
+    };
+  }
+});
 const _sfc_main = {
   name: "CUHK-iPort",
+  components: {},
   methods: {
     scroll(index) {
       this.$nextTick(function() {
@@ -225,6 +248,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   const _component_iPortImage = __nuxt_component_3;
   const _component_nuxt_img = __nuxt_component_4;
   const _component_iPortVideoPlayer = __nuxt_component_5;
+  const _component_ClientOnly = __nuxt_component_6;
   _push(`<!--[-->`);
   _push(ssrRenderComponent(_component_Title, null, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -246,16 +270,18 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     list: ["CUHK iPort", "\u529F\u80FD\u4ECB\u7D39", "\u4F7F\u7528\u8AAA\u660E", "\u5BE6\u9A57\u7BC4\u4F8B", "\u7DE8\u7A0B\u5E73\u53F0", "\u5BE6\u7528\u8CC7\u6E90\u7E3D\u532F"],
     style: { "z-index": "1" }
   }, null, _parent));
-  _push(`<div class="pageContent-container" style="${ssrRenderStyle({ "z-index": "0", "flex-direction": "column", "justify-content": "flex-start", "align-items": "flex-start", "padding": "30px", "overflow": "visible", "width": "1000px", "max-width": "100%" })}" data-v-a512682a><div class="page-content" data-v-a512682a><span class="title" data-v-a512682a>CUHK iPort</span><div class="text-content" style="${ssrRenderStyle({ "display": "flex", "justify-content": "center", "width": "100%" })}" data-v-a512682a>`);
+  _push(`<div class="pageContent-container" style="${ssrRenderStyle({ "z-index": "0", "flex-direction": "column", "justify-content": "flex-start", "align-items": "flex-start", "padding": "30px", "overflow": "visible", "width": "1000px", "max-width": "100%" })}" data-v-dfe481a7><div class="page-content" data-v-dfe481a7><span class="title" data-v-dfe481a7>CUHK iPort</span><div class="text-content" style="${ssrRenderStyle({ "display": "flex", "justify-content": "center", "width": "100%" })}" data-v-dfe481a7>`);
   _push(ssrRenderComponent(_component_iPortImage, null, null, _parent));
-  _push(`</div><span class="title" data-v-a512682a>\u529F\u80FD\u4ECB\u7D39</span><div class="text-content" data-v-a512682a> CUHK iPort\u662F\u7531\u4E2D\u5927\u5718\u968A\u958B\u767C\u7684AI\u6559\u5B78\u5957\u4EF6\u3002\u5E2B\u751F\u53EF\u7701\u7565\u8907\u96DC\u7684\u786C\u4EF6\u642D\u7DAB\u6B65\u9A5F\uFF0C\u4F7F\u7528iPort\u7DE8\u7A0B\u5E73\u53F0\uFF0C\u5957\u7528\u65BCTeachable Machine\u8A13\u7DF4\u7684AI\u6A21\u578B\uFF0C\u7121\u9808\u7DE8\u7A0B\u5373\u53EF\u5BE6\u73FEAI\u7269\u806F\u7DB2\uFF08AIoT\uFF09 \uFF0C \u5EFA\u7ACB\u4E0D\u540C\u7684AI\u9805\u76EE\u3002 `);
+  _push(`</div><span class="title" data-v-dfe481a7>\u529F\u80FD\u4ECB\u7D39</span><div class="text-content" data-v-dfe481a7> CUHK iPort\u662F\u7531\u4E2D\u5927\u5718\u968A\u958B\u767C\u7684AI\u6559\u5B78\u5957\u4EF6\u3002\u5E2B\u751F\u53EF\u7701\u7565\u8907\u96DC\u7684\u786C\u4EF6\u642D\u7DAB\u6B65\u9A5F\uFF0C\u4F7F\u7528iPort\u7DE8\u7A0B\u5E73\u53F0\uFF0C\u5957\u7528\u65BCTeachable Machine\u8A13\u7DF4\u7684AI\u6A21\u578B\uFF0C\u7121\u9808\u7DE8\u7A0B\u5373\u53EF\u5BE6\u73FEAI\u7269\u806F\u7DB2\uFF08AIoT\uFF09 \uFF0C \u5EFA\u7ACB\u4E0D\u540C\u7684AI\u9805\u76EE\u3002 `);
   _push(ssrRenderComponent(_component_nuxt_img, {
     src: "iportDesc4.png",
     style: { "width": "100%", "max-width": "900px" }
   }, null, _parent));
-  _push(`</div><span class="title" data-v-a512682a>\u4F7F\u7528\u8AAA\u660E</span><div class="text-content" data-v-a512682a>`);
+  _push(`</div><span class="title" data-v-dfe481a7>\u4F7F\u7528\u8AAA\u660E</span><div class="text-content" data-v-dfe481a7>`);
   _push(ssrRenderComponent(_component_iPortVideoPlayer, null, null, _parent));
-  _push(`</div><span class="title" data-v-a512682a>\u5BE6\u9A57\u7BC4\u4F8B</span><div class="text-content" data-v-a512682a> \u5373\u5C07\u63A8\u51FA </div><span class="title" data-v-a512682a>\u7DE8\u7A0B\u5E73\u53F0</span><div class="text-content" data-v-a512682a><a href="https://iport.eduairhk.com" target="_blank" class="btn" data-v-a512682a>\u524D\u5F80CUHK iPort\u7DE8\u7A0B\u5E73\u53F0</a></div><span class="title" data-v-a512682a>\u5BE6\u7528\u8CC7\u6E90\u7E3D\u532F</span><div class="text-content" data-v-a512682a> \u5373\u5C07\u63A8\u51FA </div></div></div><!--]-->`);
+  _push(`</div><span class="title" data-v-dfe481a7>\u5BE6\u9A57\u7BC4\u4F8B</span><div class="text-content" data-v-dfe481a7>`);
+  _push(ssrRenderComponent(_component_ClientOnly, null, {}, _parent));
+  _push(`</div><span class="title" data-v-dfe481a7>\u7DE8\u7A0B\u5E73\u53F0</span><div class="text-content" data-v-dfe481a7><a href="https://iport.eduairhk.com" target="_blank" class="btn" data-v-dfe481a7>\u524D\u5F80CUHK iPort\u7DE8\u7A0B\u5E73\u53F0</a></div><span class="title" data-v-dfe481a7>\u5BE6\u7528\u8CC7\u6E90\u7E3D\u532F</span><div class="text-content" data-v-dfe481a7> \u5373\u5C07\u63A8\u51FA </div></div></div><!--]-->`);
 }
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
@@ -263,7 +289,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/cuhk-iport.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const cuhkIport = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-a512682a"]]);
+const cuhkIport = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-dfe481a7"]]);
 
 export { cuhkIport as default };
-//# sourceMappingURL=cuhk-iport-904f3766.mjs.map
+//# sourceMappingURL=cuhk-iport-c536ae7d.mjs.map

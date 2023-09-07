@@ -19,7 +19,9 @@
       </div>
       <span class="title">實驗範例</span>
       <div class="text-content">
-        即將推出
+        <ClientOnly>
+            <Youtube src="https://www.youtube.com/watch?v=TxEHsEqnwGw&ab_channel=DerekCheung" />
+        </ClientOnly>
       </div>
       <span class="title">編程平台</span>
       <div class="text-content">
@@ -94,6 +96,8 @@
 <script>
 export default {
   name: 'CUHK-iPort',
+  components:{
+  },
   methods: {
     scroll (index) {
       this.$nextTick(function () {
