@@ -345,7 +345,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-iport-c536ae7d.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-iport-c06a9d17.mjs').then((m) => m.default || m)
   },
   {
     name: "index",

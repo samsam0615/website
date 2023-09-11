@@ -18,9 +18,10 @@
         <iPortVideoPlayer />
       </div>
       <span class="title">實驗範例</span>
-      <div class="text-content">
-        <ClientOnly>
-            <Youtube src="https://www.youtube.com/watch?v=TxEHsEqnwGw&ab_channel=DerekCheung" />
+      <div class="text-content" style="max-width: 100%" >
+        <ClientOnly >
+            <!-- <Youtube src="https://www.youtube.com/watch?v=TxEHsEqnwGw&ab_channel=DerekCheung" class="pc"/> -->
+            <Youtube src="https://www.youtube.com/watch?v=TxEHsEqnwGw&ab_channel=DerekCheung" :width="viewWidth" />
         </ClientOnly>
       </div>
       <span class="title">編程平台</span>
@@ -90,13 +91,16 @@
     width: calc(100% );
   }
 
-  
+
 </style>
 
 <script>
 export default {
   name: 'CUHK-iPort',
-  components:{
+  data () {
+    return {
+      viewWidth: 1024
+    }
   },
   methods: {
     scroll (index) {
@@ -110,6 +114,10 @@ export default {
           }
         }, 1)
       })
+    },
+    vw (percent) {
+      var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+      return (percent * w) / 100;
     }
   },
   watch: {
@@ -123,6 +131,18 @@ export default {
     }
   },
   mounted () {
+    const self = this;
+    this.viewWidth = this.vw(50);
+
+    const resizeObserver = new ResizeObserver(entries => {
+        self.viewWidth = Math.min(self.vw(50), 1024);
+        self.viewWidth = Math.max(self.viewWidth, 300);
+      }
+    )
+
+    // start observing a DOM node
+    resizeObserver.observe(document.body)
+
   }
 }
 </script>
