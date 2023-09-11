@@ -1,5 +1,5 @@
 import { b as buildAssetsURL } from '../../handlers/renderer.mjs';
-import { T as Title } from './components-d2ce98ee.mjs';
+import { T as Title, M as Meta } from './components-d2ce98ee.mjs';
 import { useSSRContext, withCtx, createTextVNode, mergeProps } from 'vue';
 import { ssrRenderComponent, ssrRenderStyle, ssrRenderAttrs, ssrRenderAttr, ssrInterpolate, ssrRenderSlot } from 'vue/server-renderer';
 import { _ as _export_sfc } from '../server.mjs';
@@ -57,7 +57,7 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/VideoBackground.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_1 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$3]]);
+const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$3]]);
 const _sfc_main$2 = {
   name: "PictureFrame",
   props: ["title", "image"]
@@ -73,7 +73,7 @@ _sfc_main$2.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/PictureFrame.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender$2], ["__scopeId", "data-v-21206e75"]]);
+const __nuxt_component_3 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender$2], ["__scopeId", "data-v-21206e75"]]);
 const _sfc_main$1 = {
   name: "UpCounter",
   props: ["image", "text1", "text2", "number"],
@@ -109,7 +109,7 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/UpCounter.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const __nuxt_component_3 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-bcc371f5"]]);
+const __nuxt_component_4 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-bcc371f5"]]);
 const _sfc_main = {
   name: "IndexPage",
   mounted() {
@@ -117,9 +117,10 @@ const _sfc_main = {
 };
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_Title = Title;
-  const _component_VideoBackground = __nuxt_component_1;
-  const _component_PictureFrame = __nuxt_component_2;
-  const _component_UpCounter = __nuxt_component_3;
+  const _component_Meta = Meta;
+  const _component_VideoBackground = __nuxt_component_2;
+  const _component_PictureFrame = __nuxt_component_3;
+  const _component_UpCounter = __nuxt_component_4;
   _push(`<!--[-->`);
   _push(ssrRenderComponent(_component_Title, null, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -133,6 +134,10 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     }),
     _: 1
   }, _parent));
+  _push(ssrRenderComponent(_component_Meta, {
+    name: "description",
+    content: "\u611B\u52D5\u667A\u6559\u80B2\u7CFB\u7D71\u6709\u9650\u516C\u53F8\u7531\u9999\u6E2F\u4E2D\u6587\u5927\u5B78\u521D\u5275\u7A2E\u5B50\u57FA\u91D1\u555F\u52D5\uFF0C\u662F\u4E00\u5BB6\u975E\u725F\u5229\u6A5F\u69CB\uFF0C\u8463\u4E8B\u6703\u6210\u54E1\u70BA\u9999\u6E2F\u4E2D\u6587\u5927\u5B78\u6DF1\u5733\u7814\u7A76\u9662\u9662\u9577\u4EFB\u63DA\u6559\u6388\u548C\u7CFB\u7D71\u5DE5\u7A0B\u8207\u5DE5\u7A0B\u7BA1\u7406\u5B78\u8499\u7F8E\u73B2\u6559\u6388\uFF0C\u81F4\u529B\u65BC\u4EE5\u6559\u80B2\u70BA\u4E3B\u5C0E\uFF0C\u63A8\u52D5\u5E74\u8F15\u4EBA\u5C0DAI\u53CASTEAM\u7684\u5B78\u7FD2\u548C\u8A8D\u77E5\uFF0C\u5E6B\u52A9\u4ED6\u5011\u5728\u76F8\u95DC\u9818\u57DF\u4E2D\u5BE6\u73FE\u81EA\u5DF1\u7684\u5922\u60F3\u548C\u62B1\u8CA0\u3002"
+  }, null, _parent));
   _push(`<div style="${ssrRenderStyle({ "width": "100%" })}"><div class="promote-container video-container" style="${ssrRenderStyle({ "overflow": "hidden", "width": "100%" })}">`);
   _push(ssrRenderComponent(_component_VideoBackground, null, null, _parent));
   _push(`<div class="video-description"><label class="title">\u638C\u63E1AI \u66F4\u597D\u660E\u5929</label><label class="content">\u611B\u52D5\u667A\u6559\u80B2\u7CFB\u7D71\u63D0\u4F9B\u4E00\u7CFB\u5217\u5275\u65B0AI\u5B78\u7FD2\u5957\u4EF6\u53CA\u8AB2\u7A0B</label></div></div><div class="promote-container promote-container-1" style="${ssrRenderStyle(null)}"><div class="promote-container-content text-container" onclick=""><div class="description-box-title" style="${ssrRenderStyle({ "padding": "30px", "font-size": "30px", "font-weight": "500" })}"><label>\u6211\u5011\u7684\u670D\u52D9</label></div><div style="${ssrRenderStyle({ "display": "flex", "justify-content": "center", "width": "100%", "gap": "50px", "padding-top": "20px" })}">`);
@@ -202,4 +207,4 @@ _sfc_main.setup = (props, ctx) => {
 const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { index as default };
-//# sourceMappingURL=index-c8a2ff95.mjs.map
+//# sourceMappingURL=index-95d58fd8.mjs.map
