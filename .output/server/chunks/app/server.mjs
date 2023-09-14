@@ -345,7 +345,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-iport-c06a9d17.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-iport-c5ebb067.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -362,6 +362,14 @@ const _routes = [
     alias: [],
     redirect: void 0,
     component: () => import('./_nuxt/ishare-9c6a347e.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "privacy",
+    path: "/privacy",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/privacy-2022abf6.mjs').then((m) => m.default || m)
   },
   {
     name: "staff",

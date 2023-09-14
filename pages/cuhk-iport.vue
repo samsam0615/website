@@ -11,7 +11,7 @@
       <span class="title">功能介紹</span>
       <div class="text-content">
         CUHK iPort是由中大團隊開發的AI教學套件。師生可省略複雜的硬件搭綫步驟，使用iPort編程平台，套用於Teachable Machine訓練的AI模型，無須編程即可實現AI物聯網（AIoT） ， 建立不同的AI項目。
-        <nuxt-img src="iportDesc4.png" style="width: 100%; max-width: 900px;"/>
+        <nuxt-img src="iportDesc5.png" style="width: 100%; max-width: 900px;"/>
       </div>
       <span class="title">使用說明</span>
       <div class="text-content">

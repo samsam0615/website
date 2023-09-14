@@ -287,18 +287,18 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     list: ["CUHK iPort", "\u529F\u80FD\u4ECB\u7D39", "\u4F7F\u7528\u8AAA\u660E", "\u5BE6\u9A57\u7BC4\u4F8B", "\u7DE8\u7A0B\u5E73\u53F0", "\u5BE6\u7528\u8CC7\u6E90\u7E3D\u532F"],
     style: { "z-index": "1" }
   }, null, _parent));
-  _push(`<div class="pageContent-container" style="${ssrRenderStyle({ "z-index": "0", "flex-direction": "column", "justify-content": "flex-start", "align-items": "flex-start", "padding": "30px", "overflow": "visible", "width": "1000px", "max-width": "100%" })}" data-v-3e686a58><div class="page-content" data-v-3e686a58><span class="title" data-v-3e686a58>CUHK iPort</span><div class="text-content" style="${ssrRenderStyle({ "display": "flex", "justify-content": "center", "width": "100%" })}" data-v-3e686a58>`);
+  _push(`<div class="pageContent-container" style="${ssrRenderStyle({ "z-index": "0", "flex-direction": "column", "justify-content": "flex-start", "align-items": "flex-start", "padding": "30px", "overflow": "visible", "width": "1000px", "max-width": "100%" })}" data-v-5aeebdee><div class="page-content" data-v-5aeebdee><span class="title" data-v-5aeebdee>CUHK iPort</span><div class="text-content" style="${ssrRenderStyle({ "display": "flex", "justify-content": "center", "width": "100%" })}" data-v-5aeebdee>`);
   _push(ssrRenderComponent(_component_iPortImage, null, null, _parent));
-  _push(`</div><span class="title" data-v-3e686a58>\u529F\u80FD\u4ECB\u7D39</span><div class="text-content" data-v-3e686a58> CUHK iPort\u662F\u7531\u4E2D\u5927\u5718\u968A\u958B\u767C\u7684AI\u6559\u5B78\u5957\u4EF6\u3002\u5E2B\u751F\u53EF\u7701\u7565\u8907\u96DC\u7684\u786C\u4EF6\u642D\u7DAB\u6B65\u9A5F\uFF0C\u4F7F\u7528iPort\u7DE8\u7A0B\u5E73\u53F0\uFF0C\u5957\u7528\u65BCTeachable Machine\u8A13\u7DF4\u7684AI\u6A21\u578B\uFF0C\u7121\u9808\u7DE8\u7A0B\u5373\u53EF\u5BE6\u73FEAI\u7269\u806F\u7DB2\uFF08AIoT\uFF09 \uFF0C \u5EFA\u7ACB\u4E0D\u540C\u7684AI\u9805\u76EE\u3002 `);
+  _push(`</div><span class="title" data-v-5aeebdee>\u529F\u80FD\u4ECB\u7D39</span><div class="text-content" data-v-5aeebdee> CUHK iPort\u662F\u7531\u4E2D\u5927\u5718\u968A\u958B\u767C\u7684AI\u6559\u5B78\u5957\u4EF6\u3002\u5E2B\u751F\u53EF\u7701\u7565\u8907\u96DC\u7684\u786C\u4EF6\u642D\u7DAB\u6B65\u9A5F\uFF0C\u4F7F\u7528iPort\u7DE8\u7A0B\u5E73\u53F0\uFF0C\u5957\u7528\u65BCTeachable Machine\u8A13\u7DF4\u7684AI\u6A21\u578B\uFF0C\u7121\u9808\u7DE8\u7A0B\u5373\u53EF\u5BE6\u73FEAI\u7269\u806F\u7DB2\uFF08AIoT\uFF09 \uFF0C \u5EFA\u7ACB\u4E0D\u540C\u7684AI\u9805\u76EE\u3002 `);
   _push(ssrRenderComponent(_component_nuxt_img, {
-    src: "iportDesc4.png",
+    src: "iportDesc5.png",
     style: { "width": "100%", "max-width": "900px" }
   }, null, _parent));
-  _push(`</div><span class="title" data-v-3e686a58>\u4F7F\u7528\u8AAA\u660E</span><div class="text-content" data-v-3e686a58>`);
+  _push(`</div><span class="title" data-v-5aeebdee>\u4F7F\u7528\u8AAA\u660E</span><div class="text-content" data-v-5aeebdee>`);
   _push(ssrRenderComponent(_component_iPortVideoPlayer, null, null, _parent));
-  _push(`</div><span class="title" data-v-3e686a58>\u5BE6\u9A57\u7BC4\u4F8B</span><div class="text-content" style="${ssrRenderStyle({ "max-width": "100%" })}" data-v-3e686a58>`);
+  _push(`</div><span class="title" data-v-5aeebdee>\u5BE6\u9A57\u7BC4\u4F8B</span><div class="text-content" style="${ssrRenderStyle({ "max-width": "100%" })}" data-v-5aeebdee>`);
   _push(ssrRenderComponent(_component_ClientOnly, null, {}, _parent));
-  _push(`</div><span class="title" data-v-3e686a58>\u7DE8\u7A0B\u5E73\u53F0</span><div class="text-content" data-v-3e686a58><a href="https://iport.eduairhk.com" target="_blank" class="btn" data-v-3e686a58>\u524D\u5F80CUHK iPort\u7DE8\u7A0B\u5E73\u53F0</a></div><span class="title" data-v-3e686a58>\u5BE6\u7528\u8CC7\u6E90\u7E3D\u532F</span><div class="text-content" data-v-3e686a58> \u5373\u5C07\u63A8\u51FA </div></div></div><!--]-->`);
+  _push(`</div><span class="title" data-v-5aeebdee>\u7DE8\u7A0B\u5E73\u53F0</span><div class="text-content" data-v-5aeebdee><a href="https://iport.eduairhk.com" target="_blank" class="btn" data-v-5aeebdee>\u524D\u5F80CUHK iPort\u7DE8\u7A0B\u5E73\u53F0</a></div><span class="title" data-v-5aeebdee>\u5BE6\u7528\u8CC7\u6E90\u7E3D\u532F</span><div class="text-content" data-v-5aeebdee> \u5373\u5C07\u63A8\u51FA </div></div></div><!--]-->`);
 }
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
@@ -306,7 +306,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/cuhk-iport.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const cuhkIport = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-3e686a58"]]);
+const cuhkIport = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-5aeebdee"]]);
 
 export { cuhkIport as default };
-//# sourceMappingURL=cuhk-iport-c06a9d17.mjs.map
+//# sourceMappingURL=cuhk-iport-c5ebb067.mjs.map
