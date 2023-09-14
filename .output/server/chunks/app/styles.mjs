@@ -1,10 +1,10 @@
 const interopDefault = r => r.default || r || [];
 const styles = {
   "node_modules/nuxt/dist/app/entry.js": () => import('./_nuxt/entry-styles.4179cf9e.mjs').then(interopDefault),
-  "pages/contact.vue": () => import('./_nuxt/contact-styles.d4a46e13.mjs').then(interopDefault),
   "pages/company.vue": () => import('./_nuxt/company-styles.49f0b9c9.mjs').then(interopDefault),
-  "pages/cuhk-iport.vue": () => import('./_nuxt/cuhk-iport-styles.68b010e5.mjs').then(interopDefault),
+  "pages/contact.vue": () => import('./_nuxt/contact-styles.d4a46e13.mjs').then(interopDefault),
   "pages/cuhk-icar.vue": () => import('./_nuxt/cuhk-icar-styles.395f3457.mjs').then(interopDefault),
+  "pages/cuhk-iport.vue": () => import('./_nuxt/cuhk-iport-styles.3c86cfa4.mjs').then(interopDefault),
   "pages/index.vue": () => import('./_nuxt/index-styles.8c669c72.mjs').then(interopDefault),
   "pages/ishare.vue": () => import('./_nuxt/ishare-styles.1d9adb89.mjs').then(interopDefault),
   "pages/privacy.vue": () => import('./_nuxt/privacy-styles.a8ecbc88.mjs').then(interopDefault),
