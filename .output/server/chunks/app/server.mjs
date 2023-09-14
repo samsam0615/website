@@ -369,7 +369,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/privacy-2022abf6.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/privacy-7a236d61.mjs').then((m) => m.default || m)
   },
   {
     name: "staff",
