@@ -1,12 +1,12 @@
 <template>
     <div class="container" >
-        <div style="display: flex; gap: 10px; width: 1024px;">
-            <span :class="{active: Math.floor(pos) == 0, inactive: Math.floor(pos) != 0}">CUHK iPort</span>
-            <span :class="{active: Math.floor(pos) == 1, inactive: Math.floor(pos) != 1}">功能介紹</span>
-            <span :class="{active: Math.floor(pos) == 2, inactive: Math.floor(pos) != 2}">使用說明</span>
-            <span :class="{active: Math.floor(pos) == 3, inactive: Math.floor(pos) != 3}">實驗範例</span>
-            <span :class="{active: Math.floor(pos) == 4, inactive: Math.floor(pos) != 4}">編程平台</span>
-            <span :class="{active: Math.floor(pos) == 5, inactive: Math.floor(pos) != 5}">資源總匯</span>
+        <div style="display: flex; gap: 10px; width: 1200px;">
+            <span :class="{active: Math.floor(pos) == 0, inactive: Math.floor(pos) != 0}">iPort是甚麼？</span>
+            <span :class="{active: Math.floor(pos) == 1, inactive: Math.floor(pos) != 1}">如何使用iPort？</span>
+            <span :class="{active: Math.floor(pos) == 2, inactive: Math.floor(pos) != 2}">警報系統</span>
+            <span :class="{active: Math.floor(pos) == 3, inactive: Math.floor(pos) != 3}">手勢控制小車</span>
+            <span :class="{active: Math.floor(pos) == 4, inactive: Math.floor(pos) != 4}">聲控開關</span>
+            <span :class="{active: Math.floor(pos) == 5, inactive: Math.floor(pos) != 5}">iPort編程平台</span>
         </div>
     </div>
 </template>
@@ -67,10 +67,10 @@
     }
 
     .active {
-        font-size: 25px !important;
+        font-size: 22px !important;
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1200px) {
         .container{
             display: none;
         }

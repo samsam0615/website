@@ -1,15 +1,15 @@
 <template>
     <Title>隱私政策</Title>
     <div class="container" >
-        <div class="page-content" style="line-height: 17px" ref="content">
+        <div class="page-content " style="line-height: 17px" ref="content">
             <div style="line-height: 22px"> 
                 最後更新日期：2023年9月14日<br>
                 Effective Date: September 14, 2023<br>
             </div>
             <br><br>
 
-            <span class="title">隱私政策<br></span><br>
-            <div class="text-content" style="display: flex; justify-content: center; width: 100%"> 
+            <span class="title font-middle">隱私政策<br></span><br>
+            <div class="text-content font-small" style="display: flex; justify-content: center; width: 100%"> 
                 1. 本聲明旨在通知你，你享有《個人資料（私穩）條例》的權利。<br>
                 2. 你，作為服務使用者通過填寫用於各種目的的申請表（例如:參與愛動智教
                 育系統有限公司的活動(下稱「愛動智」)，宣傳愛動智的活動等）所提供的資料只會用於申請表所列明的目的，並只供甄選參加者之用。<br>
@@ -64,13 +64,11 @@ export default {
 }
 
 .title{
-    font-size: 22px;
     font-weight: 600;
     padding: 10px 0;
 }
 
 .text-content{
-    font-size: 20px;
     line-height: 30px;
 }
 </style>

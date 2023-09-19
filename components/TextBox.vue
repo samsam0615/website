@@ -30,7 +30,6 @@ export default {
     justify-content: center;
     align-items: flex-start;
     padding: 20px 30px;
-    width: calc(100% );
     width: max-content;
     
 }
@@ -45,7 +44,7 @@ export default {
     margin-right: 30px
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .text-box{
         line-break: auto;
         max-width: 100%;

@@ -156,7 +156,7 @@ export default {
     z-index: 10;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1200px) {
     .page-catalog2{
         display: none;
     }
@@ -164,7 +164,7 @@ export default {
 
 
   .page-catalog2 label{
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 600;
     min-width: max-content;
     color: orange;

@@ -11,9 +11,9 @@
 *{box-sizing: border-box;}
 
 body{
-    font-family: "Gill Sans", sans-serif;
+    font-family: "Noto Sans CJK TC", "Microsoft JhengHei", PingFang,"Gill Sans", sans-serif;
     min-width: 100%;
-    
+    color: #666
 }
 
 .unselectable {
@@ -27,11 +27,11 @@ body{
 
 .text-container{
     max-width: 1200px;
-    padding: 2% 2%;
     text-align: left;
     height: 100%;
     display: flex;
     flex-direction: column;
+    gap: 0;
 
 }
 
@@ -40,18 +40,14 @@ body{
 }
 
 .pageTitle{
-    font-size: 33px;
     font-weight: 800;
     padding: 15px 0;
 }
 
 .pageDescription{
-    font-size: 22px;
-    padding: 0 0 15px 0;
 }
 
 .subTitle{
-    font-size: 30px;
     display: flex;
     align-items: center;
     font-weight: 800;
@@ -70,10 +66,6 @@ body{
     max-height: 30px;
 }
 
-.subDescription{
-    margin-top: 15px;
-    font-size: 23px;
-}
 
 .pageContent-container{
     padding: 60px 0 30px 0;
@@ -85,7 +77,24 @@ body{
     height: max-content;
     animation: fadeIn 1s ease-in-out;
     overflow: hidden;
-    max-width: 1366px;
+    max-width: 1200px;
+}
+
+.font-big{
+    font-size: 30px;
+}
+
+.font-middle{
+    font-size: 25px;
+}
+
+.font-small{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.font-mini{
+    font-size: 18px;
 }
 
 @keyframes fadeIn {
@@ -101,30 +110,29 @@ body{
     .text-container{
         width: 95%;
         max-width: 95%;
-    }
-    .pageTitle{
-        font-size: 1.75rem;
-    }
-    .pageDescription{
-        font-size: 1.25rem;
-    }
-    .subTitle{
-        font-size: 27px;
-        font-weight: 500;
-    }
-    .subDescription{
-        font-size: 1.20rem;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .text-container{
-        width: 95%;
-        max-width: 95%;
         overflow: hidden;
         -webkit-overflow-scrolling: touch;
     }
+
+    .font-big{
+        font-size: 25px;
+    }
+
+    .font-middle{
+        font-size: 20px;
+    }
+
+    .font-small{
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .font-mini{
+        font-size: 15px;
+    }
+
 }
+
 
 .vue-pdf-embed canvas{
   padding: 10px;

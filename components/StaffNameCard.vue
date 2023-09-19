@@ -4,7 +4,7 @@
             <img :src="image">
         </div>
         <div class="staff-description-container">
-            <label class="subTitle staffSubTitle" :style="{ 'border-bottom': '3px solid ' + color }">
+            <label class="subTitle staffSubTitle font-middle" :style="{ 'border-bottom': '3px solid ' + color }">
                 {{title}}
                 <a :href="youtube" target="_blank"><img src='/image/youtube.png' v-if="youtube"></a>
             </label>
@@ -29,9 +29,8 @@ export default {
     position: relative;
     display: flex;
     flex-basis: 450px;
-    height: 625px;
     margin: 20px;
-    padding: 0 10px;
+    padding: 20px 10px;
 
     flex-direction: column; align-items: center; background: #f3f3f3;
 }
@@ -122,6 +121,7 @@ export default {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        padding: 25px;
     }
     .staff-container.reverse{
         flex-direction: column;

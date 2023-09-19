@@ -84,17 +84,14 @@ export default {
 }
 
 .text-overlay .material-symbols-outlined{
-  font-size: 3rem;
 }
 
 .back-h2 {
-  font-size: 20px;
   font-weight: 500;
   margin-top: 0;
 }
 
 .back-h2-title {
-  font-size: 20px;
   font-weight: 700;
   width: 90px;
   height: 45px;
@@ -127,7 +124,6 @@ export default {
   width: 100%;
   height: 100%;
 
-  font-size: 25px;
 }
 
 .purchase-button-container .buttonContainer{
@@ -136,7 +132,6 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 20px;
 }
 
 .purchase-button-container a{
@@ -172,7 +167,6 @@ export default {
   }
 
   .back-h2 {
-    font-size: 10px;
     overflow: hidden;
     width: 80%;
     font-weight: 100;
@@ -191,14 +185,12 @@ export default {
 
   .purchase-button-container{
     transform: perspective(1000px) rotateY(179deg) translateY(0) translateX(3px) translateZ(80px);
-    font-size: 10px;
   }
 
 }
 
 @media screen and (max-width: 1921px) and (min-width: 768px)  {
   .purchase-button-container{
-      font-size: 20px;
   }
 
 }

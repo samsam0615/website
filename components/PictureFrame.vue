@@ -32,7 +32,9 @@ export default {
   border-radius: 20px;
   background-color: white;
   width: 300px;
+  min-width: 300px;
   height: 300px;
+  min-height: 300px;
   max-height: 40vw;
   padding: 0 0;
   /* background: blue; */
@@ -74,31 +76,7 @@ export default {
     font-size: 25px;
 }
 
-@media screen and (max-width: 767px) {
-    .picture-frame-container{
-        padding: 20px 0;
-    }
 
-    .description-container-wrapper{
-        height: fit-content;
-    }
-
-    .picture-frame-container .title{
-        padding-top: 20px;
-    }
-
-    .picture-frame-container .title label{
-        font-size: 17px;
-    }
-
-    .picture-frame-container .overlay .text{
-        font-size: 17px;
-    }
-
-    .description-box-title label{
-        font-size: 20px;
-    }
-}
 
 .overlay {
   position: absolute;
@@ -143,5 +121,16 @@ export default {
 .picture-frame-container:hover .overlay{
     opacity: 0.8;
     border-radius: 20px;
+}
+
+
+@media screen and (max-width: 400px) {
+  .picture-frame-container{
+    width: 250px;
+    min-width: 250px;
+    height: 250px;
+    min-height: 250px;
+    /* background: blue; */
+  }
 }
 </style>

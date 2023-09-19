@@ -1,36 +1,36 @@
 <template>
-  <div class="footer">
-    <div style="">
-      聯絡我們
-      <ul>
-        <li>
-          <span class="material-symbols-outlined">
-            call
-          </span>
-          <a>
-            +852 3618 8911
-          </a>
-        </li>
-        <li>
-          <span class="material-symbols-outlined">
-            mail
-          </span>
-          <a>
-            info@eduairhk.com
-          </a>
-        </li>
-        <li>
-          <span class="material-symbols-outlined">
-            location_on
-          </span>
-          <a>
-            沙田香港科學園16W棟2樓237室
-          </a>
-        </li>
-      </ul>
+  <div class="container">
+    <div class="footer" style=""> 
+      <div  class="main">
+        <label class="font-middle" >EduAIR 愛動智</label>
+        <a href="https://www.facebook.com/eduair" target="_blank">
+          <nuxt-img src="facebook3.png" height="20px" /> 
+          <label class="font-mini" style="padding: 0 10px">愛動智教育系統</label>
+        </a>
+        <a href="https://www.instagram.com/eduair_hk/" target="_blank">
+          <nuxt-img src="instagram3.png" height="20px" style="" /> 
+          <label class="font-mini" style="padding: 0 10px">eduair_hk</label>
+        </a>
+      </div>
+      <div>
+        <label class="font-middle" >聯絡我們</label>
+        <label style="padding: 4px 0">
+          <nuxt-img src="call3.png" height="18px" style="" /> 
+          <label class="font-mini" style="padding: 0 10px;">+852 3618 8911</label>
+        </label>
+        <label style="padding: 4px 0">
+          <nuxt-img src="mail3.png" height="18px" /> 
+          <label class="font-mini" style="padding: 0 10px;">info@eduairhk.com</label>
+        </label>
+        <label style="padding: 4px 0">
+          <nuxt-img src="location3.png" height="18px" /> 
+          <label class="font-mini" style="padding: 0 10px;">科學園16W棟2樓237室</label>
+        </label>
+      </div>
+
+
     </div>
-    <div style="line-height: 24px;">
-      版權所有 © 愛動智教育系統有限公司<br>
+    <div style="padding: 15px 0"> 
       Copyright © EduAIR Systems Limited.
     </div>
   </div>
@@ -42,71 +42,68 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     @import 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200';
-    .footer{
+    .container{
         width: 100%;
         max-width: 100%;
         min-height: 140px;
         display: flex;
+        flex-direction: column;
+        align-items: center;
         position: relative;
         color: #ffffff;
         justify-content: space-around;
-        gap: 2vw;
         padding: 15px 0 0 0;
         background: #6d0e77;
     }
-    .footer .material-symbols-outlined{
-        font-size: 16px;
+    .footer{
+      max-width: 1200px; width: 100%; display: flex; flex-direction: row; justify-content: space-between;
     }
     .footer div{
-        border-top: 3px solid #ffffff;
-        width: 25%;
+        width: max-content;
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
-        padding: 5px 0px 0 0;
+        padding: 0 0px 0 0;
         text-align: left;
     }
-    .footer div ul{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        list-style-type: none;
-        padding-left: 0;
-        margin-top: 0;
-    }
-    .footer div ul li{
-        margin-top: 5px;
-        overflow-wrap: break-word;
 
-    }
-    .footer div ul li a{
-        text-decoration: none;
-        color: #ffffff;
-        margin-left: 15px;
+    .footer .main{
+      border: none; 
+      padding: 0 0 0 0; 
     }
 
-    .copyright{
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+
+
+    a{
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+      padding: 10px 0 0 0; display: flex; align-items: center; cursor: pointer;
+      width: max-content;
     }
-    .copyright div{
-        margin:0px auto;
+
+    a label{
+      cursor: pointer;
     }
+    
+    a:hover{
+      color: #ffa500
+    }
+
     @media screen and (max-width: 1200px) {
-      .footer{
+/*       .footer{
         padding: 15px;
-        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
       .footer div{
-          flex-basis: 100%;
-          width: 100%;
-      }
-      .footer div:not(:first-child) {
-        border-top: none;
+          padding-bottom: 20px;
+      } */
+
+      .footer{
+        max-width: 1200px; width: 100%; display: flex; flex-direction: row; justify-content: space-around;
       }
     }
 </style>

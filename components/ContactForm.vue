@@ -113,7 +113,6 @@ export default {
         color: #5663c7;
         outline: none;
         width: 100%;
-        /* font-size: 16px; */
     }
 
     .contactform-container input[type=text]:focus, textarea:focus {

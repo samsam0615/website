@@ -1,12 +1,12 @@
 <template>
   <div class="upcounter-container">
-    <div  style="width: 60px; height: 60px; display: flex"> 
+    <div style="width: 60px; height: 60px; display: flex"> 
         <img :src='image' style="width: 60px; object-fit: contain;">
     </div>
-    <label>{{text1}}</label>
+    <label class="font-small">{{text1}}</label>
     <!-- <vue3-count-to :startVal='0' :endVal='number' :duration='4000' :autoplay='false' ref="upcounter" /> -->
-    <span>{{number}}</span>
-    <label>{{text2}}</label>
+    <span class="font-big">{{number}}</span>
+    <label class="font-small">{{text2}}</label>
   </div>
 </template>
 
@@ -64,7 +64,7 @@ export default {
 
 .upcounter-container{
     background-color: gainsboro;
-    width: 200px;
+    width: 180px;
     height: 200px;
     border-radius: 5px;
     display: flex;
@@ -74,12 +74,10 @@ export default {
 }
 
 .upcounter-container span{
-    font-size: 40px;
     color: orange;
 }
 
 .upcounter-container label{
-    font-size: 20px;
 }
 
 @media screen and (max-width: 1200px) {

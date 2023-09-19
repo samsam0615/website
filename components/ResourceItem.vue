@@ -35,12 +35,12 @@ export default {
 
 <style>
 .resourceItem{
-    flex-basis: 20%;
+    flex-basis: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 5px 0;
 }
 
 .resourceItem .image{
@@ -71,20 +71,6 @@ export default {
     to {background-color: blue;}
 }
 
-@media screen and (min-width: 768px) and (max-width: 1000px){
-    .resourceItem{
-        flex-basis: 50%;
-    }
-}
 
-@media screen and (max-width: 767px){
-    .resourceItem{
-        flex-basis: 20%;
-    }
 
-    .resourceItem div{
-        width: 90px;
-        height: 90px;
-    }
-}
 </style>

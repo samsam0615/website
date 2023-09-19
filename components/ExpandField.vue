@@ -1,5 +1,5 @@
 <template>
-    <div class="expand-field">
+    <div class="expand-field font-middle">
         <div class="expand-field-top">
             <div style="display: flex; flex-direction: row; align-items: center;">
                 <div class="question">？</div>
@@ -44,7 +44,6 @@ export default {
 .expand-field-top{
     width: 100%;
     color: orange;
-    font-size: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -57,7 +56,6 @@ export default {
     border-radius: 50%;
     background: rgb(255,165,0);
     color: white;
-    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,6 +79,5 @@ export default {
     color: white;
     border-radius: 5px;
     color: #5b2700;
-    font-size: 18px;
 }
 </style>

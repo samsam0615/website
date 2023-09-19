@@ -1,12 +1,12 @@
-import { hasInjectionContext, getCurrentInstance, version, inject, ref, watchEffect, watch, defineComponent, computed, h, resolveComponent, useSSRContext, createApp, reactive, unref, provide, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, toRef, shallowRef, shallowReactive, isReadonly, defineAsyncComponent, isRef, isShallow, isReactive, toRaw, mergeProps, nextTick, Suspense, Transition, withCtx, createTextVNode } from 'vue';
+import { version, defineComponent, ref, computed, h, getCurrentInstance, inject, watchEffect, watch, resolveComponent, useSSRContext, createApp, reactive, hasInjectionContext, unref, provide, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, toRef, shallowRef, shallowReactive, isReadonly, defineAsyncComponent, isRef, isShallow, isReactive, toRaw, mergeProps, nextTick, Suspense, Transition, withCtx, createTextVNode } from 'vue';
 import { $fetch } from 'ofetch';
 import { createHooks } from 'hookable';
 import { getContext, executeAsync } from 'unctx';
 import { createMemoryHistory, createRouter, START_LOCATION, RouterView } from 'vue-router';
 import { createError as createError$1, sanitizeStatusCode } from 'h3';
-import { hasProtocol, parseURL, parseQuery, withTrailingSlash, withoutTrailingSlash, withQuery, joinURL, withHttps } from 'ufo';
+import { hasProtocol, parseURL, parseQuery, encodeParam, withTrailingSlash, withoutTrailingSlash, withLeadingSlash, joinURL, withQuery, encodePath, withHttps } from 'ufo';
 import { renderSSRHead } from '@unhead/ssr';
-import { getActiveHead, createServerHead as createServerHead$1 } from 'unhead';
+import { composableNames, getActiveHead, createServerHead as createServerHead$1 } from 'unhead';
 import { defineHeadPlugin } from '@unhead/shared';
 import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode, ssrRenderAttrs, ssrRenderStyle, ssrRenderAttr } from 'vue/server-renderer';
 import { defu } from 'defu';
@@ -321,7 +321,15 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/company-766ef391.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/company-6d9b8cf4.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "company2",
+    path: "/company2",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/company2-472c2dd0.mjs').then((m) => m.default || m)
   },
   {
     name: "contact",
@@ -329,7 +337,15 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/contact-e1d6840f.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/contact-890e8717.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "contact2",
+    path: "/contact2",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/contact2-c0532d02.mjs').then((m) => m.default || m)
   },
   {
     name: "cuhk-icar",
@@ -337,7 +353,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-icar-6b0b7eea.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-icar-96c26952.mjs').then((m) => m.default || m)
   },
   {
     name: "cuhk-iport",
@@ -345,7 +361,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-iport-fd7ae4d5.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-iport-535fd41c.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -353,7 +369,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-95d58fd8.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-25719c4c.mjs').then((m) => m.default || m)
   },
   {
     name: "ishare",
@@ -361,7 +377,15 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/ishare-9c6a347e.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/ishare-0166e5a6.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "news",
+    path: "/news",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/news-cd00415a.mjs').then((m) => m.default || m)
   },
   {
     name: "privacy",
@@ -369,7 +393,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/privacy-7a236d61.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/privacy-91db5c31.mjs').then((m) => m.default || m)
   },
   {
     name: "staff",
@@ -377,7 +401,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/staff-2006aef3.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/staff-d4e7faff.mjs').then((m) => m.default || m)
   }
 ];
 const appHead = { "meta": [{ "name": "viewport", "content": "width=device-width, initial-scale=1" }, { "charset": "utf-8" }], "link": [], "style": [], "script": [], "noscript": [] };
@@ -697,6 +721,12 @@ function useHead(input, options = {}) {
     return isBrowser ? clientUseHead(input, options) : serverUseHead(input, options);
   }
 }
+const coreComposableNames = [
+  "injectHead"
+];
+({
+  "@unhead/vue": [...coreComposableNames, ...composableNames]
+});
 function useRequestEvent(nuxtApp = useNuxtApp()) {
   var _a;
   return (_a = nuxtApp.ssrContext) == null ? void 0 : _a.event;
@@ -1034,14 +1064,6 @@ const _sfc_main$4 = {
     this.$router.afterEach((to, from, next) => {
       self.isExpand = false;
     });
-    document.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-      if (scrollY === 0) {
-        this.isTop = true;
-      } else {
-        this.isTop = false;
-      }
-    });
   },
   methods: {
     isActive(route) {
@@ -1053,7 +1075,7 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   const _component_NuxtLink = __nuxt_component_0$1;
   _push(`<div${ssrRenderAttrs(mergeProps({
     ref: "menubar",
-    class: ["menubar unselectable", { expand: $data.isExpand, menubar1: $data.isTop, menubar2: !$data.isTop }]
+    class: ["menubar unselectable menubar2", { expand: $data.isExpand, menubar1: false, menubar2: !$data.isTop }]
   }, _attrs))}><div class="layer" style="${ssrRenderStyle({ "height": "100%" })}">`);
   _push(ssrRenderComponent(_component_NuxtLink, {
     to: "/",
@@ -1226,7 +1248,7 @@ const _wrapIf = (component, props, slots) => {
     return props ? h(component, props, slots) : (_a = slots.default) == null ? void 0 : _a.call(slots);
   } };
 };
-const __nuxt_component_1 = /* @__PURE__ */ defineComponent({
+const __nuxt_component_1$1 = /* @__PURE__ */ defineComponent({
   name: "NuxtPage",
   inheritAttrs: false,
   props: {
@@ -1313,11 +1335,465 @@ function _mergeTransitionProps(routeProps) {
   }));
   return defu(..._props);
 }
+async function imageMeta(_ctx, url) {
+  const meta = await _imageMeta(url).catch((err) => {
+    console.error("Failed to get image meta for " + url, err + "");
+    return {
+      width: 0,
+      height: 0,
+      ratio: 0
+    };
+  });
+  return meta;
+}
+async function _imageMeta(url) {
+  {
+    const imageMeta2 = await import('image-meta').then((r) => r.imageMeta);
+    const data = await fetch(url).then((res) => res.buffer());
+    const metadata = imageMeta2(data);
+    if (!metadata) {
+      throw new Error(`No metadata could be extracted from the image \`${url}\`.`);
+    }
+    const { width, height } = metadata;
+    const meta = {
+      width,
+      height,
+      ratio: width && height ? width / height : void 0
+    };
+    return meta;
+  }
+}
+function createMapper(map) {
+  return (key) => {
+    return key ? map[key] || key : map.missingValue;
+  };
+}
+function createOperationsGenerator({ formatter, keyMap, joinWith = "/", valueMap } = {}) {
+  if (!formatter) {
+    formatter = (key, value) => `${key}=${value}`;
+  }
+  if (keyMap && typeof keyMap !== "function") {
+    keyMap = createMapper(keyMap);
+  }
+  const map = valueMap || {};
+  Object.keys(map).forEach((valueKey) => {
+    if (typeof map[valueKey] !== "function") {
+      map[valueKey] = createMapper(map[valueKey]);
+    }
+  });
+  return (modifiers = {}) => {
+    const operations = Object.entries(modifiers).filter(([_, value]) => typeof value !== "undefined").map(([key, value]) => {
+      const mapper = map[key];
+      if (typeof mapper === "function") {
+        value = mapper(modifiers[key]);
+      }
+      key = typeof keyMap === "function" ? keyMap(key) : key;
+      return formatter(key, value);
+    });
+    return operations.join(joinWith);
+  };
+}
+function parseSize(input = "") {
+  if (typeof input === "number") {
+    return input;
+  }
+  if (typeof input === "string") {
+    if (input.replace("px", "").match(/^\d+$/g)) {
+      return parseInt(input, 10);
+    }
+  }
+}
+function createImage(globalOptions) {
+  const ctx = {
+    options: globalOptions
+  };
+  const getImage2 = (input, options = {}) => {
+    const image = resolveImage(ctx, input, options);
+    return image;
+  };
+  const $img = (input, modifiers = {}, options = {}) => {
+    return getImage2(input, {
+      ...options,
+      modifiers: defu(modifiers, options.modifiers || {})
+    }).url;
+  };
+  for (const presetName in globalOptions.presets) {
+    $img[presetName] = (source, modifiers, options) => $img(source, modifiers, { ...globalOptions.presets[presetName], ...options });
+  }
+  $img.options = globalOptions;
+  $img.getImage = getImage2;
+  $img.getMeta = (input, options) => getMeta(ctx, input, options);
+  $img.getSizes = (input, options) => getSizes(ctx, input, options);
+  ctx.$img = $img;
+  return $img;
+}
+async function getMeta(ctx, input, options) {
+  const image = resolveImage(ctx, input, { ...options });
+  if (typeof image.getMeta === "function") {
+    return await image.getMeta();
+  } else {
+    return await imageMeta(ctx, image.url);
+  }
+}
+function resolveImage(ctx, input, options) {
+  var _a, _b;
+  if (typeof input !== "string" || input === "") {
+    throw new TypeError(`input must be a string (received ${typeof input}: ${JSON.stringify(input)})`);
+  }
+  if (input.startsWith("data:")) {
+    return {
+      url: input
+    };
+  }
+  const { provider, defaults } = getProvider(ctx, options.provider || ctx.options.provider);
+  const preset = getPreset(ctx, options.preset);
+  input = hasProtocol(input) ? input : withLeadingSlash(input);
+  if (!provider.supportsAlias) {
+    for (const base in ctx.options.alias) {
+      if (input.startsWith(base)) {
+        input = joinURL(ctx.options.alias[base], input.substr(base.length));
+      }
+    }
+  }
+  if (provider.validateDomains && hasProtocol(input)) {
+    const inputHost = parseURL(input).host;
+    if (!ctx.options.domains.find((d) => d === inputHost)) {
+      return {
+        url: input
+      };
+    }
+  }
+  const _options = defu(options, preset, defaults);
+  _options.modifiers = { ..._options.modifiers };
+  const expectedFormat = _options.modifiers.format;
+  if ((_a = _options.modifiers) == null ? void 0 : _a.width) {
+    _options.modifiers.width = parseSize(_options.modifiers.width);
+  }
+  if ((_b = _options.modifiers) == null ? void 0 : _b.height) {
+    _options.modifiers.height = parseSize(_options.modifiers.height);
+  }
+  const image = provider.getImage(input, _options, ctx);
+  image.format = image.format || expectedFormat || "";
+  return image;
+}
+function getProvider(ctx, name) {
+  const provider = ctx.options.providers[name];
+  if (!provider) {
+    throw new Error("Unknown provider: " + name);
+  }
+  return provider;
+}
+function getPreset(ctx, name) {
+  if (!name) {
+    return {};
+  }
+  if (!ctx.options.presets[name]) {
+    throw new Error("Unknown preset: " + name);
+  }
+  return ctx.options.presets[name];
+}
+function getSizes(ctx, input, opts) {
+  var _a, _b;
+  const width = parseSize((_a = opts.modifiers) == null ? void 0 : _a.width);
+  const height = parseSize((_b = opts.modifiers) == null ? void 0 : _b.height);
+  const hwRatio = width && height ? height / width : 0;
+  const variants = [];
+  const sizes = {};
+  if (typeof opts.sizes === "string") {
+    for (const entry2 of opts.sizes.split(/[\s,]+/).filter((e) => e)) {
+      const s = entry2.split(":");
+      if (s.length !== 2) {
+        continue;
+      }
+      sizes[s[0].trim()] = s[1].trim();
+    }
+  } else {
+    Object.assign(sizes, opts.sizes);
+  }
+  for (const key in sizes) {
+    const screenMaxWidth = ctx.options.screens && ctx.options.screens[key] || parseInt(key);
+    let size = String(sizes[key]);
+    const isFluid = size.endsWith("vw");
+    if (!isFluid && /^\d+$/.test(size)) {
+      size = size + "px";
+    }
+    if (!isFluid && !size.endsWith("px")) {
+      continue;
+    }
+    let _cWidth = parseInt(size);
+    if (!screenMaxWidth || !_cWidth) {
+      continue;
+    }
+    if (isFluid) {
+      _cWidth = Math.round(_cWidth / 100 * screenMaxWidth);
+    }
+    const _cHeight = hwRatio ? Math.round(_cWidth * hwRatio) : height;
+    variants.push({
+      width: _cWidth,
+      size,
+      screenMaxWidth,
+      media: `(max-width: ${screenMaxWidth}px)`,
+      src: ctx.$img(input, { ...opts.modifiers, width: _cWidth, height: _cHeight }, opts)
+    });
+  }
+  variants.sort((v1, v2) => v1.screenMaxWidth - v2.screenMaxWidth);
+  const defaultVar = variants[variants.length - 1];
+  if (defaultVar) {
+    defaultVar.media = "";
+  }
+  return {
+    sizes: variants.map((v) => `${v.media ? v.media + " " : ""}${v.size}`).join(", "),
+    srcset: variants.map((v) => `${v.src} ${v.width}w`).join(", "),
+    src: defaultVar == null ? void 0 : defaultVar.src
+  };
+}
+const operationsGenerator = createOperationsGenerator({
+  keyMap: {
+    format: "f",
+    fit: "fit",
+    width: "w",
+    height: "h",
+    resize: "s",
+    quality: "q",
+    background: "b"
+  },
+  joinWith: "&",
+  formatter: (key, val) => encodeParam(key) + "_" + encodeParam(val)
+});
+const getImage = (src, { modifiers = {}, baseURL: baseURL2 } = {}, ctx) => {
+  if (modifiers.width && modifiers.height) {
+    modifiers.resize = `${modifiers.width}x${modifiers.height}`;
+    delete modifiers.width;
+    delete modifiers.height;
+  }
+  const params = operationsGenerator(modifiers) || "_";
+  if (!baseURL2) {
+    baseURL2 = joinURL(ctx.options.nuxt.baseURL, "/_ipx");
+  }
+  return {
+    url: joinURL(baseURL2, params, encodePath(src))
+  };
+};
+const validateDomains = true;
+const supportsAlias = true;
+const ipxRuntime$j5aHsReDat = /* @__PURE__ */ Object.freeze({
+  __proto__: null,
+  getImage,
+  supportsAlias,
+  validateDomains
+});
+const imageOptions = {
+  "screens": {
+    "xs": 320,
+    "sm": 640,
+    "md": 768,
+    "lg": 1024,
+    "xl": 1280,
+    "xxl": 1536,
+    "2xl": 1536
+  },
+  "presets": {},
+  "provider": "ipx",
+  "domains": [],
+  "alias": {}
+};
+imageOptions.providers = {
+  ["ipx"]: { provider: ipxRuntime$j5aHsReDat, defaults: void 0 }
+};
+const useImage = () => {
+  const config = /* @__PURE__ */ useRuntimeConfig();
+  const nuxtApp = useNuxtApp();
+  return nuxtApp.$img || nuxtApp._img || (nuxtApp._img = createImage({
+    ...imageOptions,
+    nuxt: {
+      baseURL: config.app.baseURL
+    }
+  }));
+};
+const baseImageProps = {
+  // input source
+  src: { type: String, required: true },
+  // modifiers
+  format: { type: String, default: void 0 },
+  quality: { type: [Number, String], default: void 0 },
+  background: { type: String, default: void 0 },
+  fit: { type: String, default: void 0 },
+  modifiers: { type: Object, default: void 0 },
+  // options
+  preset: { type: String, default: void 0 },
+  provider: { type: String, default: void 0 },
+  sizes: { type: [Object, String], default: void 0 },
+  preload: { type: Boolean, default: void 0 },
+  // <img> attributes
+  width: { type: [String, Number], default: void 0 },
+  height: { type: [String, Number], default: void 0 },
+  alt: { type: String, default: void 0 },
+  referrerpolicy: { type: String, default: void 0 },
+  usemap: { type: String, default: void 0 },
+  longdesc: { type: String, default: void 0 },
+  ismap: { type: Boolean, default: void 0 },
+  loading: { type: String, default: void 0 },
+  crossorigin: {
+    type: [Boolean, String],
+    default: void 0,
+    validator: (val) => ["anonymous", "use-credentials", "", true, false].includes(val)
+  },
+  decoding: {
+    type: String,
+    default: void 0,
+    validator: (val) => ["async", "auto", "sync"].includes(val)
+  }
+};
+const useBaseImage = (props) => {
+  const options = computed(() => {
+    return {
+      provider: props.provider,
+      preset: props.preset
+    };
+  });
+  const attrs = computed(() => {
+    return {
+      width: parseSize(props.width),
+      height: parseSize(props.height),
+      alt: props.alt,
+      referrerpolicy: props.referrerpolicy,
+      usemap: props.usemap,
+      longdesc: props.longdesc,
+      ismap: props.ismap,
+      crossorigin: props.crossorigin === true ? "anonymous" : props.crossorigin || void 0,
+      loading: props.loading,
+      decoding: props.decoding
+    };
+  });
+  const modifiers = computed(() => {
+    return {
+      ...props.modifiers,
+      width: parseSize(props.width),
+      height: parseSize(props.height),
+      format: props.format,
+      quality: props.quality,
+      background: props.background,
+      fit: props.fit
+    };
+  });
+  return {
+    options,
+    attrs,
+    modifiers
+  };
+};
+const imgProps = {
+  ...baseImageProps,
+  placeholder: { type: [Boolean, String, Number, Array], default: void 0 }
+};
+const __nuxt_component_1 = /* @__PURE__ */ defineComponent({
+  name: "NuxtImg",
+  props: imgProps,
+  emits: ["load", "error"],
+  setup: (props, ctx) => {
+    const $img = useImage();
+    const _base = useBaseImage(props);
+    const placeholderLoaded = ref(false);
+    const sizes = computed(() => $img.getSizes(props.src, {
+      ..._base.options.value,
+      sizes: props.sizes,
+      modifiers: {
+        ..._base.modifiers.value,
+        width: parseSize(props.width),
+        height: parseSize(props.height)
+      }
+    }));
+    const attrs = computed(() => {
+      const attrs2 = { ..._base.attrs.value, "data-nuxt-img": "" };
+      if (props.sizes) {
+        attrs2.sizes = sizes.value.sizes;
+        attrs2.srcset = sizes.value.srcset;
+      }
+      return attrs2;
+    });
+    const placeholder = computed(() => {
+      let placeholder2 = props.placeholder;
+      if (placeholder2 === "") {
+        placeholder2 = true;
+      }
+      if (!placeholder2 || placeholderLoaded.value) {
+        return false;
+      }
+      if (typeof placeholder2 === "string") {
+        return placeholder2;
+      }
+      const size = Array.isArray(placeholder2) ? placeholder2 : typeof placeholder2 === "number" ? [placeholder2, placeholder2] : [10, 10];
+      return $img(props.src, {
+        ..._base.modifiers.value,
+        width: size[0],
+        height: size[1],
+        quality: size[2] || 50
+      }, _base.options.value);
+    });
+    const mainSrc = computed(
+      () => props.sizes ? sizes.value.src : $img(props.src, _base.modifiers.value, _base.options.value)
+    );
+    const src = computed(() => placeholder.value ? placeholder.value : mainSrc.value);
+    if (props.preload) {
+      const isResponsive = Object.values(sizes.value).every((v) => v);
+      useHead({
+        link: [{
+          rel: "preload",
+          as: "image",
+          ...!isResponsive ? { href: src.value } : {
+            href: sizes.value.src,
+            imagesizes: sizes.value.sizes,
+            imagesrcset: sizes.value.srcset
+          }
+        }]
+      });
+    }
+    const imgEl = ref();
+    const nuxtApp = useNuxtApp();
+    nuxtApp.isHydrating;
+    return () => h("img", {
+      ref: imgEl,
+      key: src.value,
+      src: src.value,
+      ...{ onerror: "this.setAttribute('data-error', 1)" },
+      ...attrs.value,
+      ...ctx.attrs
+    });
+  }
+});
 const _sfc_main$3 = {
   name: "CommonFooter"
 };
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "footer" }, _attrs))}><div style="${ssrRenderStyle({})}"> 聯絡我們 <ul><li><span class="material-symbols-outlined"> call </span><a> +852 3618 8911 </a></li><li><span class="material-symbols-outlined"> mail </span><a> info@eduairhk.com </a></li><li><span class="material-symbols-outlined"> location_on </span><a> 沙田香港科學園16W棟2樓237室 </a></li></ul></div><div style="${ssrRenderStyle({ "line-height": "24px" })}"> 版權所有 © 愛動智教育系統有限公司<br> Copyright © EduAIR Systems Limited. </div></div>`);
+  const _component_nuxt_img = __nuxt_component_1;
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "container" }, _attrs))} data-v-344db37b><div class="footer" style="${ssrRenderStyle({})}" data-v-344db37b><div class="main" data-v-344db37b><label class="font-middle" data-v-344db37b>EduAIR 愛動智</label><a href="https://www.facebook.com/eduair" target="_blank" data-v-344db37b>`);
+  _push(ssrRenderComponent(_component_nuxt_img, {
+    src: "facebook3.png",
+    height: "20px"
+  }, null, _parent));
+  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-344db37b>愛動智教育系統</label></a><a href="https://www.instagram.com/eduair_hk/" target="_blank" data-v-344db37b>`);
+  _push(ssrRenderComponent(_component_nuxt_img, {
+    src: "instagram3.png",
+    height: "20px",
+    style: {}
+  }, null, _parent));
+  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-344db37b>eduair_hk</label></a></div><div data-v-344db37b><label class="font-middle" data-v-344db37b>聯絡我們</label><label style="${ssrRenderStyle({ "padding": "4px 0" })}" data-v-344db37b>`);
+  _push(ssrRenderComponent(_component_nuxt_img, {
+    src: "call3.png",
+    height: "18px",
+    style: {}
+  }, null, _parent));
+  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-344db37b>+852 3618 8911</label></label><label style="${ssrRenderStyle({ "padding": "4px 0" })}" data-v-344db37b>`);
+  _push(ssrRenderComponent(_component_nuxt_img, {
+    src: "mail3.png",
+    height: "18px"
+  }, null, _parent));
+  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-344db37b>info@eduairhk.com</label></label><label style="${ssrRenderStyle({ "padding": "4px 0" })}" data-v-344db37b>`);
+  _push(ssrRenderComponent(_component_nuxt_img, {
+    src: "location3.png",
+    height: "18px"
+  }, null, _parent));
+  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-344db37b>科學園16W棟2樓237室</label></label></div></div><div style="${ssrRenderStyle({ "padding": "15px 0" })}" data-v-344db37b> Copyright © EduAIR Systems Limited. </div></div>`);
 }
 const _sfc_setup$3 = _sfc_main$3.setup;
 _sfc_main$3.setup = (props, ctx) => {
@@ -1325,11 +1801,11 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/CommonFooter.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$1]]);
+const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-344db37b"]]);
 const _sfc_main$2 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_CommonHeader = __nuxt_component_0;
-  const _component_NuxtPage = __nuxt_component_1;
+  const _component_NuxtPage = __nuxt_component_1$1;
   const _component_CommonFooter = __nuxt_component_2;
   _push(`<div${ssrRenderAttrs(mergeProps({ style: { "overflow": "visible", "position": "absolute", "max-width": "100%", "min-width": "100%", "top": "0", "left": "0", "display": "flex", "flex-direction": "column", "align-items": "center", "min-height": "100vh" } }, _attrs))}>`);
   _push(ssrRenderComponent(_component_CommonHeader, null, null, _parent));
@@ -1365,8 +1841,8 @@ const _sfc_main$1 = {
     const statusMessage = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/error-404-1f5fc477.mjs').then((r) => r.default || r));
-    const _Error = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/error-500-69e48f38.mjs').then((r) => r.default || r));
+    const _Error404 = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/error-404-f49b91f2.mjs').then((r) => r.default || r));
+    const _Error = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/error-500-f1c1539b.mjs').then((r) => r.default || r));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ statusCode: unref(statusCode), statusMessage: unref(statusMessage), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));
@@ -1451,5 +1927,5 @@ let entry;
 }
 const entry$1 = (ctx) => entry(ctx);
 
-export { _export_sfc as _, __nuxt_component_0$1 as a, useRequestEvent as b, createError as c, useRuntimeConfig as d, entry$1 as default, useNuxtApp as e, useHead as u };
+export { _export_sfc as _, __nuxt_component_0$1 as a, __nuxt_component_1 as b, createError as c, entry$1 as default, useHead as u };
 //# sourceMappingURL=server.mjs.map

@@ -1,37 +1,65 @@
 <template>
   <Title>CUHK iPort</Title>
   <Meta name="description" content="CUHK iPort是為實現AI物聯網（AIoT）而設的AI教學套件，讓學生輕鬆創建不同AI機械項目。"/>
-  <PageCatalog4 :list='["CUHK iPort", "功能介紹", "使用說明", "實驗範例", "編程平台", "實用資源總匯"]' style="z-index: 1"/>
-  <div class="pageContent-container" style="z-index: 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 30px; overflow: visible; width: 1000px; max-width: 100%" >
-    <div class="page-content" ref="content">
-      <span class="title">CUHK iPort</span>
-      <div class="text-content" style="display: flex; justify-content: center; width: 100%"> 
+  <PageCatalog4  style="z-index: 1"/>
+  <div class="pageContent-container" style="z-index: 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 30px; overflow: visible; max-width: 1200px; width: 100%" >
+    <div class="page-content" style="width: 100%" ref="content">
+
+      <span class="title font-big">iPort是甚麼？</span>
+      <div class="text-content font-small" style="display: flex; justify-content: center; width: 100%"> 
       <iPortImage/>
       </div>
-      <span class="title">功能介紹</span>
-      <div class="text-content">
+      <div class="text-content font-small">
         CUHK iPort是由中大團隊開發的AI教學套件。師生可省略複雜的硬件搭綫步驟，使用iPort編程平台，套用於Teachable Machine訓練的AI模型，無須編程即可實現AI物聯網（AIoT） ， 建立不同的AI項目。
         <nuxt-img src="iportDesc6.png" style="width: 100%; max-width: 900px;"/>
       </div>
-      <span class="title">使用說明</span>
-      <div class="text-content">
-        <iPortVideoPlayer />
+
+      <span class="title font-big">如何使用iPort？</span>
+      <iPortVideoPlayer />
+
+      <span class="title font-big">警報系統</span>
+      <div class="text-content font-small" >
+        <img src="@/assets/image/gif/iport1.gif" style="width: 50%; min-width: 250px"><br>
+        使用Teachable Machine 訓練AI 圖片識別模型檢測禁區大門有人及無人的情景。透過iPort 平台上簡單設置顯示安全提示及聲音燈光等效果，只要有人經過禁區大門，iPort 就會發出警報，提醒誤闖人士離開。
+        <br><br>
+        <TextBox :title="'討論問題舉隅'" :image="'image/materials/logo_think2.png'">
+          是否任何人經過禁區大門都會觸發警報系統？可以只讓某些人通過嗎？<br>
+          為何天黑後警報系統就會被觸發？如何避免誤觸發的情況？<br>
+          在訓練有人的情景時，假設只用同學A經過禁區的圖片，是否有足夠數據作為識別有人的情景呢？<br>
+        </TextBox>
       </div>
-      <span class="title">實驗範例</span>
-      <div class="text-content" style="max-width: 100%" >
-        <ClientOnly >
-            <!-- <Youtube src="https://www.youtube.com/watch?v=TxEHsEqnwGw&ab_channel=DerekCheung" class="pc"/> -->
-            <Youtube src="https://www.youtube.com/watch?v=TxEHsEqnwGw&ab_channel=DerekCheung" :width="viewWidth" />
-        </ClientOnly>
-      </div>
-      <span class="title">編程平台</span>
-      <div class="text-content">
-        <a href="https://iport.eduairhk.com" target="_blank" class="btn">前往CUHK iPort編程平台</a>
+
+
+      <span class="title font-big">手勢控制小車</span>
+      <div class="text-content font-small">
+        <div class="font-middle" style="padding: 10px 0">製作教學</div>
+        <img src="@/assets/image/gif/iport4.gif" style="width: 50%; min-width: 250px"><br>
+        <div class="font-middle" style="padding: 10px 0">實驗示範</div>
+        <img src="@/assets/image/gif/iport3.gif" style="width: 50%; min-width: 250px"><br>
+        利用廢棄紙皮，膠紙及樽蓋就可以自製小車，當然需要用到iPort及兩隻360電機。在Teachable Machine 上訓練好自己喜歡的手勢識別模型後，就可以透過攝像頭以手勢控制小車飛馳。空曠室外無線控制距離可達50米。大家不妨比賽誰的小車最快離開迷宮。
+        <br><br>
+        <TextBox :title="'討論問題舉隅'" :image="'image/materials/logo_think2.png'">
+          手勢識別除了可玩小車比賽外，還可以用到哪些生活應用上？<br>
+          Teacheble Machine 上利用圖片識別手勢與傳統的手勢識別技術的分別是甚麼？<br>
+          要怎樣收集數據才能使小車得到更好的控制？<br>
+        </TextBox>
       </div>
       
-      <span class="title">實用資源總匯</span>
-      <div class="text-content">
-        即將推出
+      <span class="title font-big">聲控開關</span>
+      <div class="text-content font-small">
+        <img src="@/assets/image/gif/iport2.gif" style="width: 50%; min-width: 250px"><br>
+        iPort配件中的電動手指能夠做到類似真實手指推拉的動作，對於行動不便人士可以利用訓練聲音識別模型，利用簡單的聲控指令便能控制家中的任意按鍵開關。即使有障礙的室內無線控制距離可達15米。
+        <br><br>
+        <TextBox :title="'討論問題舉隅'" :image="'image/materials/logo_think2.png'">
+          如何能提升Teachable Machine 中的聲控準確性呢？<br>
+          如果使用的人士遇上失聲，他還是能夠控制電動手指的，要如何才能做到？<br>
+          聲控識別的最大困難是容易受到噪音影響，使到電動手指發生誤觸情況，可以如何避免噪音的影響嗎？<br>
+        </TextBox>
+      </div>
+
+      <span class="title font-big">iPort編程平台</span>
+      <div class="text-content font-small">
+        <a href="https://iport.eduairhk.com" target="_blank" class="btn">前往iPort編程平台</a>
       </div>
     </div>
   </div>
@@ -45,7 +73,6 @@
   }
 
   .page-content span{
-    font-size: 30px;
     font-weight: 700;
     padding: 30px 0 30px 0;
     scroll-margin-top: 40px;
@@ -53,12 +80,10 @@
   }
 
   .page-content div{
-    font-size: 20px;
     line-height: 40px;
   }
 
   .btn{
-    font-size: 16px;
     display: flex; width: max-content; height: 50px; align-items: center; width: 200px; justify-content: center; border-radius: 10px; border: 3px solid orange; color: orange; text-decoration: none
   }
 
@@ -84,7 +109,6 @@
 
   .page-content .text-content{
     position: relative;
-    font-size: 20px;
     line-height: 40px;
     max-width: 100%;
     padding: 0 0 20px 0;

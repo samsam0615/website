@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template>
-  <div ref="menubar" class="menubar unselectable" :class="{expand: isExpand, menubar1: isTop, menubar2: !isTop}">
+  <div ref="menubar" class="menubar unselectable menubar2" :class="{expand: isExpand, menubar1: false, menubar2: !isTop}">
     <div class="layer" style="height: 100%">
       <NuxtLink to="/" style="text-decoration: none">
         <div class="logo-container" style="position: relative; width: 180px; height: 60px; display:flex; justify-content:center; align-items: center; cursor: pointer;">
@@ -36,6 +36,11 @@
           </li>
         </ul>
       </li>
+<!--       <li ref="submenu1">
+        <NuxtLink :to="{ name: 'news' }" class="subMenuBtn" >
+            最新消息
+        </NuxtLink>
+      </li> -->
       <li ref="submenu1">
         <NuxtLink :to="{ name: 'cuhk-icar' }" class="subMenuBtn" >
             CUHK iCar
@@ -97,14 +102,14 @@ export default {
     this.$router.afterEach((to, from, next) => {
         self.isExpand = false;
     })
-    document.addEventListener('scroll', ()=> {
+/*     document.addEventListener('scroll', ()=> {
       const scrollY = window.scrollY;
        if (scrollY === 0) {
         this.isTop = true;
        } else{
         this.isTop = false;
        }
-    })
+    }) */
   },
   methods:{
       isActive(route) {
@@ -131,7 +136,7 @@ export default {
   border: 1px solid white;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1199px) {
   .menubar{
     position: fixed;
     height: 60px;
@@ -276,7 +281,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .menubar{
     position: fixed;
     height: 60px;
@@ -450,121 +455,7 @@ export default {
       color: white;
   }
 
-
-/*   .menubar .layer .btn{
-    display: block;
-  }
-  .menubar ul li span{
-      font-size: 20px;
-  }
-  .menubar .layer{
-      width: 100%;
-  }
-  .menubar .layer span{
-      display: block;
-      visibility: visible;
-  }
-  .menubar .layer .title{
-      margin-left: 20px;
-      display: none;
-  }
-  .menubar .layer .title a{
-      display: none;
-  }
-  .menubar li{
-      width: 100vw;
-  }
-  .menubar li a{
-      width: 100%;
-  }
-  .userMenu{
-      width: 100%;
-      display: none;
-      visibility: hidden;
-  }
-  .menubar {
-      width: 100%;
-      left: 0;
-      padding-left: 0;
-  }
-  .menubar.expand .userMenu{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    visibility: visible;
-  }
-  .menubar.expand ul li .subMenu{
-      display: flex;
-      visibility: visible;
-      position: relative;
-      height: fit-content;
-  }
-  .menubar.expand ul li:hover .subMenu{
-      display: flex;
-      visibility: visible;
-      position: relative;
-      height: fit-content;
-  }
-  .menubar.expand ul li.current .subMenu{
-      display: flex;
-      visibility: visible;
-      position: relative;
-      height: fit-content;
-  }
-  .menubar.expand .subMenu{
-      visibility: visible;
-  }
-  .menubar.expand{
-      height: 100vh;
-      z-index: 999;
-      flex-direction: column;
-      justify-content: flex-start;
-  }
-  .menubar.expand .userMenu li{
-      display: flex;
-      visibility: visible;
-      flex-wrap: wrap;
-  } */
 }
-
-/* @media screen and (min-width: 600px) {
-    .menubar1 {
-        background-color: rgba(255,255,255,0.7); 
-    }
-    .menubar1 .subMenu{
-        background-color: rgba(255,255,255,0.7);
-    }
-    .menubar1 ul li:hover{
-        background-color: rgb(147, 39, 159);
-    }
-    .menubar1 ul li:hover >a{
-        color: white;
-    }
-    .menubar1 ul li .router-link-active{
-        background-color: rgba(109,14,119,1);
-        color: white;
-    }
-    .menubar1 .current .subMenuBtn{
-        background-color: rgb(147, 39, 159);
-        color: white;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .menubar1 {
-        background-color: rgba(255,255,255,0.7);
-    }
-    .menubar1 .subMenu{
-        background-color: rgba(255,255,255,0.7);
-    }
-    .menubar1 ul li:hover{
-        background-color: rgba(109,14,119,1);
-    }
-    .menubar1 ul li:hover>a{
-        color: white;
-    }
-}
- */
 
   .menubar1 {
       background-color: rgba(255,255,255,0.7); 

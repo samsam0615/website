@@ -1,9 +1,9 @@
 <template>
     <Title>公司架構</Title>
-    <div class = "pageContent-container">
-        <div class="text-container" style="width: 100%;">
-            <label class="pageTitle">董事局成員</label><br>
-            <div class="pageDescription">EduAIR由一眾具豐富科技教育經驗的研究者組成，致力推動香港AI/STEAM教育發展。</div>
+    <div class="pageContent-container">
+        <div class="text-container" style="width: 100%; padding: 20px">
+            <label class="pageTitle font-big">董事局成員</label>
+            <div class="pageDescription font-small">EduAIR由一眾具豐富科技教育經驗的研究者組成，致力推動香港AI/STEAM教育發展。</div>
         </div>
         <div class="text-container" style="display: flex; flex-direction: row; padding: 0 0 10px 0; justify-content: space-around; flex-wrap: wrap;  flex: 1">
             <StaffNameCard :image="'image/staff/icon1_1200_circle.jpg'" :title="'蒙美玲教授'" :color="'purple'">
@@ -23,7 +23,7 @@
             </StaffNameCard>
         </div>
         <div class="text-container" style="width: 100%;">
-            <label class="pageTitle" style="align-self: flex-start;">技術團隊</label>
+            <label class="pageTitle font-big" style="align-self: flex-start; padding-left: 20px">技術團隊</label>
         </div>
         <div class="text-container" style="display: flex; flex-direction: row; padding: 0 0 10px 0; justify-content: space-around; flex-wrap: wrap;  flex: 1">
             <StaffNameCard :image="'image/staff/Derek.jpg'" :title="'章文杰 Derek'" :color="'purple'" :youtube="'https://www.youtube.com/@derekcheung7857'">

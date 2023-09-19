@@ -1,5 +1,5 @@
 <template>
-    <div class="download-table">
+    <div class="download-table font-small">
         <div class="download-table-row">
             <div>名稱</div>
             <div>類型</div>
@@ -50,8 +50,7 @@ export default {
     display: flex;
     flex-direction: column;
     color: #5b2700;
-    font-size: 15px;
-    line-height: 15px;
+    line-height: 25px;
 }
 
 .download-table-row{

@@ -52,7 +52,7 @@ export default {
     margin-right: 30px
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1200px){
     .text-title{
         height: 70px;
         font-size: 21px;

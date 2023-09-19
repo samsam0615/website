@@ -1,10 +1,10 @@
 <template>
   <Title>其他資源</Title>
   <Meta name="description" content="多個網上免費的AI 學習資源，好玩之餘又不用註冊登記，助你輕鬆愉快體驗AI的奇妙。"/>
-  <div class = "pageContent-container">
-    <div class="text-container"  onclick="">
-      <label class="subTitle"  ref="resource">iShare</label><br>
-      <div class="pageDescription">苦苦搜尋網上免費的AI 學習資源，好玩之餘又不想註冊登記？iShare幫你輕鬆愉快體驗AI的奇妙。</div>
+  <div class = "pageContent-container" style="width: 100%">
+    <div class="text-container">
+      <label class="subTitle font-big" ref="resource">iShare</label>
+      <div class="pageDescription font-small">苦苦搜尋網上免費的AI 學習資源，好玩之餘又不想註冊登記？iShare幫你輕鬆愉快體驗AI的奇妙。</div>
       <br><br>
       <div class="resourceContainer">
         <div class="resourceType">
@@ -28,9 +28,9 @@
         </div>
         <div class="resourceDescriptor" >
           <template v-if="focus != null">
-            <div class="title">{{focus.name}}</div>
-            <div class="description" style="font-size: 16px; line-height: 24px">{{focus.description}}</div>
-            <div class="media"><a :href="focus.url" target="_blank">前往網站</a></div>
+            <div class="title font-middle">{{focus.name}}</div>
+            <div class="description font-mini" style="line-height: 35px; padding: 0 10px">{{focus.description}}</div>
+            <div class="media"><a style="font-mini" :href="focus.url" target="_blank">前往網站</a></div>
           </template>
         </div>
       </div>
@@ -76,13 +76,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .resourceContainer{
     width: 100%;
     height: 360px;
     display: flex;
     background-color: white;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border: 1px solid rgba(0, 0, 0, 0.16);
 }
 
 .resourceType{
@@ -124,6 +124,7 @@ export default {
     width: 400px;
     height: 100%;
     display: flex;
+    padding: 15px;
     flex-direction: column;
 }
 
@@ -132,7 +133,6 @@ export default {
     justify-content: center;
     align-items: center;
     height: 20%;
-    font-size: 25px;
     padding-bottom: 10px;
     white-space: break-spaces;
 }
@@ -141,7 +141,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
     padding: 10px;
     margin-left: 10px;
     border-radius: 5px;
@@ -170,11 +169,12 @@ export default {
     line-height: 30px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 800px) {
     .resourceContainer{
         flex-direction: column;
         height: min-content;
         align-items: center;
+        width: 100%;
     }
 
     .resourceType{
@@ -196,7 +196,6 @@ export default {
         height: 100%;
         flex-wrap: wrap;
         align-content: flex-start;
-        padding: 20px;
     }
 
     .resourceDescriptor{
@@ -204,7 +203,7 @@ export default {
         height: 100%;
         display: flex;
         flex-direction: column;
-        margin-top: 20px;
+        padding: 0;
     }
 
     .resourceDescriptor div{
@@ -217,7 +216,6 @@ export default {
         align-items: center;
         margin-top: 10px;
         height: 20%;
-        font-size: 25px;
     }
 
     .resourceDescriptor .media{
@@ -233,16 +231,6 @@ export default {
         align-items: flex-start;
         height: 45%;
         line-height: 30px;
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1000px){
-    .resourceDescriptor .title{
-        font-size: 23px;
-    }
-
-    .resourceDescriptor .description{
-        font-size: 18px;
     }
 }
 
