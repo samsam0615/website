@@ -1766,34 +1766,34 @@ const _sfc_main$3 = {
 };
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_nuxt_img = __nuxt_component_1;
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "container" }, _attrs))} data-v-344db37b><div class="footer" style="${ssrRenderStyle({})}" data-v-344db37b><div class="main" data-v-344db37b><label class="font-middle" data-v-344db37b>EduAIR 愛動智</label><a href="https://www.facebook.com/eduair" target="_blank" data-v-344db37b>`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "container" }, _attrs))} data-v-fec46e26><div class="footer" style="${ssrRenderStyle({})}" data-v-fec46e26><div class="main" data-v-fec46e26><label class="font-middle" data-v-fec46e26>EduAIR 愛動智</label><a href="https://www.facebook.com/eduair" target="_blank" data-v-fec46e26>`);
   _push(ssrRenderComponent(_component_nuxt_img, {
     src: "facebook3.png",
     height: "20px"
   }, null, _parent));
-  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-344db37b>愛動智教育系統</label></a><a href="https://www.instagram.com/eduair_hk/" target="_blank" data-v-344db37b>`);
+  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-fec46e26>愛動智教育系統</label></a><a href="https://www.instagram.com/eduair_hk/" target="_blank" data-v-fec46e26>`);
   _push(ssrRenderComponent(_component_nuxt_img, {
     src: "instagram3.png",
     height: "20px",
     style: {}
   }, null, _parent));
-  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-344db37b>eduair_hk</label></a></div><div data-v-344db37b><label class="font-middle" data-v-344db37b>聯絡我們</label><label style="${ssrRenderStyle({ "padding": "4px 0" })}" data-v-344db37b>`);
+  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-fec46e26>eduair_hk</label></a></div><div data-v-fec46e26><label class="font-middle" data-v-fec46e26>聯絡我們</label><label style="${ssrRenderStyle({ "padding": "4px 0" })}" data-v-fec46e26>`);
   _push(ssrRenderComponent(_component_nuxt_img, {
     src: "call3.png",
     height: "18px",
     style: {}
   }, null, _parent));
-  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-344db37b>+852 3618 8911</label></label><label style="${ssrRenderStyle({ "padding": "4px 0" })}" data-v-344db37b>`);
+  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-fec46e26>+852 3618 8911</label></label><label style="${ssrRenderStyle({ "padding": "4px 0" })}" data-v-fec46e26>`);
   _push(ssrRenderComponent(_component_nuxt_img, {
     src: "mail3.png",
     height: "18px"
   }, null, _parent));
-  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-344db37b>info@eduairhk.com</label></label><label style="${ssrRenderStyle({ "padding": "4px 0" })}" data-v-344db37b>`);
+  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-fec46e26>info@eduairhk.com</label></label><label style="${ssrRenderStyle({ "padding": "4px 0" })}" data-v-fec46e26>`);
   _push(ssrRenderComponent(_component_nuxt_img, {
     src: "location3.png",
     height: "18px"
   }, null, _parent));
-  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-344db37b>科學園16W棟2樓237室</label></label></div></div><div style="${ssrRenderStyle({ "padding": "15px 0" })}" data-v-344db37b> Copyright © EduAIR Systems Limited. </div></div>`);
+  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-fec46e26>科學園16W棟2樓237室</label></label></div></div><div style="${ssrRenderStyle({ "padding": "15px 0" })}" data-v-fec46e26> Copyright © EduAIR Systems Limited. </div></div>`);
 }
 const _sfc_setup$3 = _sfc_main$3.setup;
 _sfc_main$3.setup = (props, ctx) => {
@@ -1801,7 +1801,7 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/CommonFooter.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-344db37b"]]);
+const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-fec46e26"]]);
 const _sfc_main$2 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_CommonHeader = __nuxt_component_0;
