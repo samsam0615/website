@@ -92,9 +92,9 @@
         return {
             id: 0,
             src: [
-                "https://customer-9nuyiwcobdv6cl6j.cloudflarestream.com/998774a81cac037fd7dff75a7ddaaa83/iframe?muted=true&poster=https%3A%2F%2Fcustomer-9nuyiwcobdv6cl6j.cloudflarestream.com%2F998774a81cac037fd7dff75a7ddaaa83%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600",
-                "https://customer-9nuyiwcobdv6cl6j.cloudflarestream.com/c866571f1b314f650410cf3be1357b70/iframe?poster=https%3A%2F%2Fcustomer-9nuyiwcobdv6cl6j.cloudflarestream.com%2Fc866571f1b314f650410cf3be1357b70%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600",
-                "https://customer-9nuyiwcobdv6cl6j.cloudflarestream.com/bab4467687bc64bcbd1aa3c867ae28c4/iframe?poster=https%3A%2F%2Fcustomer-9nuyiwcobdv6cl6j.cloudflarestream.com%2Fbab4467687bc64bcbd1aa3c867ae28c4%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                "https://customer-9nuyiwcobdv6cl6j.cloudflarestream.com/89ea8daf916aae4b7067e73ded4ca451/iframe?muted=true&preload=true&poster=https%3A%2F%2Fcustomer-9nuyiwcobdv6cl6j.cloudflarestream.com%2F89ea8daf916aae4b7067e73ded4ca451%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600",
+                "https://customer-9nuyiwcobdv6cl6j.cloudflarestream.com/0823d274d9f5930890f80879bf38681d/iframe?muted=true&preload=true&poster=https%3A%2F%2Fcustomer-9nuyiwcobdv6cl6j.cloudflarestream.com%2F0823d274d9f5930890f80879bf38681d%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600",
+                "https://customer-9nuyiwcobdv6cl6j.cloudflarestream.com/30b00d5cf6ff27876552582572ba07c7/iframe?muted=true&preload=true&poster=https%3A%2F%2Fcustomer-9nuyiwcobdv6cl6j.cloudflarestream.com%2F30b00d5cf6ff27876552582572ba07c7%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
             ]
         }
     },
