@@ -2,7 +2,6 @@
   <Title>聯絡我們</Title>
   <Meta name="description" content="立即聯絡 EduAIR"/>
   <div class="pageContent-container " style="width: 100%; padding: 60px 0 0 0">
-    {{name}} {{ email}} {{content}}
     <div class="text-container " style="width: 100%; position: relative; padding: 20px; display: flex; justify-content: center; align-items: center">
         <div class="form" style=""> 
           <div style="width: 100%; background: rgba( 255, 255, 255, 0.7   ); padding: 30px"> 

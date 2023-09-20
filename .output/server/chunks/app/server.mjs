@@ -321,7 +321,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/company-6d9b8cf4.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/company-39c81356.mjs').then((m) => m.default || m)
   },
   {
     name: "company2",
@@ -337,7 +337,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/contact-890e8717.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/contact-d99d4266.mjs').then((m) => m.default || m)
   },
   {
     name: "contact2",
@@ -361,7 +361,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-iport-535fd41c.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-iport-d8c031f0.mjs').then((m) => m.default || m)
   },
   {
     name: "index",

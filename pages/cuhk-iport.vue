@@ -19,7 +19,7 @@
 
       <span class="title font-big">警報系統</span>
       <div class="text-content font-small" >
-        <img src="@/assets/image/gif/iport1.gif" style="width: 50%; min-width: 250px"><br>
+        <img src="@/assets/image/gif/iport5.gif" style="width: 50%; min-width: 250px"><br>
         使用Teachable Machine 訓練AI 圖片識別模型檢測禁區大門有人及無人的情景。透過iPort 平台上簡單設置顯示安全提示及聲音燈光等效果，只要有人經過禁區大門，iPort 就會發出警報，提醒誤闖人士離開。
         <br><br>
         <TextBox :title="'討論問題舉隅'" :image="'image/materials/logo_think2.png'">

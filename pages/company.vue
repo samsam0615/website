@@ -22,15 +22,15 @@
             </div>
             <div class="iconBox">
                 <nuxt-img src="company2.png" />
-                研發教育套件
-            </div>
-            <div class="iconBox">
-                <nuxt-img src="company3.png" />
                 顧問服務
             </div>
             <div class="iconBox">
-                <nuxt-img src="company4.png" />
+                <nuxt-img src="company3.png" />
                 到校服務
+            </div>
+            <div class="iconBox">
+                <nuxt-img src="company4.png" />
+                研發教育套件
             </div>
         </div>
         <div style="font-size: 25px; width: 100%; padding: 20px; font-weight: 1000">
