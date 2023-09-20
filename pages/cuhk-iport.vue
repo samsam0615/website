@@ -19,13 +19,16 @@
 
       <span class="title font-big">警報系統</span>
       <div class="text-content font-small" >
-        <img src="@/assets/image/gif/iport5.gif" style="width: 50%; min-width: 250px"><br>
+        <video ref="myVideo1" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
+            <source :src="'iport5.mp4'" type="video/mp4">
+        </video>
+        <br>
         使用Teachable Machine 訓練AI 圖片識別模型檢測禁區大門有人及無人的情景。透過iPort 平台上簡單設置顯示安全提示及聲音燈光等效果，只要有人經過禁區大門，iPort 就會發出警報，提醒誤闖人士離開。
         <br><br>
         <TextBox :title="'討論問題舉隅'" :image="'image/materials/logo_think2.png'">
-          是否任何人經過禁區大門都會觸發警報系統？可以只讓某些人通過嗎？<br>
+          任何人經過禁區大門都會觸發警報系統嗎？可以只讓授權人士通過嗎？<br>
           為何天黑後警報系統就會被觸發？如何避免誤觸發的情況？<br>
-          在訓練有人的情景時，假設只用同學A經過禁區的圖片，是否有足夠數據作為識別有人的情景呢？<br>
+          在訓練「有人」的情景時，假設只用同學A經過禁區的圖片，有足夠數據作為識別有人的情景嗎？<br>
         </TextBox>
       </div>
 
@@ -33,33 +36,56 @@
       <span class="title font-big">手勢控制小車</span>
       <div class="text-content font-small">
         <div class="font-middle" style="padding: 10px 0">製作教學</div>
-        <img src="@/assets/image/gif/iport4.gif" style="width: 50%; min-width: 250px"><br>
+        <div style="display: flex; flex-wrap: wrap">
+          <video ref="myVideo2" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
+            <source :src="'iport7.mp4'" type="video/mp4">
+          </video>
+          <div style="padding: 20px 20px 0 20px"> 
+            所需材料： <br>
+            1. 廢棄紙皮 <br>
+            2. 膠樽樽蓋 <br>
+            3. 膠紙 <br>
+            4. CUHK iPort <br>
+            5. 360電機 * 2 <br>
+          </div>
+        </div>
+        <br>
         <div class="font-middle" style="padding: 10px 0">實驗示範</div>
-        <img src="@/assets/image/gif/iport3.gif" style="width: 50%; min-width: 250px"><br>
-        利用廢棄紙皮，膠紙及樽蓋就可以自製小車，當然需要用到iPort及兩隻360電機。在Teachable Machine 上訓練好自己喜歡的手勢識別模型後，就可以透過攝像頭以手勢控制小車飛馳。空曠室外無線控制距離可達50米。大家不妨比賽誰的小車最快離開迷宮。
+        <video ref="myVideo3" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
+          <source :src="'iport1.mp4'" type="video/mp4">
+        </video><br>
+        在Teachable Machine 上訓練好自己喜歡的手勢識別模型後，就可以透過攝像頭以手勢控制小車飛馳。空曠環境下無線控制距離可達50米。大家不妨比賽誰的小車最快離開迷宮。
         <br><br>
         <TextBox :title="'討論問題舉隅'" :image="'image/materials/logo_think2.png'">
-          手勢識別除了可玩小車比賽外，還可以用到哪些生活應用上？<br>
-          Teacheble Machine 上利用圖片識別手勢與傳統的手勢識別技術的分別是甚麼？<br>
-          要怎樣收集數據才能使小車得到更好的控制？<br>
+          手勢識別除了可以玩小車比賽外，還可以用到哪些生活應用上？<br>
+          Teacheble Machine 上利用圖片識別手勢與傳統的手勢識別技術有甚麼不同？<br>
+          怎樣收集數據才能使小車得到更好的控制？<br>
         </TextBox>
       </div>
       
       <span class="title font-big">聲控開關</span>
       <div class="text-content font-small">
-        <img src="@/assets/image/gif/iport2.gif" style="width: 50%; min-width: 250px"><br>
-        iPort配件中的電動手指能夠做到類似真實手指推拉的動作，對於行動不便人士可以利用訓練聲音識別模型，利用簡單的聲控指令便能控制家中的任意按鍵開關。即使有障礙的室內無線控制距離可達15米。
+        <video ref="myVideo4" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
+            <source :src="'iport2.mp4'" type="video/mp4">
+        </video>
+        <br>
+        iPort配件中的電動手指能夠做到類似真實手指推拉的動作，對於行動不便人士可以利用訓練聲音識別模型，利用簡單的聲控指令便能控制家中的任意按鍵開關。有障礙的室內環境下無線控制距離仍可達15米。
         <br><br>
         <TextBox :title="'討論問題舉隅'" :image="'image/materials/logo_think2.png'">
           如何能提升Teachable Machine 中的聲控準確性呢？<br>
-          如果使用的人士遇上失聲，他還是能夠控制電動手指的，要如何才能做到？<br>
-          聲控識別的最大困難是容易受到噪音影響，使到電動手指發生誤觸情況，可以如何避免噪音的影響嗎？<br>
+          語言障礙者有甚麼辦法能夠控制電動手指？<br>
+          聲控識別的最大困難是容易受到噪音影響，電動手指可能因而發生誤觸情況，我們如何避免噪音的影響？<br>
         </TextBox>
       </div>
 
       <span class="title font-big">iPort編程平台</span>
       <div class="text-content font-small">
-        <a href="https://iport.eduairhk.com" target="_blank" class="btn">前往iPort編程平台</a>
+        <div style="width: 100%; max-width: 900px; background: red; padding: 0; height: min-content; display: flex ">
+          <img :src="'iportui.png'" style="width: 100%; height: auto; padding: 0">
+          <div style="width: 100%; height: 100%; background: white; opacity: 0.5; position: absolute; top: 0"></div>
+          <a href="https://iport.eduairhk.com" target="_blank" class="btn"
+            style="position: absolute; top: 50%; left: 50%; transform: translate(-100%, -50%)">前往iPort編程平台</a>
+        </div>
       </div>
     </div>
   </div>
@@ -84,7 +110,9 @@
   }
 
   .btn{
-    display: flex; width: max-content; height: 50px; align-items: center; width: 200px; justify-content: center; border-radius: 10px; border: 3px solid orange; color: orange; text-decoration: none
+    display: flex; width: max-content; height: 50px; align-items: center; width: 200px; justify-content: center; border-radius: 10px; border: 3px solid orange; color: orange; text-decoration: none;
+    background: orange;
+    color: white;
   }
 
   .btn:hover{
@@ -155,6 +183,12 @@ export default {
     }
   },
   mounted () {
+    this.$refs.myVideo1.play()
+    this.$refs.myVideo2.play()
+    this.$refs.myVideo3.play()
+    this.$refs.myVideo4.play()
+
+
     const self = this;
     this.viewWidth = this.vw(50);
 

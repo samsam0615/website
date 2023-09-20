@@ -64,7 +64,7 @@
           人類和AI在同類事件中扮演甚麽角色？動手用CUHK iCar做實驗，一探究竟吧！<br><br>
           <TextBox :title="'討論問題舉隅'" :image="'image/materials/logo_think2.png'">
             CUHK iCar用了哪一種機器學習模式？<br>
-            收集數據時，我們要注意甚麽？注意這些事項的目的是甚麽？<br>
+            收集數據時，我們要注意甚麽？注意這些事項的目的又是甚麽？<br>
             除了避開小孩和避開老人，CUHK iCar還有第三個選擇嗎？<br>
           </TextBox>
         </div>
@@ -75,7 +75,7 @@
           自動駕駛車又是如何學會這項技能？動手用CUHK iCar做實驗，一探究竟吧！<br><br>
           <TextBox :title="'討論問題舉隅'" :image="'image/materials/logo_think2.png'">
             CUHK iCar如何學會辨識指定人臉？<br>
-            用指定人臉的其他角度或照片，CUHK iCar的表現會受影響嗎？爲甚麽？<br>
+            辨識其他角度的相同人臉或照片時，CUHK iCar的表現會受影響嗎？爲甚麽？<br>
             在真實情況中應用此技術，會有甚麽好處和限制？<br>
           </TextBox>
         </div>

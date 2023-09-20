@@ -4,13 +4,13 @@ const client_manifest = {
     "file": "TextBox.39ef399e.css",
     "src": "TextBox.css"
   },
-  "_TextBox.f4967ec1.js": {
+  "_TextBox.ad9e285a.js": {
     "resourceType": "script",
     "module": true,
     "css": [
       "TextBox.39ef399e.css"
     ],
-    "file": "TextBox.f4967ec1.js",
+    "file": "TextBox.ad9e285a.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -19,10 +19,10 @@ const client_manifest = {
     "file": "TextBox.39ef399e.css",
     "resourceType": "style"
   },
-  "_components.15610d71.js": {
+  "_components.8d6a8940.js": {
     "resourceType": "script",
     "module": true,
-    "file": "components.15610d71.js",
+    "file": "components.8d6a8940.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -55,30 +55,6 @@ const client_manifest = {
     "mimeType": "image/gif",
     "file": "gif_moral2.520ac47b.gif",
     "src": "assets/image/gif/gif_moral2.gif"
-  },
-  "assets/image/gif/iport2.gif": {
-    "resourceType": "image",
-    "mimeType": "image/gif",
-    "file": "iport2.b0c57375.gif",
-    "src": "assets/image/gif/iport2.gif"
-  },
-  "assets/image/gif/iport3.gif": {
-    "resourceType": "image",
-    "mimeType": "image/gif",
-    "file": "iport3.d5ff5cbd.gif",
-    "src": "assets/image/gif/iport3.gif"
-  },
-  "assets/image/gif/iport4.gif": {
-    "resourceType": "image",
-    "mimeType": "image/gif",
-    "file": "iport4.d0a68e8e.gif",
-    "src": "assets/image/gif/iport4.gif"
-  },
-  "assets/image/gif/iport5.gif": {
-    "resourceType": "image",
-    "mimeType": "image/gif",
-    "file": "iport5.98c6b345.gif",
-    "src": "assets/image/gif/iport5.gif"
   },
   "assets/image/icars2.jpg": {
     "resourceType": "image",
@@ -148,7 +124,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-404.70d16bd8.js",
+    "file": "error-404.422dc30b.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -168,7 +144,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-500.b6097274.js",
+    "file": "error-500.bb60899e.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -197,7 +173,7 @@ const client_manifest = {
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
-    "file": "entry.12d5db98.js",
+    "file": "entry.dc12e0e4.js",
     "isEntry": true,
     "src": "node_modules/nuxt/dist/app/entry.js",
     "_globalCSS": true
@@ -223,9 +199,9 @@ const client_manifest = {
       "event3.13e8b7e3.jpg"
     ],
     "css": [],
-    "file": "company.369649d3.js",
+    "file": "company.88cfb0ab.js",
     "imports": [
-      "_components.15610d71.js",
+      "_components.8d6a8940.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -252,9 +228,9 @@ const client_manifest = {
       "timeline.1dea26a8.png"
     ],
     "css": [],
-    "file": "company2.5509ac2a.js",
+    "file": "company2.ea1bc27b.js",
     "imports": [
-      "_components.15610d71.js",
+      "_components.8d6a8940.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -281,9 +257,9 @@ const client_manifest = {
       "icars2.8fe89017.jpg"
     ],
     "css": [],
-    "file": "contact.382d83f7.js",
+    "file": "contact.79a6a689.js",
     "imports": [
-      "_components.15610d71.js",
+      "_components.8d6a8940.js",
       "_index.a704afdc.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -308,9 +284,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "contact2.cd3ecdb2.js",
+    "file": "contact2.85730ad7.js",
     "imports": [
-      "_components.15610d71.js",
+      "_components.8d6a8940.js",
       "_index.a704afdc.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -323,7 +299,7 @@ const client_manifest = {
   },
   "pages/cuhk-icar.css": {
     "resourceType": "style",
-    "file": "cuhk-icar.69a4bf95.css",
+    "file": "cuhk-icar.86eaa344.css",
     "src": "pages/cuhk-icar.css"
   },
   "pages/cuhk-icar.vue": {
@@ -341,17 +317,17 @@ const client_manifest = {
       "gif_line2.81f158a0.gif"
     ],
     "css": [],
-    "file": "cuhk-icar.80b8801f.js",
+    "file": "cuhk-icar.fa30a9be.js",
     "imports": [
-      "_components.15610d71.js",
+      "_components.8d6a8940.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_TextBox.f4967ec1.js"
+      "_TextBox.ad9e285a.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/cuhk-icar.vue"
   },
-  "cuhk-icar.69a4bf95.css": {
-    "file": "cuhk-icar.69a4bf95.css",
+  "cuhk-icar.86eaa344.css": {
+    "file": "cuhk-icar.86eaa344.css",
     "resourceType": "style"
   },
   "iCarR.25d12606.png": {
@@ -401,51 +377,25 @@ const client_manifest = {
   },
   "pages/cuhk-iport.css": {
     "resourceType": "style",
-    "file": "cuhk-iport.3528d32c.css",
+    "file": "cuhk-iport.e5e7d4a2.css",
     "src": "pages/cuhk-iport.css"
   },
   "pages/cuhk-iport.vue": {
     "resourceType": "script",
     "module": true,
-    "assets": [
-      "iport5.98c6b345.gif",
-      "iport4.d0a68e8e.gif",
-      "iport3.d5ff5cbd.gif",
-      "iport2.b0c57375.gif"
-    ],
     "css": [],
-    "file": "cuhk-iport.a0ac0bba.js",
+    "file": "cuhk-iport.c0143c25.js",
     "imports": [
-      "_components.15610d71.js",
+      "_components.8d6a8940.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_TextBox.f4967ec1.js"
+      "_TextBox.ad9e285a.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/cuhk-iport.vue"
   },
-  "cuhk-iport.3528d32c.css": {
-    "file": "cuhk-iport.3528d32c.css",
+  "cuhk-iport.e5e7d4a2.css": {
+    "file": "cuhk-iport.e5e7d4a2.css",
     "resourceType": "style"
-  },
-  "iport5.98c6b345.gif": {
-    "file": "iport5.98c6b345.gif",
-    "resourceType": "image",
-    "mimeType": "image/gif"
-  },
-  "iport4.d0a68e8e.gif": {
-    "file": "iport4.d0a68e8e.gif",
-    "resourceType": "image",
-    "mimeType": "image/gif"
-  },
-  "iport3.d5ff5cbd.gif": {
-    "file": "iport3.d5ff5cbd.gif",
-    "resourceType": "image",
-    "mimeType": "image/gif"
-  },
-  "iport2.b0c57375.gif": {
-    "file": "iport2.b0c57375.gif",
-    "resourceType": "image",
-    "mimeType": "image/gif"
   },
   "pages/index.css": {
     "resourceType": "style",
@@ -459,9 +409,9 @@ const client_manifest = {
       "intro.9ccedcb0.mp4"
     ],
     "css": [],
-    "file": "index.9949e3a6.js",
+    "file": "index.1055e847.js",
     "imports": [
-      "_components.15610d71.js",
+      "_components.8d6a8940.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -484,9 +434,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "ishare.b69c3d88.js",
+    "file": "ishare.144d0fca.js",
     "imports": [
-      "_components.15610d71.js",
+      "_components.8d6a8940.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -505,9 +455,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "news.bdc145e5.js",
+    "file": "news.44a6893a.js",
     "imports": [
-      "_components.15610d71.js",
+      "_components.8d6a8940.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -526,9 +476,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "privacy.3728d2fb.js",
+    "file": "privacy.48fdef12.js",
     "imports": [
-      "_components.15610d71.js",
+      "_components.8d6a8940.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -547,9 +497,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "staff.a730d065.js",
+    "file": "staff.61a7f81a.js",
     "imports": [
-      "_components.15610d71.js",
+      "_components.8d6a8940.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
