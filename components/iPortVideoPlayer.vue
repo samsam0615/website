@@ -71,13 +71,13 @@
         background: white;
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
         .pc{
             display: none;
         }
     }
 
-    @media screen and (min-width: 1025px) {
+    @media screen and (min-width: 1200px) {
         .mobile{
             display: none;
         }

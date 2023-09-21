@@ -36,11 +36,11 @@
           </li>
         </ul>
       </li>
-<!--       <li ref="submenu1">
+      <li ref="submenu1">
         <NuxtLink :to="{ name: 'news' }" class="subMenuBtn" >
             最新消息
         </NuxtLink>
-      </li> -->
+      </li>
       <li ref="submenu1">
         <NuxtLink :to="{ name: 'cuhk-icar' }" class="subMenuBtn" >
             CUHK iCar

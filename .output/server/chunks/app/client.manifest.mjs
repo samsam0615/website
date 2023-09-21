@@ -4,13 +4,13 @@ const client_manifest = {
     "file": "TextBox.39ef399e.css",
     "src": "TextBox.css"
   },
-  "_TextBox.351bf442.js": {
+  "_TextBox.7fa614e7.js": {
     "resourceType": "script",
     "module": true,
     "css": [
       "TextBox.39ef399e.css"
     ],
-    "file": "TextBox.351bf442.js",
+    "file": "TextBox.7fa614e7.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -19,10 +19,10 @@ const client_manifest = {
     "file": "TextBox.39ef399e.css",
     "resourceType": "style"
   },
-  "_components.440ff5c3.js": {
+  "_components.4217124d.js": {
     "resourceType": "script",
     "module": true,
-    "file": "components.440ff5c3.js",
+    "file": "components.4217124d.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -31,6 +31,12 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "file": "index.a704afdc.js"
+  },
+  "assets/image/banner2.jpg": {
+    "resourceType": "image",
+    "mimeType": "image/jpeg",
+    "file": "banner2.d2dea03b.jpg",
+    "src": "assets/image/banner2.jpg"
   },
   "assets/image/event3.jpg": {
     "resourceType": "image",
@@ -124,7 +130,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-404.155a2947.js",
+    "file": "error-404.60c21378.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -144,7 +150,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-500.375ff320.js",
+    "file": "error-500.a4d822d0.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -173,7 +179,7 @@ const client_manifest = {
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
-    "file": "entry.96e99014.js",
+    "file": "entry.2724a25e.js",
     "isEntry": true,
     "src": "node_modules/nuxt/dist/app/entry.js",
     "_globalCSS": true
@@ -199,9 +205,9 @@ const client_manifest = {
       "event3.13e8b7e3.jpg"
     ],
     "css": [],
-    "file": "company.a81614c2.js",
+    "file": "company.1caebcb8.js",
     "imports": [
-      "_components.440ff5c3.js",
+      "_components.4217124d.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -228,9 +234,9 @@ const client_manifest = {
       "timeline.1dea26a8.png"
     ],
     "css": [],
-    "file": "company2.1eb85a98.js",
+    "file": "company2.78d35c27.js",
     "imports": [
-      "_components.440ff5c3.js",
+      "_components.4217124d.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -257,9 +263,9 @@ const client_manifest = {
       "icars2.8fe89017.jpg"
     ],
     "css": [],
-    "file": "contact.570df2c1.js",
+    "file": "contact.756afaf4.js",
     "imports": [
-      "_components.440ff5c3.js",
+      "_components.4217124d.js",
       "_index.a704afdc.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -284,9 +290,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "contact2.2683f2fb.js",
+    "file": "contact2.97748be1.js",
     "imports": [
-      "_components.440ff5c3.js",
+      "_components.4217124d.js",
       "_index.a704afdc.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -317,11 +323,11 @@ const client_manifest = {
       "gif_line2.81f158a0.gif"
     ],
     "css": [],
-    "file": "cuhk-icar.1769d5fb.js",
+    "file": "cuhk-icar.fe3d88fb.js",
     "imports": [
-      "_components.440ff5c3.js",
+      "_components.4217124d.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_TextBox.351bf442.js"
+      "_TextBox.7fa614e7.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/cuhk-icar.vue"
@@ -377,24 +383,24 @@ const client_manifest = {
   },
   "pages/cuhk-iport.css": {
     "resourceType": "style",
-    "file": "cuhk-iport.8bd327cc.css",
+    "file": "cuhk-iport.beaedaf1.css",
     "src": "pages/cuhk-iport.css"
   },
   "pages/cuhk-iport.vue": {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "cuhk-iport.d4af354e.js",
+    "file": "cuhk-iport.d5b96381.js",
     "imports": [
-      "_components.440ff5c3.js",
+      "_components.4217124d.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_TextBox.351bf442.js"
+      "_TextBox.7fa614e7.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/cuhk-iport.vue"
   },
-  "cuhk-iport.8bd327cc.css": {
-    "file": "cuhk-iport.8bd327cc.css",
+  "cuhk-iport.beaedaf1.css": {
+    "file": "cuhk-iport.beaedaf1.css",
     "resourceType": "style"
   },
   "pages/index.css": {
@@ -409,9 +415,9 @@ const client_manifest = {
       "intro.9ccedcb0.mp4"
     ],
     "css": [],
-    "file": "index.122b5e5d.js",
+    "file": "index.70f31c9b.js",
     "imports": [
-      "_components.440ff5c3.js",
+      "_components.4217124d.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -434,9 +440,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "ishare.c94fec88.js",
+    "file": "ishare.64587911.js",
     "imports": [
-      "_components.440ff5c3.js",
+      "_components.4217124d.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -448,24 +454,32 @@ const client_manifest = {
   },
   "pages/news.css": {
     "resourceType": "style",
-    "file": "news.8ad1be54.css",
+    "file": "news.0d1c7b47.css",
     "src": "pages/news.css"
   },
   "pages/news.vue": {
     "resourceType": "script",
     "module": true,
+    "assets": [
+      "banner2.d2dea03b.jpg"
+    ],
     "css": [],
-    "file": "news.aafae24a.js",
+    "file": "news.a65e857d.js",
     "imports": [
-      "_components.440ff5c3.js",
+      "_components.4217124d.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/news.vue"
   },
-  "news.8ad1be54.css": {
-    "file": "news.8ad1be54.css",
+  "news.0d1c7b47.css": {
+    "file": "news.0d1c7b47.css",
     "resourceType": "style"
+  },
+  "banner2.d2dea03b.jpg": {
+    "file": "banner2.d2dea03b.jpg",
+    "resourceType": "image",
+    "mimeType": "image/jpeg"
   },
   "pages/privacy.css": {
     "resourceType": "style",
@@ -476,9 +490,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "privacy.7ec1aaff.js",
+    "file": "privacy.3972c6b4.js",
     "imports": [
-      "_components.440ff5c3.js",
+      "_components.4217124d.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -497,9 +511,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "staff.bf93295a.js",
+    "file": "staff.97ee6ebf.js",
     "imports": [
-      "_components.440ff5c3.js",
+      "_components.4217124d.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,

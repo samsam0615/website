@@ -321,7 +321,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/company-39c81356.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/company-a97fa0a4.mjs').then((m) => m.default || m)
   },
   {
     name: "company2",
@@ -353,7 +353,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-icar-fd683d45.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-icar-dc229330.mjs').then((m) => m.default || m)
   },
   {
     name: "cuhk-iport",
@@ -361,7 +361,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-iport-d112d60e.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-iport-d2ed3f3a.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -369,7 +369,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-25719c4c.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-ed5c42ba.mjs').then((m) => m.default || m)
   },
   {
     name: "ishare",
@@ -385,7 +385,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/news-cd00415a.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/news-c1df8fce.mjs').then((m) => m.default || m)
   },
   {
     name: "privacy",
@@ -927,7 +927,7 @@ function defineNuxtLink(options) {
     }
   });
 }
-const __nuxt_component_0$1 = /* @__PURE__ */ defineNuxtLink({ componentName: "NuxtLink" });
+const __nuxt_component_0$2 = /* @__PURE__ */ defineNuxtLink({ componentName: "NuxtLink" });
 function createSiteConfigStack() {
   const stack = [];
   function push(input) {
@@ -1072,7 +1072,7 @@ const _sfc_main$4 = {
   }
 };
 function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  const _component_NuxtLink = __nuxt_component_0$1;
+  const _component_NuxtLink = __nuxt_component_0$2;
   _push(`<div${ssrRenderAttrs(mergeProps({
     ref: "menubar",
     class: ["menubar unselectable menubar2", { expand: $data.isExpand, menubar1: false, menubar2: !$data.isTop }]
@@ -1142,6 +1142,22 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   }, _parent));
   _push(`</li></ul></li><li>`);
   _push(ssrRenderComponent(_component_NuxtLink, {
+    to: { name: "news" },
+    class: "subMenuBtn"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(` 最新消息 `);
+      } else {
+        return [
+          createTextVNode(" 最新消息 ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li><li>`);
+  _push(ssrRenderComponent(_component_NuxtLink, {
     to: { name: "cuhk-icar" },
     class: "subMenuBtn"
   }, {
@@ -1193,7 +1209,7 @@ _sfc_main$4.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/CommonHeader.vue");
   return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$2]]);
+const __nuxt_component_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$2]]);
 const interpolatePath = (route, match) => {
   return match.path.replace(/(:\w+)\([^)]+\)/g, "$1").replace(/(:\w+)[?+*]/g, "$1").replace(/:\w+/g, (r) => {
     var _a;
@@ -1248,7 +1264,7 @@ const _wrapIf = (component, props, slots) => {
     return props ? h(component, props, slots) : (_a = slots.default) == null ? void 0 : _a.call(slots);
   } };
 };
-const __nuxt_component_1$1 = /* @__PURE__ */ defineComponent({
+const __nuxt_component_1 = /* @__PURE__ */ defineComponent({
   name: "NuxtPage",
   inheritAttrs: false,
   props: {
@@ -1686,7 +1702,7 @@ const imgProps = {
   ...baseImageProps,
   placeholder: { type: [Boolean, String, Number, Array], default: void 0 }
 };
-const __nuxt_component_1 = /* @__PURE__ */ defineComponent({
+const __nuxt_component_0 = /* @__PURE__ */ defineComponent({
   name: "NuxtImg",
   props: imgProps,
   emits: ["load", "error"],
@@ -1765,7 +1781,7 @@ const _sfc_main$3 = {
   name: "CommonFooter"
 };
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  const _component_nuxt_img = __nuxt_component_1;
+  const _component_nuxt_img = __nuxt_component_0;
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "container" }, _attrs))} data-v-fec46e26><div class="footer" style="${ssrRenderStyle({})}" data-v-fec46e26><div class="main" data-v-fec46e26><label class="font-middle" data-v-fec46e26>EduAIR 愛動智</label><a href="https://www.facebook.com/eduair" target="_blank" data-v-fec46e26>`);
   _push(ssrRenderComponent(_component_nuxt_img, {
     src: "facebook3.png",
@@ -1804,8 +1820,8 @@ _sfc_main$3.setup = (props, ctx) => {
 const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-fec46e26"]]);
 const _sfc_main$2 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  const _component_CommonHeader = __nuxt_component_0;
-  const _component_NuxtPage = __nuxt_component_1$1;
+  const _component_CommonHeader = __nuxt_component_0$1;
+  const _component_NuxtPage = __nuxt_component_1;
   const _component_CommonFooter = __nuxt_component_2;
   _push(`<div${ssrRenderAttrs(mergeProps({ style: { "overflow": "visible", "position": "absolute", "max-width": "100%", "min-width": "100%", "top": "0", "left": "0", "display": "flex", "flex-direction": "column", "align-items": "center", "min-height": "100vh" } }, _attrs))}>`);
   _push(ssrRenderComponent(_component_CommonHeader, null, null, _parent));
@@ -1927,5 +1943,5 @@ let entry;
 }
 const entry$1 = (ctx) => entry(ctx);
 
-export { _export_sfc as _, __nuxt_component_0$1 as a, __nuxt_component_1 as b, createError as c, entry$1 as default, useHead as u };
+export { _export_sfc as _, __nuxt_component_0$2 as a, __nuxt_component_0 as b, createError as c, entry$1 as default, useHead as u };
 //# sourceMappingURL=server.mjs.map

@@ -23,10 +23,10 @@
             <source :src="'iport5.mp4'" type="video/mp4">
         </video>
         <br>
-        使用Teachable Machine 訓練AI 圖片識別模型檢測禁區大門有人及無人的情景。透過iPort 平台上簡單設置顯示安全提示及聲音燈光等效果，只要有人經過禁區大門，iPort 就會發出警報，提醒誤闖人士離開。
+        訓練AI 圖片識別模型檢測禁區大門有人及無人的情景。透過iPort 平台上簡單設置顯示安全提示及聲音燈光等效果，只要有人經過禁區大門，iPort 就會發出警報，提醒誤闖人士離開。
         <br><br>
         <TextBox :title="'討論問題舉隅'" :image="'image/materials/logo_think2.png'">
-          任何人經過禁區大門都會觸發警報系統嗎？可以只讓授權人士通過嗎？<br>
+          任何人經過禁區大門都會觸發警報系統，可以只讓授權人士通過嗎？<br>
           為何天黑後警報系統就會被觸發？如何避免誤觸發的情況？<br>
           在訓練「有人」的情景時，假設只用同學A經過禁區的圖片，有足夠數據作為識別有人的情景嗎？<br>
         </TextBox>
@@ -54,11 +54,10 @@
         <video ref="myVideo3" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
           <source :src="'iport1.mp4'" type="video/mp4">
         </video><br>
-        在Teachable Machine 上訓練好自己喜歡的手勢識別模型後，就可以透過攝像頭以手勢控制小車飛馳。空曠環境下無線控制距離可達50米。大家不妨比賽誰的小車最快離開迷宮。
+        訓練好自己喜歡的手勢識別模型後，就可以透過攝像頭以手勢控制小車飛馳。空曠環境下無線控制距離可達50米。大家不妨比賽誰的小車最快離開迷宮。
         <br><br>
         <TextBox :title="'討論問題舉隅'" :image="'image/materials/logo_think2.png'">
-          手勢識別除了可以玩小車比賽外，還可以用到哪些生活應用上？<br>
-          Teacheble Machine 上利用圖片識別手勢與傳統的手勢識別技術有甚麼不同？<br>
+          利用圖片識別手勢與傳統的手勢識別技術有甚麼不同？<br>
           怎樣收集數據才能使小車得到更好的控制？<br>
         </TextBox>
       </div>
@@ -69,11 +68,10 @@
             <source :src="'iport2.mp4'" type="video/mp4">
         </video>
         <br>
-        iPort配件中的電動手指能夠做到類似真實手指推拉的動作，對於行動不便人士可以利用訓練聲音識別模型，利用簡單的聲控指令便能控制家中的任意按鍵開關。有障礙的室內環境下無線控制距離仍可達15米。
+        iPort配件中的電動手指能夠做到類似真實手指推拉的動作，對於行動不便人士可以利用訓練聲音識別模型，利用簡單的聲控指令便能控制家中的任意按鍵開關。即使在障礙物的室內環境下無線控制距離仍可達15米。
         <br><br>
         <TextBox :title="'討論問題舉隅'" :image="'image/materials/logo_think2.png'">
-          如何能提升Teachable Machine 中的聲控準確性呢？<br>
-          語言障礙者有甚麼辦法能夠控制電動手指？<br>
+          如何能提升聲控準確性呢？<br>
           聲控識別的最大困難是容易受到噪音影響，電動手指可能因而發生誤觸情況，我們如何避免噪音的影響？<br>
         </TextBox>
       </div>
