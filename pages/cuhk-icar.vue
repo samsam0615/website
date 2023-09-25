@@ -2,13 +2,14 @@
   <Title>CUHK iCar</Title>
   <Meta name="description" content="CUHK iCar是專爲初中學生而設的AI教學套件，讓學生輕鬆透過積木編程掌握AI。"/>
   <div class="cuhkicar-wrapper">
-    <PageCatalog2 @click="scroll" :title='"CUHK iCar"' :list='["iCar是甚麼？", "如何使用iCar？", "道德困境實驗", "人面識別追蹤實驗", "手畫線循跡實驗", "iCar資源總匯"]'/>
+    <PageCatalog2 @click="scroll" :title='"CUHK iCar"' :list='["iCar是甚麼？", "如何使用iCar？", "道德困境實驗", "人面識別追蹤", "手畫線循跡", "外賣仔實驗", "資源總匯"]'/>
     <PageCatalog3 @click="scroll" :title='"CUHK iCar"' 
       :list='["image/materials/logo_icar3.png", 
               "image/materials/logo_question2.png", 
               "image/materials/logo_moraldilemma.png", 
               "image/materials/logo_facereg.png", 
               "image/materials/logo_handdraw.png", 
+              "image/materials/logo_food3.png",
               "image/materials/logo_download.png"]'/>
     <div class="cuhkicar-container" >
       <div class="page-content" ref="content">
@@ -68,7 +69,7 @@
             除了避開小孩和避開老人，CUHK iCar還有第三個選擇嗎？<br>
           </TextBox>
         </div>
-        <TextTitle :image="'image/materials/logo_facereg.png'">人面識別追蹤實驗</TextTitle>
+        <TextTitle :image="'image/materials/logo_facereg.png'">人面識別追蹤</TextTitle>
         <div class="text-content font-small">
           <img src="@/assets/image/gif/gif_face2.gif" style="width: 50%; min-width: 250px"><br>
           爲甚麽自動駕駛車可以辨識人臉，並跟隨指定人臉行駛？<br>
@@ -79,7 +80,7 @@
             在真實情況中應用此技術，會有甚麽好處和限制？<br>
           </TextBox>
         </div>
-        <TextTitle :image="'image/materials/logo_handdraw.png'">手畫線循跡實驗</TextTitle>
+        <TextTitle :image="'image/materials/logo_handdraw.png'">手畫線循跡</TextTitle>
         <div class="text-content font-small">
           <img src="@/assets/image/gif/gif_line2.gif" style="width: 50%; min-width: 250px"><br>
           自動駕駛車能根據各色虛線、實線移動，從而行走正確路線。<br>
@@ -90,7 +91,36 @@
             CUHK iCar的這項技術在現實生活中有何作用？可應用在哪些地方？<br>
           </TextBox>
         </div>
-        <TextTitle :image="'image/materials/logo_download.png'">CUHK iCar資源總匯</TextTitle>
+        <TextTitle :image="'image/materials/logo_food3.png'">外賣仔實驗</TextTitle>
+        <div class="text-content font-small" style="display: flex; gap: 50px; flex-direction: column">
+          <div style="display: flex; width: 100%; justify-content: space-around"> 
+            <div style="display: flex; flex-direction: column; width: 28%; align-items: center"> 
+              基於本能推理
+              <video autoplay muted loop playsinline webkit-playsinline style="width: 100%">
+                <source :src="'food_skill.mp4'">
+              </video>
+                以最直觀的方式完成任務
+            </div>
+            <div style="display: flex; flex-direction: column; width: 28%; align-items: center"> 
+              基於規則推理
+              <video autoplay muted loop playsinline webkit-playsinline style="width: 100%">
+                <source :src="'food_rule.mp4'">
+              </video>
+                根據已學習的模式作出決策並執行
+            </div>
+            <div style="display: flex; flex-direction: column; width: 28%; align-items: center"> 
+              基於知識推理
+              <video autoplay muted loop playsinline webkit-playsinline style="width: 100%">
+                <source :src="'food_knowledge.mp4'">
+              </video>
+                應用機器學習找出最佳解決方法
+            </div>
+          </div>
+          <div >
+            推理是一個根據現有資訊來決策的過程。 它分為三個層級：基於本能、基於規則和基於知識。 CUHK-JC iCar外賣仔實驗旨在展示三種不同推理層次下的行為。 學生可以選擇不同送餐地點，通過觀察iCar的配送路線選擇，分別了解三個推理層級的特點。
+          </div>
+        </div>
+        <TextTitle :image="'image/materials/logo_download.png'">資源總匯</TextTitle>
         <div class="text-content font-small" style="display: flex; gap: 50px">
           <DownloadTable :source='download' />
         </div>
@@ -182,16 +212,7 @@ export default {
     padding: 0 0;
   }
 
-  @media screen and (max-width: 1200px){
-    .cuhkicar-wrapper{
-      flex-direction: row;
-      padding: 0;
-    }
 
-    .cuhkicar-container{
-      padding: 60px 30px;
-    }
-  }
 
   .page-content{
     position: relative;
@@ -235,7 +256,17 @@ export default {
     height: max-content;
   }
 
-  @media screen and (max-width: 1200px) {
+
+  .imageContainer img{
+    transition: all .3s ease-in-out;
+  }
+
+  .imageContainer:hover img{
+    transform: scale(1.2);
+  }
+
+  
+  @media screen and (max-width: 1199px) {
     .text-content-responsive{
       flex-direction: column;
     }
@@ -251,11 +282,14 @@ export default {
     }
   }
 
-  .imageContainer img{
-    transition: all .3s ease-in-out;
-  }
+  @media screen and (max-width: 1200px){
+    .cuhkicar-wrapper{
+      flex-direction: row;
+      padding: 0;
+    }
 
-  .imageContainer:hover img{
-    transform: scale(1.2);
+    .cuhkicar-container{
+      padding: 60px 30px;
+    }
   }
 </style>

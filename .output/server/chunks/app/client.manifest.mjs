@@ -4,13 +4,13 @@ const client_manifest = {
     "file": "TextBox.39ef399e.css",
     "src": "TextBox.css"
   },
-  "_TextBox.7fa614e7.js": {
+  "_TextBox.a105ca98.js": {
     "resourceType": "script",
     "module": true,
     "css": [
       "TextBox.39ef399e.css"
     ],
-    "file": "TextBox.7fa614e7.js",
+    "file": "TextBox.a105ca98.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -19,10 +19,10 @@ const client_manifest = {
     "file": "TextBox.39ef399e.css",
     "resourceType": "style"
   },
-  "_components.4217124d.js": {
+  "_components.9cdc4cd3.js": {
     "resourceType": "script",
     "module": true,
-    "file": "components.4217124d.js",
+    "file": "components.9cdc4cd3.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -130,7 +130,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-404.60c21378.js",
+    "file": "error-404.e516ceb0.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -150,7 +150,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-500.a4d822d0.js",
+    "file": "error-500.aaa9617b.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -179,7 +179,7 @@ const client_manifest = {
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
-    "file": "entry.2724a25e.js",
+    "file": "entry.94e33e4c.js",
     "isEntry": true,
     "src": "node_modules/nuxt/dist/app/entry.js",
     "_globalCSS": true
@@ -205,9 +205,9 @@ const client_manifest = {
       "event3.13e8b7e3.jpg"
     ],
     "css": [],
-    "file": "company.1caebcb8.js",
+    "file": "company.89856cc9.js",
     "imports": [
-      "_components.4217124d.js",
+      "_components.9cdc4cd3.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -234,9 +234,9 @@ const client_manifest = {
       "timeline.1dea26a8.png"
     ],
     "css": [],
-    "file": "company2.78d35c27.js",
+    "file": "company2.3a01a970.js",
     "imports": [
-      "_components.4217124d.js",
+      "_components.9cdc4cd3.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -263,9 +263,9 @@ const client_manifest = {
       "icars2.8fe89017.jpg"
     ],
     "css": [],
-    "file": "contact.756afaf4.js",
+    "file": "contact.eda00465.js",
     "imports": [
-      "_components.4217124d.js",
+      "_components.9cdc4cd3.js",
       "_index.a704afdc.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -290,9 +290,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "contact2.97748be1.js",
+    "file": "contact2.048a6706.js",
     "imports": [
-      "_components.4217124d.js",
+      "_components.9cdc4cd3.js",
       "_index.a704afdc.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -305,7 +305,7 @@ const client_manifest = {
   },
   "pages/cuhk-icar.css": {
     "resourceType": "style",
-    "file": "cuhk-icar.86eaa344.css",
+    "file": "cuhk-icar.d22fb844.css",
     "src": "pages/cuhk-icar.css"
   },
   "pages/cuhk-icar.vue": {
@@ -323,17 +323,17 @@ const client_manifest = {
       "gif_line2.81f158a0.gif"
     ],
     "css": [],
-    "file": "cuhk-icar.fe3d88fb.js",
+    "file": "cuhk-icar.9439faa7.js",
     "imports": [
-      "_components.4217124d.js",
+      "_components.9cdc4cd3.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_TextBox.7fa614e7.js"
+      "_TextBox.a105ca98.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/cuhk-icar.vue"
   },
-  "cuhk-icar.86eaa344.css": {
-    "file": "cuhk-icar.86eaa344.css",
+  "cuhk-icar.d22fb844.css": {
+    "file": "cuhk-icar.d22fb844.css",
     "resourceType": "style"
   },
   "iCarR.25d12606.png": {
@@ -390,11 +390,11 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "cuhk-iport.d5b96381.js",
+    "file": "cuhk-iport.e256025f.js",
     "imports": [
-      "_components.4217124d.js",
+      "_components.9cdc4cd3.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_TextBox.7fa614e7.js"
+      "_TextBox.a105ca98.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/cuhk-iport.vue"
@@ -415,9 +415,9 @@ const client_manifest = {
       "intro.9ccedcb0.mp4"
     ],
     "css": [],
-    "file": "index.70f31c9b.js",
+    "file": "index.d6b468b5.js",
     "imports": [
-      "_components.4217124d.js",
+      "_components.9cdc4cd3.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -440,9 +440,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "ishare.64587911.js",
+    "file": "ishare.39776ed5.js",
     "imports": [
-      "_components.4217124d.js",
+      "_components.9cdc4cd3.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -464,9 +464,9 @@ const client_manifest = {
       "banner2.d2dea03b.jpg"
     ],
     "css": [],
-    "file": "news.a65e857d.js",
+    "file": "news.52b9ac06.js",
     "imports": [
-      "_components.4217124d.js",
+      "_components.9cdc4cd3.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -490,9 +490,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "privacy.3972c6b4.js",
+    "file": "privacy.71b095b9.js",
     "imports": [
-      "_components.4217124d.js",
+      "_components.9cdc4cd3.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -511,9 +511,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "staff.97ee6ebf.js",
+    "file": "staff.e49297c6.js",
     "imports": [
-      "_components.4217124d.js",
+      "_components.9cdc4cd3.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,

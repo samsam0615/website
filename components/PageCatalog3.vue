@@ -139,7 +139,7 @@ export default {
     transform: translateX(-50%)
   }
 
-  @media screen and (min-width: 1025px) {
+  @media screen and (min-width: 1200px) {
       .test{
         display: none;
       }
