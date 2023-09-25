@@ -13,7 +13,7 @@
             EduAIR的服務
         </div>
         <div class="font-small" style="padding: 0 20px;">
-            EduAIR由一班香港中文大學研究團隊成立，團隊曾開創先河，將AI課題作系統式分類，製作出一套淺白易用的教材，加速AI課題融入中學課程，該套課程現在已經被超過50%的香港中學使用。
+            EduAIR致力構建一個共享學習的平台，提供多元化的服務，幫助學生進一步了解AI和STEAM，讓學生在互動和實踐中更好地理解和應用AI和STEAM相關知識，以激發學生的學習興趣和創造力。
         </div>
         <div class="icon-container" style="">
             <div class="iconBox">
@@ -37,7 +37,7 @@
             EduAIR的故事
         </div>
         <div style="padding: 0 20px; font-size: 20px">
-            愛動智教育系統是一間教育科技初創公司，成立公司的香港中文大學研究團隊開創先河，將AI課題作系統式分類，製作出一套淺白易用的教材，加速AI課題融入學校課程。
+            EduAIR由一班香港中文大學研究團隊成立，團隊曾開創先河，將AI課題作系統式分類，製作出一套淺白易用的教材，加速AI課題融入中學課程，該套課程現在已經被超過50%的香港中學使用。
         </div>
         <div style="width: 100%; padding: 50px 0">
             <nuxt-img src="timeline3.png" style="width: 100%" />
