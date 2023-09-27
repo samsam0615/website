@@ -16,6 +16,14 @@
 
       <span class="title font-big">如何使用iPort？</span>
       <iPortVideoPlayer />
+      <div class="text-content font-small" style="padding-top: 20px">
+        <div style="width: 100%; max-width: 900px; background: red; padding: 0; height: min-content; display: flex ">
+          <img :src="'iportui.png'" style="width: 100%; height: auto; padding: 0">
+          <div style="width: 100%; height: 100%; background: white; opacity: 0.5; position: absolute; top: 0"></div>
+          <a href="https://iport.eduairhk.com" target="_blank" class="btn"
+            style="position: absolute; top: 50%; left: 50%; transform: translate(-100%, -50%)">前往iPort編程平台</a>
+        </div>
+      </div>
 
       <span class="title font-big">警報系統</span>
       <div class="text-content font-small" >
@@ -35,7 +43,7 @@
 
       <span class="title font-big">手勢控制小車</span>
       <div class="text-content font-small">
-        <div class="font-middle" style="padding: 10px 0">製作教學</div>
+        <div class="font-middle" style="padding: 10px 0">製作過程</div>
         <div style="display: flex; flex-wrap: wrap">
           <video ref="myVideo2" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
             <source :src="'iport7.mp4'" type="video/mp4">
@@ -76,14 +84,15 @@
         </TextBox>
       </div>
 
-      <span class="title font-big">iPort編程平台</span>
-      <div class="text-content font-small">
-        <div style="width: 100%; max-width: 900px; background: red; padding: 0; height: min-content; display: flex ">
-          <img :src="'iportui.png'" style="width: 100%; height: auto; padding: 0">
-          <div style="width: 100%; height: 100%; background: white; opacity: 0.5; position: absolute; top: 0"></div>
-          <a href="https://iport.eduairhk.com" target="_blank" class="btn"
-            style="position: absolute; top: 50%; left: 50%; transform: translate(-100%, -50%)">前往iPort編程平台</a>
-        </div>
+      <span class="title font-big">其他實驗</span>
+      <div class="text-content font-small" >
+        <video ref="myVideo1" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
+            <source :src="'iport_rsp.mp4'" type="video/mp4">
+        </video>
+        <br>
+        <video ref="myVideo1" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
+            <source :src="'iport_tissue.mp4'" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
