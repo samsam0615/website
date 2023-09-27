@@ -93,6 +93,10 @@
         <video ref="myVideo1" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
             <source :src="'iport_tissue.mp4'" type="video/mp4">
         </video>
+        <br>
+        <video ref="myVideo1" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
+            <source :src="'iport_dog.mp4'" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
