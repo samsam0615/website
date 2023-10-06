@@ -353,7 +353,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-icar-ab268fd3.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-icar-6c7c1f77.mjs').then((m) => m.default || m)
   },
   {
     name: "cuhk-iport",
@@ -361,7 +361,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-iport-f160915a.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-iport-e9d78d7f.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -385,7 +385,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/news-c1df8fce.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/news-cf2f83dd.mjs').then((m) => m.default || m)
   },
   {
     name: "privacy",

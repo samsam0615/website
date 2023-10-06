@@ -12,9 +12,9 @@
                     <a  style="text-decoration-color: blue ;color: blue"
                     target="_blank"
                     href="https://tcs.edb.gov.hk/tcs/admin/courses/previewCourse/forPortal.htm?courseId=CSD020240360&lang=zh">
-                        [立即報名]
+                        [🔥立即報名]
                     </a>
-                    🔥STEAM教育學與教和評估系列
+                    STEAM教育學與教和評估系列
                 </div>
                 <div class="font-small" style="color: #6d0e77; font-weight: 600; padding: 0 0 15px 0;">初中人工智能課程單元應用實踐工作坊</div>
                 <div class="font-mini" style="line-height: 30px;"> 
