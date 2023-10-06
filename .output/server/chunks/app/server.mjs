@@ -321,7 +321,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/company-effeba1b.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/company-f4423083.mjs').then((m) => m.default || m)
   },
   {
     name: "company2",
@@ -353,7 +353,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-icar-6c7c1f77.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-icar-99c847ba.mjs').then((m) => m.default || m)
   },
   {
     name: "cuhk-iport",
@@ -361,7 +361,39 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-iport-e9d78d7f.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-iport-d9718a31.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "event-1",
+    path: "/event/1",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/1-999ed185.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "event-2",
+    path: "/event/2",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/2-694c5f72.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "event-3",
+    path: "/event/3",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/3-59ad60c5.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "event-4",
+    path: "/event/4",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/4-e41bbbc6.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -369,7 +401,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-ed5c42ba.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-7e9af8cf.mjs').then((m) => m.default || m)
   },
   {
     name: "ishare",
@@ -385,7 +417,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/news-cf2f83dd.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/news-e4b2540b.mjs').then((m) => m.default || m)
   },
   {
     name: "privacy",
@@ -935,7 +967,7 @@ function defineNuxtLink(options) {
     }
   });
 }
-const __nuxt_component_0$2 = /* @__PURE__ */ defineNuxtLink({ componentName: "NuxtLink" });
+const __nuxt_component_0$1 = /* @__PURE__ */ defineNuxtLink({ componentName: "NuxtLink" });
 function createSiteConfigStack() {
   const stack = [];
   function push(input) {
@@ -1080,7 +1112,7 @@ const _sfc_main$4 = {
   }
 };
 function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  const _component_NuxtLink = __nuxt_component_0$2;
+  const _component_NuxtLink = __nuxt_component_0$1;
   _push(`<div${ssrRenderAttrs(mergeProps({
     ref: "menubar",
     class: ["menubar unselectable menubar2", { expand: $data.isExpand, menubar1: false, menubar2: !$data.isTop }]
@@ -1217,7 +1249,7 @@ _sfc_main$4.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/CommonHeader.vue");
   return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const __nuxt_component_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$2]]);
+const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$2]]);
 const interpolatePath = (route, match) => {
   return match.path.replace(/(:\w+)\([^)]+\)/g, "$1").replace(/(:\w+)[?+*]/g, "$1").replace(/:\w+/g, (r) => {
     var _a;
@@ -1710,7 +1742,7 @@ const imgProps = {
   ...baseImageProps,
   placeholder: { type: [Boolean, String, Number, Array], default: void 0 }
 };
-const __nuxt_component_0 = /* @__PURE__ */ defineComponent({
+const __nuxt_component_3 = /* @__PURE__ */ defineComponent({
   name: "NuxtImg",
   props: imgProps,
   emits: ["load", "error"],
@@ -1789,7 +1821,7 @@ const _sfc_main$3 = {
   name: "CommonFooter"
 };
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  const _component_nuxt_img = __nuxt_component_0;
+  const _component_nuxt_img = __nuxt_component_3;
   _push(`<div${ssrRenderAttrs(mergeProps({ class: "container" }, _attrs))} data-v-fec46e26><div class="footer" style="${ssrRenderStyle({})}" data-v-fec46e26><div class="main" data-v-fec46e26><label class="font-middle" data-v-fec46e26>EduAIR 愛動智</label><a href="https://www.facebook.com/eduair" target="_blank" data-v-fec46e26>`);
   _push(ssrRenderComponent(_component_nuxt_img, {
     src: "facebook3.png",
@@ -1828,7 +1860,7 @@ _sfc_main$3.setup = (props, ctx) => {
 const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-fec46e26"]]);
 const _sfc_main$2 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  const _component_CommonHeader = __nuxt_component_0$1;
+  const _component_CommonHeader = __nuxt_component_0;
   const _component_NuxtPage = __nuxt_component_1;
   const _component_CommonFooter = __nuxt_component_2;
   _push(`<div${ssrRenderAttrs(mergeProps({ style: { "overflow": "visible", "position": "absolute", "max-width": "100%", "min-width": "100%", "top": "0", "left": "0", "display": "flex", "flex-direction": "column", "align-items": "center", "min-height": "100vh" } }, _attrs))}>`);
@@ -1951,5 +1983,5 @@ let entry;
 }
 const entry$1 = (ctx) => entry(ctx);
 
-export { _export_sfc as _, __nuxt_component_0$2 as a, __nuxt_component_0 as b, createError as c, entry$1 as default, useHead as u };
+export { _export_sfc as _, __nuxt_component_0$1 as a, __nuxt_component_3 as b, createError as c, entry$1 as default, useHead as u };
 //# sourceMappingURL=server.mjs.map

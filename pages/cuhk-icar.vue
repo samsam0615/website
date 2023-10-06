@@ -21,7 +21,7 @@
             全港有超過5成中學正使用CUHK iCar進行AI教學活動。
           </div>
           <div class="appDownloader"  style="">
-            <img src="@/assets/image/materials/iCarF.png" style="width: 200px">
+            <img :src="'iCarF2.png'" style="width: 200px">
             <div>
               <a href="https://play.google.com/store/apps/details?id=com.eduairhk.cuhkicarapp&hl=en_US" target="_blank">
                 <nuxt-img src="googleplay.png" style="height: 50px; margin: 10px 5px" />

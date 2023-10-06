@@ -22,7 +22,7 @@
                 <br><br>
                 教育局於本年9月底起舉辦相關的教師培訓課程(STEAM教育學與教和評估系列：初中人工智能課程單元應用實踐工作坊)，邀請500家學校共1000位中學老師參與工作坊，工作坊合共舉辦20場，每場6小時。增加老師對教學課程單元及使用相關學習套件的認識。
                 <br><br>
-                EduAIR將與教育局合作，向學校提供AI教學套件-CUHK iCar及CUHK iPort，本公司亦會派出技術專才擔任培訓課程的講師。
+                EduAIR將與教育局合作，向學校提供AI教學套件 - CUHK iCar及CUHK iPort，本公司亦會派出技術專才擔任培訓課程的講師。
                 <br><br>
                 <a  style="text-decoration-color: blue ;color: blue"
                     target="_blank"
@@ -31,7 +31,41 @@
             </div>
         </div>
 
-        <Gallery :title="'「危機解除」工作坊'" 
+        <div style="width: 100%; padding: 10px 20px; max-width: 1024px;">
+            <div class="font-big" style="align-self: flex-start; padding: 20px 0; font-weight: 600">活動回顧 🗓️</div>
+            <div style="display: flex; flex-wrap: wrap; row-gap: 20px">
+                <Gallery2 
+                    :title="'初中人工智能課程單元應用實踐工作坊（共20場）'"
+                    :subtitle="'香港教育局STEAM教育學與教和評估系列'"
+                    :url="'/event/4'"
+                    :image="'event/event4/1.jpg'"
+                    :date="'2023 年 9 月起'">
+                </Gallery2>
+                <Gallery2 
+                    :title="'「危機解除」工作坊'"
+                    :subtitle="'人工智能教育及探索實驗室開放日'"
+                    :url="'/event/1'"
+                    :image="'event/event1/2.jpg'"
+                    :date="'2023 年 8 月 17 - 18 日'">
+                </Gallery2>
+                <Gallery2 
+                    :title="'「iCar達人」工作坊'"
+                    :subtitle="'人工智能教育及探索實驗室開放日'"
+                    :url="'/event/2'"
+                    :image="'event/event2/3.jpg'"
+                    :date="'2023 年 8 月 17 - 18 日'">
+                </Gallery2>
+                <Gallery2 
+                    :title="'「iCar達人」工作坊'"
+                    :subtitle="'「智」為未來暑期訓練營 2023'"
+                    :url="'/event/3'"
+                    :image="'event/event3/2.jpg'"
+                    :date="'2023 年 7 月 18 - 19 日'">
+                </Gallery2>
+            </div>
+        </div>
+
+<!--         <Gallery :title="'「危機解除」工作坊'" 
                 :subtitle="'人工智能教育及探索實驗室開放日'"
                 :images="['event/event1/3.jpg', 'event/event1/2.jpg', 'event/event1/1.jpg', 'event/event1/4.jpg', 'event/event1/5.jpg', ]">
             EduAIR與中大賽馬會「智」為未來計劃於2023年8月17及18日在香港中文大學合辦人工智能教育及探索實驗室開放日，有二十多個不同的AI機械人展品供公眾參觀，例如AI油畫機、AI書法機械人、AI氣墊球機械人、AI鋼琴二重奏等。另外還舉辦了4埸「危機解除」工作坊，超過60位公眾以拆彈專員的身分拆解模擬定時炸彈，他們使用各種工程工具與團隊合作共同解除危機。
@@ -44,7 +78,7 @@
         <Gallery :title="'「iCar達人」工作坊'" :subtitle="'「智」為未來暑期訓練營 2023'" 
                 :images="['event/event3/4.jpg', 'event/event3/2.jpg', 'event/event3/3.jpg', 'event/event3/1.jpg', 'event/event3/5.jpg', ]">
             EduAIR 與中大賽馬會「智」為未來計劃於2023年7月18至19日在香港中文大學合辦了「智」為未來暑期訓練營 2023，短短兩天舉辦了20場豐富精彩的活動，當中包括「AI基礎班」，「Python 編程班」，「參觀AI實驗室」及「iCar達人」等，其中在「iCar達人」使用了我們研發的CUHK iCar ，並向98名香港初中學生教授編程及程式設計邏輯，所有學生都成功完成人面識別追蹤及道德困境的AI實驗，使他們對AI有更好的認識。
-        </Gallery>
+        </Gallery> -->
 
     </div>
 </template>
