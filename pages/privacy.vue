@@ -1,74 +1,82 @@
 <template>
     <Title>隱私政策</Title>
-    <div class="container" >
-        <div class="page-content " style="line-height: 17px" ref="content">
-            <div style="line-height: 22px"> 
-                最後更新日期：2023年9月14日<br>
-                Effective Date: September 14, 2023<br>
-            </div>
-            <br><br>
-
-            <span class="title font-middle">隱私政策<br></span><br>
-            <div class="text-content font-small" style="display: flex; justify-content: center; width: 100%"> 
-                1. 本聲明旨在通知你，你享有《個人資料（私穩）條例》的權利。<br>
-                2. 你，作為服務使用者通過填寫用於各種目的的申請表（例如:參與愛動智教
-                育系統有限公司的活動(下稱「愛動智」)，宣傳愛動智的活動等）所提供的資料只會用於申請表所列明的目的，並只供甄選參加者之用。<br>
-                3. 個人資料將會保密並只會由愛動智的職員處理。愛動智可能會將部份收集到的數據轉交給指定承擔本公司部份職能的代理商或其他人員。<br>
-                4. 愛動智可能會將你申請時提供的個人資料用於數據分析、研究、調查和審計等，以便不斷改進條款和愛動智提供的服務。<br>
-                5. 在該條例的規定下，你有權要求愛動智確定其是否擁有你的個人資料、提供其副本，並在認為不正確的情況下申請更改資料。<br>
-                6. 根據《個人資料（私穩）條例》，你有權要求使用及更改申請表中的個人資料，並有權在數據收集時，要求所收集數據的副本。<br><br>
-                如需要更改個人資料，請聯繫 info@eduairhk.com
-            </div>
-            <br><br>
-            <span class="title">Privacy Policy Statement<br></span><br>
-            <div class="text-content" style="display: flex; justify-content: center; width: 100%"> 
-                1. This is a statement to inform you of your rights under the Personal Data
-                (Privacy) Ordinance.<br>
-                2. Personal information is provided by you as an applicant through the
-                completion of application forms designated for various purposes, e.g. for
-                application for participating an activity, for the promotion of future activities
-                organized by EduAIR Systems Limited (EduAIR). Data collected are used
-                specifically for the purposes prescribed in the application forms and will serve
-                as a basis for selection of applicants.<br>
-                3. Personal data will be kept confidential and handled by the EduAIR's staff
-                members. EduAIR may transfer some of the data to an agent or other persons
-                appointed to undertake some of its functions.<br>
-                4. Your personal data provided in the application may be used by EduAIR for
-                conducting statistical analyses, research, survey and audit for the purpose of
-                continuous improvement of provisions and other services provided by
-                EduAIR.<br>
-                5. Under the provisions of the Ordinance, you have the right to request EduAIR
-                to ascertain whether it holds your personal data, to be given a copy, and to
-                apply for correction of the data, if deemed incorrect.<br>
-                6. In accordance with the Personal Data (Privacy) Ordinance, you have the right
-                to request access to and to correct the personal information contained in the
-                application, and the right to request a copy of such data during the data
-                collection.<br><br>
-
-                If you wish to access or correct your personal information, please
-                contact info@eduairhk.com
-            </div>
-        </div>
+    <div style="max-width: 1200px; align-self: center; margin-top: 60px">
+        最後更新日期：2023年10月6日<br>
+        Effective Date: October 6, 2023<br>
+        <h1>隱私政策</h1>
+        非常歡迎您光臨「EduAIR System Limited 網站」（以下簡稱本網站），為了讓您能夠安心使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：
+        <h2>一、隱私權保護政策的適用範圍</h2>
+        隱私權保護政策內容，包括本網站如何處理在您使用網站服務時收集到的個人識別資料。隱私權保護政策不適用於本網站以外的相關連結網站，也不適用於非本網站所委託或參與管理的人員。
+        <h2>二、個人資料的蒐集、處理及利用方式</h2>
+            <ul>
+                <li>當您造訪本網站或使用本網站所提供之功能服務時，我們將視該服務功能性質，請您提供必要的個人資料，並在該特定目的範圍內處理及利用您的個人資料；非經您書面同意，本網站不會將個人資料用於其他用途。</li>
+                <li>本網站在您使用服務信箱、問卷調查等互動性功能時，會保留您所提供的姓名、電子郵件地址、聯絡方式及使用時間等。</li>
+                <li>於一般瀏覽時，伺服器會自行記錄相關行徑，包括您使用連線設備的IP位址、使用時間、使用的瀏覽器、瀏覽及點選資料記錄等，做為我們增進網站服務的參考依據，此記錄為內部應用，決不對外公佈。</li>
+                <li>為提供精確的服務，我們會將收集的問卷調查內容進行統計與分析，分析結果之統計數據或說明文字呈現，除供內部研究外，我們會視需要公佈統計數據及說明文字，但不涉及特定個人之資料。</li>
+                <li>您可以隨時向我們提出請求，以更正或刪除您的帳戶或本網站所蒐集的個人資料等隱私資訊。</li>
+            </ul>
+        <h2>三、資料之保護</h2>
+            <ul>
+            <li>本網站主機均設有防火牆、防毒系統等相關的各項資訊安全設備及必要的安全防護措施，加以保護網站及您的個人資料採用嚴格的保護措施，只由經過授權的人員才能接觸您的個人資料，相關處理人員皆簽有保密合約，如有違反保密義務者，將會受到相關的法律處分。</li>
+            <li>如因業務需要有必要委託其他單位提供服務時，本網站亦會嚴格要求其遵守保密義務，並且採取必要檢查程序以確定其將確實遵守。</li>
+            </ul>
+        <h2>四、網站對外的相關連結</h2>
+        本網站的網頁提供其他網站的網路連結，您也可經由本網站所提供的連結，點選進入其他網站。但該連結網站不適用本網站的隱私權保護政策，您必須參考該連結網站中的隱私權保護政策。
+        <h2>五、與第三人共用個人資料之政策</h2>
+        本網站絕不會提供、交換、出租或出售任何您的個人資料給其他個人、團體、私人企業或公務機關，但有法律依據或合約義務者，不在此限。<br><br>
+        前項但書之情形包括不限於：
+        <ul>
+            <li>經由您書面同意。</li>
+            <li>法律明文規定。</li>
+            <li>為免除您生命、身體、自由或財產上之危險。</li>
+            <li>與公務機關或學術研究機構合作，基於公共利益為統計或學術研究而有必要，且資料經過提供者處理或蒐集著依其揭露方式無從識別特定之當事人。</li>
+            <li>當您在網站的行為，違反服務條款或可能損害或妨礙網站與其他使用者權益或導致任何人遭受損害時，經網站管理單位研析揭露您的個人資料是為了辨識、聯絡或採取法律行動所必要者。</li>
+            <li>有利於您的權益。</li>
+            <li>本網站委託廠商協助蒐集、處理或利用您的個人資料時，將對委外廠商或個人善盡監督管理之責。</li>
+        </ul>
+        <h2>六、Cookie之使用</h2>
+        為了提供您最佳的服務，本網站會在您的電腦中放置並取用我們的Cookie，若您不願接受Cookie的寫入，您可在您使用的瀏覽器功能項中設定隱私權等級為高，即可拒絕Cookie的寫入，但可能會導至網站某些功能無法正常執行 。
+        <h2>七、隱私權保護政策之修正</h2>
+        本網站隱私權保護政策將因應需求隨時進行修正，修正後的條款將刊登於網站上。
+        <h2>八、聯繫管道</h2>
+        對於本站之隱私權政策有任何疑問，或者想提出變更、移除個人資料之請求，請前往本站「聯絡我們」頁面提交表單。<br>
     </div>
 </template>
 
-<script>
-export default {
-  name: 'Privacy'
-}
-</script>
-
 <style scoped>
-.container{
-    padding: 100px 60px ;
-}
-
-.title{
+h1 {
     font-weight: 600;
-    padding: 10px 0;
+    font-size: 28px;
+    line-height: 40px;
+    padding: 20px 0 ;
 }
 
-.text-content{
-    line-height: 30px;
+h2 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 40px;
+    padding: 20px 0 0;
 }
+
+div {
+    padding: 20px 20px 50px 20px;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+ul{
+    padding: 0 20px;
+}
+
+li {
+    font-size: 20px;
+    line-height: 35px;
+    list-style-type: circle;
+    text-indent: 0;
+    padding: 3px 0;
+    list-style-position: inside;
+    margin: 0;
+    margin-left: 0;
+}
+
 </style>
