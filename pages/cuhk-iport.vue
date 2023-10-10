@@ -18,11 +18,11 @@
       <span class="title font-big">如何使用iPort？</span>
       <iPortVideoPlayer />
       <div class="text-content font-small" style="padding-top: 20px">
-        <div style="width: 100%; max-width: 900px; background: red; padding: 0; height: min-content; display: flex ">
+        <div style="position: relative; min-height: 100px; width: 100%; max-width: 900px; background: red; padding: 0; height: min-content; display: flex; background: red">
           <img :src="'iportui.png'" style="width: 100%; height: auto; padding: 0">
           <div style="width: 100%; height: 100%; background: white; opacity: 0.5; position: absolute; top: 0"></div>
-          <a href="https://iport.eduairhk.com" target="_blank" class="btn"
-            style="position: absolute; top: 50%; left: 50%; transform: translate(-100%, -50%)">前往iPort編程平台</a>
+          <a href="https://iport.eduairhk.com" target="_blank" class="btn" 
+            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 5px 15px">前往iPort編程平台</a>
         </div>
       </div>
 
@@ -122,7 +122,16 @@
   }
 
   .btn{
-    display: flex; width: max-content; height: 50px; align-items: center; width: 200px; justify-content: center; border-radius: 10px; border: 3px solid orange; color: orange; text-decoration: none;
+    display: flex; 
+    width: max-content; 
+   /*  height: 50px;  */
+    align-items: center; 
+    /* width: 200px;  */
+    justify-content: center; 
+    border-radius: 10px; 
+    border: 3px solid orange; 
+    color: orange; 
+    text-decoration: none;
     background: orange;
     color: white;
   }

@@ -321,7 +321,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/company-f4423083.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/company-ed15400b.mjs').then((m) => m.default || m)
   },
   {
     name: "company2",
@@ -329,7 +329,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/company2-472c2dd0.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/company2-67d1ce79.mjs').then((m) => m.default || m)
   },
   {
     name: "contact",
@@ -337,7 +337,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/contact-d99d4266.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/contact-aa489798.mjs').then((m) => m.default || m)
   },
   {
     name: "contact2",
@@ -345,7 +345,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/contact2-c0532d02.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/contact2-a81b7864.mjs').then((m) => m.default || m)
   },
   {
     name: "cuhk-icar",
@@ -353,7 +353,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-icar-99c847ba.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-icar-7ca3971c.mjs').then((m) => m.default || m)
   },
   {
     name: "cuhk-iport",
@@ -361,7 +361,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-iport-d9718a31.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-iport-753ca0f9.mjs').then((m) => m.default || m)
   },
   {
     name: "event-1",
@@ -369,7 +369,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/1-999ed185.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/1-d2974915.mjs').then((m) => m.default || m)
   },
   {
     name: "event-2",
@@ -377,7 +377,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/2-694c5f72.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/2-952266c9.mjs').then((m) => m.default || m)
   },
   {
     name: "event-3",
@@ -385,7 +385,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/3-59ad60c5.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/3-90575706.mjs').then((m) => m.default || m)
   },
   {
     name: "event-4",
@@ -393,7 +393,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/4-e41bbbc6.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/4-cb270365.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -401,7 +401,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-7e9af8cf.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-64ede490.mjs').then((m) => m.default || m)
   },
   {
     name: "ishare",
@@ -409,7 +409,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/ishare-0166e5a6.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/ishare-e64e16ea.mjs').then((m) => m.default || m)
   },
   {
     name: "news",
@@ -417,7 +417,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/news-e4b2540b.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/news-524cc723.mjs').then((m) => m.default || m)
   },
   {
     name: "privacy",
@@ -425,7 +425,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/privacy-ee74a1c1.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/privacy-4c7bf475.mjs').then((m) => m.default || m)
   },
   {
     name: "privacyold",
@@ -433,7 +433,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/privacyold-d34e1dc8.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/privacyold-e9faa64a.mjs').then((m) => m.default || m)
   },
   {
     name: "staff",
@@ -441,7 +441,15 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/staff-d4e7faff.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/staff-571d3b54.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "test",
+    path: "/test",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/test-4fa8a5b2.mjs').then((m) => m.default || m)
   }
 ];
 const appHead = { "meta": [{ "name": "viewport", "content": "width=device-width, initial-scale=1" }, { "charset": "utf-8" }], "link": [], "style": [], "script": [], "noscript": [] };
@@ -1391,6 +1399,103 @@ function _mergeTransitionProps(routeProps) {
   }));
   return defu(..._props);
 }
+const removeUndefinedProps = (props) => Object.fromEntries(Object.entries(props).filter(([, value]) => value !== void 0));
+const setupForUseMeta = (metaFactory, renderChild) => (props, ctx) => {
+  useHead(() => metaFactory({ ...removeUndefinedProps(props), ...ctx.attrs }, ctx));
+  return () => {
+    var _a, _b;
+    return renderChild ? (_b = (_a = ctx.slots).default) == null ? void 0 : _b.call(_a) : null;
+  };
+};
+const globalProps = {
+  accesskey: String,
+  autocapitalize: String,
+  autofocus: {
+    type: Boolean,
+    default: void 0
+  },
+  class: [String, Object, Array],
+  contenteditable: {
+    type: Boolean,
+    default: void 0
+  },
+  contextmenu: String,
+  dir: String,
+  draggable: {
+    type: Boolean,
+    default: void 0
+  },
+  enterkeyhint: String,
+  exportparts: String,
+  hidden: {
+    type: Boolean,
+    default: void 0
+  },
+  id: String,
+  inputmode: String,
+  is: String,
+  itemid: String,
+  itemprop: String,
+  itemref: String,
+  itemscope: String,
+  itemtype: String,
+  lang: String,
+  nonce: String,
+  part: String,
+  slot: String,
+  spellcheck: {
+    type: Boolean,
+    default: void 0
+  },
+  style: String,
+  tabindex: String,
+  title: String,
+  translate: String
+};
+const Title = /* @__PURE__ */ defineComponent({
+  // eslint-disable-next-line vue/no-reserved-component-names
+  name: "Title",
+  inheritAttrs: false,
+  setup: setupForUseMeta((_, { slots }) => {
+    var _a, _b, _c;
+    return {
+      title: ((_c = (_b = (_a = slots.default) == null ? void 0 : _a.call(slots)) == null ? void 0 : _b[0]) == null ? void 0 : _c.children) || null
+    };
+  })
+});
+const Meta = /* @__PURE__ */ defineComponent({
+  // eslint-disable-next-line vue/no-reserved-component-names
+  name: "Meta",
+  inheritAttrs: false,
+  props: {
+    ...globalProps,
+    charset: String,
+    content: String,
+    httpEquiv: String,
+    name: String,
+    body: Boolean,
+    renderPriority: [String, Number]
+  },
+  setup: setupForUseMeta((props) => {
+    const meta = { ...props };
+    if (meta.httpEquiv) {
+      meta["http-equiv"] = meta.httpEquiv;
+      delete meta.httpEquiv;
+    }
+    return {
+      meta: [meta]
+    };
+  })
+});
+const Head = /* @__PURE__ */ defineComponent({
+  // eslint-disable-next-line vue/no-reserved-component-names
+  name: "Head",
+  inheritAttrs: false,
+  setup: (_props, ctx) => () => {
+    var _a, _b;
+    return (_b = (_a = ctx.slots).default) == null ? void 0 : _b.call(_a);
+  }
+});
 async function imageMeta(_ctx, url) {
   const meta = await _imageMeta(url).catch((err) => {
     console.error("Failed to get image meta for " + url, err + "");
@@ -1818,38 +1923,45 @@ const __nuxt_component_3 = /* @__PURE__ */ defineComponent({
   }
 });
 const _sfc_main$3 = {
+  components: {},
   name: "CommonFooter"
 };
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  const _component_Meta = Meta;
   const _component_nuxt_img = __nuxt_component_3;
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "container" }, _attrs))} data-v-fec46e26><div class="footer" style="${ssrRenderStyle({})}" data-v-fec46e26><div class="main" data-v-fec46e26><label class="font-middle" data-v-fec46e26>EduAIR 愛動智</label><a href="https://www.facebook.com/eduair" target="_blank" data-v-fec46e26>`);
+  _push(`<!--[-->`);
+  _push(ssrRenderComponent(_component_Meta, {
+    name: "format-detection",
+    content: "telephone=no"
+  }, null, _parent));
+  _push(`<div class="container" data-v-8ae49a95><div class="footer" style="${ssrRenderStyle({})}" data-v-8ae49a95><div class="main" data-v-8ae49a95><label class="font-middle" data-v-8ae49a95>EduAIR 愛動智</label><a href="https://www.facebook.com/eduair" target="_blank" data-v-8ae49a95>`);
   _push(ssrRenderComponent(_component_nuxt_img, {
     src: "facebook3.png",
     height: "20px"
   }, null, _parent));
-  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-fec46e26>愛動智教育系統</label></a><a href="https://www.instagram.com/eduair_hk/" target="_blank" data-v-fec46e26>`);
+  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-8ae49a95>愛動智教育系統</label></a><a href="https://www.instagram.com/eduair_hk/" target="_blank" data-v-8ae49a95>`);
   _push(ssrRenderComponent(_component_nuxt_img, {
     src: "instagram3.png",
     height: "20px",
     style: {}
   }, null, _parent));
-  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-fec46e26>eduair_hk</label></a></div><div data-v-fec46e26><label class="font-middle" data-v-fec46e26>聯絡我們</label><label style="${ssrRenderStyle({ "padding": "4px 0" })}" data-v-fec46e26>`);
+  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-8ae49a95>eduair_hk</label></a></div><div data-v-8ae49a95><label class="font-middle" data-v-8ae49a95>聯絡我們</label><label style="${ssrRenderStyle({ "padding": "4px 0" })}" data-v-8ae49a95>`);
   _push(ssrRenderComponent(_component_nuxt_img, {
     src: "call3.png",
     height: "18px",
     style: {}
   }, null, _parent));
-  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-fec46e26>+852 3618 8911</label></label><label style="${ssrRenderStyle({ "padding": "4px 0" })}" data-v-fec46e26>`);
+  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" x-apple-data-detectors="off" data-v-8ae49a95>+852 3618 8911</label></label><label style="${ssrRenderStyle({ "padding": "4px 0" })}" data-v-8ae49a95>`);
   _push(ssrRenderComponent(_component_nuxt_img, {
     src: "mail3.png",
     height: "18px"
   }, null, _parent));
-  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-fec46e26>info@eduairhk.com</label></label><label style="${ssrRenderStyle({ "padding": "4px 0" })}" data-v-fec46e26>`);
+  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-8ae49a95>info@eduairhk.com</label></label><label style="${ssrRenderStyle({ "padding": "4px 0" })}" data-v-8ae49a95>`);
   _push(ssrRenderComponent(_component_nuxt_img, {
     src: "location3.png",
     height: "18px"
   }, null, _parent));
-  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-fec46e26>科學園16W棟2樓237室</label></label></div></div><div style="${ssrRenderStyle({ "padding": "15px 0" })}" data-v-fec46e26> Copyright © EduAIR Systems Limited. </div></div>`);
+  _push(`<label class="font-mini" style="${ssrRenderStyle({ "padding": "0 10px" })}" data-v-8ae49a95>科學園16W棟2樓237室</label></label></div></div><div style="${ssrRenderStyle({ "padding": "15px 0" })}" data-v-8ae49a95> Copyright © EduAIR Systems Limited. </div></div><!--]-->`);
 }
 const _sfc_setup$3 = _sfc_main$3.setup;
 _sfc_main$3.setup = (props, ctx) => {
@@ -1857,7 +1969,7 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/CommonFooter.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-fec46e26"]]);
+const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-8ae49a95"]]);
 const _sfc_main$2 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_CommonHeader = __nuxt_component_0;
@@ -1983,5 +2095,5 @@ let entry;
 }
 const entry$1 = (ctx) => entry(ctx);
 
-export { _export_sfc as _, __nuxt_component_0$1 as a, __nuxt_component_3 as b, createError as c, entry$1 as default, useHead as u };
+export { Head as H, Meta as M, Title as T, _export_sfc as _, __nuxt_component_0$1 as a, __nuxt_component_3 as b, createError as c, entry$1 as default, useHead as u };
 //# sourceMappingURL=server.mjs.map

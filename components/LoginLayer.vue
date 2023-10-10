@@ -1,9 +1,11 @@
 <template>
   <transition name="fadeout">
-    <div class="login-container" :class="{wrong: wrong}" v-show="display"> 
-          <div style="font-size: 15px; color: #1967D2;">
-              For Inquiries, Please Contact: info@eduairhk.com
-          </div>
+    <div style="padding-top: 60px" class="login-container" :class="{wrong: wrong}" v-show="display"> 
+        
+        
+        <div style="font-size: 15px; color: #1967D2;">
+            For Inquiries, Please Contact: info@eduairhk.com
+        </div>
 
         <div style="padding: 5px 0 20px; display: flex; align-items: center;" >
           <div style="padding: 0 10px; font-size: 15px; color: #1967D2">
@@ -14,7 +16,7 @@
           </div>
         </div>
           <div class="password">
-              <input type="password" placeholder="Password" v-model="password"  @keyup.enter.prevent="login">
+              <input type="password" placeholder="Password" v-model="password"  @keyup.enter.prevent="login" autocomplete="new-password">
               <div class="button" style="position: relative; " @click.prevent="login">
                   <img :src="'enter.png'" style="width: 100%;">
               </div>
@@ -28,7 +30,12 @@
               <img  :src="'armR2.png'" >
             </div>
         </div>
-        <div style="font-size: 40px; color: #1967D2; font-weight: 600; line-height: 40px">CUHK iPort</div>
+        <div style="font-size: 40px; color: #1967D2; font-weight: 600; line-height: 40px; position: relative">
+          CUHK iPort
+          <div class="message"> 
+            已參與初中人工智能單元應用實踐工作坊的老師請聯絡info@eduairhk.com 獲取登入密碼。
+          </div>
+        </div>
     </div>   
   </transition>
 </template>
@@ -75,12 +82,19 @@ export default {
     overflow: hidden;
     width: 300px; 
     height: 300px; 
+    min-width: 300px;
+    min-height: 300px;
     display: flex; 
     justify-content: center; 
     padding: 40px; 
     border-radius: 50%;
     border: 3px solid #1967D2;
     transition: 1s ease-in-out; 
+  }
+
+  .icar img{
+    width: 100%;
+    height: 100%;
   }
 
   .arm{
@@ -222,5 +236,33 @@ export default {
   .fadeout-enter-from ,
   .fadeout-leave-to{
     opacity: 0;
+  }
+
+  .message{
+    position: absolute;
+    right: 0;
+    transform: translate(30%, 250px);
+    line-height: 20px;
+    z-index: 1;
+    width: 220px;
+    padding: 10px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #1967D2;
+    font-size: 16px;
+  }
+
+  .message::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-bottom: 20px solid rgba(255, 255, 255, 0.8);
+    border-top: 0;
+    transform: translate(0, -100%);
+    
   }
 </style>
