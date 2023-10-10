@@ -1,7 +1,7 @@
 <template>
     <Title>[🔥立即報名] 初中人工智能課程單元應用實踐工作坊</Title>
-    <div class="pageContent-container" style="max-width: 100%">
-        <div style="width: 100%; padding: 10px 20px; max-width: 1200px;">
+    <div class="pageContent-container" style="max-width: 100%; width: 1024px">
+        <div style="width: 100%; padding: 10px 20px;">
             <div class="font-big" style="align-self: flex-start; padding: 20px 0 0 0; font-weight: 600; color: #6d0e77">
                 [🔥立即報名] 初中人工智能課程單元應用實踐工作坊
             </div>

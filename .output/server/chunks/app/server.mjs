@@ -369,7 +369,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/1-494eb218.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/1-94c8e946.mjs').then((m) => m.default || m)
   },
   {
     name: "event-2",
@@ -377,7 +377,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/2-1664910c.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/2-26ff4640.mjs').then((m) => m.default || m)
   },
   {
     name: "event-3",
@@ -385,7 +385,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/3-155ec28f.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/3-da69b7f6.mjs').then((m) => m.default || m)
   },
   {
     name: "event-4",
@@ -393,7 +393,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/4-9326f4c8.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/4-adf6b7aa.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
