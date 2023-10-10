@@ -29,51 +29,12 @@
               </GoogleMap>
             </div>
             <div style="width: 400px; max-width: 100%; padding: 20px; line-height: 30px; background: rgba(255,255,255,0.6); margin: 20px 0 5px; border-radius: 10px; display: flex; align-items: center; padding: 20px;">
-              聯絡電話：+852 3618 8911<br>
+              聯絡電話：+852 5542 7564<br>
               聯絡電郵：info@eduairhk.com<br>
               地址：科學園16W棟2樓237室
             </div>
           </div>
       </div>
-<!--       <div style="display: flex; align-self: flex-start; padding: 20px 0; flex-direction: column; width: 100%; max-width: 100%">
-        <div style="border-radius: 5px; overflow: hidden; width: 500px; height: 350px;"> 
-          <GoogleMap api-key="AIzaSyBgiaMIsBDwdjUXYZZkvuLlAtrBmBaHRtY" style="width: 100%; height: 100%;" :center="center" :zoom="17">
-            <Marker :options="{ position: center }" />
-          </GoogleMap>
-        </div>
-        <div style="width: 100%; padding: 20px; line-height: 30px; background: rgba(255,255,255,0.6); margin: 20px 0 5px; border-radius: 10px; display: flex; align-items: center; padding: 20px">
-          聯絡電話：+852 3618 8911<br>
-          聯絡電郵：info@eduairhk.com<br>
-          地址：香港科學園16W棟2樓237室
-        </div>
-      </div> -->
-<!--       <div style="overflow: visible; position: relative; width: 80%; display: flex; justify-content: center; align-items: center"> 
-        <div class="namecard" style=""> 
-          <div style="display: flex;">
-            <div style="flex: 1; display: flex; flex-direction: column; height: 100%; position: relative">
-              <div style="font-size: 23px; display: flex; align-items: center; height: max-content">
-                <img :src="'logo.png'" style="width: 100px">
-              </div>
-              <div class="row">+852 3618 8911</div>
-              <div class="row">info@eduairhk.com</div>
-              <div class="row">科學園16W棟2樓237室</div>
-            </div>
-            <div style="border-radius: 5px; overflow: hidden; width: 160px; height: 160px"> 
-              <GoogleMap api-key="AIzaSyBgiaMIsBDwdjUXYZZkvuLlAtrBmBaHRtY" style="width: 100%; height: 100%;" :center="center" :zoom="17">
-                <Marker :options="{ position: center }" />
-              </GoogleMap>
-            </div>
-          </div>
-          <div class="row" style="flex: 1; align-items: flex-end; justify-content: flex-end; padding: 0">
-            <div class="button" style="background: #395694; border-bottom: 4px solid #2c4472">
-              <label class="text">Facebook</label>
-            </div>
-            <div class="button" style="background: #e55a77; border-bottom: 4px solid #da2e69">
-              <label class="text">Instagram</label>
-            </div>
-          </div>
-        </div>
-      </div> -->
     </div>
   </div>
 </template>

@@ -17,7 +17,7 @@
         <label class="font-middle" >聯絡我們</label>
         <label style="padding: 4px 0">
           <nuxt-img src="call3.png" height="18px" style="" /> 
-          <label class="font-mini" style="padding: 0 10px;" x-apple-data-detectors="off">+852 3618 8911</label>
+          <label class="font-mini" style="padding: 0 10px;" x-apple-data-detectors="off">+852 5542 7564</label>
         </label>
         <label style="padding: 4px 0">
           <nuxt-img src="mail3.png" height="18px" /> 
