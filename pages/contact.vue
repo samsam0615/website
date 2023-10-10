@@ -22,7 +22,7 @@
               </form>
             </div>
           </div>
-          <div style="display: flex; align-self: flex-start; flex-direction: column; width: 100%; justify-content: center; align-items: center; padding: 20px 0; width: max-content; align-self: center">
+          <div style="display: flex; align-self: flex-start; flex-direction: column; max-width: 100%; justify-content: center; align-items: center; padding: 20px 0; width: max-content; align-self: center">
             <div style="border-radius: 5px; overflow: hidden; width: 400px; height: 300px; max-width: 100%"> 
               <GoogleMap api-key="AIzaSyBgiaMIsBDwdjUXYZZkvuLlAtrBmBaHRtY" style="width: 100%; height: 100%;" :center="center" :zoom="17">
                 <Marker :options="{ position: center }" />
