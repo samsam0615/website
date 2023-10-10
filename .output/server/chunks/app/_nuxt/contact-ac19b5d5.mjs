@@ -48,7 +48,7 @@ const _sfc_main = {
       if (this.name == "" || this.email == "" || this.content == "") {
         return;
       }
-      emailjs.sendForm("service_b5o3c5j", "template_glfviys", "#contactform", "fmOc4joeStfAyUTP1").then((response) => {
+      emailjs.sendForm("service_dw5j7af", "template_glfviys", "#contactform", "fmOc4joeStfAyUTP1").then((response) => {
         console.log("SUCCESS!", response.status, response.text);
       }, (err) => {
         console.log("FAILED...", err);
@@ -82,7 +82,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     name: "description",
     content: "\u7ACB\u5373\u806F\u7D61 EduAIR"
   }, null, _parent));
-  _push(`<div class="bg" data-v-2554adb2><div class="pageContent-container" data-v-2554adb2><div class="text-container" data-v-2554adb2><div class="form" data-v-2554adb2><div style="${ssrRenderStyle({ "width": "100%", "background": "rgba( 255, 255, 255, 0.7   )", "padding": "30px", "flex": "1" })}" data-v-2554adb2><label class="pageTitle font-big" data-v-2554adb2>\u7ACB\u5373\u806F\u7D61 EduAIR<br data-v-2554adb2></label><br data-v-2554adb2><form id="contactform" style="${ssrRenderStyle({ "display": "flex", "flex-direction": "column" })}" data-v-2554adb2><input${ssrRenderAttr("value", $data.name)} class="font-mini" type="text" id="name" name="name" placeholder="\u59D3\u540D\uFF08\u5FC5\u586B\uFF09" autocomplete="off" required data-v-2554adb2><input${ssrRenderAttr("value", $data.email)} class="font-mini" type="text" id="email" name="email" placeholder="\u96FB\u90F5\uFF08\u5FC5\u586B\uFF09" autocomplete="off" required data-v-2554adb2><textarea class="font-mini" placeholder="\u5167\u5BB9\uFF08\u5FC5\u586B\uFF09" name="message" id="message" data-v-2554adb2>${ssrInterpolate($data.content)}</textarea><div class="row" style="${ssrRenderStyle({ "display": "flex", "justify-content": "space-between" })}" data-v-2554adb2><input class="font-mini" type="text" id="phone" name="phone" placeholder="\u806F\u7D61\u96FB\u8A71" autocomplete="off" data-v-2554adb2><input class="font-mini" type="text" id="contactformOrganization" name="organization" placeholder="\u6A5F\u69CB/\u516C\u53F8\u540D\u7A31" autocomplete="off" data-v-2554adb2></div><div style="${ssrRenderStyle({ "justify-content": "center", "display": "flex" })}" data-v-2554adb2><button data-v-2554adb2>\u63D0\u4EA4</button><button data-v-2554adb2>\u91CD\u7F6E</button></div></form></div></div><div style="${ssrRenderStyle({ "display": "flex", "align-self": "center", "flex-direction": "column", "width": "max-content", "justify-content": "center", "align-items": "center", "padding": "20px 0" })}" data-v-2554adb2><div style="${ssrRenderStyle({ "border-radius": "5px", "overflow": "hidden", "width": "400px", "height": "300px", "max-width": "100%" })}" data-v-2554adb2>`);
+  _push(`<div class="bg" data-v-b953131b><div class="pageContent-container" data-v-b953131b><div class="text-container" data-v-b953131b><div class="form" data-v-b953131b><div style="${ssrRenderStyle({ "width": "100%", "background": "rgba( 255, 255, 255, 0.7   )", "padding": "30px", "flex": "1" })}" data-v-b953131b><label class="pageTitle font-big" data-v-b953131b>\u7ACB\u5373\u806F\u7D61 EduAIR<br data-v-b953131b></label><br data-v-b953131b><form id="contactform" style="${ssrRenderStyle({ "display": "flex", "flex-direction": "column" })}" data-v-b953131b><input${ssrRenderAttr("value", $data.name)} class="font-mini" type="text" id="name" name="name" placeholder="\u59D3\u540D\uFF08\u5FC5\u586B\uFF09" autocomplete="off" required data-v-b953131b><input${ssrRenderAttr("value", $data.email)} class="font-mini" type="text" id="email" name="email" placeholder="\u96FB\u90F5\uFF08\u5FC5\u586B\uFF09" autocomplete="off" required data-v-b953131b><textarea class="font-mini" placeholder="\u5167\u5BB9\uFF08\u5FC5\u586B\uFF09" name="message" id="message" data-v-b953131b>${ssrInterpolate($data.content)}</textarea><div class="row" style="${ssrRenderStyle({ "display": "flex", "justify-content": "space-between" })}" data-v-b953131b><input class="font-mini" type="text" id="phone" name="phone" placeholder="\u806F\u7D61\u96FB\u8A71" autocomplete="off" data-v-b953131b><input class="font-mini" type="text" id="contactformOrganization" name="organization" placeholder="\u6A5F\u69CB/\u516C\u53F8\u540D\u7A31" autocomplete="off" data-v-b953131b></div><div style="${ssrRenderStyle({ "justify-content": "center", "display": "flex" })}" data-v-b953131b><button data-v-b953131b>\u63D0\u4EA4</button><button data-v-b953131b>\u91CD\u7F6E</button></div></form></div></div><div style="${ssrRenderStyle({ "display": "flex", "align-self": "center", "flex-direction": "column", "width": "max-content", "justify-content": "center", "align-items": "center", "padding": "20px 0" })}" data-v-b953131b><div style="${ssrRenderStyle({ "border-radius": "5px", "overflow": "hidden", "width": "400px", "height": "300px", "max-width": "100%" })}" data-v-b953131b>`);
   _push(ssrRenderComponent(_component_GoogleMap, {
     "api-key": "AIzaSyBgiaMIsBDwdjUXYZZkvuLlAtrBmBaHRtY",
     style: { "width": "100%", "height": "100%" },
@@ -104,7 +104,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     }),
     _: 1
   }, _parent));
-  _push(`</div><div style="${ssrRenderStyle({ "width": "400px", "max-width": "100%", "padding": "20px", "line-height": "30px", "background": "rgba(255,255,255,0.6)", "margin": "20px 0 5px", "border-radius": "10px", "display": "flex", "align-items": "center" })}" data-v-2554adb2> \u806F\u7D61\u96FB\u8A71\uFF1A+852 5542 7564<br data-v-2554adb2> \u806F\u7D61\u96FB\u90F5\uFF1Ainfo@eduairhk.com<br data-v-2554adb2> \u5730\u5740\uFF1A\u79D1\u5B78\u571216W\u68DF2\u6A13237\u5BA4 </div></div></div></div></div><!--]-->`);
+  _push(`</div><div style="${ssrRenderStyle({ "width": "400px", "max-width": "100%", "padding": "20px", "line-height": "30px", "background": "rgba(255,255,255,0.6)", "margin": "20px 0 5px", "border-radius": "10px", "display": "flex", "align-items": "center" })}" data-v-b953131b> \u806F\u7D61\u96FB\u8A71\uFF1A+852 5542 7564<br data-v-b953131b> \u806F\u7D61\u96FB\u90F5\uFF1Ainfo@eduairhk.com<br data-v-b953131b> \u5730\u5740\uFF1A\u79D1\u5B78\u571216W\u68DF2\u6A13237\u5BA4 </div></div></div></div></div><!--]-->`);
 }
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
@@ -112,7 +112,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/contact.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const contact = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-2554adb2"]]);
+const contact = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-b953131b"]]);
 
 export { contact as default };
-//# sourceMappingURL=contact-10389f5e.mjs.map
+//# sourceMappingURL=contact-ac19b5d5.mjs.map

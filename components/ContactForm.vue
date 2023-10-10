@@ -60,7 +60,7 @@ export default {
   },
   methods: {
     sendForm () {
-      emailjs.sendForm('service_b5o3c5j', 'template_glfviys', '#contactform', 'fmOc4joeStfAyUTP1').then((response) => {
+      emailjs.sendForm('service_dw5j7af', 'template_glfviys', '#contactform', 'fmOc4joeStfAyUTP1').then((response) => {
         console.log('SUCCESS!', response.status, response.text)
       }, (err) => {
         console.log('FAILED...', err)

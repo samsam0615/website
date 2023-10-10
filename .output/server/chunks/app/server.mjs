@@ -337,7 +337,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/contact-10389f5e.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/contact-ac19b5d5.mjs').then((m) => m.default || m)
   },
   {
     name: "contact2",
@@ -345,7 +345,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/contact2-a81b7864.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/contact2-df1b5b5b.mjs').then((m) => m.default || m)
   },
   {
     name: "cuhk-icar",

@@ -57,12 +57,12 @@ export default {
     }
   },
   methods: {
-    sendForm () {
+     sendForm () {
       if(this.name == "" || this.email == "" || this.content == ""){
         return
       }
       
-      emailjs.sendForm('service_b5o3c5j', 'template_glfviys', '#contactform', 'fmOc4joeStfAyUTP1').then((response) => {
+      emailjs.sendForm('service_dw5j7af', 'template_glfviys', '#contactform', 'fmOc4joeStfAyUTP1').then((response) => {
         console.log('SUCCESS!', response.status, response.text)
       }, (err) => {
         console.log('FAILED...', err)
@@ -106,9 +106,10 @@ input:not(:placeholder-shown), textarea:not(:placeholder-shown){
 }
 
 .row input{
-  flex-basis: 45%;
-  max-width: 48%;
+  width: 100%;
 }
+
+
 
 textarea{
   flex-grow: 1;
@@ -229,14 +230,19 @@ button:hover{
   width: 100%; position: relative; padding: 20px; display: flex; justify-content: space-around; align-items: center; flex-direction: row
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
+  .row input + input{
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
   .form .row{
     flex-direction: column;
   }
 
   .text-container{
     flex-direction: column;
-
   }
 }
 </style>

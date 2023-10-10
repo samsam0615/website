@@ -34,7 +34,7 @@ const _sfc_main$1 = {
   },
   methods: {
     sendForm() {
-      emailjs.sendForm("service_b5o3c5j", "template_glfviys", "#contactform", "fmOc4joeStfAyUTP1").then((response) => {
+      emailjs.sendForm("service_dw5j7af", "template_glfviys", "#contactform", "fmOc4joeStfAyUTP1").then((response) => {
         console.log("SUCCESS!", response.status, response.text);
       }, (err) => {
         console.log("FAILED...", err);
@@ -91,4 +91,4 @@ _sfc_main.setup = (props, ctx) => {
 const contact2 = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { contact2 as default };
-//# sourceMappingURL=contact2-a81b7864.mjs.map
+//# sourceMappingURL=contact2-df1b5b5b.mjs.map
