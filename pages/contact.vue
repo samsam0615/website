@@ -5,7 +5,7 @@
     <div class="pageContent-container">
       <div class="text-container">
           <div class="form"> 
-            <div style="min-width: max-content; width: 100%; background: rgba( 255, 255, 255, 0.7   ); padding: 30px"> 
+            <div style=" width: 100%; background: rgba( 255, 255, 255, 0.7   ); padding: 30px; flex: 1"> 
               <label class="pageTitle font-big">立即聯絡 EduAIR<br></label><br>
               <form  id="contactform" ref="contactform" style="display: flex; flex-direction: column">
                 <input v-model="name" class="font-mini" type="text" id="name"  name="name" placeholder="姓名（必填）" autocomplete="off" required>
@@ -22,13 +22,13 @@
               </form>
             </div>
           </div>
-          <div style="display: flex; align-self: flex-start; flex-direction: column; width: 100%; justify-content: center; align-items: center; padding: 20px 0;">
-            <div style="border-radius: 5px; overflow: hidden; width: 500px; height: 300px; max-width: 100%"> 
+          <div style="display: flex; align-self: flex-start; flex-direction: column; width: 100%; justify-content: center; align-items: center; padding: 20px 0; width: max-content; align-self: center">
+            <div style="border-radius: 5px; overflow: hidden; width: 400px; height: 300px; max-width: 100%"> 
               <GoogleMap api-key="AIzaSyBgiaMIsBDwdjUXYZZkvuLlAtrBmBaHRtY" style="width: 100%; height: 100%;" :center="center" :zoom="17">
                 <Marker :options="{ position: center }" />
               </GoogleMap>
             </div>
-            <div style="width: 500px; max-width: 100%; padding: 20px; line-height: 30px; background: rgba(255,255,255,0.6); margin: 20px 0 5px; border-radius: 10px; display: flex; align-items: center; padding: 20px;">
+            <div style="width: 400px; max-width: 100%; padding: 20px; line-height: 30px; background: rgba(255,255,255,0.6); margin: 20px 0 5px; border-radius: 10px; display: flex; align-items: center; padding: 20px;">
               聯絡電話：+852 3618 8911<br>
               聯絡電郵：info@eduairhk.com<br>
               地址：科學園16W棟2樓237室
@@ -145,7 +145,8 @@ input:not(:placeholder-shown), textarea:not(:placeholder-shown){
 }
 
 .row input{
-  flex-basis: 40%;
+  flex-basis: 45%;
+  max-width: 48%;
 }
 
 textarea{
@@ -170,8 +171,10 @@ button:hover{
 
 .form{
   width: 100%; 
-  max-width: 600px;
-  display: flex; justify-content: center; align-items: center; overflow: hidden; 
+  max-width: 500px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; overflow: hidden; 
 /*   background-image: url('~/assets/image/icars2.jpg'); 
   background-size: auto 1000px; background-position: 0 -200px; */
   height: max-content;
@@ -262,7 +265,7 @@ button:hover{
 }
 
 .text-container{
-  width: 100%; position: relative; padding: 20px; display: flex; justify-content: center; align-items: center; flex-direction: row
+  width: 100%; position: relative; padding: 20px; display: flex; justify-content: space-around; align-items: center; flex-direction: row
 }
 
 @media screen and (max-width: 1200px) {

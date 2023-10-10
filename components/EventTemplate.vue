@@ -1,6 +1,6 @@
 <template>
     <div class="pageContent-container" style="max-width: 100%">
-        <div style="width: 100%; padding: 10px 20px; max-width: 1024px;">
+        <div style="width: 100%; padding: 10px 20px; max-width: 1200px;">
             <div class="font-big" style="align-self: flex-start; padding: 20px 0 0 0; font-weight: 600; color: #6d0e77">{{title}}</div>
             <div class="font-middle" style="padding: 8px 0">{{subtitle}}</div>
             <div class="font-small" style="display: flex; align-items: center; padding: 5px 0"><img :src="'/calendargray.png'" style="width: 50px; padding: 0 9px">{{date}}</div>

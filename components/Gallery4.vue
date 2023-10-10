@@ -71,7 +71,7 @@ export default {
 
 .container{
     display: flex; padding: 20px; width: 100%; flex-direction: column;
-    max-width: 1024px;
+    max-width: 1200px;
 }
 
 
@@ -116,7 +116,7 @@ export default {
     width: 450px; aspect-ratio: 4 / 3; overflow: hidden; max-width: 100%;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
     .imageDisplayer{
         width: 100%;
     }
@@ -125,7 +125,7 @@ export default {
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .mobile{
         display: none;
     }

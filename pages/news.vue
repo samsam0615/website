@@ -1,12 +1,12 @@
 <template>
     <Title>最新消息</Title>
-    <div class="pageContent-container" style="max-width: 100%">
+    <div class="pageContent-container" style="max-width: 100%; width: 1024px; justify-content: center;">
         <div class="banner">
             <label class="title font-big">
                 最新消息
             </label>
         </div>
-        <div class="text"> 
+        <div class="text" > 
             <div class="border"> 
                 <div class="font-middle" style="color: #6d0e77; font-weight: 600; padding: 0 0 0px 0;">
                     <a  style="text-decoration-color: blue ;color: blue"
@@ -33,7 +33,7 @@
 
         <div style="width: 100%; padding: 10px 20px; max-width: 1024px;">
             <div class="font-big" style="align-self: flex-start; padding: 20px 0; font-weight: 600">活動回顧 🗓️</div>
-            <div style="display: flex; flex-wrap: wrap; row-gap: 20px">
+            <div style="display: flex; flex-wrap: wrap; row-gap: 20px; max-width: 1024px;">
                 <Gallery2 
                     :title="'初中人工智能課程單元應用實踐工作坊（共20場）'"
                     :subtitle="'香港教育局STEAM教育學與教和評估系列'"

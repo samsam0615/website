@@ -26,7 +26,7 @@ body{
 }
 
 .text-container{
-    max-width: 1200px;
+    max-width: 1024px;
     text-align: left;
     height: 100%;
     display: flex;
@@ -77,7 +77,7 @@ body{
     height: max-content;
     animation: fadeIn 1s ease-in-out;
     overflow: hidden;
-    max-width: 1200px;
+    max-width: 1024px;
 }
 
 .font-big{

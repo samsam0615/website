@@ -64,7 +64,7 @@ export default {
 
 .container{
     display: flex; padding: 20px; width: 100%; flex-direction: column;
-    max-width: 1024px;
+    max-width: 1200px;
 }
 
 

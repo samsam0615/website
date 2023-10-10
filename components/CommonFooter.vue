@@ -60,7 +60,7 @@ export default {
         background: #6d0e77;
     }
     .footer{
-      max-width: 1024px; width: 100%; display: flex; flex-direction: row; justify-content: space-between;
+      max-width: 800px; width: 100%; display: flex; flex-direction: row; justify-content: space-between;
     }
     .footer div{
         width: max-content;
