@@ -2,9 +2,9 @@ const interopDefault = r => r.default || r || [];
 const styles = {
   "node_modules/nuxt/dist/app/entry.js": () => import('./_nuxt/entry-styles.e78d7eeb.mjs').then(interopDefault),
   "pages/company.vue": () => import('./_nuxt/company-styles.6507d9be.mjs').then(interopDefault),
+  "pages/contact.vue": () => import('./_nuxt/contact-styles.9cc51a3f.mjs').then(interopDefault),
   "pages/contact2.vue": () => import('./_nuxt/contact2-styles.737f440c.mjs').then(interopDefault),
   "pages/company2.vue": () => import('./_nuxt/company2-styles.93948169.mjs').then(interopDefault),
-  "pages/contact.vue": () => import('./_nuxt/contact-styles.28e94a25.mjs').then(interopDefault),
   "pages/cuhk-icar.vue": () => import('./_nuxt/cuhk-icar-styles.3782471c.mjs').then(interopDefault),
   "pages/cuhk-iport.vue": () => import('./_nuxt/cuhk-iport-styles.60f19321.mjs').then(interopDefault),
   "pages/event/4.vue": () => import('./_nuxt/4-styles.09058201.mjs').then(interopDefault),

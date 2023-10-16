@@ -2,6 +2,17 @@
   <Title>聯絡我們</Title>
   <Meta name="description" content="立即聯絡 EduAIR"/>
   <div class="bg">
+    <div v-if="isError" style="position: fixed; width: 400px; height: max-content; background: rgba(255, 236, 236, 0.95); z-index: 1; top: 50%; left: 50%; max-width: 75%; max-height: 40%; transform: translate(-50%, -50%); padding: 25px;">
+      <div style="font-size: 20px">Failed Sending Form</div>
+      <div style="font-size: 16px; padding: 10px 0">
+        The contact form functionality has encountered an issue. Please utilize email to get in touch with us.  
+      </div>
+    </div>
+    <div v-if="isSuccess" style="position: fixed; width: 400px; height: max-content; background: rgba(236, 255, 236, 0.95); z-index: 1; top: 50%; left: 50%; max-width: 75%; max-height: 40%; transform: translate(-50%, -50%); padding: 25px;">
+      <div style="font-size: 20px">Send Sucessfully </div>
+      <div style="font-size: 16px; padding: 10px 0">
+      </div>
+    </div>
     <div class="pageContent-container">
       <div class="text-container">
           <div class="form"> 
@@ -16,7 +27,7 @@
                   <input class="font-mini" type="text" id="contactformOrganization" name="organization" placeholder="機構/公司名稱"  autocomplete="off">
                 </div>
                 <div style="justify-content: center; display: flex"> 
-                  <button @click="sendForm">提交</button>
+                  <button @click.prevent="sendForm">提交</button>
                   <button @click.prevent="resetForm">重置</button>
                 </div>
               </form>
@@ -53,7 +64,9 @@ export default {
       center: {
         lat: 22.428077697753906,
         lng: 114.20909881591797
-      }
+      },
+      isError: false,
+      isSuccess: false
     }
   },
   methods: {
@@ -64,10 +77,19 @@ export default {
       
       emailjs.sendForm('service_dw5j7af', 'template_glfviys', '#contactform', 'fmOc4joeStfAyUTP1').then((response) => {
         console.log('SUCCESS!', response.status, response.text)
+        this.isSuccess = true;
+        setTimeout(() => {
+          this.isSuccess = false
+        }, 2000)
+        this.resetForm();
       }, (err) => {
         console.log('FAILED...', err)
+        this.isError = true;
+        setTimeout(() => {
+          this.isError = false
+        }, 2000)
       })
-      location.reload()
+      /* location.reload() */
     },
     resetForm () {
       this.$refs.contactform.reset()
