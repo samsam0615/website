@@ -9,13 +9,13 @@ const client_manifest = {
     "file": "TextBox.39ef399e.css",
     "src": "TextBox.css"
   },
-  "_EventTemplate.d3d58a9c.js": {
+  "_EventTemplate.7fc93e9c.js": {
     "resourceType": "script",
     "module": true,
     "css": [
       "EventTemplate.0cc883ee.css"
     ],
-    "file": "EventTemplate.d3d58a9c.js",
+    "file": "EventTemplate.7fc93e9c.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -24,13 +24,13 @@ const client_manifest = {
     "file": "EventTemplate.0cc883ee.css",
     "resourceType": "style"
   },
-  "_TextBox.db2f4b9f.js": {
+  "_TextBox.f2cd307c.js": {
     "resourceType": "script",
     "module": true,
     "css": [
       "TextBox.39ef399e.css"
     ],
-    "file": "TextBox.db2f4b9f.js",
+    "file": "TextBox.f2cd307c.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -44,10 +44,10 @@ const client_manifest = {
     "module": true,
     "file": "index.a704afdc.js"
   },
-  "_index.es.6edb97ba.js": {
+  "_index.es.38bbba0f.js": {
     "resourceType": "script",
     "module": true,
-    "file": "index.es.6edb97ba.js",
+    "file": "index.es.38bbba0f.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -150,7 +150,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-404.a79e25fa.js",
+    "file": "error-404.fca597d8.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -170,7 +170,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-500.0f58010e.js",
+    "file": "error-500.46c7cc94.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -199,7 +199,7 @@ const client_manifest = {
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
-    "file": "entry.3e732f34.js",
+    "file": "entry.5fbf6523.js",
     "isEntry": true,
     "src": "node_modules/nuxt/dist/app/entry.js",
     "_globalCSS": true
@@ -225,7 +225,7 @@ const client_manifest = {
       "event3.13e8b7e3.jpg"
     ],
     "css": [],
-    "file": "company.43156671.js",
+    "file": "company.651b1600.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -253,7 +253,7 @@ const client_manifest = {
       "timeline.1dea26a8.png"
     ],
     "css": [],
-    "file": "company2.981b5598.js",
+    "file": "company2.6cf9c616.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -281,11 +281,11 @@ const client_manifest = {
       "icars2.8fe89017.jpg"
     ],
     "css": [],
-    "file": "contact.8692f6a2.js",
+    "file": "contact.76eb11c9.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
       "_index.a704afdc.js",
-      "_index.es.6edb97ba.js"
+      "_index.es.38bbba0f.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/contact.vue"
@@ -308,7 +308,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "contact2.0f8894b1.js",
+    "file": "contact2.9306761f.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
       "_index.a704afdc.js"
@@ -319,6 +319,34 @@ const client_manifest = {
   "contact2.015868bf.css": {
     "file": "contact2.015868bf.css",
     "resourceType": "style"
+  },
+  "pages/courses.css": {
+    "resourceType": "style",
+    "file": "courses.11c5cce9.css",
+    "src": "pages/courses.css"
+  },
+  "pages/courses.vue": {
+    "resourceType": "script",
+    "module": true,
+    "assets": [
+      "banner2.d2dea03b.jpg"
+    ],
+    "css": [],
+    "file": "courses.57a194e4.js",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "pages/courses.vue"
+  },
+  "courses.11c5cce9.css": {
+    "file": "courses.11c5cce9.css",
+    "resourceType": "style"
+  },
+  "banner2.d2dea03b.jpg": {
+    "file": "banner2.d2dea03b.jpg",
+    "resourceType": "image",
+    "mimeType": "image/jpeg"
   },
   "pages/cuhk-icar.css": {
     "resourceType": "style",
@@ -340,10 +368,10 @@ const client_manifest = {
       "gif_line2.81f158a0.gif"
     ],
     "css": [],
-    "file": "cuhk-icar.684b575a.js",
+    "file": "cuhk-icar.1e32974a.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_TextBox.db2f4b9f.js"
+      "_TextBox.f2cd307c.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/cuhk-icar.vue"
@@ -406,10 +434,10 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "cuhk-iport.beb54d8f.js",
+    "file": "cuhk-iport.132d93ef.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_TextBox.db2f4b9f.js"
+      "_TextBox.f2cd307c.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/cuhk-iport.vue"
@@ -421,10 +449,10 @@ const client_manifest = {
   "pages/event/1.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "1.84bbe92b.js",
+    "file": "1.6b01fc79.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_EventTemplate.d3d58a9c.js"
+      "_EventTemplate.7fc93e9c.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/event/1.vue"
@@ -432,10 +460,10 @@ const client_manifest = {
   "pages/event/2.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "2.71289e15.js",
+    "file": "2.aa564508.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_EventTemplate.d3d58a9c.js"
+      "_EventTemplate.7fc93e9c.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/event/2.vue"
@@ -443,10 +471,10 @@ const client_manifest = {
   "pages/event/3.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "3.59c1b962.js",
+    "file": "3.e71ae627.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_EventTemplate.d3d58a9c.js"
+      "_EventTemplate.7fc93e9c.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/event/3.vue"
@@ -460,7 +488,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "4.4bf146fc.js",
+    "file": "4.9cd5e2c7.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -483,7 +511,7 @@ const client_manifest = {
       "intro.9ccedcb0.mp4"
     ],
     "css": [],
-    "file": "index.19b09548.js",
+    "file": "index.72e9dc2a.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -500,22 +528,22 @@ const client_manifest = {
   },
   "pages/ishare.css": {
     "resourceType": "style",
-    "file": "ishare.9f386b7a.css",
+    "file": "ishare.d35b04d6.css",
     "src": "pages/ishare.css"
   },
   "pages/ishare.vue": {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "ishare.a3d27d17.js",
+    "file": "ishare.40f4eac8.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/ishare.vue"
   },
-  "ishare.9f386b7a.css": {
-    "file": "ishare.9f386b7a.css",
+  "ishare.d35b04d6.css": {
+    "file": "ishare.d35b04d6.css",
     "resourceType": "style"
   },
   "pages/news.css": {
@@ -530,7 +558,7 @@ const client_manifest = {
       "banner2.d2dea03b.jpg"
     ],
     "css": [],
-    "file": "news.0bc81266.js",
+    "file": "news.31b28293.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -541,11 +569,6 @@ const client_manifest = {
     "file": "news.2d30cd2d.css",
     "resourceType": "style"
   },
-  "banner2.d2dea03b.jpg": {
-    "file": "banner2.d2dea03b.jpg",
-    "resourceType": "image",
-    "mimeType": "image/jpeg"
-  },
   "pages/privacy.css": {
     "resourceType": "style",
     "file": "privacy.16569ea6.css",
@@ -555,7 +578,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "privacy.4365a294.js",
+    "file": "privacy.c0b540ca.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -575,7 +598,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "privacyold.9cc8f347.js",
+    "file": "privacyold.4828f5b0.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -595,7 +618,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "staff.072515f4.js",
+    "file": "staff.f34c5121.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -609,9 +632,9 @@ const client_manifest = {
   "pages/test.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "test.f068770f.js",
+    "file": "test.4b521949.js",
     "imports": [
-      "_index.es.6edb97ba.js",
+      "_index.es.38bbba0f.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,

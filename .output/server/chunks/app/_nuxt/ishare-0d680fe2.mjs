@@ -84,6 +84,24 @@ const defaultExternalJson = {
       name: "Odd One Out",
       url: "https://artsandculture.google.com/experiment/odd-one-out/wAHNn4JsVTFOiw",
       description: "Odd One Out \u662F Google Arts & Culture \u4E0A\u6E2C\u8A66\u4F60\u7684\u89C0\u5BDF\u80FD\u529B\u7684\u904A\u6232\u3002\u904A\u6232\u5448\u73FE\u4E86\u4E00\u7CFB\u5217\u85DD\u8853\u4F5C\u54C1\uFF0C\u73A9\u5BB6\u8981\u5728\u5176\u4E2D\u8B58\u5225\u51FAAI\u751F\u6210\u7684\u300C\u5192\u540D\u9802\u66FF\u8005\u300D\u3002"
+    },
+    {
+      imageURL: "",
+      name: "Memswift",
+      url: "https://memeswift.com/?ref=futuretools.io",
+      description: "Memeswift \u662F\u4F7F\u7528AI\u628A\u7528\u5BB6\u4E0A\u50B3\u6216\u6355\u7372\u7684\u7167\u7247\u8B8A\u70BA\u641E\u7B11\u7684\u8868\u60C5\u5305\u3002\u8A72\u5DE5\u5177\u652F\u6301 jpg\uFF0Cjpeg \u548C webp \u7684\u6A94\u6848\u3002"
+    },
+    {
+      imageURL: "",
+      name: "StarByFace",
+      url: "https://starbyface.com/?ref=futuretools.io#google_vignette",
+      description: '"StarByFace\u662F\u4E00\u500B\u7528AI\u6BD4\u8F03\u4EBA\u81C9\u7684\u5DE5\u5177\uFF0C\u7528\u6236\u4E0A\u50B3\u4ED6\u5011\u7684\u7167\u7247\uFF0C\u7CFB\u7D71\u4EBA\u81C9\u9EDE\u6AA2\u6E2C\u6703\u627E\u53BB\u5B9A\u4F4D\u4EBA\u81C9\u7684\u95DC\u9375\u90E8\u4F4D\uFF0C\u4F8B\u5982\u7709\u6BDB\u3001\u773C\u775B\u3001\u9F3B\u5B50\u3001\u5634\u5DF4\u7684\u4F4D\u7F6E\uFF0C\u795E\u7D93\u7DB2\u7D61\u6703\u5C07\u4EBA\u8207\u540D\u4EBA\u9762\u5B54\u9032\u884C\u6BD4\u8F03\uFF0C\u4E26\u63A8\u85A6\u6700\u76F8\u4F3C\u7684\u540D\u4EBA\u9762\u5B54\u3002"'
+    },
+    {
+      imageURL: "",
+      name: "Machine Learning for Kids",
+      url: "https://machinelearningforkids.co.uk/#!/about",
+      description: "Machine Learning for Kids\u662F\u4E00\u500B\u70BA\u521D\u5B78\u8005\u4ECB\u7D39\u6A5F\u5668\u5B78\u7FD2\u7684\u5E73\u53F0\u3002\u5B83\u63D0\u4F9B\u4E86\u4E00\u500B\u6613\u65BC\u4F7F\u7528\u7684\u6307\u5C0E\u74B0\u5883\uFF0C\u7528\u65BC\u8A13\u7DF4\u6A5F\u5668\u5B78\u7FD2\u6A21\u578B\u4F86\u8B58\u5225\u6587\u672C\u3001\u6578\u5B57\u3001\u5716\u50CF\u6216\u8072\u97F3\u3002\u5152\u7AE5\u53EF\u4EE5\u5C07\u9019\u4E9B\u6A21\u578B\u6DFB\u52A0\u5230\u6559\u80B2\u7DE8\u78BC\u5E73\u53F0 Scratch \u548C App Inventor \u4E2D\uFF0C\u4F7F\u7528\u4ED6\u5011\u8A13\u7DF4\u7684\u6A5F\u5668\u5B78\u7FD2\u6A21\u578B\u5275\u5EFA\u9805\u76EE\u548C\u69CB\u5EFA\u904A\u6232\u3002"
     }
   ],
   hear: [
@@ -95,9 +113,21 @@ const defaultExternalJson = {
     },
     {
       imageURL: "",
-      name: "Teacheable Machine",
-      url: "https://teachablemachine.withgoogle.com/",
-      description: "Teachable Machine\u662F\u7531Google\u57FA\u65BCAI\u958B\u767C\u7684\u7DB2\u9801\u61C9\u7528\u3002\u7528\u6236\u53EA\u9700\u9304\u88FD\u7C21\u77ED\u7684\u97F3\u8A0A\u6A23\u672C\uFF0C\u85C9\u6B64\u8A13\u7DF4AI\u6A21\u578B\u5C07\u97F3\u8A0A\u5206\u985E\u3002"
+      name: "Conformer-2",
+      url: "https://www.assemblyai.com/playground/source",
+      description: "Conformer-2\u662F\u4E00\u500B\u81EA\u52D5\u8A9E\u97F3\u8B58\u5225\u7684AI \u6A21\u578B\uFF0C\u53EF\u7528\u65BC\u8A9E\u97F3\u8B58\u5225\u3001\u8AAA\u8A71\u6AA2\u6E2C\u548C\u97F3\u983B\u6458\u8981\u3002 \u7528\u6236\u53EF\u4EE5\u4E0A\u50B3\u97F3\u983B\u6587\u4EF6\u6216\u8996\u983B\u6587\u4EF6\uFF0C\u6216\u8F38\u5165YouTube\u8996\u983B\u93C8\u63A5\uFF0CAI\u53EF\u4EE5\u5E6B\u4F60\u8F49\u63DB\u5B57\u5E55\u53CA\u4F5C\u91CD\u9EDE\u7E3D\u7D50\u7B49\u3002"
+    },
+    {
+      imageURL: "",
+      name: "LeMUR",
+      url: "https://www.assemblyai.com/playground/v2",
+      description: "LeMUR \u662F\u57FA\u65BC\u8A9E\u97F3\u6578\u64DA\u69CB\u5EFA\u7684\u5927\u578B\u8A9E\u8A00\u6A21\u578B\uFF08LLM\uFF09\uFF0C \u7528\u6236\u53EF\u4E0A\u8F09\u8A9E\u97F3\u6A94\u6848\u6216\u8F38\u5165YouTube\u8996\u983B\u93C8\u63A5\uFF0C LeMUR \u4FBF\u80FD\u8F49\u63DB\u5B57\u5E55\u53CA\u7E3D\u7D50\u5185\u5BB9\uFF0C \u7528\u6236\u4E5F\u53EF\u4EE5\u8ABF\u6574\u7E3D\u7D50\u7684\u683C\u5F0F\u53CA\u767C\u554F\u6709\u95DC\u6A94\u6848\u5167\u5BB9\u7684\u554F\u984C\u3002"
+    },
+    {
+      imageURL: "",
+      name: "Riverside",
+      url: "https://riverside.fm/transcription?ref=futuretools.io",
+      description: "Riverside \u662F\u8B93\u7528\u6236\u8F49\u9304\u97F3\u983B\u548C\u8996\u983B\u6587\u4EF6\u7684\u5DE5\u5177\u3002\u7528\u6236\u53EA\u9700\u5C07\u6587\u4EF6\u4E0A\u50B3\u5230\u5E73\u53F0\u5373\u53EF\u9032\u884C\u8F49\u9304\u3002\u8A72\u5DE5\u5177\u652F\u6301\u591A\u7A2E\u6587\u4EF6\u985E\u578B\uFF0C\u5305\u62EC MP3\u3001WAV\u3001MP4 \u548C MOV\uFF0C\u53CA\u63D0\u4F9B 100 \u591A\u7A2E\u8A9E\u8A00\u7684\u8F49\u9304\u3002\u7528\u6236\u53EF\u4EE5\u9078\u64C7\u4E0B\u8F09 TXT \u683C\u5F0F\u7684\u6587\u5B57\u8A18\u9304\u6216\u7372\u53D6 SRT \u683C\u5F0F\u7684\u5B57\u5E55\u3002"
     }
   ],
   speak: [
@@ -132,6 +162,24 @@ const defaultExternalJson = {
       name: "Teach Anything",
       url: "https://www.teach-anything.com/?ref=futuretools.io",
       description: "Teach Anything\u662F\u4E00\u500B\u6559\u5B78\u5DE5\u5177\uFF0C\u7528\u6236\u901A\u904E\u7DE8\u5BEB\u554F\u984C\u3001\u9078\u64C7\u8A9E\u8A00\u3001\u548C\u96E3\u5EA6\u7D1A\u5225\u4F86\u5FEB\u901F\u7372\u5F97\u554F\u984C\u7684\u7B54\u6848\u3002"
+    },
+    {
+      imageURL: "",
+      name: "Hotoke AI",
+      url: "https://hotoke.ai/",
+      description: "Hotoke AI\u662F\u4EE5ChatGPT\u505A\u57FA\u790E\uFF0C\u7531\u65E5\u672C\u958B\u767C\u7684AI\u4F5B\u7956 \u3002\u7528\u6236\u53EF\u4EE5\u8F38\u5165\u4EBA\u751F\u7591\u554F\uFF0CAI\u4FBF\u6703\u5F9E\u4F5B\u7CFB\u7684\u89D2\u5EA6\u56DE\u7B54\u4F60\u7684\u7B54\u6848\u3002Hotoke AI \u652F\u63F4\u591A\u500B\u8A9E\u8A00\uFF0C\u5305\u62EC\u4E2D\u6587\u7248\u3002"
+    },
+    {
+      imageURL: "",
+      name: "Character.ai",
+      url: "https://beta.character.ai/",
+      description: "Character.ai\u662F\u751F\u6210\u5F0FAI\u804A\u5929\u6A5F\u5668\u4EBA\uFF0C\u7528\u6236\u53EF\u4EE5\u9078\u64C7\u8DDF\u4E0D\u540C\u7684\u4EBA\u7269\uFF0C\u5305\u62EC\u540D\u4EBA\u3001\u53F2\u524D\u4EBA\u7269\u3001\u52D5\u6F2B\u89D2\u8272\u7B49\u3002AI\u6703\u6A21\u64EC\u89D2\u8272\u7684\u6027\u683C\u8207\u7528\u6236\u804A\u5929\u3002 \u6B64\u5916\uFF0C\u7528\u6236\u53EF\u81EA\u884C\u8A2D\u8A08\u300C\u865B\u64EC\u89D2\u8272\u300D\u53CA\u4ED6\u7684\u300C\u500B\u6027\u300D\uFF0C\u5275\u5EFA\u81EA\u5DF1\u7684\u804A\u5929\u6A5F\u5668\u4EBA\u3002"
+    },
+    {
+      imageURL: "",
+      name: "ChatPDF",
+      url: "https://www.chatpdf.com/",
+      description: "ChatPDF \u6703\u5F9E\u5927\u578B PDF \u6587\u4EF6\uFF0C\u5982\u6CD5\u5F8B\u5408\u540C\u3001\u66F8\u7C4D\u6216\u7814\u7A76\u8AD6\u6587\u4E2D\u5FEB\u901F\u63D0\u53D6\u4E3B\u8981\u4FE1\u606F\uFF0C\u8B93\u7528\u6236\u53EF\u4EE5\u66F4\u5BB9\u6613\u660E\u767D\u8907\u96DC\u7684\u6587\u4EF6\u3002"
     }
   ],
   create: [
@@ -170,6 +218,36 @@ const defaultExternalJson = {
       url: "https://clipdrop.co/uncrop",
       imageURL: "",
       description: "Clipdrop\u662F\u4E00\u500B\u201C\u53D6\u6D88\u88C1\u526A\u201D\u7684AI\u5DE5\u5177\uFF0C\u5B83\u4F7F\u7528 AI \u6280\u8853\u4F86\u7DE8\u8F2F\u5716\u50CF\u7684\u9577\u5BEC\u6BD4\uFF0C\u901A\u904E\u64F4\u5C55\u6216\u8ABF\u6574\u4E3B\u9AD4\u6216\u80CC\u666F\u4F86\u4FEE\u6539\u7167\u7247\u7684\u69CB\u5716\uFF0C\u53EF\u4EE5\u751F\u6210\u7B26\u5408\u6240\u9700\u5BEC\u9AD8\u6BD4\u7684\u65B0\u7248\u672C\u5716\u50CF\u3002"
+    },
+    {
+      name: "Stable diffusion XL",
+      url: "https://clipdrop.co/stable-diffusion",
+      imageURL: "",
+      description: "\u8207Stable diffusion \u76F8\u6BD4\uFF0C\u7528\u6236\u53EF\u4EE5\u7528\u66F4\u77ED\u7684\u6307\u793A\u751F\u6210\u66F4\u7684\u7F8E\u9E97\u7684\u5716\u50CF\u3002 \u6B64\u5916\uFF0C\u7528\u6236\u53EF\u4EE5\u9078\u64C7\u4E0D\u540C\u7684\u98A8\u683C\uFF0C\u4E26\u6307\u793A\u5716\u50CF\u4E2D\u8981\u907F\u514D\u7684\u5167\u5BB9\u3002"
+    },
+    {
+      name: "Artbreeder",
+      url: "https://www.artbreeder.com/",
+      imageURL: "",
+      description: "\u7528\u6236\u53EF\u4EE5\u5C07\u81EA\u5DF1\u6216\u7DB2\u7AD9\u4E0A\u7684\u4E0D\u540C\u5716\u50CF\u6DF7\u5408\u5728\u4E00\u8D77\uFF0C\u751F\u6210\u5168\u65B0\u7684\u5716\u50CF"
+    },
+    {
+      name: "DeepAI",
+      url: "https://deepai.org/machine-learning-model/cute-creature-generator",
+      imageURL: "",
+      description: "DeepAI \u662F\u4E00\u500B\u5716\u50CF\u7DE8\u8F2F\u5668\uFF0C\u6587\u672C\u5716\u50CF\u751F\u6210\u5668\u7528\u6236\u7528\u6587\u5B57\u6307\u793A\u7DB2\u7AD9\u7DE8\u8F2F\u5716\u50CF\uFF0C\u4F8B\u5982\u6539\u8B8A\u984F\u8272\u53CA\u80CC\u666F, \u4E5F\u53EF\u4EE5\u76F4\u63A5\u9078\u64C7\u4E00\u500B\u98A8\u683C\uFF0C\u751F\u6210\u65B0\u7684\u5716\u50CF\u3002"
+    },
+    {
+      name: "Waveformer",
+      url: "https://waveformer.replicate.dev/",
+      imageURL: "",
+      description: "Waveformer\u662F\u6DF1\u5EA6\u5B78\u7FD2\u521D\u5275\u516C\u53F8Anthropic\u958B\u767C\u3002\u7528\u6236\u53EA\u8981\u8F38\u5165\u4E00\u4E32\u60F3\u8981\u751F\u6210\u7684\u97F3\u6A02\u6587\u5B57\uFF0C\u4E26\u6307\u5B9A\u79D2\u6578\uFF0C\u5C31\u6703\u751F\u6210\u97F3\u6A02\u3002"
+    },
+    {
+      name: "Zeroscope",
+      url: "https://huggingface.co/spaces/fffiloni/zeroscope?ref=futuretools.io",
+      imageURL: "",
+      description: "Zeroscope \u662F\u4E00\u500B\u6587\u672C\u5230\u8996\u983B\u7684\u5DE5\u5177\uFF0C \u7528\u6236\u53EF\u4EE5\u8F38\u5165\u63CF\u8FF0\u6027\u6587\u5B57\u3001\u6558\u8FF0\u6216\u8173\u672C\uFF0C\u5DE5\u5177\u6703\u81EA\u52D5\u751F\u6210\u76F8\u61C9\u7684\u7121\u6C34\u5370\u8996\u983B\u5167\u5BB9\u3002 \u9019\u5C0D\u9700\u8981\u5FEB\u901F\u88FD\u4F5C\u8996\u983B\u5167\u5BB9\u800C\u7121\u9700\u7CBE\u6E5B\u7684\u8996\u983B\u7DE8\u8F2F\u6280\u80FD\u6216\u8CC7\u6E90\u7684\u4EBA\u7279\u5225\u6709\u7528\u3002"
     }
   ],
   advance: [
@@ -233,7 +311,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     name: "description",
     content: "\u591A\u500B\u7DB2\u4E0A\u514D\u8CBB\u7684AI \u5B78\u7FD2\u8CC7\u6E90\uFF0C\u597D\u73A9\u4E4B\u9918\u53C8\u4E0D\u7528\u8A3B\u518A\u767B\u8A18\uFF0C\u52A9\u4F60\u8F15\u9B06\u6109\u5FEB\u9AD4\u9A57AI\u7684\u5947\u5999\u3002"
   }, null, _parent));
-  _push(`<div class="pageContent-container" style="${ssrRenderStyle({ "width": "100%" })}" data-v-d938f538><div class="text-container" data-v-d938f538><label class="subTitle font-big" data-v-d938f538>iShare</label><div class="pageDescription font-small" data-v-d938f538>\u82E6\u82E6\u641C\u5C0B\u7DB2\u4E0A\u514D\u8CBB\u7684AI \u5B78\u7FD2\u8CC7\u6E90\uFF0C\u597D\u73A9\u4E4B\u9918\u53C8\u4E0D\u60F3\u8A3B\u518A\u767B\u8A18\uFF1FiShare\u5E6B\u4F60\u8F15\u9B06\u6109\u5FEB\u9AD4\u9A57AI\u7684\u5947\u5999\u3002</div><br data-v-d938f538><br data-v-d938f538><div class="resourceContainer" data-v-d938f538><div class="resourceType" data-v-d938f538><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["vision"] == $data.focusClass })}" data-v-d938f538>\u8996\u89BA</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["hear"] == $data.focusClass })}" data-v-d938f538>\u807D\u89BA</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["speak"] == $data.focusClass })}" data-v-d938f538>\u8A9E\u97F3</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["read"] == $data.focusClass })}" data-v-d938f538>\u7406\u89E3</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["create"] == $data.focusClass })}" data-v-d938f538>\u5275\u4F5C</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["advance"] == $data.focusClass })}" data-v-d938f538>\u9032\u968E</label></div><div class="resourceSelector unselectable" data-v-d938f538>`);
+  _push(`<div class="pageContent-container" style="${ssrRenderStyle({ "width": "100%" })}" data-v-0d44cc3c><div class="text-container" data-v-0d44cc3c><label class="subTitle font-big" data-v-0d44cc3c>iShare</label><div class="pageDescription font-small" data-v-0d44cc3c>\u82E6\u82E6\u641C\u5C0B\u7DB2\u4E0A\u514D\u8CBB\u7684AI \u5B78\u7FD2\u8CC7\u6E90\uFF0C\u597D\u73A9\u4E4B\u9918\u53C8\u4E0D\u60F3\u8A3B\u518A\u767B\u8A18\uFF1FiShare\u5E6B\u4F60\u8F15\u9B06\u6109\u5FEB\u9AD4\u9A57AI\u7684\u5947\u5999\u3002</div><br data-v-0d44cc3c><br data-v-0d44cc3c><div class="resourceContainer" data-v-0d44cc3c><div class="resourceType" data-v-0d44cc3c><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["vision"] == $data.focusClass })}" data-v-0d44cc3c>\u8996\u89BA</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["hear"] == $data.focusClass })}" data-v-0d44cc3c>\u807D\u89BA</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["speak"] == $data.focusClass })}" data-v-0d44cc3c>\u8A9E\u97F3</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["read"] == $data.focusClass })}" data-v-0d44cc3c>\u7406\u89E3</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["create"] == $data.focusClass })}" data-v-0d44cc3c>\u5275\u4F5C</label><label class="${ssrRenderClass({ active: $data.externalJson != null && $data.externalJson["advance"] == $data.focusClass })}" data-v-0d44cc3c>\u9032\u968E</label></div><div class="resourceSelector unselectable" data-v-0d44cc3c>`);
   if ($data.externalJson != null) {
     _push(`<!--[-->`);
     ssrRenderList($data.focusClass, (item) => {
@@ -250,9 +328,9 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   } else {
     _push(`<!---->`);
   }
-  _push(`</div><div class="resourceDescriptor" data-v-d938f538>`);
+  _push(`</div><div class="resourceDescriptor" data-v-0d44cc3c>`);
   if ($data.focus != null) {
-    _push(`<!--[--><div class="title font-middle" data-v-d938f538>${ssrInterpolate($data.focus.name)}</div><div class="description font-mini" style="${ssrRenderStyle({ "line-height": "35px", "padding": "0 10px" })}" data-v-d938f538>${ssrInterpolate($data.focus.description)}</div><div class="media" data-v-d938f538><a style="${ssrRenderStyle({})}"${ssrRenderAttr("href", $data.focus.url)} target="_blank" data-v-d938f538>\u524D\u5F80\u7DB2\u7AD9</a></div><!--]-->`);
+    _push(`<!--[--><div style="${ssrRenderStyle({ "position": "relative", "display": "flex", "flex-direction": "column", "flex-grow": "1", "max-height": "calc(100% - 50px)" })}" data-v-0d44cc3c><div class="title font-middle" style="${ssrRenderStyle({ "position": "relative", "padding": "0 0 10px" })}" data-v-0d44cc3c>${ssrInterpolate($data.focus.name)}</div><div class="description font-mini" style="${ssrRenderStyle({ "position": "relative", "line-height": "35px", "padding": "0 10px", "overflow-y": "auto", "height": "max-content" })}" data-v-0d44cc3c>${ssrInterpolate($data.focus.description)}</div></div><div class="media" style="${ssrRenderStyle({ "height": "50px" })}" data-v-0d44cc3c><a style="${ssrRenderStyle({})}"${ssrRenderAttr("href", $data.focus.url)} target="_blank" data-v-0d44cc3c>\u524D\u5F80\u7DB2\u7AD9</a></div><!--]-->`);
   } else {
     _push(`<!---->`);
   }
@@ -264,7 +342,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/ishare.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const ishare = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-d938f538"]]);
+const ishare = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-0d44cc3c"]]);
 
 export { ishare as default };
-//# sourceMappingURL=ishare-e64e16ea.mjs.map
+//# sourceMappingURL=ishare-0d680fe2.mjs.map

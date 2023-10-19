@@ -28,9 +28,13 @@
         </div>
         <div class="resourceDescriptor" >
           <template v-if="focus != null">
-            <div class="title font-middle">{{focus.name}}</div>
-            <div class="description font-mini" style="line-height: 35px; padding: 0 10px">{{focus.description}}</div>
-            <div class="media"><a style="font-mini" :href="focus.url" target="_blank">前往網站</a></div>
+            <div style="position: relative; display: flex; flex-direction: column; flex-grow: 1; max-height: calc(100% - 50px)"> 
+              <div class="title font-middle" style="position: relative; padding: 0 0 10px; ">{{focus.name}}</div>
+              <div class="description font-mini" style="position: relative; line-height: 35px; padding: 0 10px; overflow-y: auto; height: max-content;">{{focus.description}}</div>
+            </div>
+            <div class="media" style="height: 50px">
+              <a style="font-mini" :href="focus.url" target="_blank">前往網站</a>
+              </div>
           </template>
         </div>
       </div>
@@ -126,6 +130,7 @@ export default {
     display: flex;
     padding: 15px;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .resourceDescriptor .title{

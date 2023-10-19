@@ -348,6 +348,14 @@ const _routes = [
     component: () => import('./_nuxt/contact2-df1b5b5b.mjs').then((m) => m.default || m)
   },
   {
+    name: "courses",
+    path: "/courses",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/courses-98d236ec.mjs').then((m) => m.default || m)
+  },
+  {
     name: "cuhk-icar",
     path: "/cuhk-icar",
     meta: {},
@@ -409,7 +417,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/ishare-e64e16ea.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/ishare-0d680fe2.mjs').then((m) => m.default || m)
   },
   {
     name: "news",
@@ -1199,6 +1207,22 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
       } else {
         return [
           createTextVNode(" 最新消息 ")
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`</li><li>`);
+  _push(ssrRenderComponent(_component_NuxtLink, {
+    to: { name: "courses" },
+    class: "subMenuBtn"
+  }, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(` 到校課程 `);
+      } else {
+        return [
+          createTextVNode(" 到校課程 ")
         ];
       }
     }),

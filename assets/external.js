@@ -25,6 +25,24 @@ export default {
       url: 'https://artsandculture.google.com/experiment/odd-one-out/wAHNn4JsVTFOiw',
       description: 'Odd One Out 是 Google Arts & Culture 上測試你的觀察能力的遊戲。遊戲呈現了一系列藝術作品，玩家要在其中識別出AI生成的「冒名頂替者」。'
     },
+    {
+      imageURL: '',
+      name: 'Memswift',
+      url: 'https://memeswift.com/?ref=futuretools.io',
+      description: 'Memeswift 是使用AI把用家上傳或捕獲的照片變為搞笑的表情包。該工具支持 jpg，jpeg 和 webp 的檔案。'
+    },
+    {
+      imageURL: '',
+      name: 'StarByFace',
+      url: 'https://starbyface.com/?ref=futuretools.io#google_vignette',
+      description: '"StarByFace是一個用AI比較人臉的工具，用戶上傳他們的照片，系統人臉點檢測會找去定位人臉的關鍵部位，例如眉毛、眼睛、鼻子、嘴巴的位置，神經網絡會將人與名人面孔進行比較，並推薦最相似的名人面孔。"'
+    },
+    {
+      imageURL: '',
+      name: 'Machine Learning for Kids',
+      url: 'https://machinelearningforkids.co.uk/#!/about',
+      description: 'Machine Learning for Kids是一個為初學者介紹機器學習的平台。它提供了一個易於使用的指導環境，用於訓練機器學習模型來識別文本、數字、圖像或聲音。兒童可以將這些模型添加到教育編碼平台 Scratch 和 App Inventor 中，使用他們訓練的機器學習模型創建項目和構建遊戲。'
+    },
   ],
   hear: [
     {
@@ -35,9 +53,23 @@ export default {
     },
     {
       imageURL: '',
-      name: 'Teacheable Machine',
-      url: 'https://teachablemachine.withgoogle.com/',
-      description: 'Teachable Machine是由Google基於AI開發的網頁應用。用戶只需錄製簡短的音訊樣本，藉此訓練AI模型將音訊分類。'
+      name: 'Conformer-2',
+      url: 'https://www.assemblyai.com/playground/source',
+      description: 'Conformer-2是一個自動語音識別的AI 模型，可用於語音識別、說話檢測和音頻摘要。 用戶可以上傳音頻文件或視頻文件，或輸入YouTube視頻鏈接，AI可以幫你轉換字幕及作重點總結等。'
+    }
+    ,
+    {
+      imageURL: '',
+      name: 'LeMUR',
+      url: 'https://www.assemblyai.com/playground/v2',
+      description: 'LeMUR 是基於語音數據構建的大型語言模型（LLM）， 用戶可上載語音檔案或輸入YouTube視頻鏈接， LeMUR 便能轉換字幕及總結内容， 用戶也可以調整總結的格式及發問有關檔案內容的問題。'
+    }
+    ,
+    {
+      imageURL: '',
+      name: 'Riverside',
+      url: 'https://riverside.fm/transcription?ref=futuretools.io',
+      description: 'Riverside 是讓用戶轉錄音頻和視頻文件的工具。用戶只需將文件上傳到平台即可進行轉錄。該工具支持多種文件類型，包括 MP3、WAV、MP4 和 MOV，及提供 100 多種語言的轉錄。用戶可以選擇下載 TXT 格式的文字記錄或獲取 SRT 格式的字幕。'
     }
   ],
   speak: [
@@ -72,6 +104,24 @@ export default {
       name: 'Teach Anything',
       url: 'https://www.teach-anything.com/?ref=futuretools.io',
       description: 'Teach Anything是一個教學工具，用戶通過編寫問題、選擇語言、和難度級別來快速獲得問題的答案。'
+    },
+    {
+      imageURL: '',
+      name: 'Hotoke AI',
+      url: 'https://hotoke.ai/',
+      description: 'Hotoke AI是以ChatGPT做基礎，由日本開發的AI佛祖 。用戶可以輸入人生疑問，AI便會從佛系的角度回答你的答案。Hotoke AI 支援多個語言，包括中文版。'
+    },
+    {
+      imageURL: '',
+      name: 'Character.ai',
+      url: 'https://beta.character.ai/',
+      description: 'Character.ai是生成式AI聊天機器人，用戶可以選擇跟不同的人物，包括名人、史前人物、動漫角色等。AI會模擬角色的性格與用戶聊天。 此外，用戶可自行設計「虛擬角色」及他的「個性」，創建自己的聊天機器人。'
+    },
+    {
+      imageURL: '',
+      name: 'ChatPDF',
+      url: 'https://www.chatpdf.com/',
+      description: 'ChatPDF 會從大型 PDF 文件，如法律合同、書籍或研究論文中快速提取主要信息，讓用戶可以更容易明白複雜的文件。'
     },
 
   ],
@@ -111,6 +161,36 @@ export default {
       url: 'https://clipdrop.co/uncrop',
       imageURL: '',
       description: 'Clipdrop是一個“取消裁剪”的AI工具，它使用 AI 技術來編輯圖像的長寬比，通過擴展或調整主體或背景來修改照片的構圖，可以生成符合所需寬高比的新版本圖像。'
+    },
+    {
+      name: 'Stable diffusion XL',
+      url: 'https://clipdrop.co/stable-diffusion',
+      imageURL: '',
+      description: '與Stable diffusion 相比，用戶可以用更短的指示生成更的美麗的圖像。 此外，用戶可以選擇不同的風格，並指示圖像中要避免的內容。'
+    },
+    {
+      name: 'Artbreeder',
+      url: 'https://www.artbreeder.com/',
+      imageURL: '',
+      description: '用戶可以將自己或網站上的不同圖像混合在一起，生成全新的圖像'
+    },
+    {
+      name: 'DeepAI',
+      url: 'https://deepai.org/machine-learning-model/cute-creature-generator',
+      imageURL: '',
+      description: 'DeepAI 是一個圖像編輯器，文本圖像生成器用戶用文字指示網站編輯圖像，例如改變顏色及背景, 也可以直接選擇一個風格，生成新的圖像。'
+    },
+    {
+      name: 'Waveformer',
+      url: 'https://waveformer.replicate.dev/',
+      imageURL: '',
+      description: 'Waveformer是深度學習初創公司Anthropic開發。用戶只要輸入一串想要生成的音樂文字，並指定秒數，就會生成音樂。'
+    },
+    {
+      name: 'Zeroscope',
+      url: 'https://huggingface.co/spaces/fffiloni/zeroscope?ref=futuretools.io',
+      imageURL: '',
+      description: 'Zeroscope 是一個文本到視頻的工具， 用戶可以輸入描述性文字、敘述或腳本，工具會自動生成相應的無水印視頻內容。 這對需要快速製作視頻內容而無需精湛的視頻編輯技能或資源的人特別有用。'
     }
   ],
   advance: [

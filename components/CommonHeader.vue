@@ -42,6 +42,11 @@
         </NuxtLink>
       </li>
       <li ref="submenu1">
+        <NuxtLink :to="{ name: 'courses' }" class="subMenuBtn" >
+            到校課程
+        </NuxtLink>
+      </li>
+      <li ref="submenu1">
         <NuxtLink :to="{ name: 'cuhk-icar' }" class="subMenuBtn" >
             CUHK iCar
         </NuxtLink>
