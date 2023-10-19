@@ -45,17 +45,17 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
     }),
     _: 1
   }, _parent));
-  _push(`<div class="pageContent-container" style="${ssrRenderStyle({ "max-width": "100%", "width": "1024px", "justify-content": "flex-start", "min-height": "100%", "align-items": "center" })}" data-v-33b6f3dc><div class="banner" data-v-33b6f3dc><label class="title font-big" data-v-33b6f3dc> \u5230\u6821\u8AB2\u7A0B </label></div><div class="text" style="${ssrRenderStyle({ "padding": "60px" })}" data-v-33b6f3dc>`);
+  _push(`<div class="pageContent-container" style="${ssrRenderStyle({ "max-width": "100%", "width": "1024px", "justify-content": "flex-start", "min-height": "100%", "align-items": "center" })}" data-v-48263345><div class="banner" data-v-48263345><label class="title font-big" data-v-48263345> \u5230\u6821\u8AB2\u7A0B </label></div><div class="text" style="${ssrRenderStyle({ "padding": "60px" })}" data-v-48263345>`);
   _push(ssrRenderComponent(_component_NuxtLink, {
     to: "/contact",
     style: { "text-decoration": "none" }
   }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(`<div style="${ssrRenderStyle({ "margin-top": "30px", "padding": "20px", "font-size": "30px", "background": "orange", "color": "white", "border-radius": "10px", "cursor": "pointer" })}" data-v-33b6f3dc${_scopeId}> \u806F\u7D61\u6211\u5011 \u77AD\u89E3\u66F4\u591A </div>`);
+        _push2(`<div style="${ssrRenderStyle({ "margin-top": "30px", "padding": "20px", "font-size": "20px", "background": "orange", "color": "white", "border-radius": "10px", "cursor": "pointer", "display": "flex", "justify-content": "center", "min-width": "max-content" })}" data-v-48263345${_scopeId}> \u806F\u7D61\u6211\u5011\u2002\u77AD\u89E3\u66F4\u591A </div>`);
       } else {
         return [
-          createVNode("div", { style: { "margin-top": "30px", "padding": "20px", "font-size": "30px", "background": "orange", "color": "white", "border-radius": "10px", "cursor": "pointer" } }, " \u806F\u7D61\u6211\u5011 \u77AD\u89E3\u66F4\u591A ")
+          createVNode("div", { style: { "margin-top": "30px", "padding": "20px", "font-size": "20px", "background": "orange", "color": "white", "border-radius": "10px", "cursor": "pointer", "display": "flex", "justify-content": "center", "min-width": "max-content" } }, " \u806F\u7D61\u6211\u5011\u2002\u77AD\u89E3\u66F4\u591A ")
         ];
       }
     }),
@@ -69,7 +69,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/courses.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const courses = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-33b6f3dc"]]);
+const courses = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-48263345"]]);
 
 export { courses as default };
-//# sourceMappingURL=courses-b0a13c13.mjs.map
+//# sourceMappingURL=courses-b995c664.mjs.map

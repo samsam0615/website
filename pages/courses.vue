@@ -8,8 +8,8 @@
         </div>
         <div class="text" style="padding: 60px"> 
             <NuxtLink to="/contact" style="text-decoration: none">
-            <div style="margin-top: 30px; padding: 20px; font-size: 30px; background: orange; color: white; border-radius: 10px; cursor: pointer"> 
-                聯絡我們 瞭解更多
+            <div style="margin-top: 30px; padding: 20px; font-size: 20px; background: orange; color: white; border-radius: 10px; cursor: pointer; display: flex; justify-content: center; min-width: max-content"> 
+                聯絡我們&ensp;瞭解更多
             </div>
             </NuxtLink>
             
