@@ -353,7 +353,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/courses-98d236ec.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/courses-b0a13c13.mjs').then((m) => m.default || m)
   },
   {
     name: "cuhk-icar",
