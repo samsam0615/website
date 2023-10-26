@@ -6,7 +6,7 @@ import { createMemoryHistory, createRouter, START_LOCATION, RouterView } from 'v
 import { createError as createError$1, sanitizeStatusCode } from 'h3';
 import { hasProtocol, parseURL, parseQuery, encodeParam, withTrailingSlash, withoutTrailingSlash, withLeadingSlash, joinURL, withQuery, encodePath, withHttps } from 'ufo';
 import { renderSSRHead } from '@unhead/ssr';
-import { composableNames, getActiveHead, createServerHead as createServerHead$1 } from 'unhead';
+import { composableNames, getActiveHead as getActiveHead$2, createServerHead as createServerHead$1 } from 'unhead';
 import { defineHeadPlugin } from '@unhead/shared';
 import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode, ssrRenderAttrs, ssrRenderStyle, ssrRenderAttr } from 'vue/server-renderer';
 import { defu } from 'defu';
@@ -353,7 +353,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/courses-b995c664.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/courses-76d86bb5.mjs').then((m) => m.default || m)
   },
   {
     name: "cuhk-icar",
@@ -401,7 +401,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/4-adf6b7aa.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/4-9c82c552.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -689,32 +689,32 @@ const plugin = /* @__PURE__ */ defineNuxtPlugin({
     return { provide: { router } };
   }
 });
-function resolveUnref(r) {
+function resolveUnref$2(r) {
   return typeof r === "function" ? r() : unref(r);
 }
-function resolveUnrefHeadInput(ref2, lastKey = "") {
+function resolveUnrefHeadInput$2(ref2, lastKey = "") {
   if (ref2 instanceof Promise)
     return ref2;
-  const root = resolveUnref(ref2);
+  const root = resolveUnref$2(ref2);
   if (!ref2 || !root)
     return root;
   if (Array.isArray(root))
-    return root.map((r) => resolveUnrefHeadInput(r, lastKey));
+    return root.map((r) => resolveUnrefHeadInput$2(r, lastKey));
   if (typeof root === "object") {
     return Object.fromEntries(
       Object.entries(root).map(([k, v]) => {
         if (k === "titleTemplate" || k.startsWith("on"))
           return [k, unref(v)];
-        return [k, resolveUnrefHeadInput(v, k)];
+        return [k, resolveUnrefHeadInput$2(v, k)];
       })
     );
   }
   return root;
 }
 const Vue3 = version.startsWith("3");
-const headSymbol = "usehead";
-function injectHead() {
-  return getCurrentInstance() && inject(headSymbol) || getActiveHead();
+const headSymbol$2 = "usehead";
+function injectHead$2() {
+  return getCurrentInstance() && inject(headSymbol$2) || getActiveHead$2();
 }
 function vueInstall(head) {
   const plugin2 = {
@@ -722,7 +722,7 @@ function vueInstall(head) {
       if (Vue3) {
         app.config.globalProperties.$unhead = head;
         app.config.globalProperties.$head = head;
-        app.provide(headSymbol, head);
+        app.provide(headSymbol$2, head);
       }
     }
   };
@@ -744,17 +744,17 @@ function VueReactiveUseHeadPlugin() {
     hooks: {
       "entries:resolve": function(ctx) {
         for (const entry2 of ctx.entries)
-          entry2.resolvedInput = resolveUnrefHeadInput(entry2.input);
+          entry2.resolvedInput = resolveUnrefHeadInput$2(entry2.input);
       }
     }
   });
 }
-function clientUseHead(input, options = {}) {
-  const head = injectHead();
+function clientUseHead$2(input, options = {}) {
+  const head = injectHead$2();
   const deactivated = ref(false);
   const resolvedInput = ref({});
   watchEffect(() => {
-    resolvedInput.value = deactivated.value ? {} : resolveUnrefHeadInput(input);
+    resolvedInput.value = deactivated.value ? {} : resolveUnrefHeadInput$2(input);
   });
   const entry2 = head.push(resolvedInput.value, options);
   watch(resolvedInput, (e) => {
@@ -763,18 +763,18 @@ function clientUseHead(input, options = {}) {
   getCurrentInstance();
   return entry2;
 }
-function serverUseHead(input, options = {}) {
-  const head = injectHead();
+function serverUseHead$2(input, options = {}) {
+  const head = injectHead$2();
   return head.push(input, options);
 }
-function useHead(input, options = {}) {
+function useHead$2(input, options = {}) {
   var _a;
-  const head = injectHead();
+  const head = injectHead$2();
   if (head) {
     const isBrowser = !!((_a = head.resolvedOptions) == null ? void 0 : _a.document);
     if (options.mode === "server" && isBrowser || options.mode === "client" && !isBrowser)
       return;
-    return isBrowser ? clientUseHead(input, options) : serverUseHead(input, options);
+    return isBrowser ? clientUseHead$2(input, options) : serverUseHead$2(input, options);
   }
 }
 const coreComposableNames = [
@@ -1091,12 +1091,96 @@ const unhead_KgADcZ0jPj = /* @__PURE__ */ defineNuxtPlugin({
     }
   }
 });
+var activeHead$1;
+var getActiveHead$1 = () => activeHead$1;
+function resolveUnref$1(r) {
+  return typeof r === "function" ? r() : unref(r);
+}
+function resolveUnrefHeadInput$1(ref3, lastKey = "") {
+  if (ref3 instanceof Promise)
+    return ref3;
+  const root = resolveUnref$1(ref3);
+  if (!ref3 || !root)
+    return root;
+  if (Array.isArray(root))
+    return root.map((r) => resolveUnrefHeadInput$1(r, lastKey));
+  if (typeof root === "object") {
+    return Object.fromEntries(
+      Object.entries(root).map(([k, v]) => {
+        if (k === "titleTemplate" || k.startsWith("on"))
+          return [k, unref(v)];
+        return [k, resolveUnrefHeadInput$1(v, k)];
+      })
+    );
+  }
+  return root;
+}
+version.startsWith("3");
+var headSymbol$1 = "usehead";
+function injectHead$1() {
+  return getCurrentInstance() && inject(headSymbol$1) || getActiveHead$1();
+}
+function clientUseHead$1(input, options = {}) {
+  const head = injectHead$1();
+  const deactivated = ref(false);
+  const resolvedInput = ref({});
+  watchEffect(() => {
+    resolvedInput.value = deactivated.value ? {} : resolveUnrefHeadInput$1(input);
+  });
+  const entry2 = head.push(resolvedInput.value, options);
+  watch(resolvedInput, (e) => {
+    entry2.patch(e);
+  });
+  getCurrentInstance();
+  return entry2;
+}
+function serverUseHead$1(input, options = {}) {
+  const head = injectHead$1();
+  return head.push(input, options);
+}
+function useHead$1(input, options = {}) {
+  var _a;
+  const head = injectHead$1();
+  if (head) {
+    const isBrowser = !!((_a = head.resolvedOptions) == null ? void 0 : _a.document);
+    if (options.mode === "server" && isBrowser || options.mode === "client" && !isBrowser)
+      return;
+    return isBrowser ? clientUseHead$1(input, options) : serverUseHead$1(input, options);
+  }
+}
+var plugin_impl_default = (nuxtApp) => {
+  const mixin = {
+    created() {
+      var _a;
+      if (typeof ((_a = this.$options) == null ? void 0 : _a.jsonld) !== "function") {
+        return;
+      }
+      const jsonComputed = computed(() => this.$options.jsonld.call(this));
+      useHead$1(() => ({
+        script: [
+          {
+            type: "application/ld+json",
+            children: jsonComputed.value ? JSON.stringify(jsonComputed.value, null, "") : void 0
+          }
+        ]
+      }));
+    }
+  };
+  const plugin2 = {
+    install(Vue) {
+      Vue.mixin(mixin);
+    }
+  };
+  nuxtApp.vueApp.use(plugin2);
+};
+var plugin_default = /* @__PURE__ */ defineNuxtPlugin(plugin_impl_default);
 const plugins = [
   plugin,
   siteConfig_Eeyr9ytLpT,
   revive_payload_server_eJ33V7gbc6,
   components_plugin_KR1HBZs4kY,
-  unhead_KgADcZ0jPj
+  unhead_KgADcZ0jPj,
+  plugin_default
 ];
 const _imports_0 = "" + __buildAssetsURL("logo.24b58023.png");
 const _imports_1 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAMxJREFUaEPtmNEOQDAMRfly/pxISBoZ0twrNTmeCG23c2YV49D5MXY+/oEJVBvEAAZEAiwhEaAcjgEZoZjg1wYWEY47vAn7zgATMCtIGzDXfyfdr1/id5CZs2LADDSdDgNpZOaAOwOzsdbRFFv14r3tPD4Tr5vjoRMbLT2lSnfi6ZTxnCDqvfpucm4S6SX0ROQT952ESibEBEqwh6IYwIBIgE4sAsyEpztx938lMnTKnmUbLUO/F8YABkQCLCERoByOARmhmAADIkA5fAUqaxAxlhWfYQAAAABJRU5ErkJggg==";
@@ -1425,7 +1509,7 @@ function _mergeTransitionProps(routeProps) {
 }
 const removeUndefinedProps = (props) => Object.fromEntries(Object.entries(props).filter(([, value]) => value !== void 0));
 const setupForUseMeta = (metaFactory, renderChild) => (props, ctx) => {
-  useHead(() => metaFactory({ ...removeUndefinedProps(props), ...ctx.attrs }, ctx));
+  useHead$2(() => metaFactory({ ...removeUndefinedProps(props), ...ctx.attrs }, ctx));
   return () => {
     var _a, _b;
     return renderChild ? (_b = (_a = ctx.slots).default) == null ? void 0 : _b.call(_a) : null;
@@ -1921,7 +2005,7 @@ const __nuxt_component_3 = /* @__PURE__ */ defineComponent({
     const src = computed(() => placeholder.value ? placeholder.value : mainSrc.value);
     if (props.preload) {
       const isResponsive = Object.values(sizes.value).every((v) => v);
-      useHead({
+      useHead$2({
         link: [{
           rel: "preload",
           as: "image",
@@ -1994,8 +2078,91 @@ _sfc_main$3.setup = (props, ctx) => {
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
 const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-75252dda"]]);
+var activeHead;
+var getActiveHead = () => activeHead;
+function resolveUnref(r) {
+  return typeof r === "function" ? r() : unref(r);
+}
+function resolveUnrefHeadInput(ref3, lastKey = "") {
+  if (ref3 instanceof Promise)
+    return ref3;
+  const root = resolveUnref(ref3);
+  if (!ref3 || !root)
+    return root;
+  if (Array.isArray(root))
+    return root.map((r) => resolveUnrefHeadInput(r, lastKey));
+  if (typeof root === "object") {
+    return Object.fromEntries(
+      Object.entries(root).map(([k, v]) => {
+        if (k === "titleTemplate" || k.startsWith("on"))
+          return [k, unref(v)];
+        return [k, resolveUnrefHeadInput(v, k)];
+      })
+    );
+  }
+  return root;
+}
+version.startsWith("3");
+var headSymbol = "usehead";
+function injectHead() {
+  return getCurrentInstance() && inject(headSymbol) || getActiveHead();
+}
+function clientUseHead(input, options = {}) {
+  const head = injectHead();
+  const deactivated = ref(false);
+  const resolvedInput = ref({});
+  watchEffect(() => {
+    resolvedInput.value = deactivated.value ? {} : resolveUnrefHeadInput(input);
+  });
+  const entry2 = head.push(resolvedInput.value, options);
+  watch(resolvedInput, (e) => {
+    entry2.patch(e);
+  });
+  getCurrentInstance();
+  return entry2;
+}
+function serverUseHead(input, options = {}) {
+  const head = injectHead();
+  return head.push(input, options);
+}
+function useHead(input, options = {}) {
+  var _a;
+  const head = injectHead();
+  if (head) {
+    const isBrowser = !!((_a = head.resolvedOptions) == null ? void 0 : _a.document);
+    if (options.mode === "server" && isBrowser || options.mode === "client" && !isBrowser)
+      return;
+    return isBrowser ? clientUseHead(input, options) : serverUseHead(input, options);
+  }
+}
+var isFunc = (json) => typeof json === "function";
+var useJsonld = (json) => {
+  if (!json) {
+    return;
+  }
+  const jsonComputed = computed(() => isFunc(json) ? json() : json);
+  useHead(() => {
+    if (!jsonComputed.value) {
+      return {};
+    }
+    return {
+      script: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(jsonComputed.value, null, "")
+        }
+      ]
+    };
+  });
+};
+useJsonld({
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "name": "愛動智 EduAIR",
+  "url": "https://www.eduairhk.com"
+});
 const _sfc_main$2 = {};
-function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_CommonHeader = __nuxt_component_0;
   const _component_NuxtPage = __nuxt_component_1;
   const _component_CommonFooter = __nuxt_component_2;
@@ -2119,5 +2286,5 @@ let entry;
 }
 const entry$1 = (ctx) => entry(ctx);
 
-export { Head as H, Meta as M, Title as T, _export_sfc as _, __nuxt_component_0$1 as a, __nuxt_component_3 as b, createError as c, entry$1 as default, useHead as u };
+export { Head as H, Meta as M, Title as T, _export_sfc as _, __nuxt_component_0$1 as a, __nuxt_component_3 as b, createError as c, entry$1 as default, useHead$2 as u };
 //# sourceMappingURL=server.mjs.map

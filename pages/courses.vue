@@ -12,12 +12,7 @@
                 聯絡我們&ensp;瞭解更多
             </div>
             </NuxtLink>
-            
-            
         </div>
-
-
-
     </div>
 </template>
 

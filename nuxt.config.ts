@@ -11,6 +11,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image',
     'nuxt-simple-sitemap',
+    'nuxt-jsonld',
   ],
   site: {
     url: 'https://eduairhk.com',

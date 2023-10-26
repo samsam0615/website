@@ -1,4 +1,4 @@
-import { _ as _export_sfc, u as useHead } from '../server.mjs';
+import { _ as _export_sfc, u as useHead$2 } from '../server.mjs';
 import { mergeProps, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrInterpolate } from 'vue/server-renderer';
 import 'ofetch';
@@ -55,7 +55,7 @@ const _sfc_main = {
   },
   setup(__props) {
     const props = __props;
-    useHead({
+    useHead$2({
       title: `${props.statusCode} - ${props.statusMessage} | ${props.appName}`,
       script: [],
       style: [

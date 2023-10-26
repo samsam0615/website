@@ -28,11 +28,20 @@
         </div>
         <div style="width: 100%; padding: 20px; max-width: 1200px">
             <div class="font-middle" style="color: #ffa500; font-weight: 600">活動快照</div>
-            <div style="padding: 20px 0">
-                <ExpandField2 :title="' 2023 年 9 月 28 日'" :number="'1'">
+            <div class="event-photo" style="padding: 20px 0">
+                <ExpandField2 :title="' 2023 年 10 月 20 日'" :number="'1'">
+                    <img :src="'/event/20231020.jpg'" style="width: 100%">
+                </ExpandField2>
+                <ExpandField2 :title="' 2023 年 9 月 28 日'" :number="'2'">
                     <img :src="'/event/event4/1.jpg'" style="width: 100%">
                 </ExpandField2>
             </div>
         </div>
     </div>
 </template>
+
+<style scoped>
+.event-photo> *:not(:first-child) {
+  margin-top: 20px;
+}
+</style>

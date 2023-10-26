@@ -1,4 +1,4 @@
-import { _ as _export_sfc, u as useHead, a as __nuxt_component_0$1 } from '../server.mjs';
+import { _ as _export_sfc, u as useHead$2, a as __nuxt_component_0$1 } from '../server.mjs';
 import { mergeProps, withCtx, createTextVNode, toDisplayString, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrInterpolate, ssrRenderComponent } from 'vue/server-renderer';
 import 'ofetch';
@@ -59,7 +59,7 @@ const _sfc_main = {
   },
   setup(__props) {
     const props = __props;
-    useHead({
+    useHead$2({
       title: `${props.statusCode} - ${props.statusMessage} | ${props.appName}`,
       script: [],
       style: [

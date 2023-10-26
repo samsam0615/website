@@ -7,6 +7,16 @@
   </div>
 </template>
 
+<script>
+useJsonld({
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "name": "愛動智 EduAIR",
+  "url": "https://www.eduairhk.com",
+});
+</script>
+
+
 <style>
 *{box-sizing: border-box;}
 
