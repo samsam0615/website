@@ -6,7 +6,7 @@
                 {{title}}
             </div>
             <div class="expand-button" v-if="displayArrow" @click="isExpand = !isExpand">
-                <img src="@/assets/image/materials/icon_expand.png" v-if="isExpand">
+                <img src="@/assets/image/materials/icon_expand.png" v-if="!isExpand">
                 <img src="@/assets/image/materials/icon_narrow.png" v-else>
             </div>
         </div>
@@ -19,10 +19,9 @@
 <script>
 export default {
   name: 'ExpandField',
-  props: ['title', 'number', 'displayArrow'],
+  props: ['title', 'number', 'displayArrow', 'isExpand'],
   data () {
     return {
-        isExpand: false
     }
   },
   methods:{

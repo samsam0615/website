@@ -1,5 +1,6 @@
 <template>
     <Title>最新消息</Title>
+    <Meta name="description" content=""/>
     <div class="pageContent-container" style="max-width: 100%; width: 1024px; justify-content: center;">
         <div class="banner">
             <label class="title font-big">

@@ -1,5 +1,6 @@
 <template>
     <Title>到校課程</Title>
+    <Meta name="description" content="按此查看到校課程"/>
     <div class="pageContent-container" style="max-width: 100%; width: 1024px; justify-content: center; min-height: 100%; justify-content: flex-start; align-items: center">
         <div class="banner">
             <label class="title font-big">

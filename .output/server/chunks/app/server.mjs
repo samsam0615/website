@@ -321,15 +321,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/company-ed15400b.mjs').then((m) => m.default || m)
-  },
-  {
-    name: "company2",
-    path: "/company2",
-    meta: {},
-    alias: [],
-    redirect: void 0,
-    component: () => import('./_nuxt/company2-67d1ce79.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/company-5b7f27f9.mjs').then((m) => m.default || m)
   },
   {
     name: "contact",
@@ -337,15 +329,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/contact-34320b23.mjs').then((m) => m.default || m)
-  },
-  {
-    name: "contact2",
-    path: "/contact2",
-    meta: {},
-    alias: [],
-    redirect: void 0,
-    component: () => import('./_nuxt/contact2-df1b5b5b.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/contact-2295a801.mjs').then((m) => m.default || m)
   },
   {
     name: "courses",
@@ -353,7 +337,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/courses-76d86bb5.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/courses-51acfb8e.mjs').then((m) => m.default || m)
   },
   {
     name: "cuhk-icar",
@@ -401,7 +385,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/4-9c82c552.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/4-d26a1cb7.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -425,7 +409,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/news-c6c88e28.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/news-42274b2e.mjs').then((m) => m.default || m)
   },
   {
     name: "privacy",
@@ -436,28 +420,12 @@ const _routes = [
     component: () => import('./_nuxt/privacy-4c7bf475.mjs').then((m) => m.default || m)
   },
   {
-    name: "privacyold",
-    path: "/privacyold",
-    meta: {},
-    alias: [],
-    redirect: void 0,
-    component: () => import('./_nuxt/privacyold-e9faa64a.mjs').then((m) => m.default || m)
-  },
-  {
     name: "staff",
     path: "/staff",
     meta: {},
     alias: [],
     redirect: void 0,
     component: () => import('./_nuxt/staff-571d3b54.mjs').then((m) => m.default || m)
-  },
-  {
-    name: "test",
-    path: "/test",
-    meta: {},
-    alias: [],
-    redirect: void 0,
-    component: () => import('./_nuxt/test-4fa8a5b2.mjs').then((m) => m.default || m)
   }
 ];
 const appHead = { "meta": [{ "name": "viewport", "content": "width=device-width, initial-scale=1" }, { "charset": "utf-8" }], "link": [], "style": [], "script": [], "noscript": [] };
@@ -1595,15 +1563,6 @@ const Meta = /* @__PURE__ */ defineComponent({
     };
   })
 });
-const Head = /* @__PURE__ */ defineComponent({
-  // eslint-disable-next-line vue/no-reserved-component-names
-  name: "Head",
-  inheritAttrs: false,
-  setup: (_props, ctx) => () => {
-    var _a, _b;
-    return (_b = (_a = ctx.slots).default) == null ? void 0 : _b.call(_a);
-  }
-});
 async function imageMeta(_ctx, url) {
   const meta = await _imageMeta(url).catch((err) => {
     console.error("Failed to get image meta for " + url, err + "");
@@ -2286,5 +2245,5 @@ let entry;
 }
 const entry$1 = (ctx) => entry(ctx);
 
-export { Head as H, Meta as M, Title as T, _export_sfc as _, __nuxt_component_0$1 as a, __nuxt_component_3 as b, createError as c, entry$1 as default, useHead$2 as u };
+export { Meta as M, Title as T, _export_sfc as _, __nuxt_component_0$1 as a, __nuxt_component_3 as b, createError as c, entry$1 as default, useHead$2 as u };
 //# sourceMappingURL=server.mjs.map
