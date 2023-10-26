@@ -56,7 +56,9 @@
             </div>
           </div>
         </div>
-        <TextTitle :image="'image/materials/logo_moraldilemma.png'">道德困境實驗</TextTitle>
+        <TextTitle :image="'image/materials/logo_moraldilemma.png'" :isShowDownload="true" 
+          :chiUrl="'https://download.eduairhk.com/道德困境_中文版教材.zip'" 
+          :engUrl="'https://download.eduairhk.com/Moral_Dilemma_English_Materials.zip'">道德困境實驗</TextTitle>
         <div class="text-content font-small">
           <img src="@/assets/image/gif/gif_moral2.gif" style="width: 50%; min-width: 250px"><br>
           當自動駕駛車刹車功能失靈，只能左轉或右轉，
@@ -69,7 +71,9 @@
             除了避開小孩和避開老人，CUHK iCar還有第三個選擇嗎？<br>
           </TextBox>
         </div>
-        <TextTitle :image="'image/materials/logo_facereg.png'">人面識別追蹤</TextTitle>
+        <TextTitle :image="'image/materials/logo_facereg.png'" :isShowDownload="true" 
+          :chiUrl="'https://download.eduairhk.com/人面識別追蹤_中文版教材.zip'" 
+          :engUrl="'https://download.eduairhk.com/Face_Following_English_Materials.zip'">人面識別追蹤</TextTitle>
         <div class="text-content font-small">
           <img src="@/assets/image/gif/gif_face2.gif" style="width: 50%; min-width: 250px"><br>
           爲甚麽自動駕駛車可以辨識人臉，並跟隨指定人臉行駛？<br>
@@ -80,7 +84,9 @@
             在真實情況中應用此技術，會有甚麽好處和限制？<br>
           </TextBox>
         </div>
-        <TextTitle :image="'image/materials/logo_handdraw.png'">手畫線循跡</TextTitle>
+        <TextTitle :image="'image/materials/logo_handdraw.png'" :isShowDownload="true" 
+          :chiUrl="'https://download.eduairhk.com/手畫線循跡_中文版教材.zip'" 
+          :engUrl="'https://download.eduairhk.com/Line_Tracking_English_Materials.zip'">手畫線循跡</TextTitle>
         <div class="text-content font-small">
           <img src="@/assets/image/gif/gif_line2.gif" style="width: 50%; min-width: 250px"><br>
           自動駕駛車能根據各色虛線、實線移動，從而行走正確路線。<br>

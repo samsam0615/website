@@ -345,7 +345,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cuhk-icar-7ca3971c.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/cuhk-icar-20c343ca.mjs').then((m) => m.default || m)
   },
   {
     name: "cuhk-iport",
