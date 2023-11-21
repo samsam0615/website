@@ -2,7 +2,7 @@
   <Title>CUHK iPort</Title>
   <Meta name="description" content="CUHK iPort是為實現AI物聯網（AIoT）而設的AI教學套件，讓學生輕鬆創建不同AI機械項目。"/>
   <PageCatalog4  style="z-index: 1"/>
-  <LoginLayer @login="isShowContent = true"/>
+  <!-- <LoginLayer @login="isShowContent = true"/> -->
   <div class="pageContent-container" v-show="isShowContent" style="z-index: 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 30px; overflow: visible; max-width: 1200px; width: 100%" >
     <div class="page-content" style="width: 100%" ref="content">
 

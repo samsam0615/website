@@ -1,7 +1,7 @@
 import { _ as _export_sfc, T as Title, M as Meta, b as __nuxt_component_3$1 } from '../server.mjs';
 import { useSSRContext, withCtx, createTextVNode, createVNode, mergeProps } from 'vue';
 import { ssrRenderComponent, ssrRenderStyle, ssrRenderAttr, ssrRenderAttrs, ssrRenderClass } from 'vue/server-renderer';
-import { _ as __nuxt_component_7 } from './TextBox-3e9a026b.mjs';
+import { _ as __nuxt_component_6 } from './TextBox-d613185c.mjs';
 import 'ofetch';
 import 'hookable';
 import 'unctx';
@@ -29,7 +29,7 @@ import 'pathe';
 import 'ipx';
 import 'http-graceful-shutdown';
 
-const _sfc_main$4 = {
+const _sfc_main$3 = {
   name: "VueCatalog",
   props: ["title", "list"],
   emits: ["click"],
@@ -112,66 +112,16 @@ const _sfc_main$4 = {
   },
   watch: {}
 };
-function _sfc_ssrRender$4(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "container" }, _attrs))} data-v-236b6ea7><div style="${ssrRenderStyle({ "display": "flex", "gap": "10px", "width": "1200px" })}" data-v-236b6ea7><span class="${ssrRenderClass({ active: Math.floor($data.pos) == 0, inactive: Math.floor($data.pos) != 0 })}" data-v-236b6ea7>iPort\u662F\u751A\u9EBC\uFF1F</span><span class="${ssrRenderClass({ active: Math.floor($data.pos) == 1, inactive: Math.floor($data.pos) != 1 })}" data-v-236b6ea7>\u5982\u4F55\u4F7F\u7528iPort\uFF1F</span><span class="${ssrRenderClass({ active: Math.floor($data.pos) == 2, inactive: Math.floor($data.pos) != 2 })}" data-v-236b6ea7>\u8B66\u5831\u7CFB\u7D71</span><span class="${ssrRenderClass({ active: Math.floor($data.pos) == 3, inactive: Math.floor($data.pos) != 3 })}" data-v-236b6ea7>\u624B\u52E2\u63A7\u5236\u5C0F\u8ECA</span><span class="${ssrRenderClass({ active: Math.floor($data.pos) == 4, inactive: Math.floor($data.pos) != 4 })}" data-v-236b6ea7>\u8072\u63A7\u958B\u95DC</span><span class="${ssrRenderClass({ active: Math.floor($data.pos) == 5, inactive: Math.floor($data.pos) != 5 })}" data-v-236b6ea7>\u5176\u4ED6\u5BE6\u9A57</span></div></div>`);
-}
-const _sfc_setup$4 = _sfc_main$4.setup;
-_sfc_main$4.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/PageCatalog4.vue");
-  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
-};
-const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$4], ["__scopeId", "data-v-236b6ea7"]]);
-const _sfc_main$3 = {
-  name: "LoginLayer",
-  emits: ["login"],
-  data() {
-    return {
-      display: true,
-      password: "",
-      forget: false,
-      wrong: false,
-      wrongTimeout: null,
-      isAgree: false
-    };
-  },
-  methods: {
-    login() {
-      if (this.password === "cuhkiport") {
-        this.display = false;
-        this.$emit("login");
-      } else {
-        if (this.wrong == false) {
-          this.wrong = true;
-          this.wrongTimeout = setTimeout(() => {
-            this.wrong = false;
-          }, 1e3);
-        } else {
-          clearTimeout(this.wrongTimeout);
-          this.wrongTimeout = setTimeout(() => {
-            this.wrong = false;
-          }, 1e3);
-        }
-      }
-    }
-  }
-};
 function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<div${ssrRenderAttrs(mergeProps({
-    style: [
-      { "padding-top": "60px" },
-      $data.display ? null : { display: "none" }
-    ],
-    class: ["login-container", { wrong: $data.wrong }]
-  }, _attrs))} data-v-26f01d3c><div style="${ssrRenderStyle({ "font-size": "15px", "color": "#1967D2" })}" data-v-26f01d3c> For Inquiries, Please Contact: info@eduairhk.com </div><div style="${ssrRenderStyle({ "padding": "5px 0 20px", "display": "flex", "align-items": "center" })}" data-v-26f01d3c><div style="${ssrRenderStyle({ "padding": "0 10px", "font-size": "15px", "color": "#1967D2" })}" data-v-26f01d3c> *By continuing, you agree to the <a href="https://eduairhk.com/privacy" target="_blank" style="${ssrRenderStyle({ "color": "#39499f", "font-size": "15px", "border-bottom": "1px solid #39499f", "cursor": "pointer", "text-decoration": "none" })}" data-v-26f01d3c> Privacy Policy </a></div></div><div class="password" data-v-26f01d3c><input type="password" placeholder="Password"${ssrRenderAttr("value", $data.password)} autocomplete="new-password" data-v-26f01d3c><div class="button" style="${ssrRenderStyle({ "position": "relative" })}" data-v-26f01d3c><img${ssrRenderAttr("src", "enter.png")} style="${ssrRenderStyle({ "width": "100%" })}" data-v-26f01d3c></div></div><div class="icar" style="${ssrRenderStyle({ "margin": "30px 0", "position": "relative" })}" data-v-26f01d3c><img${ssrRenderAttr("src", "iCarF2.png")} data-v-26f01d3c><div class="arm L" data-v-26f01d3c><img${ssrRenderAttr("src", "armL2.png")} data-v-26f01d3c></div><div class="arm R" data-v-26f01d3c><img${ssrRenderAttr("src", "armR2.png")} data-v-26f01d3c></div></div><div style="${ssrRenderStyle({ "font-size": "40px", "color": "#1967D2", "font-weight": "600", "line-height": "40px", "position": "relative" })}" data-v-26f01d3c> CUHK iPort <div class="message" data-v-26f01d3c> \u5DF2\u53C3\u8207\u521D\u4E2D\u4EBA\u5DE5\u667A\u80FD\u55AE\u5143\u61C9\u7528\u5BE6\u8E10\u5DE5\u4F5C\u574A\u7684\u8001\u5E2B\u8ACB\u806F\u7D61info@eduairhk.com \u7372\u53D6\u767B\u5165\u5BC6\u78BC\u3002 </div></div></div>`);
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "container" }, _attrs))} data-v-236b6ea7><div style="${ssrRenderStyle({ "display": "flex", "gap": "10px", "width": "1200px" })}" data-v-236b6ea7><span class="${ssrRenderClass({ active: Math.floor($data.pos) == 0, inactive: Math.floor($data.pos) != 0 })}" data-v-236b6ea7>iPort\u662F\u751A\u9EBC\uFF1F</span><span class="${ssrRenderClass({ active: Math.floor($data.pos) == 1, inactive: Math.floor($data.pos) != 1 })}" data-v-236b6ea7>\u5982\u4F55\u4F7F\u7528iPort\uFF1F</span><span class="${ssrRenderClass({ active: Math.floor($data.pos) == 2, inactive: Math.floor($data.pos) != 2 })}" data-v-236b6ea7>\u8B66\u5831\u7CFB\u7D71</span><span class="${ssrRenderClass({ active: Math.floor($data.pos) == 3, inactive: Math.floor($data.pos) != 3 })}" data-v-236b6ea7>\u624B\u52E2\u63A7\u5236\u5C0F\u8ECA</span><span class="${ssrRenderClass({ active: Math.floor($data.pos) == 4, inactive: Math.floor($data.pos) != 4 })}" data-v-236b6ea7>\u8072\u63A7\u958B\u95DC</span><span class="${ssrRenderClass({ active: Math.floor($data.pos) == 5, inactive: Math.floor($data.pos) != 5 })}" data-v-236b6ea7>\u5176\u4ED6\u5BE6\u9A57</span></div></div>`);
 }
 const _sfc_setup$3 = _sfc_main$3.setup;
 _sfc_main$3.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/LoginLayer.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/PageCatalog4.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_3 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$3], ["__scopeId", "data-v-26f01d3c"]]);
+const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender$3], ["__scopeId", "data-v-236b6ea7"]]);
 const _sfc_main$2 = {};
 function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
   const _component_nuxt_img = __nuxt_component_3$1;
@@ -205,7 +155,7 @@ _sfc_main$2.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/iPortImage.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-const __nuxt_component_4 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender$2], ["__scopeId", "data-v-3167c7d9"]]);
+const __nuxt_component_3 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender$2], ["__scopeId", "data-v-3167c7d9"]]);
 const _sfc_main$1 = {
   name: "iPortVideoPlayer",
   data() {
@@ -237,7 +187,7 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/iPortVideoPlayer.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const __nuxt_component_6 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-097aa183"]]);
+const __nuxt_component_5 = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["ssrRender", _sfc_ssrRender$1], ["__scopeId", "data-v-097aa183"]]);
 const _sfc_main = {
   name: "CUHK-iPort",
   data() {
@@ -294,11 +244,10 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   const _component_Title = Title;
   const _component_Meta = Meta;
   const _component_PageCatalog4 = __nuxt_component_2;
-  const _component_LoginLayer = __nuxt_component_3;
-  const _component_iPortImage = __nuxt_component_4;
+  const _component_iPortImage = __nuxt_component_3;
   const _component_nuxt_img = __nuxt_component_3$1;
-  const _component_iPortVideoPlayer = __nuxt_component_6;
-  const _component_TextBox = __nuxt_component_7;
+  const _component_iPortVideoPlayer = __nuxt_component_5;
+  const _component_TextBox = __nuxt_component_6;
   _push(`<!--[-->`);
   _push(ssrRenderComponent(_component_Title, null, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -317,29 +266,26 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     content: "CUHK iPort\u662F\u70BA\u5BE6\u73FEAI\u7269\u806F\u7DB2\uFF08AIoT\uFF09\u800C\u8A2D\u7684AI\u6559\u5B78\u5957\u4EF6\uFF0C\u8B93\u5B78\u751F\u8F15\u9B06\u5275\u5EFA\u4E0D\u540CAI\u6A5F\u68B0\u9805\u76EE\u3002"
   }, null, _parent));
   _push(ssrRenderComponent(_component_PageCatalog4, { style: { "z-index": "1" } }, null, _parent));
-  _push(ssrRenderComponent(_component_LoginLayer, {
-    onLogin: ($event) => $data.isShowContent = true
-  }, null, _parent));
   _push(`<div class="pageContent-container" style="${ssrRenderStyle([
     $data.isShowContent ? null : { display: "none" },
     { "z-index": "0", "flex-direction": "column", "justify-content": "flex-start", "align-items": "flex-start", "padding": "30px", "overflow": "visible", "max-width": "1200px", "width": "100%" }
-  ])}" data-v-e5ebacca><div class="page-content" style="${ssrRenderStyle({ "width": "100%" })}" data-v-e5ebacca><span class="title font-big" data-v-e5ebacca>iPort\u662F\u751A\u9EBC\uFF1F</span><div class="text-content font-small" style="${ssrRenderStyle({ "display": "flex", "justify-content": "center", "width": "100%" })}" data-v-e5ebacca>`);
+  ])}" data-v-79944aea><div class="page-content" style="${ssrRenderStyle({ "width": "100%" })}" data-v-79944aea><span class="title font-big" data-v-79944aea>iPort\u662F\u751A\u9EBC\uFF1F</span><div class="text-content font-small" style="${ssrRenderStyle({ "display": "flex", "justify-content": "center", "width": "100%" })}" data-v-79944aea>`);
   _push(ssrRenderComponent(_component_iPortImage, null, null, _parent));
-  _push(`</div><div class="text-content font-small" data-v-e5ebacca> CUHK iPort\u662F\u7531\u4E2D\u5927\u5718\u968A\u958B\u767C\u7684AI\u6559\u5B78\u5957\u4EF6\u3002\u5E2B\u751F\u53EF\u7701\u7565\u8907\u96DC\u7684\u786C\u4EF6\u642D\u7DAB\u6B65\u9A5F\uFF0C\u4F7F\u7528iPort\u7DE8\u7A0B\u5E73\u53F0\uFF0C\u5957\u7528\u65BCTeachable Machine\u8A13\u7DF4\u7684AI\u6A21\u578B\uFF0C\u7121\u9808\u7DE8\u7A0B\u5373\u53EF\u5BE6\u73FEAI\u7269\u806F\u7DB2\uFF08AIoT\uFF09 \uFF0C \u5EFA\u7ACB\u4E0D\u540C\u7684AI\u9805\u76EE\u3002 `);
+  _push(`</div><div class="text-content font-small" data-v-79944aea> CUHK iPort\u662F\u7531\u4E2D\u5927\u5718\u968A\u958B\u767C\u7684AI\u6559\u5B78\u5957\u4EF6\u3002\u5E2B\u751F\u53EF\u7701\u7565\u8907\u96DC\u7684\u786C\u4EF6\u642D\u7DAB\u6B65\u9A5F\uFF0C\u4F7F\u7528iPort\u7DE8\u7A0B\u5E73\u53F0\uFF0C\u5957\u7528\u65BCTeachable Machine\u8A13\u7DF4\u7684AI\u6A21\u578B\uFF0C\u7121\u9808\u7DE8\u7A0B\u5373\u53EF\u5BE6\u73FEAI\u7269\u806F\u7DB2\uFF08AIoT\uFF09 \uFF0C \u5EFA\u7ACB\u4E0D\u540C\u7684AI\u9805\u76EE\u3002 `);
   _push(ssrRenderComponent(_component_nuxt_img, {
     src: "iportDesc6.png",
     style: { "width": "100%", "max-width": "900px" }
   }, null, _parent));
-  _push(`</div><span class="title font-big" data-v-e5ebacca>\u5982\u4F55\u4F7F\u7528iPort\uFF1F</span>`);
+  _push(`</div><span class="title font-big" data-v-79944aea>\u5982\u4F55\u4F7F\u7528iPort\uFF1F</span>`);
   _push(ssrRenderComponent(_component_iPortVideoPlayer, null, null, _parent));
-  _push(`<div class="text-content font-small" style="${ssrRenderStyle({ "padding-top": "20px" })}" data-v-e5ebacca><div style="${ssrRenderStyle({ "position": "relative", "min-height": "100px", "width": "100%", "max-width": "900px", "background": "red", "padding": "0", "height": "min-content", "display": "flex" })}" data-v-e5ebacca><img${ssrRenderAttr("src", "iportui.png")} style="${ssrRenderStyle({ "width": "100%", "height": "auto", "padding": "0" })}" data-v-e5ebacca><div style="${ssrRenderStyle({ "width": "100%", "height": "100%", "background": "white", "opacity": "0.5", "position": "absolute", "top": "0" })}" data-v-e5ebacca></div><a href="https://iport.eduairhk.com" target="_blank" class="btn" style="${ssrRenderStyle({ "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%, -50%)", "padding": "5px 15px" })}" data-v-e5ebacca>\u524D\u5F80iPort\u7DE8\u7A0B\u5E73\u53F0</a></div></div><span class="title font-big" data-v-e5ebacca>\u8B66\u5831\u7CFB\u7D71</span><div class="text-content font-small" data-v-e5ebacca><video autoplay muted loop playsinline webkit-playsinline style="${ssrRenderStyle({ "width": "100%", "max-width": "750px" })}" data-v-e5ebacca><source${ssrRenderAttr("src", "iport5.mp4")} type="video/mp4" data-v-e5ebacca></video><br data-v-e5ebacca> \u8A13\u7DF4AI \u5716\u7247\u8B58\u5225\u6A21\u578B\u6AA2\u6E2C\u7981\u5340\u5927\u9580\u6709\u4EBA\u53CA\u7121\u4EBA\u7684\u60C5\u666F\u3002\u900F\u904EiPort \u5E73\u53F0\u4E0A\u7C21\u55AE\u8A2D\u7F6E\u986F\u793A\u5B89\u5168\u63D0\u793A\u53CA\u8072\u97F3\u71C8\u5149\u7B49\u6548\u679C\uFF0C\u53EA\u8981\u6709\u4EBA\u7D93\u904E\u7981\u5340\u5927\u9580\uFF0CiPort \u5C31\u6703\u767C\u51FA\u8B66\u5831\uFF0C\u63D0\u9192\u8AA4\u95D6\u4EBA\u58EB\u96E2\u958B\u3002 <br data-v-e5ebacca><br data-v-e5ebacca>`);
+  _push(`<div class="text-content font-small" style="${ssrRenderStyle({ "padding-top": "20px" })}" data-v-79944aea><div style="${ssrRenderStyle({ "position": "relative", "min-height": "100px", "width": "100%", "max-width": "900px", "background": "red", "padding": "0", "height": "min-content", "display": "flex" })}" data-v-79944aea><img${ssrRenderAttr("src", "iportui.png")} style="${ssrRenderStyle({ "width": "100%", "height": "auto", "padding": "0" })}" data-v-79944aea><div style="${ssrRenderStyle({ "width": "100%", "height": "100%", "background": "white", "opacity": "0.5", "position": "absolute", "top": "0" })}" data-v-79944aea></div><a href="https://iport.eduairhk.com" target="_blank" class="btn" style="${ssrRenderStyle({ "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%, -50%)", "padding": "5px 15px" })}" data-v-79944aea>\u524D\u5F80iPort\u7DE8\u7A0B\u5E73\u53F0</a></div></div><span class="title font-big" data-v-79944aea>\u8B66\u5831\u7CFB\u7D71</span><div class="text-content font-small" data-v-79944aea><video autoplay muted loop playsinline webkit-playsinline style="${ssrRenderStyle({ "width": "100%", "max-width": "750px" })}" data-v-79944aea><source${ssrRenderAttr("src", "iport5.mp4")} type="video/mp4" data-v-79944aea></video><br data-v-79944aea> \u8A13\u7DF4AI \u5716\u7247\u8B58\u5225\u6A21\u578B\u6AA2\u6E2C\u7981\u5340\u5927\u9580\u6709\u4EBA\u53CA\u7121\u4EBA\u7684\u60C5\u666F\u3002\u900F\u904EiPort \u5E73\u53F0\u4E0A\u7C21\u55AE\u8A2D\u7F6E\u986F\u793A\u5B89\u5168\u63D0\u793A\u53CA\u8072\u97F3\u71C8\u5149\u7B49\u6548\u679C\uFF0C\u53EA\u8981\u6709\u4EBA\u7D93\u904E\u7981\u5340\u5927\u9580\uFF0CiPort \u5C31\u6703\u767C\u51FA\u8B66\u5831\uFF0C\u63D0\u9192\u8AA4\u95D6\u4EBA\u58EB\u96E2\u958B\u3002 <br data-v-79944aea><br data-v-79944aea>`);
   _push(ssrRenderComponent(_component_TextBox, {
     title: "\u8A0E\u8AD6\u554F\u984C\u8209\u9685",
     image: "image/materials/logo_think2.png"
   }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(` \u4EFB\u4F55\u4EBA\u7D93\u904E\u7981\u5340\u5927\u9580\u90FD\u6703\u89F8\u767C\u8B66\u5831\u7CFB\u7D71\uFF0C\u53EF\u4EE5\u53EA\u8B93\u6388\u6B0A\u4EBA\u58EB\u901A\u904E\u55CE\uFF1F<br data-v-e5ebacca${_scopeId}> \u70BA\u4F55\u5929\u9ED1\u5F8C\u8B66\u5831\u7CFB\u7D71\u5C31\u6703\u88AB\u89F8\u767C\uFF1F\u5982\u4F55\u907F\u514D\u8AA4\u89F8\u767C\u7684\u60C5\u6CC1\uFF1F<br data-v-e5ebacca${_scopeId}> \u5728\u8A13\u7DF4\u300C\u6709\u4EBA\u300D\u7684\u60C5\u666F\u6642\uFF0C\u5047\u8A2D\u53EA\u7528\u540C\u5B78A\u7D93\u904E\u7981\u5340\u7684\u5716\u7247\uFF0C\u6709\u8DB3\u5920\u6578\u64DA\u4F5C\u70BA\u8B58\u5225\u6709\u4EBA\u7684\u60C5\u666F\u55CE\uFF1F<br data-v-e5ebacca${_scopeId}>`);
+        _push2(` \u4EFB\u4F55\u4EBA\u7D93\u904E\u7981\u5340\u5927\u9580\u90FD\u6703\u89F8\u767C\u8B66\u5831\u7CFB\u7D71\uFF0C\u53EF\u4EE5\u53EA\u8B93\u6388\u6B0A\u4EBA\u58EB\u901A\u904E\u55CE\uFF1F<br data-v-79944aea${_scopeId}> \u70BA\u4F55\u5929\u9ED1\u5F8C\u8B66\u5831\u7CFB\u7D71\u5C31\u6703\u88AB\u89F8\u767C\uFF1F\u5982\u4F55\u907F\u514D\u8AA4\u89F8\u767C\u7684\u60C5\u6CC1\uFF1F<br data-v-79944aea${_scopeId}> \u5728\u8A13\u7DF4\u300C\u6709\u4EBA\u300D\u7684\u60C5\u666F\u6642\uFF0C\u5047\u8A2D\u53EA\u7528\u540C\u5B78A\u7D93\u904E\u7981\u5340\u7684\u5716\u7247\uFF0C\u6709\u8DB3\u5920\u6578\u64DA\u4F5C\u70BA\u8B58\u5225\u6709\u4EBA\u7684\u60C5\u666F\u55CE\uFF1F<br data-v-79944aea${_scopeId}>`);
       } else {
         return [
           createTextVNode(" \u4EFB\u4F55\u4EBA\u7D93\u904E\u7981\u5340\u5927\u9580\u90FD\u6703\u89F8\u767C\u8B66\u5831\u7CFB\u7D71\uFF0C\u53EF\u4EE5\u53EA\u8B93\u6388\u6B0A\u4EBA\u58EB\u901A\u904E\u55CE\uFF1F"),
@@ -353,14 +299,14 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     }),
     _: 1
   }, _parent));
-  _push(`</div><span class="title font-big" data-v-e5ebacca>\u624B\u52E2\u63A7\u5236\u5C0F\u8ECA</span><div class="text-content font-small" data-v-e5ebacca><div class="font-middle" style="${ssrRenderStyle({ "padding": "10px 0" })}" data-v-e5ebacca>\u88FD\u4F5C\u904E\u7A0B</div><div style="${ssrRenderStyle({ "display": "flex", "flex-wrap": "wrap" })}" data-v-e5ebacca><video autoplay muted loop playsinline webkit-playsinline style="${ssrRenderStyle({ "width": "100%", "max-width": "750px" })}" data-v-e5ebacca><source${ssrRenderAttr("src", "iport7.mp4")} type="video/mp4" data-v-e5ebacca></video><div style="${ssrRenderStyle({ "padding": "20px 20px 0 20px" })}" data-v-e5ebacca> \u6240\u9700\u6750\u6599\uFF1A <br data-v-e5ebacca> 1. \u5EE2\u68C4\u7D19\u76AE <br data-v-e5ebacca> 2. \u81A0\u6A3D\u6A3D\u84CB <br data-v-e5ebacca> 3. \u81A0\u7D19 <br data-v-e5ebacca> 4. CUHK iPort <br data-v-e5ebacca> 5. 360\u96FB\u6A5F * 2 <br data-v-e5ebacca></div></div><br data-v-e5ebacca><div class="font-middle" style="${ssrRenderStyle({ "padding": "10px 0" })}" data-v-e5ebacca>\u5BE6\u9A57\u793A\u7BC4</div><video autoplay muted loop playsinline webkit-playsinline style="${ssrRenderStyle({ "width": "100%", "max-width": "750px" })}" data-v-e5ebacca><source${ssrRenderAttr("src", "iport1.mp4")} type="video/mp4" data-v-e5ebacca></video><br data-v-e5ebacca> \u8A13\u7DF4\u597D\u81EA\u5DF1\u559C\u6B61\u7684\u624B\u52E2\u8B58\u5225\u6A21\u578B\u5F8C\uFF0C\u5C31\u53EF\u4EE5\u900F\u904E\u651D\u50CF\u982D\u4EE5\u624B\u52E2\u63A7\u5236\u5C0F\u8ECA\u98DB\u99B3\u3002\u7A7A\u66E0\u74B0\u5883\u4E0B\u7121\u7DDA\u63A7\u5236\u8DDD\u96E2\u53EF\u905450\u7C73\u3002\u5927\u5BB6\u4E0D\u59A8\u6BD4\u8CFD\u8AB0\u7684\u5C0F\u8ECA\u6700\u5FEB\u96E2\u958B\u8FF7\u5BAE\u3002 <br data-v-e5ebacca><br data-v-e5ebacca>`);
+  _push(`</div><span class="title font-big" data-v-79944aea>\u624B\u52E2\u63A7\u5236\u5C0F\u8ECA</span><div class="text-content font-small" data-v-79944aea><div class="font-middle" style="${ssrRenderStyle({ "padding": "10px 0" })}" data-v-79944aea>\u88FD\u4F5C\u904E\u7A0B</div><div style="${ssrRenderStyle({ "display": "flex", "flex-wrap": "wrap" })}" data-v-79944aea><video autoplay muted loop playsinline webkit-playsinline style="${ssrRenderStyle({ "width": "100%", "max-width": "750px" })}" data-v-79944aea><source${ssrRenderAttr("src", "iport7.mp4")} type="video/mp4" data-v-79944aea></video><div style="${ssrRenderStyle({ "padding": "20px 20px 0 20px" })}" data-v-79944aea> \u6240\u9700\u6750\u6599\uFF1A <br data-v-79944aea> 1. \u5EE2\u68C4\u7D19\u76AE <br data-v-79944aea> 2. \u81A0\u6A3D\u6A3D\u84CB <br data-v-79944aea> 3. \u81A0\u7D19 <br data-v-79944aea> 4. CUHK iPort <br data-v-79944aea> 5. 360\u96FB\u6A5F * 2 <br data-v-79944aea></div></div><br data-v-79944aea><div class="font-middle" style="${ssrRenderStyle({ "padding": "10px 0" })}" data-v-79944aea>\u5BE6\u9A57\u793A\u7BC4</div><video autoplay muted loop playsinline webkit-playsinline style="${ssrRenderStyle({ "width": "100%", "max-width": "750px" })}" data-v-79944aea><source${ssrRenderAttr("src", "iport1.mp4")} type="video/mp4" data-v-79944aea></video><br data-v-79944aea> \u8A13\u7DF4\u597D\u81EA\u5DF1\u559C\u6B61\u7684\u624B\u52E2\u8B58\u5225\u6A21\u578B\u5F8C\uFF0C\u5C31\u53EF\u4EE5\u900F\u904E\u651D\u50CF\u982D\u4EE5\u624B\u52E2\u63A7\u5236\u5C0F\u8ECA\u98DB\u99B3\u3002\u7A7A\u66E0\u74B0\u5883\u4E0B\u7121\u7DDA\u63A7\u5236\u8DDD\u96E2\u53EF\u905450\u7C73\u3002\u5927\u5BB6\u4E0D\u59A8\u6BD4\u8CFD\u8AB0\u7684\u5C0F\u8ECA\u6700\u5FEB\u96E2\u958B\u8FF7\u5BAE\u3002 <br data-v-79944aea><br data-v-79944aea>`);
   _push(ssrRenderComponent(_component_TextBox, {
     title: "\u8A0E\u8AD6\u554F\u984C\u8209\u9685",
     image: "image/materials/logo_think2.png"
   }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(` \u5229\u7528\u5716\u7247\u8B58\u5225\u624B\u52E2\u8207\u50B3\u7D71\u7684\u624B\u52E2\u8B58\u5225\u6280\u8853\u6709\u751A\u9EBC\u4E0D\u540C\uFF1F<br data-v-e5ebacca${_scopeId}> \u600E\u6A23\u6536\u96C6\u6578\u64DA\u624D\u80FD\u4F7F\u5C0F\u8ECA\u5F97\u5230\u66F4\u597D\u7684\u63A7\u5236\uFF1F<br data-v-e5ebacca${_scopeId}>`);
+        _push2(` \u5229\u7528\u5716\u7247\u8B58\u5225\u624B\u52E2\u8207\u50B3\u7D71\u7684\u624B\u52E2\u8B58\u5225\u6280\u8853\u6709\u751A\u9EBC\u4E0D\u540C\uFF1F<br data-v-79944aea${_scopeId}> \u600E\u6A23\u6536\u96C6\u6578\u64DA\u624D\u80FD\u4F7F\u5C0F\u8ECA\u5F97\u5230\u66F4\u597D\u7684\u63A7\u5236\uFF1F<br data-v-79944aea${_scopeId}>`);
       } else {
         return [
           createTextVNode(" \u5229\u7528\u5716\u7247\u8B58\u5225\u624B\u52E2\u8207\u50B3\u7D71\u7684\u624B\u52E2\u8B58\u5225\u6280\u8853\u6709\u751A\u9EBC\u4E0D\u540C\uFF1F"),
@@ -372,14 +318,14 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     }),
     _: 1
   }, _parent));
-  _push(`</div><span class="title font-big" data-v-e5ebacca>\u8072\u63A7\u958B\u95DC</span><div class="text-content font-small" data-v-e5ebacca><video autoplay muted loop playsinline webkit-playsinline style="${ssrRenderStyle({ "width": "100%", "max-width": "750px" })}" data-v-e5ebacca><source${ssrRenderAttr("src", "iport2.mp4")} type="video/mp4" data-v-e5ebacca></video><br data-v-e5ebacca> iPort\u914D\u4EF6\u4E2D\u7684\u96FB\u52D5\u624B\u6307\u80FD\u5920\u505A\u5230\u985E\u4F3C\u771F\u5BE6\u624B\u6307\u63A8\u62C9\u7684\u52D5\u4F5C\uFF0C\u5C0D\u65BC\u884C\u52D5\u4E0D\u4FBF\u4EBA\u58EB\u53EF\u4EE5\u5229\u7528\u8A13\u7DF4\u8072\u97F3\u8B58\u5225\u6A21\u578B\uFF0C\u5229\u7528\u7C21\u55AE\u7684\u8072\u63A7\u6307\u4EE4\u4FBF\u80FD\u63A7\u5236\u5BB6\u4E2D\u7684\u4EFB\u610F\u6309\u9375\u958B\u95DC\u3002\u5373\u4F7F\u5728\u969C\u7919\u7269\u7684\u5BA4\u5167\u74B0\u5883\u4E0B\u7121\u7DDA\u63A7\u5236\u8DDD\u96E2\u4ECD\u53EF\u905415\u7C73\u3002 <br data-v-e5ebacca><br data-v-e5ebacca>`);
+  _push(`</div><span class="title font-big" data-v-79944aea>\u8072\u63A7\u958B\u95DC</span><div class="text-content font-small" data-v-79944aea><video autoplay muted loop playsinline webkit-playsinline style="${ssrRenderStyle({ "width": "100%", "max-width": "750px" })}" data-v-79944aea><source${ssrRenderAttr("src", "iport2.mp4")} type="video/mp4" data-v-79944aea></video><br data-v-79944aea> iPort\u914D\u4EF6\u4E2D\u7684\u96FB\u52D5\u624B\u6307\u80FD\u5920\u505A\u5230\u985E\u4F3C\u771F\u5BE6\u624B\u6307\u63A8\u62C9\u7684\u52D5\u4F5C\uFF0C\u5C0D\u65BC\u884C\u52D5\u4E0D\u4FBF\u4EBA\u58EB\u53EF\u4EE5\u5229\u7528\u8A13\u7DF4\u8072\u97F3\u8B58\u5225\u6A21\u578B\uFF0C\u5229\u7528\u7C21\u55AE\u7684\u8072\u63A7\u6307\u4EE4\u4FBF\u80FD\u63A7\u5236\u5BB6\u4E2D\u7684\u4EFB\u610F\u6309\u9375\u958B\u95DC\u3002\u5373\u4F7F\u5728\u969C\u7919\u7269\u7684\u5BA4\u5167\u74B0\u5883\u4E0B\u7121\u7DDA\u63A7\u5236\u8DDD\u96E2\u4ECD\u53EF\u905415\u7C73\u3002 <br data-v-79944aea><br data-v-79944aea>`);
   _push(ssrRenderComponent(_component_TextBox, {
     title: "\u8A0E\u8AD6\u554F\u984C\u8209\u9685",
     image: "image/materials/logo_think2.png"
   }, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(` \u5982\u4F55\u80FD\u63D0\u5347\u8072\u63A7\u6E96\u78BA\u6027\u5462\uFF1F<br data-v-e5ebacca${_scopeId}> \u8072\u63A7\u8B58\u5225\u7684\u6700\u5927\u56F0\u96E3\u662F\u5BB9\u6613\u53D7\u5230\u566A\u97F3\u5F71\u97FF\uFF0C\u96FB\u52D5\u624B\u6307\u53EF\u80FD\u56E0\u800C\u767C\u751F\u8AA4\u89F8\u60C5\u6CC1\uFF0C\u6211\u5011\u5982\u4F55\u907F\u514D\u566A\u97F3\u7684\u5F71\u97FF\uFF1F<br data-v-e5ebacca${_scopeId}>`);
+        _push2(` \u5982\u4F55\u80FD\u63D0\u5347\u8072\u63A7\u6E96\u78BA\u6027\u5462\uFF1F<br data-v-79944aea${_scopeId}> \u8072\u63A7\u8B58\u5225\u7684\u6700\u5927\u56F0\u96E3\u662F\u5BB9\u6613\u53D7\u5230\u566A\u97F3\u5F71\u97FF\uFF0C\u96FB\u52D5\u624B\u6307\u53EF\u80FD\u56E0\u800C\u767C\u751F\u8AA4\u89F8\u60C5\u6CC1\uFF0C\u6211\u5011\u5982\u4F55\u907F\u514D\u566A\u97F3\u7684\u5F71\u97FF\uFF1F<br data-v-79944aea${_scopeId}>`);
       } else {
         return [
           createTextVNode(" \u5982\u4F55\u80FD\u63D0\u5347\u8072\u63A7\u6E96\u78BA\u6027\u5462\uFF1F"),
@@ -391,7 +337,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     }),
     _: 1
   }, _parent));
-  _push(`</div><span class="title font-big" data-v-e5ebacca>\u5176\u4ED6\u5BE6\u9A57</span><div class="text-content font-small" data-v-e5ebacca><video autoplay muted loop playsinline webkit-playsinline style="${ssrRenderStyle({ "width": "100%", "max-width": "750px" })}" data-v-e5ebacca><source${ssrRenderAttr("src", "iport_rsp.mp4")} type="video/mp4" data-v-e5ebacca></video><br data-v-e5ebacca><video autoplay muted loop playsinline webkit-playsinline style="${ssrRenderStyle({ "width": "100%", "max-width": "750px" })}" data-v-e5ebacca><source${ssrRenderAttr("src", "iport_tissue.mp4")} type="video/mp4" data-v-e5ebacca></video><br data-v-e5ebacca><video autoplay muted loop playsinline webkit-playsinline style="${ssrRenderStyle({ "width": "100%", "max-width": "750px" })}" data-v-e5ebacca><source${ssrRenderAttr("src", "iport_dog.mp4")} type="video/mp4" data-v-e5ebacca></video></div></div></div><!--]-->`);
+  _push(`</div><span class="title font-big" data-v-79944aea>\u5176\u4ED6\u5BE6\u9A57</span><div class="text-content font-small" data-v-79944aea><video autoplay muted loop playsinline webkit-playsinline style="${ssrRenderStyle({ "width": "100%", "max-width": "750px" })}" data-v-79944aea><source${ssrRenderAttr("src", "iport_rsp.mp4")} type="video/mp4" data-v-79944aea></video><br data-v-79944aea><video autoplay muted loop playsinline webkit-playsinline style="${ssrRenderStyle({ "width": "100%", "max-width": "750px" })}" data-v-79944aea><source${ssrRenderAttr("src", "iport_tissue.mp4")} type="video/mp4" data-v-79944aea></video><br data-v-79944aea><video autoplay muted loop playsinline webkit-playsinline style="${ssrRenderStyle({ "width": "100%", "max-width": "750px" })}" data-v-79944aea><source${ssrRenderAttr("src", "iport_dog.mp4")} type="video/mp4" data-v-79944aea></video></div></div></div><!--]-->`);
 }
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
@@ -399,7 +345,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/cuhk-iport.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const cuhkIport = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-e5ebacca"]]);
+const cuhkIport = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-79944aea"]]);
 
 export { cuhkIport as default };
-//# sourceMappingURL=cuhk-iport-753ca0f9.mjs.map
+//# sourceMappingURL=cuhk-iport-3a75eddc.mjs.map
