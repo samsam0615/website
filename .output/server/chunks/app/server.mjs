@@ -393,7 +393,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-64ede490.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-5b400579.mjs').then((m) => m.default || m)
   },
   {
     name: "ishare",

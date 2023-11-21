@@ -71,8 +71,13 @@
 <script>
 export default {
   name: 'IndexPage',
-  mounted(){
-    
+  head () {
+    return {
+      title: '愛動智 EduAIR',
+      meta: [
+        {hid: 'og:title', name:'og:title' , content: '愛動智 EduAIR'},
+      ],
+    }
   }
 }
 </script>
