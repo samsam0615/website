@@ -36,8 +36,11 @@
                 <ExpandField2 :title="' 2023 年 10 月 20 日'" :number="'2'" :isExpand="false" :displayArrow="true">
                     <img :src="'/event/20231020.jpg'" style="width: 100%">
                 </ExpandField2>
-                <ExpandField2 :title="' 2023 年 10 月 27 日'" :number="'3'" :isExpand="true" :displayArrow="true">
+                <ExpandField2 :title="' 2023 年 10 月 27 日'" :number="'3'" :isExpand="false" :displayArrow="true">
                     <img :src="'/event/20231027.jpg'" style="width: 100%">
+                </ExpandField2>
+                <ExpandField2 :title="' 2023 年 11 月 10 日'" :number="'4'" :isExpand="true" :displayArrow="true">
+                    <img :src="'/event/20231110.jpeg'" style="width: 100%">
                 </ExpandField2>
             </div>
         </div>
