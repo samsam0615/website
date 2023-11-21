@@ -18,19 +18,19 @@
         </div>
         <div class="icon-container" style="">
             <div class="iconBox">
-                <nuxt-img src="company1.png" />
+                <img :src="'/image/company1.png'" />
                 教育工作坊
             </div>
             <div class="iconBox">
-                <nuxt-img src="company2.png" />
+                <img :src="'/image/company2.png'" />
                 顧問服務
             </div>
             <div class="iconBox">
-                <nuxt-img src="company3.png" />
+                <img :src="'/image/company3.png'" />
                 到校服務
             </div>
             <div class="iconBox">
-                <nuxt-img src="company4.png" />
+                <img :src="'/image/company4.png'" />
                 研發教育套件
             </div>
         </div>
@@ -41,7 +41,7 @@
             EduAIR由一班香港中文大學研究團隊成立，團隊曾開創先河，將AI課題作系統式分類，製作出一套淺白易用的教材，加速AI課題融入中學課程，該套課程現在已經被超過50%的香港中學使用。
         </div>
         <div style="width: 100%; padding: 50px 0">
-            <nuxt-img src="timeline3.png" style="width: 100%" />
+            <img :src="'/image/timeline3.png'" style="width: 100%" />
         </div>
     </div>
 </template>
@@ -53,7 +53,7 @@
     top: 0;
     overflow: hidden; 
     position: relative;
-    background-image: url('~/assets/image/event3.jpg');
+    background-image: url('~/assets/banner1.jpg');
     background-position-y: 600px;
     background-size: 1200px auto;
 }

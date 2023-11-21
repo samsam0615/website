@@ -6,7 +6,7 @@
         </div>
         <div  class="download-button-container" v-if="isShowDownload"> 
             <div style="font-size: 20px; padding: 10px">下載教材</div>
-            <img :src="'/download.svg'" style="width: 30px;">
+            <img :src="'/image/download.svg'" style="width: 30px;">
             <div class="hover" style="color: #565656;">
                 <a class="download-button" :href="chiUrl"> 
                     中

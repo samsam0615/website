@@ -91,7 +91,7 @@
     top: 0;
     overflow: hidden; 
     position: relative;
-    background-image: url('~/assets/image/banner2.jpg');
+    background-image: url('~/assets/banner2.jpg');
     background-position-x: -100px;
     background-position-y: 600px;
     background-size: 1200px auto;

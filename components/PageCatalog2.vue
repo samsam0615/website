@@ -3,9 +3,9 @@
     <label>{{title}}</label>
     <div style="display: flex; flex-direction: column;  width: 100%; position: relative; padding: 0 20px; ">
         <div style="z-index:1"> 
-          <img v-if="status == 'right'" ref='car' src="@/assets/image/materials/iCarR.png" style="position: relative; height: 50px; top: 10px;" :style="{left: xPos + xOffset + 'px'}">
-          <img v-if="status == 'left'" ref='car' src="@/assets/image/materials/iCarL.png" style="position: relative; height: 50px; top: 10px;" :style="{left: xPos + xOffset + 'px'}">
-          <img v-if="status == 'stop'" ref='car' src="@/assets/image/materials/iCarF.png" style="position: relative; height: 50px; top: 10px;" :style="{left: xPos + xOffset + 'px'}">
+          <img v-if="status == 'right'" ref='car' :src="'/image/materials/iCarR.png'" style="position: relative; height: 50px; top: 10px;" :style="{left: xPos + xOffset + 'px'}">
+          <img v-if="status == 'left'" ref='car' :src="'/image/materials/iCarL.png'" style="position: relative; height: 50px; top: 10px;" :style="{left: xPos + xOffset + 'px'}">
+          <img v-if="status == 'stop'" ref='car' :src="'/image/materials/iCarF.png'" style="position: relative; height: 50px; top: 10px;" :style="{left: xPos + xOffset + 'px'}">
         </div>
         <div style="display: flex; flex: 1; flex-direction: row; min-height: 60px; max-height: 60px; width: 100%; position: relative; align-items: flex-end; padding: 0"> 
           <span class="line" ></span>

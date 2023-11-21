@@ -6,7 +6,7 @@
         <div class="staff-description-container">
             <label class="subTitle staffSubTitle font-middle" :style="{ 'border-bottom': '3px solid ' + color }">
                 {{title}}
-                <a :href="youtube" target="_blank"><img src='/image/youtube.png' v-if="youtube"></a>
+                <a :href="youtube" target="_blank"><img :src='"/image/youtube.png"' v-if="youtube"></a>
             </label>
             <div class="description" >
                 <slot/>

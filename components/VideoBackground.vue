@@ -8,7 +8,7 @@
         playsinline
         webkit-playsinline
       >
-      <source src="@/assets/image/media/intro.mp4" type="video/mp4">
+      <source :src="'media/intro.mp4'" type="video/mp4">
     </video>
 </template>
 

@@ -17,7 +17,7 @@
             <div v-for="image in images" :key="image" 
                 class="image-container2" style="aspect-ratio: 4/3; overflow: hidden;" 
                 @click="setImage(image)" :class="{active: url == image}">
-                <nuxt-img :src="image" style="height: 100%; object-fit: cover;" />
+                <img :src="image" style="height: 100%; object-fit: cover;" />
                 <div></div>
             </div>
         </div> 

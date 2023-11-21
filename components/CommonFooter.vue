@@ -5,26 +5,26 @@
       <div  class="main">
         <label class="font-middle" >EduAIR 愛動智</label>
         <a href="https://www.facebook.com/eduair" target="_blank">
-          <nuxt-img src="facebook3.png" height="20px" /> 
+          <img :src="'/image/facebook3.png'" height="20px" /> 
           <label class="font-mini" style="padding: 0 10px">愛動智教育系統</label>
         </a>
         <a href="https://www.instagram.com/eduair_hk/" target="_blank">
-          <nuxt-img src="instagram3.png" height="20px" style="" /> 
+          <img :src="'/image/instagram3.png'" height="20px" style="" /> 
           <label class="font-mini" style="padding: 0 10px">eduair_hk</label>
         </a>
       </div>
       <div>
         <label class="font-middle" >聯絡我們</label>
         <label style="padding: 4px 0">
-          <nuxt-img src="call3.png" height="18px" style="" /> 
+          <img :src="'/image/call3.png'" height="18px" style="" /> 
           <label class="font-mini" style="padding: 0 10px;" x-apple-data-detectors="off">+852 5542 7564</label>
         </label>
         <label style="padding: 4px 0">
-          <nuxt-img src="mail3.png" height="18px" /> 
+          <img :src="'/image/mail3.png'" height="18px" /> 
           <label class="font-mini" style="padding: 0 10px;">info@eduairhk.com</label>
         </label>
         <label style="padding: 4px 0">
-          <nuxt-img src="location3.png" height="18px" /> 
+          <img :src="'/image/location3.png'" height="18px" /> 
           <label class="font-mini" style="padding: 0 10px;">科學園16W棟2樓237室</label>
         </label>
       </div>

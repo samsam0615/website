@@ -159,14 +159,12 @@ button:hover{
   display: flex; 
   justify-content: center; 
   align-items: center; overflow: hidden; 
-/*   background-image: url('~/assets/image/icars2.jpg'); 
-  background-size: auto 1000px; background-position: 0 -200px; */
   height: max-content;
 }
 
 .bg{
   width: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden; 
-  background-image: url('~/assets/image/icars2.jpg'); 
+  background-image: url('~/assets/banner3.jpg'); 
   background-size: cover; 
   background-position: 0 0;
   background-repeat: no-repeat;

@@ -1,7 +1,7 @@
 {
-  "date": "2023-11-21T03:30:44.024Z",
-  "preset": "node-server",
+  "date": "2023-11-21T07:27:21.549Z",
+  "preset": "static",
   "commands": {
-    "preview": "node ./server/index.mjs"
+    "preview": "npx serve ./public"
   }
 }

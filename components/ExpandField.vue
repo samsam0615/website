@@ -6,12 +6,12 @@
                 {{title}}
             </div>
             <div class="expand-button" @click="isExpand = !isExpand">
-                <img src="@/assets/image/materials/icon_expand.png" v-if="isExpand">
-                <img src="@/assets/image/materials/icon_narrow.png" v-else>
+                <!-- <img :src="'image/materials/icon_expand.png'" v-if="isExpand">
+                <img :src="'image/materials/icon_narrow.png'" v-else> -->
             </div>
         </div>
         <div class="expand-field-bottom" v-if="isExpand">
-            <img src="@/assets/image/materials/icon_quote2.png" style="padding: 0 50px; width: 40px; height: 40px; color: #5b2700;">
+            <img :src="'/image/materials/icon_quote2.png'" style="padding: 0 50px; width: 40px; height: 40px; color: #5b2700;">
             <slot></slot>
         </div>
     </div>

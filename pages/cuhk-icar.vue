@@ -21,13 +21,13 @@
             全港有超過5成中學正使用CUHK iCar進行AI教學活動。
           </div>
           <div class="appDownloader"  style="">
-            <img :src="'iCarF2.png'" style="width: 200px">
+            <img :src="'/image/iCarF2.png'" style="width: 200px">
             <div>
               <a href="https://play.google.com/store/apps/details?id=com.eduairhk.cuhkicarapp&hl=en_US" target="_blank">
-                <nuxt-img src="googleplay.png" style="height: 50px; margin: 10px 5px" />
+                <img :src="'/image/app/googleplay.png'" style="height: 50px; margin: 10px 5px" />
               </a>
               <a href="https://apps.apple.com/us/app/cuhk-icar-app/id6462405334" target="_blank">
-                <nuxt-img src="apple.png" style="height: 50px; margin: 10px 5px" />
+                <img :src="'/image/app/apple.png'" style="height: 50px; margin: 10px 5px" />
               </a>
             </div>
           </div>
@@ -39,19 +39,19 @@
             <div style="display: flex; justify-content: center; flex-direction: column; align-items: center; margin-left: 15px; margin-right: 15px; margin-top: 25px;">
               MakeCode積木編程
               <div class="imageContainer">
-                <img src="@/assets/image/materials/logo_blockly.png" style="height: 90%">
+                <img :src="'/image/materials/logo_blockly.png'" style="height: 90%">
               </div>
             </div>
             <div style="display: flex; justify-content: center; flex-direction: column; align-items: center; margin-left: 15px; margin-right: 15px; margin-top: 25px">
               手機藍芽控制
               <div class="imageContainer">
-                <img src="@/assets/image/materials/logo_app.png" style="height: 90%">
+                <img :src="'/image/materials/logo_app.png'" style="height: 90%">
               </div>
             </div>
             <div style="display: flex; justify-content: center; flex-direction: column; align-items: center; margin-left: 15px; margin-right: 15px; margin-top: 25px">
               紅外線遙控器
               <div class="imageContainer">
-                <img src="@/assets/image/materials/logo_remote.png" style="height: 70%">
+                <img :src="'/image/materials/logo_remote.png'" style="height: 70%">
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@
           :chiUrl="'https://download.eduairhk.com/道德困境_中文版教材.zip'" 
           :engUrl="'https://download.eduairhk.com/Moral_Dilemma_English_Materials.zip'">道德困境實驗</TextTitle>
         <div class="text-content font-small">
-          <img src="@/assets/image/gif/gif_moral2.gif" style="width: 50%; min-width: 250px"><br>
+          <img :src="'/image/gif/gif_moral2.gif'" style="width: 50%; min-width: 250px"><br>
           當自動駕駛車刹車功能失靈，只能左轉或右轉，
           然而，不論選擇哪條路線，車輛都將碰上其他路人！
           眼前一邊是小孩，另一邊則是老人，自動車該怎麽辦？
@@ -71,11 +71,11 @@
             除了避開小孩和避開老人，CUHK iCar還有第三個選擇嗎？<br>
           </TextBox>
         </div>
-        <TextTitle :image="'image/materials/logo_facereg.png'" :isShowDownload="true" 
+        <TextTitle :image="'/image/materials/logo_facereg.png'" :isShowDownload="true" 
           :chiUrl="'https://download.eduairhk.com/人面識別追蹤_中文版教材.zip'" 
           :engUrl="'https://download.eduairhk.com/Face_Following_English_Materials.zip'">人面識別追蹤</TextTitle>
         <div class="text-content font-small">
-          <img src="@/assets/image/gif/gif_face2.gif" style="width: 50%; min-width: 250px"><br>
+          <img :src="'/image/gif/gif_face2.gif'" style="width: 50%; min-width: 250px"><br>
           爲甚麽自動駕駛車可以辨識人臉，並跟隨指定人臉行駛？<br>
           自動駕駛車又是如何學會這項技能？動手用CUHK iCar做實驗，一探究竟吧！<br><br>
           <TextBox :title="'討論問題舉隅'" :image="'image/materials/logo_think2.png'">
@@ -88,7 +88,7 @@
           :chiUrl="'https://download.eduairhk.com/手畫線循跡_中文版教材.zip'" 
           :engUrl="'https://download.eduairhk.com/Line_Tracking_English_Materials.zip'">手畫線循跡</TextTitle>
         <div class="text-content font-small">
-          <img src="@/assets/image/gif/gif_line2.gif" style="width: 50%; min-width: 250px"><br>
+          <img :src="'/image/gif/gif_line2.gif'" style="width: 50%; min-width: 250px"><br>
           自動駕駛車能根據各色虛線、實線移動，從而行走正確路線。<br>
           這是怎麽做到的呢？動手用CUHK iCar做實驗，一探究竟吧！<br><br>
           <TextBox :title="'討論問題舉隅'" :image="'image/materials/logo_think2.png'">
@@ -103,21 +103,21 @@
             <div style="display: flex; flex-direction: column; width: 28%; align-items: center"> 
               基於本能推理
               <video autoplay muted loop playsinline webkit-playsinline style="width: 100%">
-                <source :src="'food_skill.mp4'">
+                <source :src="'/media/food_skill.mp4'">
               </video>
                 以最直觀的方式完成任務
             </div>
             <div style="display: flex; flex-direction: column; width: 28%; align-items: center"> 
               基於規則推理
               <video autoplay muted loop playsinline webkit-playsinline style="width: 100%">
-                <source :src="'food_rule.mp4'">
+                <source :src="'/media/food_rule.mp4'">
               </video>
                 根據已學習的模式作出決策並執行
             </div>
             <div style="display: flex; flex-direction: column; width: 28%; align-items: center"> 
               基於知識推理
               <video autoplay muted loop playsinline webkit-playsinline style="width: 100%">
-                <source :src="'food_knowledge.mp4'">
+                <source :src="'/media/food_knowledge.mp4'">
               </video>
                 應用機器學習找出最佳解決方法
             </div>

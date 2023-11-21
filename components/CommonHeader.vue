@@ -4,12 +4,12 @@
     <div class="layer" style="height: 100%">
       <NuxtLink to="/" style="text-decoration: none">
         <div class="logo-container" style="position: relative; width: 180px; height: 60px; display:flex; justify-content:center; align-items: center; cursor: pointer;">
-          <img src="@/assets/image/logo.png" style="position: relative; height: 70%;">
+          <img :src="'/image/logo.png'" style="position: relative; height: 70%;">
           <label class="title">愛動智</label>
         </div>
       </NuxtLink>
       <div style="height: 60px; width: 60px; display: flex; justify-content: center; align-items: center; cursor: pointer"> 
-        <img src="@/assets/image/materials/icon_menu.png" @click="isExpand = !isExpand" width="36" height="36" class="btn">
+        <img :src="'/image/materials/icon_menu.png'" @click="isExpand = !isExpand" width="36" height="36" class="btn">
       </div>
       <!-- <MenuIcon :size="36" /> -->
     </div>

@@ -16,17 +16,17 @@
         </div>
         <div class="responsive-div" style="">
           <div style="width: 300px; height: 300px;"> 
-            <nuxt-img src="event7.jpg" style="width: 100%; aspect-ratio: 3 / 2" />
+            <img :src="'/image/event7.jpg'" style="width: 100%; aspect-ratio: 3 / 2" />
             香港教育局課程
             STEAM教育學與教和評估系列：初中人工智能課程單元應用實踐工作坊
           </div>
           <div style="width: 300px; height: 300px"> 
-            <nuxt-img src="event1.jpg" style="width: 100%; aspect-ratio: 3 / 2" />
+            <img :src="'/image/event1.jpg'" style="width: 100%; aspect-ratio: 3 / 2" />
             中大賽馬會「智」為未來計劃 - 人工智能教育及探索實驗室開放日
             「危機解除」工作坊
           </div>
           <div style="width: 300px; height: 300px"> 
-            <nuxt-img src="event6.jpg" style="width: 100%; aspect-ratio: 3 / 2" />
+            <img :src="'/image/event6.jpg'" style="width: 100%; aspect-ratio: 3 / 2" />
             中大賽馬會「智」為未來計劃 - 「智」為未來暑期訓練營 2023
             「iCar達人」工作坊
           </div>
@@ -40,13 +40,13 @@
         </div>
         <div class="responsive-div" style="">
 
-          <PictureFrame :title="'創新教學套件'" :image="'image/media/img0.jpg'">
+          <PictureFrame :title="'創新教學套件'" :image="'image/img0.jpg'">
             由中大工程專家研發的一系列學習工具，是學習AI/STEAM的最佳起點
           </PictureFrame>
-          <PictureFrame :title="'嶄新學習體驗'" :image="'image/media/img1.jpg'">
+          <PictureFrame :title="'嶄新學習體驗'" :image="'image/img1.jpg'">
             提供嶄新及貼近生活的課程，讓學生無痛學習AI/STEAM課題
           </PictureFrame>
-          <PictureFrame :title="'互動AI展品'" :image="'image/media/img2.jpg'">
+          <PictureFrame :title="'互動AI展品'" :image="'image/img2.jpg'">
             結合機械與AI，研發出多個在藝術/玩樂/生活方面的AI展品，讓學生了解AI的廣泛應用
           </PictureFrame>
         </div>

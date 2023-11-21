@@ -18,16 +18,16 @@
           <div class="password">
               <input type="password" placeholder="Password" v-model="password"  @keyup.enter.prevent="login" autocomplete="new-password">
               <div class="button" style="position: relative; " @click.prevent="login">
-                  <img :src="'enter.png'" style="width: 100%;">
+                  <img :src="'/image/enter.png'" style="width: 100%;">
               </div>
           </div>
         <div class="icar" style="margin: 30px 0; position: relative"> 
-            <img :src="'iCarF2.png'">
+            <img :src="'/image/iCarF2.png'">
             <div class="arm L" > 
-              <img  :src="'armL2.png'" >
+              <img  :src="'/image/armL2.png'" >
             </div>
             <div class="arm R" > 
-              <img  :src="'armR2.png'" >
+              <img  :src="'/image/armR2.png'" >
             </div>
         </div>
         <div style="font-size: 40px; color: #1967D2; font-weight: 600; line-height: 40px; position: relative">

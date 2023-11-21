@@ -1,20 +1,20 @@
 <template>
     <div class="mobile container">
-        <nuxt-img :src="'iport2.svg'" :width="330" preload />
+        <img :src="'/image/iport2.svg'" :width="330" preload />
         <div style="position: absolute; opacity: 0.8; width: 158px; height: 122px; top: 23px;" class="anime"> 
             <div class="light"> </div>
             <div class="screen">
-                <nuxt-img class="image" :src="'logo.png'"/>
+                <img class="image" :src="'/image/logo.png'"/>
             </div>
         </div>
     </div>
 
     <div class="pc container">
-        <nuxt-img :src="'iport2.svg'" :width="700" preload />
+        <img :src="'/image/iport2.svg'" :width="700" preload />
         <div style="position: absolute; opacity: 0.8; width: 330px; height: 256px; top: 35px;" class="anime"> 
             <div class="light"> </div>
             <div class="screen">
-                <nuxt-img class="image" :src="'logo.png'"/>
+                <img class="image" :src="'/image/logo.png'"/>
             </div>
         </div>
     </div>

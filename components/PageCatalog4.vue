@@ -6,7 +6,7 @@
             <span :class="{active: Math.floor(pos) == 2, inactive: Math.floor(pos) != 2}">警報系統</span>
             <span :class="{active: Math.floor(pos) == 3, inactive: Math.floor(pos) != 3}">手勢控制小車</span>
             <span :class="{active: Math.floor(pos) == 4, inactive: Math.floor(pos) != 4}">聲控開關</span>
-            <span :class="{active: Math.floor(pos) == 5, inactive: Math.floor(pos) != 5}">其他實驗</span>
+            <span :class="{active: Math.floor(pos) == 5 || Math.floor(pos) == 6, inactive: Math.floor(pos) != 5 && Math.floor(pos) != 6}">其他實驗</span>
         </div>
     </div>
 </template>

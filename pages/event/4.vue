@@ -10,10 +10,10 @@
                 style="display: flex; align-items: center; padding: 5px 0; color: red; font-weight: 600"
                 href="https://tcs.edb.gov.hk/tcs/admin/courses/previewCourse/forPortal.htm?courseId=CSD020240360&lang=zh"
                 target="_blank">
-                <img :src="'/calendarred.png'" style="width: 50px; padding: 0 9px;">
+                <img :src="'/image/calendarred.png'" style="width: 50px; padding: 0 9px;">
                 陸續推出 🔥 
             </a>
-            <div class="font-small" style="display: flex; align-items: center; padding: 5px 0"><img :src="'/location4gray.png'" style="width: 50px; padding: 0 9px">香港中文大學</div>
+            <div class="font-small" style="display: flex; align-items: center; padding: 5px 0"><img :src="'/image/location4gray.png'" style="width: 50px; padding: 0 9px">香港中文大學</div>
         </div>
         <div style="width: 100%; padding: 20px 20px; max-width: 1200px;" class="font-small">
             香港教育局於今年6月推出「初中人工智能課程單元」，學校需要每年安排約10至14小時教授相關內容，讓學生能從小了解AI，培養及加強他們學習創新科技的興趣及能力。
