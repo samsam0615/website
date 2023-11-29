@@ -1,6 +1,8 @@
 <template>
-  <Title>愛動智 EduAIR</Title>
-  <Meta name="description" content="愛動智教育系統有限公司由香港中文大學初創種子基金啟動，是一家非牟利機構，董事會成員為香港中文大學深圳研究院院長任揚教授和系統工程與工程管理學蒙美玲教授，致力於以教育為主導，推動年輕人對AI/STEAM的學習和認知，幫助他們在相關領域中實現自己的夢想和抱負。"/>
+  <Head>
+    <Title>愛動智 EduAIR</Title>
+    <Meta name="description" content="愛動智教育系統有限公司由香港中文大學初創種子基金啟動，是一家非牟利機構，董事會成員為香港中文大學深圳研究院院長任揚教授和系統工程與工程管理學蒙美玲教授，致力於以教育為主導，推動年輕人對AI/STEAM的學習和認知，幫助他們在相關領域中實現自己的夢想和抱負。"/>
+  </Head>
   <div style="width: 100%" >
     <div class="promote-container video-container" style="overflow: hidden; width: 100%;">
       <VideoBackground />
@@ -40,13 +42,13 @@
         </div>
         <div class="responsive-div" style="">
 
-          <PictureFrame :title="'創新教學套件'" :image="'image/img0.jpg'">
+          <PictureFrame :title="'創新教學套件'" :image="'/image/img0.jpg'">
             由中大工程專家研發的一系列學習工具，是學習AI/STEAM的最佳起點
           </PictureFrame>
-          <PictureFrame :title="'嶄新學習體驗'" :image="'image/img1.jpg'">
+          <PictureFrame :title="'嶄新學習體驗'" :image="'/image/img1.jpg'">
             提供嶄新及貼近生活的課程，讓學生無痛學習AI/STEAM課題
           </PictureFrame>
-          <PictureFrame :title="'互動AI展品'" :image="'image/img2.jpg'">
+          <PictureFrame :title="'互動AI展品'" :image="'/image/img2.jpg'">
             結合機械與AI，研發出多個在藝術/玩樂/生活方面的AI展品，讓學生了解AI的廣泛應用
           </PictureFrame>
         </div>
@@ -58,10 +60,10 @@
           <label>我們的成果</label>
         </div>
         <div style="display: flex; justify-content: center; width: 100%; gap: 50px; padding-top: 20px; flex-wrap: wrap">
-          <UpCounter :text1='"舉辦"' :text2='"學生訓練班"' :image='"image/materials/work_history.png"' :number='5' />
-          <UpCounter :text1='"舉辦"' :text2='"教師工作坊"' :image='"image/materials/teacher2.png"' :number='6' />
-          <UpCounter :text1='"已有"' :text2='"本地中學使用"' :image='"image/materials/school2.png"' :number='238' />
-          <UpCounter :text1='"覆蓋"' :text2='"學生"' :image='"image/materials/people.png"' :number='2560' />
+          <UpCounter :text1='"舉辦"' :text2='"學生訓練班"' :image='"/image/materials/work_history.png"' :number='5' />
+          <UpCounter :text1='"舉辦"' :text2='"教師工作坊"' :image='"/image/materials/teacher2.png"' :number='6' />
+          <UpCounter :text1='"已有"' :text2='"本地中學使用"' :image='"/image/materials/school2.png"' :number='238' />
+          <UpCounter :text1='"覆蓋"' :text2='"學生"' :image='"/image/materials/people.png"' :number='2560' />
         </div>
       </div>
     </div>

@@ -1,6 +1,8 @@
 <template>
-    <Title>到校課程</Title>
-    <Meta name="description" content="按此查看到校課程"/>
+    <Head>
+        <Title>到校課程</Title>
+        <Meta name="description" content="按此查看到校課程"/>
+    </Head>
     <div class="pageContent-container" style="max-width: 100%; width: 1024px; justify-content: center; min-height: 100%; justify-content: flex-start; align-items: center">
         <div class="banner">
             <label class="title font-big">
@@ -24,15 +26,12 @@
     overflow: hidden; 
     position: relative;
     background-image: url('~/assets/banner4.jpg');
-    background-position-x: -100px;
-    background-position-y: 600px;
-    background-size: 1200px auto;
+
 }
 
 .banner img {
     width: 100%;
     top: 100px;
-    object-position: 0 -200px
 }
 .banner .title{
     color: #6d0e77; 

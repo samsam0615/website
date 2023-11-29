@@ -1,5 +1,7 @@
 <template>
-    <Title>隱私政策</Title>
+    <Head>
+        <Title>隱私政策</Title>
+    </Head>
     <div style="max-width: 1200px; align-self: center; margin-top: 60px">
         最後更新日期：2023年10月6日<br>
         Effective Date: October 6, 2023<br>

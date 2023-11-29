@@ -3,7 +3,7 @@
         <div style="height: 300px; border-radius: 20px; padding: 20px 0; display: flex; flex-direction: column; border: 1px solid #c0c0c0; background: orange"> 
             <span class="font-small" @click="id = 0" :class="{active: id == 0}">1. 訓練AI模型及生成連結</span>
             <span class="font-small" @click="id = 1" :class="{active: id == 1}">2. 上載模型至編程平台</span>
-            <span class="font-small" @click="id = 2" :class="{active: id == 2}">3. 操作CUHK iPort或模擬器</span>
+            <span class="font-small" @click="id = 2" :class="{active: id == 2}">3. 操作iPort或模擬器</span>
         </div>
         <div style="display: flex; justify-content: center; align-items: center; padding: 0 20px;"> 
             <div style="position: relative; width: 550px; height: 300px; background: white;">
@@ -35,7 +35,7 @@
                 preload="true" />
             </div>
             </span>
-            <span class="font-small" @click="id = 2" :class="{active: id == 2}">3. 操作CUHK iPort或模擬器
+            <span class="font-small" @click="id = 2" :class="{active: id == 2}">3. 操作iPort或模擬器
                 <div v-show="id == 2" style="position: relative; width: 100%; height: 300px;">
                 <iframe :src="src[2]"
                     style="border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%; border-radius: 10px; " 

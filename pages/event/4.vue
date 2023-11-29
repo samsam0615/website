@@ -20,7 +20,7 @@
             <br><br>
             教育局於本年9月底起舉辦相關的教師培訓課程(STEAM教育學與教和評估系列：初中人工智能課程單元應用實踐工作坊)，邀請500家學校共1000位中學老師參與工作坊，工作坊合共舉辦20場，每場6小時。增加老師對教學課程單元及使用相關學習套件的認識。
             <br><br>
-            EduAIR將與教育局合作，向學校提供AI教學套件-CUHK iCar及CUHK iPort，本公司亦會派出技術專才擔任培訓課程的講師。
+            EduAIR將與教育局合作，向學校提供AI教學套件-iCar及iPort，本公司亦會派出技術專才擔任培訓課程的講師。
             <br><br>
             <a  style="text-decoration-color: blue ;color: blue"
                     target="_blank"
@@ -39,8 +39,11 @@
                 <ExpandField2 :title="' 2023 年 10 月 27 日'" :number="'3'" :isExpand="false" :displayArrow="true">
                     <img :src="'/event/20231027.jpg'" style="width: 100%">
                 </ExpandField2>
-                <ExpandField2 :title="' 2023 年 11 月 10 日'" :number="'4'" :isExpand="true" :displayArrow="true">
+                <ExpandField2 :title="' 2023 年 11 月 10 日'" :number="'4'" :isExpand="false" :displayArrow="true">
                     <img :src="'/event/20231110.jpg'" style="width: 100%">
+                </ExpandField2>
+                <ExpandField2 :title="' 2023 年 11 月 24 日'" :number="'4'" :isExpand="true" :displayArrow="true">
+                    <img :src="'/event/20231124.jpg'" style="width: 100%">
                 </ExpandField2>
             </div>
         </div>

@@ -1,6 +1,8 @@
 <template>
-  <Title>其他資源</Title>
-  <Meta name="description" content="多個網上免費的AI 學習資源，好玩之餘又不用註冊登記，助你輕鬆愉快體驗AI的奇妙。"/>
+  <Head>
+    <Title>其他資源</Title>
+    <Meta name="description" content="多個網上免費的AI 學習資源，好玩之餘又不用註冊登記，助你輕鬆愉快體驗AI的奇妙。"/>
+  </Head>
   <div class = "pageContent-container" style="width: 100%">
     <div class="text-container">
       <label class="subTitle font-big" ref="resource">iShare</label>

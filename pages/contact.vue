@@ -1,6 +1,8 @@
 <template>
-  <Title>聯絡我們</Title>
-  <Meta name="description" content="熱線電話：5542 7564 電郵地址：info@eduairhk.com"/>
+  <Head>
+    <Title>聯絡我們</Title>
+    <Meta name="description" content="熱線電話：5542 7564 電郵地址：info@eduairhk.com"/>
+  </Head>
   <div class="bg">
     <div v-if="isError" style="position: fixed; width: 400px; height: max-content; background: rgba(255, 236, 236, 0.95); z-index: 1; top: 50%; left: 50%; max-width: 75%; max-height: 40%; transform: translate(-50%, -50%); padding: 25px;">
       <div style="font-size: 20px">Failed Sending Form</div>

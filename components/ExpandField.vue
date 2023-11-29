@@ -6,8 +6,7 @@
                 {{title}}
             </div>
             <div class="expand-button" @click="isExpand = !isExpand">
-                <!-- <img :src="'image/materials/icon_expand.png'" v-if="isExpand">
-                <img :src="'image/materials/icon_narrow.png'" v-else> -->
+                
             </div>
         </div>
         <div class="expand-field-bottom" v-if="isExpand">

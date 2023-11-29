@@ -27,7 +27,6 @@
 
 <script>
 export default {
-  name: 'CUHK-iCar',
   props:{
     title: {
         type: String,

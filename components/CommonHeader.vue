@@ -47,13 +47,13 @@
         </NuxtLink>
       </li>
       <li ref="submenu1">
-        <NuxtLink :to="{ name: 'cuhk-icar' }" class="subMenuBtn" >
-            CUHK iCar
+        <NuxtLink :to="{ name: 'icar' }" class="subMenuBtn" >
+            iCar
         </NuxtLink>
       </li>
       <li ref="submenu1">
-        <NuxtLink :to="{ name: 'cuhk-iport' }" class="subMenuBtn" >
-          CUHK iPort
+        <NuxtLink :to="{ name: 'iport' }" class="subMenuBtn" >
+          iPort
         </NuxtLink>
       </li>
       <li>

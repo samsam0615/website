@@ -14,6 +14,16 @@ useJsonld({
   "name": "愛動智 EduAIR",
   "url": "https://www.eduairhk.com",
 });
+
+useSeoMeta({
+  title: '愛動智 EduAIR',
+  titleTemplate: '愛動智 EduAIR',
+  ogTitle: '愛動智 EduAIR',
+  ogImage: 'https://eduairhk.com/favicon.ico',
+  description: '愛動智教育系統有限公司由香港中文大學初創種子基金啟動，是一家非牟利機構，董事會成員為香港中文大學深圳研究院院長任揚教授和系統工程與工程管理學蒙美玲教授，致力於以教育為主導，推動年輕人對AI/STEAM的學習和認知，幫助他們在相關領域中實現自己的夢想和抱負。',
+  ogDescription: '愛動智教育系統有限公司由香港中文大學初創種子基金啟動，是一家非牟利機構，董事會成員為香港中文大學深圳研究院院長任揚教授和系統工程與工程管理學蒙美玲教授，致力於以教育為主導，推動年輕人對AI/STEAM的學習和認知，幫助他們在相關領域中實現自己的夢想和抱負。',
+})
+
 </script>
 
 

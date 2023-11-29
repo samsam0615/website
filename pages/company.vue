@@ -1,6 +1,8 @@
 <template>
-    <Title>公司簡介</Title>
-    <Meta name="description" content="愛動智教育系統有限公司(EduAIR)由香港中文大學初創種子基金啟動，是一家非牟利機構，董事會成員為香港中文大學深圳研究院院長任揚教授和系統工程與工程管理學蒙美玲教授，致力於以教育為主導，推動年輕人對AI/STEAM的學習和認知，幫助他們在相關領域中實現自己的夢想和抱負。"/>
+    <Head>
+        <Title>公司簡介</Title>
+        <Meta name="description" content="愛動智教育系統有限公司(EduAIR)由香港中文大學初創種子基金啟動，是一家非牟利機構，董事會成員為香港中文大學深圳研究院院長任揚教授和系統工程與工程管理學蒙美玲教授，致力於以教育為主導，推動年輕人對AI/STEAM的學習和認知，幫助他們在相關領域中實現自己的夢想和抱負。"/>
+    </Head>
     <div class="pageContent-container">
         <div class="banner">
             <label class="layer">
@@ -54,8 +56,7 @@
     overflow: hidden; 
     position: relative;
     background-image: url('~/assets/banner1.jpg');
-    background-position-y: 600px;
-    background-size: 1200px auto;
+
 }
 
 .banner .layer{

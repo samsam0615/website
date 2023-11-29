@@ -1,6 +1,6 @@
 <template>
   <Meta name="format-detection" content="telephone=no"/>
-  <div class="container">
+  <footer class="container">
     <div class="footer" style=""> 
       <div  class="main">
         <label class="font-middle" >EduAIR 愛動智</label>
@@ -34,7 +34,7 @@
     <div style="padding: 15px 0"> 
       Copyright © EduAIR Systems Limited.
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>
