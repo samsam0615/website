@@ -37,6 +37,7 @@ export default {
     align-items: center;
     gap: 20px;
     width: 750px;
+    max-width: 90vw
 }
 
 .expand-field-top{
