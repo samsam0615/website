@@ -17,7 +17,7 @@
         <label class="font-middle" >聯絡我們</label>
         <label style="padding: 4px 0">
           <img :src="'/image/call3.png'" height="18px" style="" /> 
-          <label class="font-mini" style="padding: 0 10px;" x-apple-data-detectors="off">+852 5542 7564</label>
+          <label class="font-mini" style="padding: 0 10px;" x-apple-data-detectors="off">+852 6437 3924</label>
         </label>
         <label style="padding: 4px 0">
           <img :src="'/image/mail3.png'" height="18px" /> 

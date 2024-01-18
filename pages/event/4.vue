@@ -48,8 +48,11 @@
                 <ExpandField2 :title="' 2023 年 12 月 01 日'" :number="'6'" :isExpand="false" :displayArrow="true">
                     <img :src="'/event/20231201.jpg'" style="width: 100%">
                 </ExpandField2>
-                <ExpandField2 :title="' 2023 年 12 月 06 日'" :number="'7'" :isExpand="true" :displayArrow="true">
+                <ExpandField2 :title="' 2023 年 12 月 06 日'" :number="'7'" :isExpand="false" :displayArrow="true">
                     <img :src="'/event/20231206.jpg'" style="width: 100%">
+                </ExpandField2>
+                <ExpandField2 :title="' 2023 年 12 月 19 日'" :number="'8'" :isExpand="true" :displayArrow="true">
+                    <img :src="'/event/20231219.jpg'" style="width: 100%">
                 </ExpandField2>
                 <!-- <ExpandField2 :title="' 2023 年 11 月 24 日'" :number="'8'" :isExpand="true" :displayArrow="true">
                     <img :src="'/event/20231124.jpg'" style="width: 100%">

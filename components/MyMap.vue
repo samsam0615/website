@@ -1,6 +1,6 @@
 <template>
     <div>
-        <GoogleMap api-key="AIzaSyBgiaMIsBDwdjUXYZZkvuLlAtrBmBaHRtY" style="width: 100%; width: 600px; height: 400px; margin-top: 120px" :center="center" :zoom="17">
+        <GoogleMap api-key="AIzaSyCI3oxo3OJ9z1IX4PQ3k1h7wJ4EhNdsrp0" style="width: 100%; width: 600px; height: 400px; margin-top: 120px" :center="center" :zoom="17">
             <Marker :options="{ position: center }" />
         </GoogleMap>
     </div>

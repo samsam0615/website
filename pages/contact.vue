@@ -1,7 +1,7 @@
 <template>
   <Head>
     <Title>聯絡我們</Title>
-    <Meta name="description" content="熱線電話：5542 7564 電郵地址：info@eduairhk.com"/>
+    <Meta name="description" content="熱線電話：6437 3924 電郵地址：info@eduairhk.com"/>
   </Head>
   <div class="bg">
     <div v-if="isError" style="position: fixed; width: 400px; height: max-content; background: rgba(255, 236, 236, 0.95); z-index: 1; top: 50%; left: 50%; max-width: 75%; max-height: 40%; transform: translate(-50%, -50%); padding: 25px;">
@@ -42,9 +42,15 @@
               </GoogleMap>
             </div>
             <div style="width: 400px; max-width: 100%; padding: 20px; line-height: 30px; background: rgba(255,255,255,0.6); margin: 20px 0 5px; border-radius: 10px; display: flex; align-items: center; padding: 20px;">
-              聯絡電話：+852 5542 7564<br>
+              <div>
+              聯絡電話：+852 6437 3924<br>
               聯絡電郵：info@eduairhk.com<br>
               地址：科學園16W棟2樓237室
+              </div>
+              <a target="_blank" href="https://wa.me/message/6UXEU7SCWSVSE1" style="color: #008069; flex: 1; display: flex; justify-content: center; align-items: center; flex-direction: column; cursor: pointer">
+                <img :src="'/image/whatsapp-qr.png'" style="width: 100px">
+                WhatsApp 
+              </a>
             </div>
           </div>
       </div>
