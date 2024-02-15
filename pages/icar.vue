@@ -105,21 +105,21 @@
             <div style="display: flex; flex-direction: column; width: 28%; align-items: center"> 
               基於本能推理
               <video autoplay muted loop playsinline webkit-playsinline style="width: 100%">
-                <source :src="'/media/food_skill.mp4'">
+                <source :src="'https://video.eduairhk.com/food_skill.mp4'">
               </video>
                 以最直觀的方式完成任務
             </div>
             <div style="display: flex; flex-direction: column; width: 28%; align-items: center"> 
               基於規則推理
               <video autoplay muted loop playsinline webkit-playsinline style="width: 100%">
-                <source :src="'/media/food_rule.mp4'">
+                <source :src="'https://video.eduairhk.com/food_rule.mp4'">
               </video>
                 根據已學習的模式作出決策並執行
             </div>
             <div style="display: flex; flex-direction: column; width: 28%; align-items: center"> 
               基於知識推理
               <video autoplay muted loop playsinline webkit-playsinline style="width: 100%">
-                <source :src="'/media/food_knowledge.mp4'">
+                <source :src="'https://video.eduairhk.com/food_knowledge.mp4'">
               </video>
                 應用機器學習找出最佳解決方法
             </div>

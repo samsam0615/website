@@ -6,7 +6,7 @@
             <div class="font-small" style="display: flex; align-items: center; padding: 5px 0"><img :src="'/image/calendargray.png'" style="width: 50px; padding: 0 9px">{{date}}</div>
             <div class="font-small" style="display: flex; align-items: center; padding: 5px 0"><img :src="'/image/location4gray.png'" style="width: 50px; padding: 0 9px">{{location}}</div>
         </div>
-    <Gallery4 :images="images">
+    <Gallery4 :images="images" :title="null">
         <slot/>
     </Gallery4>
     </div>

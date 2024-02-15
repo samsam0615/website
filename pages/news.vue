@@ -36,7 +36,14 @@
 
         <div style="width: 100%; padding: 10px 20px; max-width: 1024px;">
             <div class="font-big" style="align-self: flex-start; padding: 20px 0; font-weight: 600">活動回顧 🗓️</div>
-            <div style="display: flex; flex-wrap: wrap; row-gap: 20px; max-width: 1024px;">
+            <div style="display: flex; max-width: 1024px; justify-content: flex-start; align-content: flex-start; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+                <Gallery2 
+                    :title="'學與教博覽 2023'"
+                    :subtitle="''"
+                    :url="'/event/5'"
+                    :image="'/event/event5/1.jpg'"
+                    :date="'2023 年 12 月 13 - 15 日'">
+                </Gallery2>
                 <Gallery2 
                     :title="'初中人工智能課程單元應用實踐工作坊（共20場）'"
                     :subtitle="'香港教育局STEAM教育學與教和評估系列'"

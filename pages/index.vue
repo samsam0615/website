@@ -7,8 +7,8 @@
     <div class="promote-container video-container" style="overflow: hidden; width: 100%;">
       <VideoBackground />
       <div class="video-description">
-        <label class="title">掌握AI 更好明天</label>
-        <label class="content">愛動智教育系統提供一系列創新AI學習套件及課程</label>
+        <label class="title">{{$t('homepage.slogan')}}</label>
+        <label class="content">{{$t('homepage.slogan2')}}</label>
       </div>
     </div>
     <div class="promote-container promote-container-2 " v-show="true" >

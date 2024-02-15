@@ -29,38 +29,35 @@
         <div style="width: 100%; padding: 20px; max-width: 1200px">
             <div class="font-middle" style="color: #ffa500; font-weight: 600">活動快照</div>
             <div class="event-photo" style="padding: 20px 0">
-
-                <ExpandField2 :title="' 2023 年 9 月 28 日'" :number="'1'" :isExpand="false" :displayArrow="true">
-                    <img :src="'/event/event4/1.jpg'" style="width: 100%">
+                <ExpandField2 v-for="(row, index) in rows" :key="index" :isExpand="index == rows.length - 1"
+                    :title="row.title" :number="index + 1"  :displayArrow="true">
+                    <img :src="row.img" style="width: 100%">
                 </ExpandField2>
-                <ExpandField2 :title="' 2023 年 10 月 20 日'" :number="'2'" :isExpand="false" :displayArrow="true">
-                    <img :src="'/event/20231020.jpg'" style="width: 100%">
-                </ExpandField2>
-                <ExpandField2 :title="' 2023 年 10 月 27 日'" :number="'3'" :isExpand="false" :displayArrow="true">
-                    <img :src="'/event/20231027.jpg'" style="width: 100%">
-                </ExpandField2>
-                <ExpandField2 :title="' 2023 年 11 月 10 日'" :number="'4'" :isExpand="false" :displayArrow="true">
-                    <img :src="'/event/20231110.jpg'" style="width: 100%">
-                </ExpandField2>
-                <ExpandField2 :title="' 2023 年 11 月 24 日'" :number="'5'" :isExpand="false" :displayArrow="true">
-                    <img :src="'/event/20231124.jpg'" style="width: 100%">
-                </ExpandField2>
-                <ExpandField2 :title="' 2023 年 12 月 01 日'" :number="'6'" :isExpand="false" :displayArrow="true">
-                    <img :src="'/event/20231201.jpg'" style="width: 100%">
-                </ExpandField2>
-                <ExpandField2 :title="' 2023 年 12 月 06 日'" :number="'7'" :isExpand="false" :displayArrow="true">
-                    <img :src="'/event/20231206.jpg'" style="width: 100%">
-                </ExpandField2>
-                <ExpandField2 :title="' 2023 年 12 月 19 日'" :number="'8'" :isExpand="true" :displayArrow="true">
-                    <img :src="'/event/20231219.jpg'" style="width: 100%">
-                </ExpandField2>
-                <!-- <ExpandField2 :title="' 2023 年 11 月 24 日'" :number="'8'" :isExpand="true" :displayArrow="true">
-                    <img :src="'/event/20231124.jpg'" style="width: 100%">
-                </ExpandField2> -->
             </div>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    data () {
+        return {
+            rows: [
+                {title: '2023 年 9 月 28 日', img: '/event/event4/1.jpg'},
+                {title: '2023 年 10 月 20 日', img: '/event/20231020.jpg'},
+                {title: '2023 年 10 月 27 日', img: '/event/20231027.jpg'},
+                {title: '2023 年 11 月 10 日', img: '/event/20231110.jpg'},
+                {title: '2023 年 11 月 24 日', img: '/event/20231124.jpg'},
+                {title: '2023 年 12 月 01 日', img: '/event/20231201.jpg'},
+                {title: '2023 年 12 月 06 日', img: '/event/20231206.jpg'},
+                {title: '2023 年 12 月 19 日', img: '/event/20231219.jpg'},
+                {title: '2024 年 01 月 19 日', img: '/event/20240119.jpg'},
+                {title: '2024 年 02 月 02 日', img: '/event/20240202.jpg'},
+            ]
+        }
+    }
+}
+</script>
 
 <style scoped>
 .event-photo> *:not(:first-child) {

@@ -8,7 +8,7 @@
         playsinline
         webkit-playsinline
       >
-      <source :src="'media/intro.mp4'" type="video/mp4">
+      <source :src="'https://video.eduairhk.com/intro.mp4'" type="video/mp4">
     </video>
 </template>
 

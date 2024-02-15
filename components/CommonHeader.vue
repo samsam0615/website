@@ -16,72 +16,64 @@
     <ul ref="userMenu" class="userMenu">
       <li ref="submenu1">
         <a class="subMenuBtn">
-          關於我們
+          {{$t('navbar.aboutus')}}
         </a>
         <ul class="subMenu">
           <li>
             <NuxtLink to="/company">
-              公司簡介
+              {{$t('navbar.company')}}
             </NuxtLink>
           </li>
           <li>
             <NuxtLink to="/staff">
-              公司架構
+              {{$t('navbar.staff')}}
             </NuxtLink>
           </li>
           <li>
             <NuxtLink to="/contact">
-              聯絡我們
+              {{$t('navbar.contactus')}}
             </NuxtLink>
           </li>
         </ul>
       </li>
       <li ref="submenu1">
         <NuxtLink :to="{ name: 'news' }" class="subMenuBtn" >
-            最新消息
+            {{$t('navbar.news')}}
         </NuxtLink>
       </li>
       <li ref="submenu1">
         <NuxtLink :to="{ name: 'courses' }" class="subMenuBtn" >
-            到校課程
+            {{$t('navbar.courses')}}
         </NuxtLink>
       </li>
       <li ref="submenu1">
         <NuxtLink :to="{ name: 'icar' }" class="subMenuBtn" >
-            iCar
+            {{$t('navbar.icar')}}
         </NuxtLink>
       </li>
       <li ref="submenu1">
         <NuxtLink :to="{ name: 'iport' }" class="subMenuBtn" >
-          iPort
+            {{$t('navbar.iport')}}
         </NuxtLink>
       </li>
       <li>
         <NuxtLink to="/ishare">
-          iShare
+          {{$t('navbar.ishare')}}
         </NuxtLink>
       </li>
       <li ref="submenu1">
         <a class="subMenuBtn">
-          學習平台
+          {{$t('navbar.platform')}}
         </a>
         <ul class="subMenu">
           <li>
             <a href="https://iport.eduairhk.com" target="_blank">
-              iPort ePlatform
+              {{$t('navbar.iportPlatform')}}
             </a>
           </li>
           <li>
             <a href="https://ipython.eduairhk.com" target="_blank">
-              iPython 
-              <div class="border">
-                敬請期待
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="https://itrain.eduairhk.com" target="_blank">
-              iTrain
+              {{$t('navbar.itrain')}} 
               <div class="border">
                 敬請期待
               </div>

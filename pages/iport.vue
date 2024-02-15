@@ -31,7 +31,7 @@
       <span class="title font-big">警報系統</span>
       <div class="text-content font-small" >
         <video ref="myVideo1" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
-            <source :src="'/media/iport5.mp4'" type="video/mp4">
+            <source :src="'https://video.eduairhk.com/iport5.mp4'" type="video/mp4">
         </video>
         <br>
         訓練AI 圖片識別模型檢測禁區大門有人及無人的情景。透過iPort 平台上簡單設置顯示安全提示及聲音燈光等效果，只要有人經過禁區大門，iPort 就會發出警報，提醒誤闖人士離開。
@@ -49,7 +49,7 @@
         <div class="font-middle" style="padding: 10px 0">製作過程</div>
         <div style="display: flex; flex-wrap: wrap">
           <video ref="myVideo2" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
-            <source :src="'/media/iport7.mp4'" type="video/mp4">
+            <source :src="'https://video.eduairhk.com/iport8.mp4'" type="video/mp4">
           </video>
           <div style="padding: 20px 20px 0 20px"> 
             所需材料： <br>
@@ -63,7 +63,7 @@
         <br>
         <div class="font-middle" style="padding: 10px 0">實驗示範</div>
         <video ref="myVideo3" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
-          <source :src="'/media/iport1.mp4'" type="video/mp4">
+          <source :src="'https://video.eduairhk.com/iport1.mp4'" type="video/mp4">
         </video><br>
         訓練好自己喜歡的手勢識別模型後，就可以透過攝像頭以手勢控制小車飛馳。空曠環境下無線控制距離可達50米。大家不妨比賽誰的小車最快離開迷宮。
         <br><br>
@@ -76,7 +76,7 @@
       <span class="title font-big">聲控開關</span>
       <div class="text-content font-small">
         <video ref="myVideo4" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
-            <source :src="'/media/iport2.mp4'" type="video/mp4">
+            <source :src="'https://video.eduairhk.com/iport2.mp4'" type="video/mp4">
         </video>
         <br>
         iPort配件中的電動手指能夠做到類似真實手指推拉的動作，對於行動不便人士可以利用訓練聲音識別模型，利用簡單的聲控指令便能控制家中的任意按鍵開關。即使在障礙物的室內環境下無線控制距離仍可達15米。
@@ -90,15 +90,21 @@
       <span class="title font-big">其他實驗</span>
       <div class="text-content font-small" >
         <video ref="myVideo1" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
-            <source :src="'/media/iport_rsp.mp4'" type="video/mp4">
+            <source :src="'https://video.eduairhk.com/iport_rsp.mp4'" type="video/mp4">
         </video>
         <br>
         <video ref="myVideo1" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
-            <source :src="'/media/iport_tissue.mp4'" type="video/mp4">
+            <source :src="'https://video.eduairhk.com/iport_tissue.mp4'" type="video/mp4">
         </video>
         <br>
         <video ref="myVideo1" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
-            <source :src="'/media/iport_dog.mp4'" type="video/mp4">
+            <source :src="'https://video.eduairhk.com/iport_dog.mp4'" type="video/mp4">
+        </video>
+        <video muted controls style="width: 100%; max-width: 750px">
+            <source :src="'https://video.eduairhk.com/iport6.mp4'" type="video/mp4">
+        </video>
+        <video muted controls style="width: 100%; max-width: 750px">
+            <source :src="'https://video.eduairhk.com/iport7.mp4'" autostart="false" type="video/mp4">
         </video>
       </div>
     </div>
