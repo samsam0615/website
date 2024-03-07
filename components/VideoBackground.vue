@@ -8,7 +8,7 @@
         playsinline
         webkit-playsinline
       >
-      <source :src="'https://video.eduairhk.com/intro.mp4'" type="video/mp4">
+      <source :src="'/intro.mp4'" type="video/mp4">
     </video>
 </template>
 
@@ -16,7 +16,11 @@
 export default {
   name: 'VideoBackground',
   mounted(){
-    this.$refs.myVideo.play()
+    try {
+      this.$refs.myVideo.play()
+    } catch (error) {
+      console.log(error)
+    }
   }
 }
 </script>

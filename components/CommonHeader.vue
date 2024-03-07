@@ -72,7 +72,7 @@
             </a>
           </li>
           <li>
-            <a href="https://ipython.eduairhk.com" target="_blank">
+            <a href="https://itrain.eduairhk.com" target="_blank">
               {{$t('navbar.itrain')}} 
               <div class="border">
                 敬請期待
@@ -108,7 +108,10 @@ export default {
     this.$router.afterEach((to, from, next) => {
         self.isExpand = false;
     })
-    this.setLocale(localStorage.getItem('locale'))
+    const locale = localStorage.getItem('locale');
+    if(locale) {
+      this.setLocale(localStorage.getItem('locale'))
+    }
   },
   methods:{
     isActive(route) {
