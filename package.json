@@ -13,11 +13,11 @@
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.0.0-rc.1",
     "@nuxt/image-edge": "^1.0.0-rc.1-28180077.d51e794",
-    "@nuxtjs/i18n": "^8.0.0",
     "@types/node": "^18.17.0",
     "nuxt": "^3.6.5",
     "nuxt-simple-sitemap": "^3.2.6",
-    "sitemap": "^7.1.1"
+    "sitemap": "^7.1.1",
+    "vue-i18n": "^9.9.1"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",

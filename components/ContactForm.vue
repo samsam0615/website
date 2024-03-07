@@ -180,7 +180,7 @@ export default {
         flex-grow: 1;
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199.9px) {
         .contactform-container form{
             margin-top: 40px;
         }

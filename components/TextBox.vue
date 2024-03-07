@@ -44,7 +44,7 @@ export default {
     margin-right: 30px
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199.9px) {
     .text-box{
         line-break: auto;
         max-width: 100%;

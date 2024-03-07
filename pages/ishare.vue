@@ -1,41 +1,41 @@
 <template>
   <Head>
-    <Title>其他資源</Title>
-    <Meta name="description" content="多個網上免費的AI 學習資源，好玩之餘又不用註冊登記，助你輕鬆愉快體驗AI的奇妙。"/>
+    <Title>{{$t('ishare.title')}}</Title>
+    <Meta name="description" content="$t('ishare.content')"/>
   </Head>
-  <div class = "pageContent-container" style="width: 100%">
-    <div class="text-container">
-      <label class="subTitle font-big" ref="resource">iShare</label>
-      <div class="pageDescription font-small">苦苦搜尋網上免費的AI 學習資源，好玩之餘又不想註冊登記？iShare幫你輕鬆愉快體驗AI的奇妙。</div>
+  <div class = "pageContent-container" style="width: 100%;">
+    <div class="text-container" style="width: 100%; padding: 20px">
+      <label class="pageTitle font-big" ref="resource">iShare</label>
+      <div class="pageDescription font-small">{{$t('ishare.subtitle')}}</div>
       <br><br>
       <div class="resourceContainer">
         <div class="resourceType">
-          <label :class="{active: externalJson != null && externalJson['vision'] == focusClass}" @click="setFocusClass('vision')">視覺</label>
-          <label :class="{active: externalJson != null && externalJson['hear'] == focusClass}" @click="setFocusClass('hear')">聽覺</label>
-          <label :class="{active: externalJson != null && externalJson['speak'] == focusClass}" @click="setFocusClass('speak')">語音</label>
-          <label :class="{active: externalJson != null && externalJson['read'] == focusClass}" @click="setFocusClass('read')">理解</label>
-          <label :class="{active: externalJson != null && externalJson['create'] == focusClass}" @click="setFocusClass('create')">創作</label>
-          <label :class="{active: externalJson != null && externalJson['advance'] == focusClass}" @click="setFocusClass('advance')">進階</label>
+          <label :class="{active: $tm('ishareJson') != null && $tm('ishareJson')['vision'] == focusClass}" @click="setFocusClass('vision')">{{$t('ishare.abilities[0]')}}</label>
+          <label :class="{active: $tm('ishareJson') != null && $tm('ishareJson')['hear'] == focusClass}" @click="setFocusClass('hear')">{{$t('ishare.abilities[1]')}}</label>
+          <label :class="{active: $tm('ishareJson') != null && $tm('ishareJson')['speak'] == focusClass}" @click="setFocusClass('speak')">{{$t('ishare.abilities[2]')}}</label>
+          <label :class="{active: $tm('ishareJson') != null && $tm('ishareJson')['read'] == focusClass}" @click="setFocusClass('read')">{{$t('ishare.abilities[3]')}}</label>
+          <label :class="{active: $tm('ishareJson') != null && $tm('ishareJson')['create'] == focusClass}" @click="setFocusClass('create')">{{$t('ishare.abilities[4]')}}</label>
+          <label :class="{active: $tm('ishareJson') != null && $tm('ishareJson')['advance'] == focusClass}" @click="setFocusClass('advance')">{{$t('ishare.abilities[5]')}}</label>
         </div>
         <div class="resourceSelector unselectable">
-          <template v-if="externalJson != null">
-            <ResourceItem v-for="item in focusClass"
+          <template v-if="$tm('ishareJson') != null">
+            <ResourceItem v-for="(item, index) in $tm('ishareJson')[focusClass]"
               :key="item.name"
               :text='item.name'
               :url='item.url'
-              @click="setFocus(item)"
-              @touchleave="setFocus(item)"
-              :class="{active: focus == item}"/>
+              @click="setFocus(index)"
+              @touchleave="setFocus(index)"
+              :class="{active: focus == index}"/>
           </template>
         </div>
         <div class="resourceDescriptor" >
           <template v-if="focus != null">
             <div style="position: relative; display: flex; flex-direction: column; flex-grow: 1; max-height: calc(100% - 50px)"> 
-              <div class="title font-middle" style="position: relative; padding: 0 0 10px; ">{{focus.name}}</div>
-              <div class="description font-mini" style="position: relative; line-height: 35px; padding: 0 10px; overflow-y: auto; height: max-content;">{{focus.description}}</div>
+              <div class="title font-middle" style="position: relative; padding: 0 0 10px; ">{{$tm('ishareJson')[focusClass][focus].name}}</div>
+              <div class="description font-mini" style="position: relative; line-height: 35px; padding: 0 10px; overflow-y: auto; height: max-content;">{{$tm('ishareJson')[focusClass][focus].description}}</div>
             </div>
             <div class="media" style="height: 50px">
-              <a style="font-mini" :href="focus.url" target="_blank">前往網站</a>
+              <a style="font-mini" :href="$tm('ishareJson')[focusClass][focus].url" target="_blank">{{$t('ishare.website')}}</a>
               </div>
           </template>
         </div>
@@ -45,38 +45,25 @@
 </template>
 
 <script>
-import defaultExternalJson from '@/assets/external.js'
-
 export default {
   name: 'Resource',
   data () {
     return {
       focus: null,
       focusClass: null,
-      externalJson: null
     }
   },
   mounted () {
-    const self = this
-    self.externalJson = defaultExternalJson
-    self.focusClass = self.externalJson.vision
-    self.focus = self.focusClass[0]
-
-    /* axios.get('http://localhost:3000/web/external').then(result => {
-        self.externalJson = result.data;
-        self.focusClass = self.externalJson.vision;
-        self.focus = self.focusClass[0]
-    }).catch(error => {
-        console.log(error)
-    }) */
+    this.setFocusClass(Object.keys(this.$tm('ishareJson'))[0])
   },
   methods: {
-    setFocus (item) {
-      this.focus = item
+    setFocus (index) {
+      this.focus = index
     },
     setFocusClass (className) {
-      this.focusClass = this.externalJson[className]
-      this.focus = this.focusClass[0]
+      const obj = this.$tm('ishareJson')
+      this.focusClass = className
+      this.setFocus(0)
     }
   }
 }

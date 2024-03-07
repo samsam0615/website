@@ -1,34 +1,35 @@
 <template>
-    <Title>[🔥立即報名] 初中人工智能課程單元應用實踐工作坊</Title>
+    <Title>{{$t('event_4_vue.title')}}</Title>
     <div class="pageContent-container" style="max-width: 100%; width: 1024px">
         <div style="width: 100%; padding: 10px 20px;">
             <div class="font-big" style="align-self: flex-start; padding: 20px 0 0 0; font-weight: 600; color: #6d0e77">
-                [🔥立即報名] 初中人工智能課程單元應用實踐工作坊
+                {{$t('event_4_vue.title')}}
             </div>
-            <div class="font-middle" style="padding: 8px 0">香港教育局STEAM教育學與教和評估系列</div>
+            <div class="font-middle" style="padding: 8px 0">{{$t('event_4_vue.subtitle')}}</div>
             <a class="font-small" 
                 style="display: flex; align-items: center; padding: 5px 0; color: red; font-weight: 600"
                 href="https://tcs.edb.gov.hk/tcs/admin/courses/previewCourse/forPortal.htm?courseId=CSD020240360&lang=zh"
                 target="_blank">
                 <img :src="'/image/calendarred.png'" style="width: 50px; padding: 0 9px;">
-                陸續推出 🔥 
+                {{$t('event_4_vue.date')}}
             </a>
-            <div class="font-small" style="display: flex; align-items: center; padding: 5px 0"><img :src="'/image/location4gray.png'" style="width: 50px; padding: 0 9px">香港中文大學</div>
+            <div class="font-small" style="display: flex; align-items: center; padding: 5px 0"><img :src="'/image/location4gray.png'" style="width: 50px; padding: 0 9px">{{$t('event_4_vue.location')}}</div>
         </div>
         <div style="width: 100%; padding: 20px 20px; max-width: 1200px;" class="font-small">
-            香港教育局於今年6月推出「初中人工智能課程單元」，學校需要每年安排約10至14小時教授相關內容，讓學生能從小了解AI，培養及加強他們學習創新科技的興趣及能力。
+            {{$t('event_4_vue.content[0]')}}
             <br><br>
-            教育局於本年9月底起舉辦相關的教師培訓課程(STEAM教育學與教和評估系列：初中人工智能課程單元應用實踐工作坊)，邀請500家學校共1000位中學老師參與工作坊，工作坊合共舉辦20場，每場6小時。增加老師對教學課程單元及使用相關學習套件的認識。
+            {{$t('event_4_vue.content[1]')}}
             <br><br>
-            EduAIR將與教育局合作，向學校提供AI教學套件-iCar及iPort，本公司亦會派出技術專才擔任培訓課程的講師。
+            {{$t('event_4_vue.content[2]')}}
             <br><br>
             <a  style="text-decoration-color: blue ;color: blue"
                     target="_blank"
-                    href="https://tcs.edb.gov.hk/tcs/admin/courses/previewCourse/forPortal.htm?courseId=CSD020240360&lang=zh">教師培訓課程詳情</a>
+                    href="https://tcs.edb.gov.hk/tcs/admin/courses/previewCourse/forPortal.htm?courseId=CSD020240360&lang=zh">{{$t('event_4_vue.content[3]')}}</a>
         </div>
         <div style="width: 100%; padding: 20px; max-width: 1200px">
-            <div class="font-middle" style="color: #ffa500; font-weight: 600">活動快照</div>
+            <div class="font-middle" style="color: #ffa500; font-weight: 600">{{$t('event_4_vue.photo')}}</div>
             <div class="event-photo" style="padding: 20px 0">
+
                 <ExpandField2 v-for="(row, index) in rows" :key="index" :isExpand="index == rows.length - 1"
                     :title="row.title" :number="index + 1"  :displayArrow="true">
                     <img :src="row.img" style="width: 100%">
@@ -43,16 +44,16 @@ export default {
     data () {
         return {
             rows: [
-                {title: '2023 年 9 月 28 日', img: '/event/event4/1.jpg'},
-                {title: '2023 年 10 月 20 日', img: '/event/20231020.jpg'},
-                {title: '2023 年 10 月 27 日', img: '/event/20231027.jpg'},
-                {title: '2023 年 11 月 10 日', img: '/event/20231110.jpg'},
-                {title: '2023 年 11 月 24 日', img: '/event/20231124.jpg'},
-                {title: '2023 年 12 月 01 日', img: '/event/20231201.jpg'},
-                {title: '2023 年 12 月 06 日', img: '/event/20231206.jpg'},
-                {title: '2023 年 12 月 19 日', img: '/event/20231219.jpg'},
-                {title: '2024 年 01 月 19 日', img: '/event/20240119.jpg'},
-                {title: '2024 年 02 月 02 日', img: '/event/20240202.jpg'},
+                {title: this.$t('event_4_vue.photo_date[0]'), img: '/event/event4/1.jpg'},
+                {title: this.$t('event_4_vue.photo_date[1]'), img: '/event/20231020.jpg'},
+                {title: this.$t('event_4_vue.photo_date[2]'), img: '/event/20231027.jpg'},
+                {title: this.$t('event_4_vue.photo_date[3]'), img: '/event/20231110.jpg'},
+                {title: this.$t('event_4_vue.photo_date[4]'), img: '/event/20231124.jpg'},
+                {title: this.$t('event_4_vue.photo_date[5]'), img: '/event/20231201.jpg'},
+                {title: this.$t('event_4_vue.photo_date[6]'), img: '/event/20231206.jpg'},
+                {title: this.$t('event_4_vue.photo_date[7]'), img: '/event/20231219.jpg'},
+                {title: this.$t('event_4_vue.photo_date[8]'), img: '/event/20240119.jpg'},
+                {title: this.$t('event_4_vue.photo_date[9]'), img: '/event/20240202.jpg'},
             ]
         }
     }

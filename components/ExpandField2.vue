@@ -2,7 +2,7 @@
     <div class="expand-field font-middle">
         <div class="expand-field-top">
             <div style="display: flex; flex-direction: row; align-items: center;">
-                <div class="question">{{number}}</div>
+                <div class="question font-middle">{{number}}</div>
                 {{title}}
             </div>
             <div class="expand-button" v-if="displayArrow" @click="isExpand = !isExpand">
@@ -52,7 +52,6 @@ export default {
 .expand-field-top .question{
     width: 40px;
     height: 40px;
-    font-size: 25px;
     border-radius: 50%;
     background: rgb(255,165,0);
     color: white;

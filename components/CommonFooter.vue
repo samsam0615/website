@@ -2,8 +2,8 @@
   <Meta name="format-detection" content="telephone=no"/>
   <footer class="container">
     <div class="footer" style=""> 
-      <div  class="main">
-        <label class="font-middle" >EduAIR 愛動智</label>
+      <div  style="width: 50%" class="main">
+        <label class="font-middle" style="padding: 5px 0" >{{$t('footer.title1')}}</label>
         <a href="https://www.facebook.com/eduair" target="_blank">
           <img :src="'/image/facebook3.png'" height="20px" /> 
           <label class="font-mini" style="padding: 0 10px">愛動智教育系統</label>
@@ -13,8 +13,8 @@
           <label class="font-mini" style="padding: 0 10px">eduair_hk</label>
         </a>
       </div>
-      <div>
-        <label class="font-middle" >聯絡我們</label>
+      <div style="max-width: 50%">
+        <label class="font-middle" style="padding: 5px 0">{{$t('footer.title2')}}</label>
         <label style="padding: 4px 0">
           <img :src="'/image/call3.png'" height="18px" style="" /> 
           <label class="font-mini" style="padding: 0 10px;" x-apple-data-detectors="off">+852 6437 3924</label>
@@ -23,13 +23,11 @@
           <img :src="'/image/mail3.png'" height="18px" /> 
           <label class="font-mini" style="padding: 0 10px;">info@eduairhk.com</label>
         </label>
-        <label style="padding: 4px 0">
+        <label style="padding: 4px 0;">
           <img :src="'/image/location3.png'" height="18px" /> 
-          <label class="font-mini" style="padding: 0 10px;">科學園16W棟2樓237室</label>
+          <label class="font-mini" style="padding: 0 10px;">{{$t('footer.location')}}</label>
         </label>
       </div>
-
-
     </div>
     <div style="padding: 15px 0"> 
       Copyright © EduAIR Systems Limited.
@@ -56,11 +54,11 @@ export default {
         position: relative;
         color: #ffffff;
         justify-content: space-around;
-        padding: 15px 0 0 0;
+        padding: 15px 15px 0 0;
         background: #6d0e77;
     }
     .footer{
-      max-width: 800px; width: 100%; display: flex; flex-direction: row; justify-content: space-between;
+      max-width: 1000px; width: 100%; display: flex; flex-direction: row; justify-content: space-between;
     }
     .footer div{
         width: max-content;
@@ -94,7 +92,7 @@ export default {
       color: #ffa500
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199.9px) {
 /*       .footer{
         padding: 15px;
         justify-content: center;
@@ -106,6 +104,7 @@ export default {
 
       .footer{
         max-width: 1200px; width: 100%; display: flex; flex-direction: row; justify-content: space-around;
+        padding: 0 10px;
       }
     }
 </style>

@@ -80,7 +80,7 @@ export default {
 .upcounter-container label{
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199.9px) {
     .upcounter-container{
         flex-basis: 49%;
         max-width: 200px;

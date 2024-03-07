@@ -123,7 +123,7 @@
         height: 427px;
     }
 
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 1199.9px) {
         .pc{
             display: none;
         }

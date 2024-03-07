@@ -7,12 +7,12 @@
           <img :src="'/image/logo.png'" style="position: relative; height: 70%;">
           <label class="title">愛動智</label>
         </div>
-      </NuxtLink>
-      <div style="height: 60px; width: 60px; display: flex; justify-content: center; align-items: center; cursor: pointer"> 
+    </NuxtLink>
+      <div class="userMenuBtn" style=""> 
         <img :src="'/image/materials/icon_menu.png'" @click="isExpand = !isExpand" width="36" height="36" class="btn">
       </div>
-      <!-- <MenuIcon :size="36" /> -->
     </div>
+
     <ul ref="userMenu" class="userMenu">
       <li ref="submenu1">
         <a class="subMenuBtn">
@@ -82,16 +82,25 @@
         </ul>
       </li>
     </ul>
+
+    <div class="langBar" :class="{hideWhenNeed: isExpand}" v-show="false">
+      <div @click="setLocale('zh', true)" :class="{active: $i18n.locale == 'zh'}">繁</div>
+      <div @click="setLocale('cn', true)" :class="{active: $i18n.locale == 'cn'}">简</div>
+      <!-- <div @click="setLocale('en', true)" :class="{active: $i18n.locale == 'en'}">Eng</div> -->
+    </div>
   </div>
 </template>
 
 <script>
+import { useI18n } from 'vue-i18n'
+
 export default {
   name: 'CommonHeader',
   data() {
       return {
-          isExpand: false,
-          isTop: true,
+        isExpand: false,
+        isTop: true,
+        locale: useI18n()
       };
   },
   mounted(){
@@ -99,29 +108,28 @@ export default {
     this.$router.afterEach((to, from, next) => {
         self.isExpand = false;
     })
-/*     document.addEventListener('scroll', ()=> {
-      const scrollY = window.scrollY;
-       if (scrollY === 0) {
-        this.isTop = true;
-       } else{
-        this.isTop = false;
-       }
-    }) */
+    this.setLocale(localStorage.getItem('locale'))
   },
   methods:{
-      isActive(route) {
-          return this.$route.path.startsWith(route);
-      },
+    isActive(route) {
+        return this.$route.path.startsWith(route);
+    },
+    setLocale(locale, refresh = false){
+      this.$i18n.locale = locale
+      localStorage.setItem('locale', locale);
+      /* if (refresh) {
+        location.reload();
+      } */
+    }
   },
 }
 </script>
 
-<style>
+<style scoped>
 
 .border{
   border: 1px solid #6d0e77; 
   border-radius: 5px; 
-  font-size: 12px; 
   margin-left: 5px; 
   display: flex;
   justify-content: center;
@@ -133,7 +141,11 @@ export default {
   border: 1px solid white;
 }
 
-@media screen and (min-width: 1199px) {
+.menubar .layer .btn{
+  display: block;
+}
+
+@media screen and (min-width: 1200px) {
   .menubar{
     position: fixed;
     height: 60px;
@@ -183,6 +195,8 @@ export default {
     align-items: center;
     color: #6d0e77;
     text-decoration: none;
+    text-wrap: pretty;
+    text-align: center;
   }
 
   .subMenu{
@@ -278,7 +292,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199.9px) {
   .menubar{
     position: fixed;
     height: 60px;
@@ -307,10 +321,6 @@ export default {
     align-items: center;
     max-height: 60px;
     width: 100%;
-  }
-
-  .menubar .btn{
-    display: block;
   }
 
   .menubar .userMenu{
@@ -469,4 +479,51 @@ export default {
   .menubar1 ul li:hover >a{
       color: white;
   }
+</style>
+
+<style scoped>
+.langBar{
+  width: max-content; height: 100%; display: flex; gap: 10px;
+  min-height: 20px;
+  position: fixed;
+  top: calc(100% - 40px); right: 5px;
+}
+
+.langBar div{
+  width: 35px; display: flex; justify-content: center; font-size: 14px; 
+  height: 35px;
+  color: #6d0e77;
+  cursor: pointer;
+  background: rgba(230, 230, 230, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+.langBar div:hover, .langBar div.active{
+  background: #6d0e77;
+  color: white;
+}
+
+.rhs{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 100%;
+}
+
+.userMenuBtn{
+  height: 60px; width: 60px; justify-content: center; align-items: center; cursor: pointer;
+  display: flex;
+}
+
+@media screen and (max-width: 1199.9px) {
+  .langBar.hideWhenNeed{
+    display: none;
+  }
+}
 </style>

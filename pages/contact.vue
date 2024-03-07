@@ -1,7 +1,7 @@
 <template>
   <Head>
-    <Title>聯絡我們</Title>
-    <Meta name="description" content="熱線電話：6437 3924 電郵地址：info@eduairhk.com"/>
+    <Title>{{$t('navbar.contactus')}}</Title>
+    <Meta name="description" content="$t('contact.content')"/>
   </Head>
   <div class="bg">
     <div v-if="isError" style="position: fixed; width: 400px; height: max-content; background: rgba(255, 236, 236, 0.95); z-index: 1; top: 50%; left: 50%; max-width: 75%; max-height: 40%; transform: translate(-50%, -50%); padding: 25px;">
@@ -19,18 +19,18 @@
       <div class="text-container">
           <div class="form"> 
             <div style=" width: 100%; background: rgba( 255, 255, 255, 0.7   ); padding: 30px; flex: 1"> 
-              <label class="pageTitle font-big">立即聯絡 EduAIR<br></label><br>
+              <label class="pageTitle font-big">{{$t('contact.title')}}<br></label><br>
               <form  id="contactform" ref="contactform" style="display: flex; flex-direction: column">
-                <input v-model="name" class="font-mini" type="text" id="name"  name="name" placeholder="姓名（必填）" autocomplete="off" required>
-                <input v-model="email" class="font-mini" type="text" id="email" name="email" placeholder="電郵（必填）" autocomplete="off" required>
-                <textarea v-model="content" class="font-mini" placeholder="內容（必填）" name="message" id="message"></textarea>
+                <input v-model="name" class="font-mini" type="text" id="name"  name="name" :placeholder="$t('contact.name' )" autocomplete="off" required>
+                <input v-model="email" class="font-mini" type="text" id="email" name="email" :placeholder="$t('contact.email')" autocomplete="off" required>
+                <textarea v-model="content" class="font-mini" :placeholder="$t('contact.message')" name="message" id="message"></textarea>
                 <div class="row" style="display: flex; justify-content: space-between"> 
-                  <input class="font-mini" type="text" id="phone" name="phone" placeholder="聯絡電話" autocomplete="off">
-                  <input class="font-mini" type="text" id="contactformOrganization" name="organization" placeholder="機構/公司名稱"  autocomplete="off">
+                  <input class="font-mini" type="text" id="phone" name="phone" :placeholder="$t('contact.phone')" autocomplete="off">
+                  <input class="font-mini" type="text" id="contactformOrganization" name="organization" :placeholder="$t('contact.organization')" autocomplete="off">
                 </div>
                 <div style="justify-content: center; display: flex"> 
-                  <button @click.prevent="sendForm">提交</button>
-                  <button @click.prevent="resetForm">重置</button>
+                  <button @click.prevent="sendForm">{{$t('contact.button1')}}</button>
+                  <button @click.prevent="resetForm">{{$t('contact.button2')}}</button>
                 </div>
               </form>
             </div>
@@ -43,9 +43,9 @@
             </div>
             <div style="width: 400px; max-width: 100%; padding: 20px; line-height: 30px; background: rgba(255,255,255,0.6); margin: 20px 0 5px; border-radius: 10px; display: flex; align-items: center; padding: 20px;">
               <div>
-              聯絡電話：+852 6437 3924<br>
-              聯絡電郵：info@eduairhk.com<br>
-              地址：科學園16W棟2樓237室
+                {{$t('contact.detail.phone')}}<br>
+                {{$t('contact.detail.email')}}<br>
+                {{$t('contact.detail.address')}}
               </div>
               <a target="_blank" href="https://wa.me/message/6UXEU7SCWSVSE1" style="color: #008069; flex: 1; display: flex; justify-content: center; align-items: center; flex-direction: column; cursor: pointer">
                 <img :src="'/image/whatsapp-qr.png'" style="width: 100px">
@@ -264,7 +264,7 @@ button:hover{
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199.9px) {
   .form .row{
     flex-direction: column;
   }

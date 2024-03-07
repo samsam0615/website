@@ -1,12 +1,12 @@
 <template>
     <div class="container" >
         <div style="display: flex; gap: 10px; width: 1200px;">
-            <span :class="{active: Math.floor(pos) == 0, inactive: Math.floor(pos) != 0}">iPort是甚麼？</span>
-            <span :class="{active: Math.floor(pos) == 1, inactive: Math.floor(pos) != 1}">如何使用iPort？</span>
-            <span :class="{active: Math.floor(pos) == 2, inactive: Math.floor(pos) != 2}">警報系統</span>
-            <span :class="{active: Math.floor(pos) == 3, inactive: Math.floor(pos) != 3}">手勢控制小車</span>
-            <span :class="{active: Math.floor(pos) == 4, inactive: Math.floor(pos) != 4}">聲控開關</span>
-            <span :class="{active: Math.floor(pos) == 5 || Math.floor(pos) == 6, inactive: Math.floor(pos) != 5 && Math.floor(pos) != 6}">其他實驗</span>
+            <span :class="{'font-middle': Math.floor(pos) == 0, 'inactive font-small': Math.floor(pos) != 0}">{{list[0]}}</span>
+            <span :class="{'font-middle': Math.floor(pos) == 1, 'inactive font-small': Math.floor(pos) != 1}">{{list[1]}}</span>
+            <span :class="{'font-middle': Math.floor(pos) == 2, 'inactive font-small': Math.floor(pos) != 2}">{{list[2]}}</span>
+            <span :class="{'font-middle': Math.floor(pos) == 3, 'inactive font-small': Math.floor(pos) != 3}">{{list[3]}}</span>
+            <span :class="{'font-middle': Math.floor(pos) == 4, 'inactive font-small': Math.floor(pos) != 4}">{{list[4]}}</span>
+            <span :class="{'font-middle': Math.floor(pos) == 5 || Math.floor(pos) == 6, 'inactive font-small': Math.floor(pos) != 5 && Math.floor(pos) != 6}">{{list[5]}}</span>
         </div>
     </div>
 </template>
@@ -32,7 +32,6 @@
         line-height: 35px;
         border-bottom: 10px solid #c1c1c1; 
         color: #c1c1c1;
-        font-size: 20px;
         font-weight: 600;
         transition: all .3s ease-in-out;
     }
@@ -66,11 +65,7 @@
         color: #c1c1c1 !important;
     }
 
-    .active {
-        font-size: 22px !important;
-    }
-
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199.9px) {
         .container{
             display: none;
         }

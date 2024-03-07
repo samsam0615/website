@@ -1,18 +1,18 @@
 <template>
     <Head>
-        <Title>到校課程</Title>
-        <Meta name="description" content="按此查看到校課程"/>
+        <Title>{{$t('navbar.courses')}}</Title>
+        <Meta name="description" content="$t('courses.description')"/>
     </Head>
     <div class="pageContent-container" style="max-width: 100%; width: 1024px; justify-content: center; min-height: 100%; justify-content: flex-start; align-items: center">
         <div class="banner">
             <label class="title font-big">
-                到校課程
+                {{$t('courses.title')}}
             </label>
         </div>
         <div class="text" style="padding: 60px"> 
             <NuxtLink to="/contact" style="text-decoration: none">
             <div style="margin-top: 30px; padding: 20px; font-size: 20px; background: orange; color: white; border-radius: 10px; cursor: pointer; display: flex; justify-content: center; min-width: max-content"> 
-                聯絡我們&ensp;瞭解更多
+                {{$t('courses.button')}}
             </div>
             </NuxtLink>
         </div>
@@ -68,7 +68,7 @@
     align-items: flex-start;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199.9px) {
     .banner{
         width: 100%;
         max-width: 100%;

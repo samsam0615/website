@@ -1,8 +1,7 @@
 <template>
-  <div style="overflow: visible; position: absolute; max-width: 100%; min-width: 100%; top: 0; left: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh">
+  <div :class="{en: $i18n.locale == 'en'}" style="overflow: visible; position: absolute; max-width: 100%; min-width: 100%; top: 0; left: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh">
     <CommonHeader />
-    <!-- <CommonFund /> -->
-    <NuxtPage  />
+    <NuxtPage/>
     <CommonFooter />
   </div>
 </template>
@@ -100,21 +99,54 @@ body{
     max-width: 1024px;
 }
 
-.font-big{
+.font-video-title:not(.en){
+    font-size: 60px;
+}
+
+.en .font-video-title{
+    font-size: 40px;
+}
+
+.font-title:not(.en){
+    font-size: 40px;
+}
+
+.en .font-title{
+    font-size: 40px;
+}
+
+.font-big:not(.en){
     font-size: 30px;
 }
 
-.font-middle{
+.en .font-big{
+    font-size:28px;
+}
+
+.font-middle:not(.en){
     font-size: 25px;
 }
 
-.font-small{
+.en .font-middle{
+    font-size: 22px;
+}
+
+.font-small:not(.en){
     font-size: 20px;
     line-height: 30px;
 }
 
-.font-mini{
+.en .font-small{
     font-size: 18px;
+    line-height: 25px;
+}
+
+.font-mini:not(.en){
+    font-size: 18px;
+}
+
+.en .font-small{
+    font-size: 16px;
 }
 
 @keyframes fadeIn {
@@ -126,7 +158,7 @@ body{
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199.9px) {
     .text-container{
         width: 95%;
         max-width: 95%;
@@ -134,8 +166,16 @@ body{
         -webkit-overflow-scrolling: touch;
     }
 
-    .font-big{
-        font-size: 25px;
+    .font-video-title:not(.en){
+        font-size: 23px;
+    }
+
+    .en .font-video-title{
+        font-size: 40px;
+    }
+
+    .font-big:not(.en){
+        font-size: 18px;
     }
 
     .font-middle{
@@ -147,8 +187,8 @@ body{
         line-height: 22px;
     }
 
-    .font-mini{
-        font-size: 15px;
+    .font-mini:not(.en){
+        font-size: 13px;
     }
 
 }

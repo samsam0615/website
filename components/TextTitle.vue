@@ -5,7 +5,7 @@
             <slot/>
         </div>
         <div  class="download-button-container" v-if="isShowDownload"> 
-            <div style="font-size: 20px; padding: 10px">下載教材</div>
+            <div style="font-size: 20px">下載教材</div>
             <img :src="'/image/download.svg'" style="width: 30px;">
             <div class="hover" style="color: #565656;">
                 <a class="download-button" :href="chiUrl"> 
@@ -44,6 +44,7 @@ export default {
 
 <style scoped>
 .text-title {
+    position: relative;
     background: orange;
     color: white;
     border-radius: 10px;
@@ -56,7 +57,7 @@ export default {
     /* scroll-margin-top: 40px; */
     scroll-margin-top: 200px;
     width: max-content;
-    padding: 0 30px 0 30px;
+    padding: 0 25px 0 25px;
     max-width: 100%;
     width: calc(100% );
     margin-top: 20px;
@@ -70,10 +71,12 @@ export default {
 }
 
 .download-button-container{
-    width: 140px; height: 60px; 
+    width: max-content; height: max-content; 
     display: flex; position: relative;
     align-items: center;
     justify-content: flex-end;
+    gap: 20px;
+    padding: 10px;
 }
 
 .download-button{
@@ -104,21 +107,23 @@ export default {
     display: flex;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1199.9px){
     .text-title{
         height: 70px;
         font-size: 21px;
         line-break: auto;
-        padding: 0 10px;
+        padding: 0 20px 0 20px;
     }
 
     .text-title img{
-        margin-left: 20px;
-        margin-right: 20px;
     }
 
     .download-button-container{
-        display: none;
+        position: absolute;
+        top: calc(100% + 5px);
+        right: 0;
+        background: rgba(163, 97, 26, 0.3);
+        border-radius: 5px;
     }
 }
 </style>

@@ -115,7 +115,7 @@ export default {
     width: 450px; aspect-ratio: 4 / 3; overflow: hidden; max-width: 100%;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199.9px) {
     .imageDisplayer{
         width: 100%;
     }

@@ -1,10 +1,10 @@
 <template>
   <Head>
     <Title>iCar</Title>
-    <Meta name="description" content="iCar是專爲初中學生而設的AI教學套件，讓學生輕鬆透過積木編程掌握AI。"/>
+    <Meta name="description" content="$t('icar.description')"/>
   </Head>
   <div class="cuhkicar-wrapper">
-    <PageCatalog2 @click="scroll" :title='"iCar"' :list='["iCar是甚麼？", "如何使用iCar？", "道德困境實驗", "人面識別追蹤", "手畫線循跡", "外賣仔實驗", "資源總匯"]'/>
+    <PageCatalog2 @click="scroll" :title='"iCar"' :list="[$t('icar.navbar[0]' ), $t('icar.navbar[1]'), $t('icar.navbar[2]' ), $t('icar.navbar[3]' ), $t('icar.navbar[4]' ), $t('icar.navbar[5]' ), $t('icar.navbar[6]' )]"/>
     <PageCatalog3 @click="scroll" :title='"iCar"' 
       :list='["/image/materials/logo_icar3.png", 
               "/image/materials/logo_question2.png", 
@@ -15,12 +15,10 @@
               "/image/materials/logo_download.png"]'/>
     <div class="cuhkicar-container" >
       <div class="page-content" ref="content">
-        <TextTitle :image="'/image/materials/logo_icar3.png'">iCar是甚麼？</TextTitle>
+        <TextTitle :image="'/image/materials/logo_icar3.png'">{{$t('icar.navbar[0]')}}</TextTitle>
         <div class="text-content font-small text-content-responsive">
           <div class="text">
-            iCar是由香港中文大學科研團隊開發，專爲初中學生而設的AI教學套件，
-            可進行多個有趣的教學實驗，讓學生輕鬆透過積木編程掌握AI。
-            全港有超過5成中學正使用iCar進行AI教學活動。
+            {{$t('icar.content')}} 
           </div>
           <div class="appDownloader"  style="">
             <img :src="'/image/iCarF2.png'" style="width: 200px">
@@ -35,23 +33,23 @@
           </div>
 
         </div>
-        <TextTitle :image="'/image/materials/logo_question2.png'">如何使用iCar？</TextTitle>
+        <TextTitle :image="'/image/materials/logo_question2.png'">{{$t('icar.navbar[1]')}}</TextTitle>
         <div class="text-content font-small">
           <div style="display: flex; flex-direction: row; padding: 0; justify-content: center; padding-top: 0; flex-wrap: wrap">
             <div style="display: flex; justify-content: center; flex-direction: column; align-items: center; margin-left: 15px; margin-right: 15px; margin-top: 25px;">
-              MakeCode積木編程
+              {{$t('icar.Area2.title[0]')}}
               <div class="imageContainer">
                 <img :src="'/image/materials/logo_blockly.png'" style="height: 90%">
               </div>
             </div>
             <div style="display: flex; justify-content: center; flex-direction: column; align-items: center; margin-left: 15px; margin-right: 15px; margin-top: 25px">
-              手機藍芽控制
+              {{$t('icar.Area2.title[1]')}}
               <div class="imageContainer">
                 <img :src="'/image/materials/logo_app.png'" style="height: 90%">
               </div>
             </div>
             <div style="display: flex; justify-content: center; flex-direction: column; align-items: center; margin-left: 15px; margin-right: 15px; margin-top: 25px">
-              紅外線遙控器
+              {{$t('icar.Area2.title[2]')}}
               <div class="imageContainer">
                 <img :src="'/image/materials/logo_remote.png'" style="height: 70%">
               </div>
@@ -60,75 +58,74 @@
         </div>
         <TextTitle :image="'/image/materials/logo_moraldilemma.png'" :isShowDownload="true" 
           :chiUrl="'https://download.eduairhk.com/道德困境_中文版教材.zip'" 
-          :engUrl="'https://download.eduairhk.com/Moral_Dilemma_English_Materials.zip'">道德困境實驗</TextTitle>
+          :engUrl="'https://download.eduairhk.com/Moral_Dilemma_English_Materials.zip'">{{$t('icar.navbar[2]')}}</TextTitle>
         <div class="text-content font-small">
           <img :src="'/image/gif/gif_moral2.gif'" style="width: 50%; min-width: 250px"><br>
-          當自動駕駛車刹車功能失靈，只能左轉或右轉，
-          然而，不論選擇哪條路線，車輛都將碰上其他路人！
-          眼前一邊是小孩，另一邊則是老人，自動車該怎麽辦？
-          人類和AI在同類事件中扮演甚麽角色？動手用iCar做實驗，一探究竟吧！<br><br>
-          <TextBox :title="'討論問題舉隅'" :image="'/image/materials/logo_think2.png'">
-            iCar用了哪一種機器學習模式？<br>
-            收集數據時，我們要注意甚麽？注意這些事項的目的又是甚麽？<br>
-            除了避開小孩和避開老人，iCar還有第三個選擇嗎？<br>
+          {{$t('icar.Area3.content')}}<br><br>
+          <TextBox :title="$t('icar.Area3.question_title')" :image="'/image/materials/logo_think2.png'">
+            {{$t('icar.Area3.question[0]')}}<br>
+            {{$t('icar.Area3.question[1]')}}<br>
+            {{$t('icar.Area3.question[2]')}}<br>
           </TextBox>
         </div>
         <TextTitle :image="'/image/materials/logo_facereg.png'" :isShowDownload="true" 
           :chiUrl="'https://download.eduairhk.com/人面識別追蹤_中文版教材.zip'" 
-          :engUrl="'https://download.eduairhk.com/Face_Following_English_Materials.zip'">人面識別追蹤</TextTitle>
+          :engUrl="'https://download.eduairhk.com/Face_Following_English_Materials.zip'">{{$t('icar.navbar[3]')}}</TextTitle>
         <div class="text-content font-small">
           <img :src="'/image/gif/gif_face2.gif'" style="width: 50%; min-width: 250px"><br>
-          爲甚麽自動駕駛車可以辨識人臉，並跟隨指定人臉行駛？<br>
-          自動駕駛車又是如何學會這項技能？動手用iCar做實驗，一探究竟吧！<br><br>
-          <TextBox :title="'討論問題舉隅'" :image="'/image/materials/logo_think2.png'">
-            iCar如何學會辨識指定人臉？<br>
-            辨識其他角度的相同人臉或照片時，iCar的表現會受影響嗎？爲甚麽？<br>
-            在真實情況中應用此技術，會有甚麽好處和限制？<br>
+          {{$t('icar.Area4.content[0]')}}<br>
+          {{$t('icar.Area4.content[1]')}}<br><br>
+          <TextBox :title="$t('icar.Area3.question_title')" :image="'/image/materials/logo_think2.png'">
+            {{$t('icar.Area4.question[0]')}}<br>
+            {{$t('icar.Area4.question[1]')}}<br>
+            {{$t('icar.Area4.question[2]')}}<br>
           </TextBox>
         </div>
         <TextTitle :image="'/image/materials/logo_handdraw.png'" :isShowDownload="true" 
           :chiUrl="'https://download.eduairhk.com/手畫線循跡_中文版教材.zip'" 
-          :engUrl="'https://download.eduairhk.com/Line_Tracking_English_Materials.zip'">手畫線循跡</TextTitle>
+          :engUrl="'https://download.eduairhk.com/Line_Tracking_English_Materials.zip'">{{$t('icar.navbar[4]')}}</TextTitle>
         <div class="text-content font-small">
           <img :src="'/image/gif/gif_line2.gif'" style="width: 50%; min-width: 250px"><br>
-          自動駕駛車能根據各色虛線、實線移動，從而行走正確路線。<br>
-          這是怎麽做到的呢？動手用iCar做實驗，一探究竟吧！<br><br>
-          <TextBox :title="'討論問題舉隅'" :image="'/image/materials/logo_think2.png'">
-            iCar跟著手畫線和列印出來的線條行駛會有差異嗎？<br>
-            線條的粗幼、大小、形狀等對iCar行駛有影響嗎？<br>
-            iCar的這項技術在現實生活中有何作用？可應用在哪些地方？<br>
+          {{$t('icar.Area5.content[0]')}}<br>
+          {{$t('icar.Area5.content[1]')}}<br><br>
+          <TextBox :title="$t('icar.Area3.question_title')"  :image="'/image/materials/logo_think2.png'">
+            {{$t('icar.Area5.question[0]')}}<br>
+            {{$t('icar.Area5.question[1]')}}<br>
+            {{$t('icar.Area5.question[2]')}}<br>
           </TextBox>
         </div>
-        <TextTitle :image="'/image/materials/logo_food3.png'">外賣仔實驗</TextTitle>
+        <TextTitle :image="'/image/materials/logo_food3.png'" :isShowDownload="true"
+          :chiUrl="'https://download.eduairhk.com/送餐實驗_中文版教材.zip'" 
+          :engUrl="'https://download.eduairhk.com/Food_Delivery_English_Materials.zip'">{{$t('icar.navbar[5]')}}</TextTitle>
         <div class="text-content font-small" style="display: flex; gap: 50px; flex-direction: column">
-          <div style="display: flex; width: 100%; justify-content: space-around"> 
-            <div style="display: flex; flex-direction: column; width: 28%; align-items: center"> 
-              基於本能推理
+          <div style="display: flex; width: 100%; justify-content: space-around; flex-wrap: wrap"> 
+            <div style="display: flex; flex-direction: column; width: 28%; align-items: center; min-width: 200px"> 
+              {{$t('icar.Area6.title[0]')}}
               <video autoplay muted loop playsinline webkit-playsinline style="width: 100%">
                 <source :src="'https://video.eduairhk.com/food_skill.mp4'">
               </video>
-                以最直觀的方式完成任務
+              {{$t('icar.Area6.subtitle[0]')}}
             </div>
-            <div style="display: flex; flex-direction: column; width: 28%; align-items: center"> 
-              基於規則推理
+            <div style="display: flex; flex-direction: column; width: 28%; align-items: center; min-width: 200px"> 
+              {{$t('icar.Area6.title[1]')}}
               <video autoplay muted loop playsinline webkit-playsinline style="width: 100%">
                 <source :src="'https://video.eduairhk.com/food_rule.mp4'">
               </video>
-                根據已學習的模式作出決策並執行
+              {{$t('icar.Area6.subtitle[1]')}}
             </div>
-            <div style="display: flex; flex-direction: column; width: 28%; align-items: center"> 
-              基於知識推理
+            <div style="display: flex; flex-direction: column; width: 28%; align-items: center; min-width: 200px"> 
+              {{$t('icar.Area6.title[2]')}}
               <video autoplay muted loop playsinline webkit-playsinline style="width: 100%">
                 <source :src="'https://video.eduairhk.com/food_knowledge.mp4'">
               </video>
-                應用機器學習找出最佳解決方法
+              {{$t('icar.Area6.subtitle[2]')}}
             </div>
           </div>
           <div >
-            推理是一個根據現有資訊來決策的過程。 它分為三個層級：基於本能、基於規則和基於知識。iCar外賣仔實驗旨在展示三種不同推理層次下的行為。 學生可以選擇不同送餐地點，通過觀察iCar的配送路線選擇，分別了解三個推理層級的特點。
+            {{$t('icar.Area6.content')}}
           </div>
         </div>
-        <TextTitle :image="'/image/materials/logo_download.png'">資源總匯</TextTitle>
+        <TextTitle :image="'/image/materials/logo_download.png'">{{$t('icar.navbar[6]')}}</TextTitle>
         <div class="text-content font-small" style="display: flex; gap: 50px">
           <DownloadTable :source='download' />
         </div>
@@ -145,28 +142,14 @@ export default {
         download: [
           {
             action: 'download',
-            name: 'iCar 教材 (中文版)',
-            size: '285 MB',
-            type: 'zip',
-            url: 'https://download.eduairhk.com/iCar_ZH.zip'
-          },
-          {
-            action: 'download',
-            name: 'iCar Teaching Materials (English Version)',
-            size: '261 MB',
-            type: 'zip',
-            url: 'https://download.eduairhk.com/iCar_EN.zip'
-          },
-          {
-            action: 'download',
-            name: 'iCar micro:bit程式',
+            name: this.$t('icar.Area7.name[1]'),
             size: '3 MB',
             type: 'zip',
             url: 'https://download.eduairhk.com/iCar_hex.zip'
           },
           {
             action: 'clipboard',
-            name: 'MakeCode iCar擴展庫網址',
+            name: this.$t('icar.Area7.name[2]'),
             size: '-',
             type: '-',
             url: 'https://github.com/hitkuangye/CUHK_JC_iCar_V2'
@@ -274,7 +257,7 @@ export default {
   }
 
   
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1199.9px) {
     .text-content-responsive{
       flex-direction: column;
     }
@@ -290,7 +273,7 @@ export default {
     }
   }
 
-  @media screen and (max-width: 1200px){
+  @media screen and (max-width: 1199.9px){
     .cuhkicar-wrapper{
       flex-direction: row;
       padding: 0;
