@@ -92,12 +92,12 @@ export default {
       url: 'https://replicate.com/methexis-inc/img2prompt?ref=FutureTools.io',
       description: 'Replicate是一款使用AI從不同角度分析及理解圖像的工具，通過利用AI模型來獲取與圖像內容及樣式匹配的文本提示。'
     },
-    {
-      imageURL: '',
-      name: 'OnlineGPT',
-      url: 'https://onlinegpt.org/chat/',
-      description: 'OnlineGPT是一款基於AI的聊天平台，利用自然語言處理和機器學習技術，與用戶對話，可理解和解釋用戶的自然語言，回答用戶的問題，提供建議，執行任務等。'
-    },
+    // {
+    //   imageURL: '',
+    //   name: 'OnlineGPT',
+    //   url: 'https://onlinegpt.org/chat/',
+    //   description: 'OnlineGPT是一款基於AI的聊天平台，利用自然語言處理和機器學習技術，與用戶對話，可理解和解釋用戶的自然語言，回答用戶的問題，提供建議，執行任務等。'
+    // },
     {
       imageURL: '',
       name: 'Teach Anything',
@@ -185,12 +185,12 @@ export default {
       imageURL: '',
       description: 'Waveformer是深度學習初創公司Anthropic開發。用戶只要輸入一串想要生成的音樂文字，並指定秒數，就會生成音樂。'
     },
-    {
-      name: 'Zeroscope',
-      url: 'https://huggingface.co/spaces/fffiloni/zeroscope?ref=futuretools.io',
-      imageURL: '',
-      description: 'Zeroscope 是一個文本到視頻的工具， 用戶可以輸入描述性文字、敘述或腳本，工具會自動生成相應的無水印視頻內容。 這對需要快速製作視頻內容而無需精湛的視頻編輯技能或資源的人特別有用。'
-    }
+    // {
+    //   name: 'Zeroscope',
+    //   url: 'https://huggingface.co/spaces/fffiloni/zeroscope?ref=futuretools.io',
+    //   imageURL: '',
+    //   description: 'Zeroscope 是一個文本到視頻的工具， 用戶可以輸入描述性文字、敘述或腳本，工具會自動生成相應的無水印視頻內容。 這對需要快速製作視頻內容而無需精湛的視頻編輯技能或資源的人特別有用。'
+    // }
   ],
   advance: [
     {
