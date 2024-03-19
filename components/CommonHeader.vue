@@ -7,7 +7,7 @@
           <img :src="'/image/logo.png'" style="position: relative; height: 70%;">
           <label class="title">愛動智</label>
         </div>
-    </NuxtLink>
+      </NuxtLink>
       <div class="userMenuBtn" style=""> 
         <img :src="'/image/materials/icon_menu.png'" @click="isExpand = !isExpand" width="36" height="36" class="btn">
       </div>
@@ -42,8 +42,8 @@
         </NuxtLink>
       </li>
       <li ref="submenu1">
-        <NuxtLink :to="{ name: 'courses' }" class="subMenuBtn" >
-            {{$t('navbar.courses')}}
+        <NuxtLink :to="{ name: 'course' }" class="subMenuBtn" >
+            {{$t('navbar.course')}}
         </NuxtLink>
       </li>
       <li ref="submenu1">
@@ -72,7 +72,7 @@
             </a>
           </li>
           <li>
-            <a href="https://ipython.eduairhk.com" target="_blank">
+            <a href="https://itrain.eduairhk.com" target="_blank">
               {{$t('navbar.itrain')}} 
               <div class="border">
                 敬請期待
@@ -108,7 +108,10 @@ export default {
     this.$router.afterEach((to, from, next) => {
         self.isExpand = false;
     })
-    this.setLocale(localStorage.getItem('locale'))
+    const locale = localStorage.getItem('locale');
+    if(locale) {
+      this.setLocale(localStorage.getItem('locale'))
+    }
   },
   methods:{
     isActive(route) {

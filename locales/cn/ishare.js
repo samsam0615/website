@@ -53,13 +53,6 @@ export default {
     },
     {
       imageURL: '',
-      name: 'Conformer-2',
-      url: 'https://www.assemblyai.com/playground/source',
-      description: 'Conformer-2是一個自動語音識別的AI 模型，可用於語音識別、說話檢測和音頻摘要。 用戶可以上傳音頻文件或視頻文件，或輸入YouTube視頻鏈接，AI可以幫你轉換字幕及作重點總結等。'
-    }
-    ,
-    {
-      imageURL: '',
       name: 'LeMUR',
       url: 'https://www.assemblyai.com/playground/v2',
       description: 'LeMUR 是基於語音數據構建的大型語言模型（LLM）， 用戶可上載語音檔案或輸入YouTube視頻鏈接， LeMUR 便能轉換字幕及總結内容， 用戶也可以調整總結的格式及發問有關檔案內容的問題。'

@@ -7,7 +7,7 @@ export default {
         company: "公司簡介",
         staff: "公司架構",
         news: "最新消息",
-        courses: "到校課程",
+        course: "到校課程",
         platform: "學習平台",
         contactus: "聯絡我們",
         icar: "iCar",
@@ -136,7 +136,7 @@ export default {
     },
   
        
-    courses : {
+    course : {
         title: '到校課程',
         description : '按此查看到校課程',
         button: '聯絡我們 瞭解更多'

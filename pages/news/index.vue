@@ -40,7 +40,7 @@
                 <Gallery2 
                     :title="$t('news.Area1.head')"
                     :subtitle="''"
-                    :url="'/event/5'"
+                    :url="'/news/5'"
                     :image="'/event/event5/1.jpg'"
                     :date="$t('news.Area1.date')">
                 </Gallery2>
@@ -48,28 +48,28 @@
                 <Gallery2 
                     :title="$t('news.Area2.title')"
                     :subtitle="$t('news.Area2.subtitle')"
-                    :url="'/event/4'"
+                    :url="'/news/4'"
                     :image="'/event/event4/1.jpg'"
                     :date="$t('news.Area2.date')">
                 </Gallery2>
                 <Gallery2 
                     :title="$t('news.Area3.title')"
                     :subtitle="$t('news.Area3.subtitle')"
-                    :url="'/event/1'"
+                    :url="'/news/1'"
                     :image="'/event/event1/2.jpg'"
                     :date="$t('news.Area3.date')">
                 </Gallery2>
                 <Gallery2 
                     :title="$t('news.Area4.title')"
                     :subtitle="$t('news.Area4.subtitle')"
-                    :url="'/event/2'"
+                    :url="'/news/2'"
                     :image="'/event/event2/3.jpg'"
                     :date="$t('news.Area4.date')">
                 </Gallery2>
                 <Gallery2 
                     :title="$t('news.Area5.title')"
                     :subtitle="$t('news.Area5.subtitle')"
-                    :url="'/event/3'"
+                    :url="'/news/3'"
                     :image="'/event/event3/2.jpg'"
                     :date="$t('news.Area5.date')">
                 </Gallery2>
@@ -95,6 +95,8 @@
 .banner .title{
     color: #6d0e77; 
     font-weight: 800; 
+    font-size: 40px; 
+
     position: absolute; 
     width: 100%;
     height: 100%;
