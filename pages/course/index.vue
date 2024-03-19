@@ -55,6 +55,12 @@
                         :url="'/course/7'" @click.stop="navigateTo('/course/7')"
                         :image="'/course/7.jpg'">
                     </Gallery2>
+                    <Gallery2 :height="330"
+                        style="border: 3px solid #992724; cursor: pointer" :color="'#992724'" :urlColor="'#992724'"
+                        :title="'iPort (模型訓練與AI實踐體驗)'"
+                        :url="'/course/8'" @click.stop="navigateTo('/course/8')"
+                        :image="'/course/8.jpg'">
+                    </Gallery2>
                 </div>
             </div>
     </div>
