@@ -93,7 +93,7 @@ export default {
         'button2':'重置',
 
         detail : {
-            'phone': '聯絡電話：+852 6437 392',
+            'phone': '聯絡電話：+852 6437 3924',
             email: "聯絡電郵：info{'@'}eduairhk.com",
             'address': '地址：科學園16W棟2樓237室'
         }
