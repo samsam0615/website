@@ -109,6 +109,9 @@
         <video ref="myVideo1" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
             <source :src="'https://video.eduairhk.com/iport9.mp4'" type="video/mp4">
         </video>
+        <video ref="myVideo1" autoplay muted loop playsinline webkit-playsinline style="width: 100%; max-width: 750px">
+            <source :src="'https://video.eduairhk.com/iport_dog_2.mp4'" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
