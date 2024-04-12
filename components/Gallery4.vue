@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="pc" style="width: 100%; height: 450px; padding: 0 20px; ">
-                <div class="font-small" style="line-height: 35px;"> 
+                <div class="font-event-gallery" style="text-align: justify;" > 
                     <slot />
                 </div>
             </div>
@@ -24,7 +24,7 @@
         <div class="mobile" style="width: 100%; padding: 10px;">
             <div class="font-middle" style="color: #6d0e77; font-weight: 600; padding: 10px 0 0px 0;">{{title}}</div>
             <div v-if="subtitle" class="font-small" style="color: #6d0e77; font-weight: 600; padding: 0 0 10px 0;">{{subtitle}}</div>
-            <div class="font-mini" style="line-height: 30px;"> 
+            <div class="font-mini" style="text-align: justify;"> 
                 <slot />
             </div>
         </div>

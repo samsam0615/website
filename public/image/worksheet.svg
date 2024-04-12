@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230.5 231.53">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #e0dfe1;
+      }
+
+      .cls-3 {
+        fill: #353434;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2-2" data-name="Layer 2">
+    <g>
+      <path class="cls-1" d="M50.87,0h110.26c5.53,0,10.02,4.49,10.02,10.02V221.51c0,5.53-4.49,10.02-10.02,10.02H10.02c-5.53,0-10.02-4.49-10.02-10.02V50.87"/>
+      <polyline class="cls-2" points="50.87 0 50.87 50.87 0 50.87"/>
+      <rect class="cls-3" x="61.46" y="53.66" width="86.02" height="6.83" rx="3.42" ry="3.42"/>
+      <rect class="cls-3" x="23.67" y="83.41" width="123.8" height="6.83" rx="3.42" ry="3.42"/>
+      <rect class="cls-3" x="23.67" y="112.82" width="123.8" height="6.83" rx="3.42" ry="3.42"/>
+      <rect class="cls-3" x="23.67" y="142.23" width="123.8" height="6.83" rx="3.42" ry="3.42"/>
+      <rect class="cls-3" x="23.67" y="171.64" width="123.8" height="6.83" rx="3.42" ry="3.42"/>
+      <path class="cls-3" d="M226.35,125.88h0c-5.53-5.53-14.5-5.53-20.04,0l-67.13,67.13-7,26.56,27.04-6.53,67.13-67.13c5.53-5.53,5.53-14.5,0-20.04Z"/>
+    </g>
+  </g>
+</svg>

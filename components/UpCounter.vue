@@ -1,11 +1,10 @@
 <template>
-  <div class="upcounter-container">
+  <div class="upcounter-container" ref="upcounter">
     <div style="width: 60px; height: 60px; display: flex"> 
         <img :src='image' style="width: 60px; object-fit: contain;">
     </div>
     <label class="font-small">{{text1}}</label>
-    <!-- <vue3-count-to :startVal='0' :endVal='number' :duration='4000' :autoplay='false' ref="upcounter" /> -->
-    <span class="font-big">{{number}}</span>
+    <span class="font-big">{{Math.floor(value)}}</span>
     <label class="font-small">{{text2}}</label>
   </div>
 </template>
@@ -17,31 +16,47 @@ export default {
   props: ['image', 'text1', 'text2', 'number'],
   data: () => ({
     counterStatus: false,
-    event: null
+    event: null,
+    value: 0,
   }),
   components:{
     
   },
   methods:{
     startCounter(){
-        let self = this;
-        let dist = window.innerHeight - self.$refs.upcounter.$el.getBoundingClientRect().top;
-        if(dist > 0){
-            if(self.counterStatus == false){
-                self.$refs.upcounter.start();
-                self.counterStatus = true;
+        let dist = window.innerHeight - this.$refs.upcounter.getBoundingClientRect().top;
+        // console.log(dist, window.innerHeight - this.$refs.upcounter.getBoundingClientRect().top)
+        if(dist >= 0){
+            // console.log('dist >= 0')
+            if(this.counterStatus == false){
+                this.counterStatus = true;
+                console.log('start conter')
+
+                const max = this.number;
+                const frameTo = 8;
+                const interval = max / frameTo;
+                let timer = setInterval(() => {
+                    if(this.value < this.number) {
+                        if(this.value + interval >= max) {
+                            this.value = max
+                            // cancel interval
+                            clearInterval(timer)
+                        } else {
+                            this.value += interval
+                        }
+                    }
+                }, 125)
             }
         }
     }
   },
   mounted(){
-/*     let self = this
-    this.startCounter();
+    this.startCounter()
     this.event = document.addEventListener('scroll', (e)=>{
-        if(self.$refs.upcounter){
+        if(this.$refs.upcounter){
             this.startCounter();
         }
-    }) */
+    })
   },
   unmounted(){
     document.removeEventListener('scroll', this.event)

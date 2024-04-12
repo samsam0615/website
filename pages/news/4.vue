@@ -17,7 +17,7 @@
                     :src="'/image/location4gray.png'" style="width: 50px; padding: 0 9px">{{ $t('event_4_vue.location') }}
             </div>
         </div>
-        <div style="width: 100%; padding: 20px 20px; max-width: 1200px;" class="font-small">
+        <div style="width: 100%; padding: 20px 20px; max-width: 1200px; text-align: justify;" class="font-small">
             {{ $t('event_4_vue.content[0]') }}
             <br><br>
             {{ $t('event_4_vue.content[1]') }}

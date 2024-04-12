@@ -5,14 +5,12 @@
         </div>
         <div class="staff-description-container">
             <label class="subTitle staffSubTitle font-middle" :style="{ 'border-bottom': '3px solid ' + color }">
-                <div style="display: flex; flex-direction: row; padding-top: 15px;">
-                    <div style="text-align: center;" class="font-big">
+                <div style="display: flex; flex-direction: column; padding-top: 15px;">
+                    <div style="text-align: center; padding-bottom: 8px;" class="font-big">
                         {{ name }}
                     </div>
-                    <div style="display: flex; align-items: center;">
-                        <a :href="youtube" target="_blank">
-                            <img :src='"/image/youtube.png"' v-if="youtube">
-                        </a>
+                    <div style="text-align: center; font-size: small;">
+                        {{ title }}
                     </div>
                 </div>
             </label>
@@ -28,7 +26,7 @@
 <script>
 export default {
     name: 'TextBox',
-    props: ['name', 'title', 'image', 'color', 'youtube', 'subtitle'],
+    props: ['name', 'title', 'image', 'color', 'subtitle'],
     methods: {
     }
 }
@@ -38,10 +36,11 @@ export default {
 .staff-container {
     position: relative;
     display: flex;
-    flex-basis: 450px;
+    /* flex-basis: 450px; */
     margin: 20px;
     padding: 20px 10px;
     border-radius: 10px;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     background: #f3f3f3;
@@ -80,32 +79,6 @@ export default {
     height: auto;
 }
 
-.popup-box-container {
-    width: 60vw;
-    height: 70vh;
-    position: fixed;
-    background-color: rgba(81, 00, 243, 0.9);
-    border-radius: 5vw;
-    padding: 5vw 5vw;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    left: 100%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.6s;
-    z-index: 2;
-}
-
-.visible {
-    left: 50%;
-    visibility: visible;
-    opacity: 1;
-    transform: (-50%, 50%) scale(1);
-}
 
 .subDescription {
     font-size: 22px;
@@ -129,7 +102,7 @@ export default {
 .staffSubTitle {
     display: flex;
     justify-content: center;
-    width: 70%;
+    /* width: 70%; */
     white-space: nowrap;
 }
 
@@ -140,7 +113,7 @@ export default {
         align-items: center;
         padding: 25px;
         margin: 10px 0 10px 0;
-        /* width: 100%; */
+        width: 100%;
         /* background: aqua; */
         border-radius: 10px;
     }

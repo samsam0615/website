@@ -1,7 +1,7 @@
 <template>
     <video ref="myVideo"
         id="myVideo"
-        style=" right: 0; bottom: 0; width: 100%; height: 100%; object-fit: cover; margin-top: 60px; padding:"
+        style=" right: 0; bottom: 0; width: 100%; height: 100%; object-fit: cover; margin-top: 48px; padding:"
         autoplay
         muted
         loop

@@ -1,7 +1,8 @@
 <template>
     <div :style="{ height: height + 'px' }" class="gallery_box">
         <div>
-            <img :src="image" style="width: 100%; height: auto; aspect-ratio: 3 / 2; background:#FFEBCD;   border-radius: 5px;">
+            <img :src="image"
+                style="width: 100%; height: auto; aspect-ratio: 3 / 2; background:#FFEBCD;   border-radius: 5px;">
             <div style="padding: 5px 10px 10px 10px ">
                 <div class="font-small" :style="{ color: color }" style="font-weight: 600;">{{ title }}</div>
                 <div class="font-mini">{{ subtitle }}</div>
@@ -9,10 +10,11 @@
         </div>
 
         <div style="padding: 10px">
-            <NuxtLink :to="url" :style="{ color: urlColor }" style="line-height: 30px; cursor: pointer; text-decoration: none;">
-                {{$t('news.more')}}
+            <NuxtLink :to="url" :style="{ color: urlColor }"
+                style="line-height: 30px; cursor: pointer;   text-decoration: none;">
+                <!-- {{ $t('news.more') }} -->
             </NuxtLink>
-            <div style="font-size: small;">{{ date }}</div>
+            <div>{{ date }}</div>
         </div>
     </div>
 </template>
@@ -46,7 +48,6 @@ export default {
         },
         color: {
             type: String,
-            // default: '#6d0e77'
             default: '#6d0e77'
         },
         urlColor: {
@@ -67,13 +68,13 @@ export default {
     padding: 0;
 
     transition: all .3s ease-in-out;
-    box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
 
     border-radius: 5px;
 }
 
 .gallery_box:hover {
     transform: scale(1.02);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 </style>

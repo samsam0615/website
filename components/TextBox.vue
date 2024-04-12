@@ -1,5 +1,5 @@
 <template>
-    <div class="text-box">
+    <div class="text-box font-small">
         <div style="display: flex; align-items: center; padding-bottom: 20px;"> 
             <img :src="image">
             <label class="title">{{title}}</label>
@@ -20,11 +20,12 @@ export default {
 <style scoped>
 .text-box {
     position: relative;
+    max-width: 100%;
     color: #7c7c7c;
     border: 3px solid orange;
     border-radius: 10px;
-    font-size: 20px;
-    font-weight: 600;
+    /* font-size: 20px; */
+    /* font-weight: 600; */
     display: flex;
     flex-direction: column;
     justify-content: center;

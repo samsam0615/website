@@ -8,7 +8,7 @@
       <VideoBackground />
       <div class="video-description">
         <label class="title font-video-title">{{$t('homepage.slogan')}}</label> <br>
-        <label class="content font-big">{{$t('homepage.slogan2')}}</label>
+        <label class="content font-video-description">{{$t('homepage.slogan2')}}</label>
       </div>
     </div>
     <div class="promote-container promote-container-2 " v-show="true" >
@@ -19,15 +19,21 @@
         <div class="responsive-div" style="">
           <div style="width: 300px; height: 300px;"> 
             <img :src="'/image/event7.jpg'" style="width: 100%; aspect-ratio: 3 / 2" />
-            {{$t('homepage.area1.content1')}}
+            <div style="text-align: justify;">
+              {{$t('homepage.area1.content1')}}
+            </div>
           </div>
           <div style="width: 300px; height: 300px"> 
             <img :src="'/image/event1.jpg'" style="width: 100%; aspect-ratio: 3 / 2" />
-            {{$t('homepage.area1.content2')}}
+            <div style="text-align: justify;">
+              {{$t('homepage.area1.content2')}}
+            </div>
           </div>
           <div style="width: 300px; height: 300px"> 
             <img :src="'/image/event6.jpg'" style="width: 100%; aspect-ratio: 3 / 2" />
-            {{$t('homepage.area1.content3')}}
+            <div style="text-align: justify;">
+              {{$t('homepage.area1.content3')}}
+            </div>
           </div>
         </div>
       </div>
@@ -160,9 +166,9 @@ export default {
 
     .video-description{
       position: absolute;
-      width: 45%;
+      width: 40%;
       right: 20px;
-      border-radius: 10px;
+      /* border-radius: 10px; */
       text-shadow: black 3px 3px 10px;
       color: white;
     }

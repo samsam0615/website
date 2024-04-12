@@ -15,7 +15,7 @@ export default {
         ishare: "iShare",
         iportPlatform: 'iPort ePlatform',
         itrain: 'iTrain',
-        comingSoon: 'Stay Tuned'
+        comingSoon: 'StayTuned'
     },
     homepage : {
         title :'EduAIR',
@@ -49,7 +49,7 @@ export default {
         'description': 'EduAIR Systems Limited (“EduAIR”) is a non-profit organization funded by The Chinese University of Hong Kong (CUHK). Our board members include Prof. YAM Yeung, director of the CUHK Shenzhen Research Institute (SZRI) , and Prof. Helen MENG from Systems Engineering and Engineering Management. They strive to promote AI and STEAM among young learners and help them realize their dreams and aspirations in related fields.',
         'contents': [
             {
-                'title': 'EduAIR’s Services',
+                'title': 'EduAIR\'s Services',
                 'content': 'EduAIR is dedicated to build a collaborative learning platform with comprehensive activities provided, enhance students’ understanding of AI and STEAM. By engaging students in interactive and hands-on experiences, EduAIR aims to enhance their comprehension and application of AI and STEAM knowledge, thereby excitation their learning interest and creativity.',
                 'words': ['Educational Workshops','Consultancy Services','On-campus Services','Development of Educational kits']
             },
@@ -94,7 +94,7 @@ export default {
         'button2':'Reset',
 
         detail : {
-            'phone': 'Contact：+852 6437 392',
+            'phone': 'Contact：+852 6437 3924',
             'email': "Email：info{'@'}eduairhk.com",
             'address': 'Address: Room 237, 2/F, Building 16W, Science Park'
         }
@@ -134,7 +134,9 @@ export default {
             title :'“iCar Expert” Workshop',
             subtitle : 'AI for the Future Summer Camp 2023',
             date : '18 -19 July, 2023'
-        }
+        },
+
+        more :'More>>',
     },
   
        

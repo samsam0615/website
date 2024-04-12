@@ -1,93 +1,223 @@
-<!-- Please remove this file from your project -->
 <template>
-  <div ref="menubar" class="menubar unselectable menubar2" :class="{expand: isExpand, menubar1: false, menubar2: !isTop}">
-    <div class="layer" style="height: 100%">
-      <NuxtLink to="/" style="text-decoration: none">
-        <div class="logo-container" style="position: relative; width: 180px; height: 60px; display:flex; justify-content:center; align-items: center; cursor: pointer;">
-          <img :src="'/image/logo.png'" style="position: relative; height: 70%;">
-          <label class="title">愛動智</label>
-        </div>
+  <div class="header unselectable">
+    <div>
+      <NuxtLink to="/" style="text-decoration: none; display: flex;" @click="closeMobileMenu()">
+        <img :src="'/image/logo_with_cuhk_2.svg'" style="height: 48px;">
+        <div class="charity_number">
+          慈善機構註冊編號：91／18516</div>
       </NuxtLink>
-      <div class="userMenuBtn" style=""> 
-        <img :src="'/image/materials/icon_menu.png'" @click="isExpand = !isExpand" width="36" height="36" class="btn">
+    </div>
+
+    <div class="pc_menu">
+      <div class="pc_menu_button pc_menu_dropdown_head">
+        <div class="pc_menu_dropdown_head_button">
+          <div>
+            {{ $t('navbar.aboutus') }}
+          </div>
+        </div>
+        <div class="pc_menu_dropdown_content">
+          <NuxtLink class="pc_menu_button pc_menu_dropdown_button" to="/company">
+            {{ $t('navbar.company') }}
+          </NuxtLink>
+          <NuxtLink class="pc_menu_button pc_menu_dropdown_button" to="/staff">
+            {{ $t('navbar.staff') }}
+          </NuxtLink>
+          <NuxtLink class="pc_menu_button pc_menu_dropdown_button" to="/contact">
+            {{ $t('navbar.contactus') }}
+          </NuxtLink>
+        </div>
       </div>
+
+      <NuxtLink class="pc_menu_button" :to="{ name: 'news' }">
+        {{ $t('navbar.news') }}
+      </NuxtLink>
+      <NuxtLink class="pc_menu_button" :to="{ name: 'course' }">
+        {{ $t('navbar.course') }}
+      </NuxtLink>
+      <NuxtLink class="pc_menu_button" :to="{ name: 'icar' }">
+        {{ $t('navbar.icar') }}
+      </NuxtLink>
+      <NuxtLink class="pc_menu_button" :to="{ name: 'iport' }">
+        {{ $t('navbar.iport') }}
+      </NuxtLink>
+      <NuxtLink class="pc_menu_button" to="/ishare">
+        {{ $t('navbar.ishare') }}
+      </NuxtLink>
+
+      <!-- <NuxtLink class="pc_menu_shopping_cart" :to="{ name: 'store' }">
+        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+          <path
+            d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
+        </svg>
+      </NuxtLink> -->
+
+      <div class="pc_menu_button pc_menu_dropdown_head">
+        <div>
+          {{ $t('navbar.platform') }}
+        </div>
+        <div class="pc_menu_dropdown_content">
+          <a class="pc_menu_button pc_menu_dropdown_button" href="https://iport.eduairhk.com" target="_blank">
+            {{ $t('navbar.iportPlatform') }}
+          </a>
+          <a class="pc_menu_button pc_menu_dropdown_button" href="https://itrain.eduairhk.com" target="_blank">
+            {{ $t('navbar.itrain') }}
+            <div class="border">
+              {{ $t('navbar.comingSoon') }}
+            </div>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="pc_menu_lang_head" v-show="false">
+        <div>
+          {{ language[0].lang }}
+        </div>
+        <div class="pc_menu_lang_dropdown_content">
+          <a class="pc_menu_lang_button " @click="setLocale(language[1].key, true)">
+            {{ language[1].lang }}
+          </a>
+          <a class="pc_menu_lang_button " @click="setLocale(language[2].key, true)">
+            {{ language[2].lang }}
+          </a>
+        </div>
+      </div>
+
     </div>
 
-    <ul ref="userMenu" class="userMenu">
-      <li ref="submenu1">
-        <a class="subMenuBtn">
-          {{$t('navbar.aboutus')}}
-        </a>
-        <ul class="subMenu">
-          <li>
-            <NuxtLink to="/company">
-              {{$t('navbar.company')}}
-            </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/staff">
-              {{$t('navbar.staff')}}
-            </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/contact">
-              {{$t('navbar.contactus')}}
-            </NuxtLink>
-          </li>
-        </ul>
-      </li>
-      <li ref="submenu1">
-        <NuxtLink :to="{ name: 'news' }" class="subMenuBtn" >
-            {{$t('navbar.news')}}
-        </NuxtLink>
-      </li>
-      <li ref="submenu1">
-        <NuxtLink :to="{ name: 'course' }" class="subMenuBtn" >
-            {{$t('navbar.course')}}
-        </NuxtLink>
-      </li>
-      <li ref="submenu1">
-        <NuxtLink :to="{ name: 'icar' }" class="subMenuBtn" >
-            {{$t('navbar.icar')}}
-        </NuxtLink>
-      </li>
-      <li ref="submenu1">
-        <NuxtLink :to="{ name: 'iport' }" class="subMenuBtn" >
-            {{$t('navbar.iport')}}
-        </NuxtLink>
-      </li>
-      <li>
-        <NuxtLink to="/ishare">
-          {{$t('navbar.ishare')}}
-        </NuxtLink>
-      </li>
-      <li ref="submenu1">
-        <a class="subMenuBtn">
-          {{$t('navbar.platform')}}
-        </a>
-        <ul class="subMenu">
-          <li>
-            <a href="https://iport.eduairhk.com" target="_blank">
-              {{$t('navbar.iportPlatform')}}
-            </a>
-          </li>
-          <li>
-            <a href="https://itrain.eduairhk.com" target="_blank">
-              {{$t('navbar.itrain')}} 
-              <div class="border">
-                敬請期待
+
+    <!-- mobile -->
+    <div class="mobile_menu">
+      <Transition v-show="show_mobile_menu_icon">
+        <div class="mobile_menu_icon" @click="openMobileMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+          </svg>
+        </div>
+      </Transition>
+
+      <div class="mobile_menu_background" :style="{ height: mobile_us_menu_height }">
+        <div class="mobile_menu_function_bar">
+          <div class="mobile_close_icon" @click="closeMobileMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg>
+          </div>
+
+          <div class="mobile_lang" v-show="false">
+            <div class="mobile_lang_button" @click="setLocale('zh', true)" :class="{ active: $i18n.locale == 'zh' }">
+              繁
+            </div>
+            <div class="mobile_lang_button" @click="setLocale('cn', true)" :class="{ active: $i18n.locale == 'cn' }">
+              简
+            </div>
+            <div class="mobile_lang_button" @click="setLocale('en', true)" :class="{ active: $i18n.locale == 'en' }">
+              EN
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile_menu_collapsibles" :style="{ 'background-color': abous_us_background_color }">
+          <div style="display: flex; flex-direction: column;">
+            <div class="mobile_menu_button" @click="expendMenu_aboutUs()"
+              style="display: flex; justify-content: space-between;">
+              {{ $t('navbar.aboutus') }}
+              <div class="mobile_expend_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                  <path d="M480-360 280-560h400L480-360Z" />
+                </svg>
               </div>
-            </a>
-          </li>
-        </ul>
-      </li>
-    </ul>
+            </div>
+            <div class="mobile_menu_collapsibles_expend" :style="{ height: about_us_menu_height }">
+              <NuxtLink class="mobile_menu_button" to="/company" @click="closeMobileMenu()">
+                {{ $t('navbar.company') }}
+              </NuxtLink>
+              <NuxtLink class="mobile_menu_button" to="/staff" @click="closeMobileMenu()">
+                {{ $t('navbar.staff') }}
+              </NuxtLink>
+              <NuxtLink class="mobile_menu_button " to="/contact" @click="closeMobileMenu()">
+                {{ $t('navbar.contactus') }}
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
 
-    <div class="langBar" :class="{hideWhenNeed: isExpand}" v-show="false">
-      <div @click="setLocale('zh', true)" :class="{active: $i18n.locale == 'zh'}">繁</div>
-      <div @click="setLocale('cn', true)" :class="{active: $i18n.locale == 'cn'}">简</div>
-      <!-- <div @click="setLocale('en', true)" :class="{active: $i18n.locale == 'en'}">Eng</div> -->
+        <NuxtLink class="mobile_menu_button" :to="{ name: 'news' }" @click="closeMobileMenu()">
+          {{ $t('navbar.news') }}
+        </NuxtLink>
+        <NuxtLink class="mobile_menu_button" :to="{ name: 'course' }" @click="closeMobileMenu()">
+          {{ $t('navbar.course') }}
+        </NuxtLink>
+        <NuxtLink class="mobile_menu_button" :to="{ name: 'icar' }" @click="closeMobileMenu()">
+          {{ $t('navbar.icar') }}
+        </NuxtLink>
+        <NuxtLink class="mobile_menu_button" :to="{ name: 'iport' }" @click="closeMobileMenu()">
+          {{ $t('navbar.iport') }}
+        </NuxtLink>
+        <NuxtLink class="mobile_menu_button" to="/ishare" @click="closeMobileMenu()">
+          {{ $t('navbar.ishare') }}
+        </NuxtLink>
+
+
+        <div class="mobile_menu_collapsibles" :style="{ 'background-color': e_platform_background_color }">
+          <div style="display: flex; flex-direction: column;">
+            <div class="mobile_menu_button" @click="expendMenu_ePlatform()"
+              style="display: flex; justify-content: space-between;">
+              {{ $t('navbar.platform') }}
+              <div class="mobile_expend_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                  <path d="M480-360 280-560h400L480-360Z" />
+                </svg>
+              </div>
+            </div>
+            <div class="mobile_menu_collapsibles_expend" :style="{ height: e_platform_menu_height }">
+              <a class="mobile_menu_button" href="https://iport.eduairhk.com" target="_blank"
+                @click="closeMobileMenu()">
+                {{ $t('navbar.iportPlatform') }}
+              </a>
+              <a class="mobile_menu_button" href="https://itrain.eduairhk.com" target="_blank"
+                @click="closeMobileMenu()">
+                {{ $t('navbar.itrain') }}
+                <div class="border">
+                  {{ $t('navbar.comingSoon') }}
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!-- <div class="mobile_menu_collapsibles" :style="{ 'background-color': e_platform_background_color }">
+          <div class="mobile_menu_button" @click="expendMenu_ePlatform()"
+            style="display: flex; justify-content: space-between;">
+            {{ $t('navbar.aboutus') }}
+            <div class="mobile_expend_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                <path d="M480-360 280-560h400L480-360Z" />
+              </svg>
+            </div>
+          </div>
+          <div class="mobile_menu_collapsibles_expend" ref="myElement" :style="{ height: e_platform_menu_height }">
+            <NuxtLink class="mobile_menu_button" to="/company">
+              {{ $t('navbar.company') }}
+            </NuxtLink>
+            <NuxtLink class="mobile_menu_button" to="/staff">
+              {{ $t('navbar.staff') }}
+            </NuxtLink>
+            <NuxtLink class="mobile_menu_button " to="/contact">
+              {{ $t('navbar.contactus') }}
+            </NuxtLink>
+          </div>
+        </div> -->
+
+      </div>
+
+
     </div>
+
   </div>
 </template>
 
@@ -95,438 +225,451 @@
 import { useI18n } from 'vue-i18n'
 
 export default {
-  name: 'CommonHeader',
   data() {
-      return {
-        isExpand: false,
-        isTop: true,
-        locale: useI18n()
-      };
+    return {
+      show_mobile_menu_icon: true,
+      mobile_us_menu_height: '0%',
+      about_us_menu_height: '0px',
+      abous_us_background_color: 'transparent',
+      e_platform_menu_height: '0px',
+      e_platform_background_color: 'transparent',
+
+      locale: useI18n(),
+      language: [
+        {
+          lang: '繁', key: 'zh'
+        },
+        {
+          lang: '简', key: 'cn'
+        },
+        {
+          lang: 'EN', key: 'en'
+        },
+      ]
+    }
   },
-  mounted(){
+  mounted() {
     let self = this;
     this.$router.afterEach((to, from, next) => {
-        self.isExpand = false;
+      self.isExpand = false;
     })
     const locale = localStorage.getItem('locale');
-    if(locale) {
+    if (locale) {
       this.setLocale(localStorage.getItem('locale'))
     }
   },
-  methods:{
-    isActive(route) {
-        return this.$route.path.startsWith(route);
+  methods: {
+    openMobileMenu() {
+      this.mobile_us_menu_height = '100%'
+      this.show_mobile_menu_icon = false
     },
-    setLocale(locale, refresh = false){
+    closeMobileMenu() {
+      this.mobile_us_menu_height = '0%'
+      this.show_mobile_menu_icon = true
+    }
+    ,
+    expendMenu_aboutUs() {
+      if (this.about_us_menu_height === '0px') {
+        this.about_us_menu_height = 48 * 3 + 'px'
+        this.abous_us_background_color = 'rgba(109,14,119, 0.15)'
+        this.e_platform_menu_height = '0px'
+        this.e_platform_background_color = 'transparent'
+      } else {
+        this.about_us_menu_height = '0px'
+        this.abous_us_background_color = 'transparent'
+      }
+    },
+    expendMenu_ePlatform() {
+      if (this.e_platform_menu_height === '0px') {
+        this.about_us_menu_height = '0px'
+        this.abous_us_background_color = 'transparent'
+        this.e_platform_menu_height = 48 * 2 + 'px'
+        this.e_platform_background_color = 'rgba(109,14,119, 0.15)'
+      } else {
+        this.e_platform_menu_height = '0px'
+        this.e_platform_background_color = 'transparent'
+      }
+    },
+    setLocale(locale, refresh = false) {
       this.$i18n.locale = locale
       localStorage.setItem('locale', locale);
       /* if (refresh) {
         location.reload();
       } */
+
+      switch (locale) {
+        case 'zh':
+          this.language = [
+            {
+              lang: '繁', key: 'zh'
+            },
+            {
+              lang: '简', key: 'cn'
+            },
+            {
+              lang: 'EN', key: 'en'
+            },
+          ]
+          break
+        case 'cn':
+          this.language = [
+            {
+              lang: '简', key: 'cn'
+            },
+            {
+              lang: '繁', key: 'zh'
+            },
+            {
+              lang: 'EN', key: 'en'
+            },
+          ]
+          break
+        case 'en':
+          this.language = [
+            {
+              lang: 'EN', key: 'en'
+            },
+            {
+              lang: '繁', key: 'zh'
+            },
+            {
+              lang: '简', key: 'cn'
+            },
+          ]
+          break
+      }
     }
-  },
+  }
 }
 </script>
 
 <style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
 
-.border{
-  border: 1px solid #6d0e77; 
-  border-radius: 5px; 
-  margin-left: 5px; 
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  box-shadow: 0px 1px 5px gray;
+  z-index: 99;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.charity_number {
+  color: black;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 48px;
+  top: 0px;
+  left: 220px;
+  max-width: fit-content;
+  font-size: small;
+  color: gray
+}
+
+/* pc menu */
+.pc_menu_button {
+  min-width: 80px;
+  height: 48px;
+  padding: 0px 15px;
+  background-color: transparent;
+  display: flex;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #6d0e77;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.pc_menu_dropdown_button {
+  width: 100px;
+  float: none;
+  font-size: 13px;
+  text-align: center;
+  padding: 0px 0px;
+  border-width: 0.5px;
+  border-top-style: solid;
+}
+
+.pc_menu_button:hover {
+  background-color: #6d0e77;
+  color: white;
+}
+
+.pc_menu_dropdown_content {
+  display: none;
+  position: absolute;
+  top: 48px;
+  background-color: white;
+  box-shadow: 0px 1px 5px gray;
+  z-index: 99;
+}
+
+.pc_menu_dropdown_head {
+  width: 100px;
+}
+
+.pc_menu_dropdown_head:hover .pc_menu_dropdown_content {
+  display: block;
+}
+
+.border {
+  border: 1px solid #6d0e77;
+  border-radius: 5px;
+  margin-left: 3px;
   display: flex;
   justify-content: center;
   padding: 2px;
   text-indent: 0;
+  font-size: 10px;
 }
 
-.subMenu li:hover .border{
+.pc_menu_dropdown_button:hover .border {
   border: 1px solid white;
 }
 
-.menubar .layer .btn{
-  display: block;
-}
 
-@media screen and (min-width: 1200px) {
-  .menubar{
-    position: fixed;
-    height: 60px;
-    z-index: 999;
-    padding: 0 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0px 1px 5px gray;
-    top: 0;
-    left: 0;
-    white-space: nowrap;
-    font-size: 18px;
-  }
-
-  .menubar .layer{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 60px;
-    align-items: center;
-    max-height: 60px;
-    width: 100%;
-  }
-
-  .menubar .layer .btn{
-    display: none;
-  }
-
-  .userMenu{
-    list-style: none;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-  }
-
-  .userMenu li a{
-    width: 130px;
-    height: 60px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #6d0e77;
-    text-decoration: none;
-    text-wrap: pretty;
-    text-align: center;
-  }
-
-  .subMenu{
-    display: none;
-    position: absolute;
-    flex-direction: column;
-    box-shadow: 0px 1px 5px gray;
-    flex-wrap: nowrap;
-    width: 130px;
-    max-width: 130px;
-    padding: 0;
-  }
-
-  .subMenu li{
-    border-top: 1px solid gray;
-    list-style: none;
-    position: relative;
-    display: block;
-    height: 60px;
-    width: 130px;
-    font-size: 15px;
-  }
-
-  .subMenu a{
-      display: flex;
-      position: relative;
-      height: 100%;
-      left: 0;
-  }
-
-  .menubar ul li:hover .subMenu{
-      display: flex;
-      position: absolute;
-  }
-
-
-
-  .menubar ul li.current .subMenu{
-      display: flex;
-      position: absolute;
-  }
-
-  .menubar .layer span{
-      display: none;
-      visibility: hidden;
-      margin-right: 10px;
-  }
-
-  .menubar .layer label{
-      margin-left: 20px;
-      color: rgb(117,15,109);
-      font-weight: 600;
-  }
-
-  .menubar .logo-conatiner{
-      position: relative;
-      height: 100%;
-      display:flex;
-      justify-content:center;
-      align-items: center;
-  }
-
-
-  .menubar .title{
-    cursor: pointer;
-    font-size: 20px;
-    text-decoration: none !important;
-  }
-
-  .nuxt-link{
-    text-decoration: none;
-  }
-
-  .nuxt-link-active{
-    text-decoration:none;
-    cursor: pointer;
-  }
-
-  .menubar2 {
-      background-color: white;
-  }
-
-  .menubar2 .subMenu{
-      background-color: white;
-  }
-
-  .menubar2 ul li:hover{
-      background-color: #6d0e77;
-  }
-
-  .menubar2 ul li:hover >a{
-      color: white;
-  }
-}
-
-@media screen and (max-width: 1199.9px) {
-  .menubar{
-    position: fixed;
-    height: 60px;
-    z-index: 999;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0px 1px 5px gray;
-    top: 0;
-    left: 0;
-    padding: 0 10px;
-    white-space: nowrap;
-    font-size: 18px;
-        overflow: auto;
-
-  }
-
-  .menubar .layer{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 60px;
-    align-items: center;
-    max-height: 60px;
-    width: 100%;
-  }
-
-  .menubar .userMenu{
-    display: none;
-    list-style: none;
-    position: relative;
-    top: 0;
-  }
-
-  .menubar.expand{
-    display: flex;
-    height: 100vh;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    padding-bottom: 30px;
-  }
-
-  .menubar.expand .userMenu li{
-     text-indent: 50px;
-  }
-
-  .menubar.expand .subMenu li{
-     text-indent: 100px;
-  }
-
-  .menubar.expand ul{
-    list-style: none;
-    padding: 0;
-  }
-
-  .menubar.expand .userMenu{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  
-
-  .userMenu li a{
-    width: 100%;
-    height: 60px;
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #6d0e77;
-    text-decoration: none;
-    left: 0
-  }
-
-/*   .subMenu{
-    display: none;
-    position: absolute;
-    flex-direction: column;
-    box-shadow: 0px 1px 5px gray;
-    flex-wrap: nowrap;
-    width: 130px;
-    max-width: 130px;
-    padding: 0;
-  }
-
-  .subMenu li{
-    border-top: 1px solid gray;
-    list-style: none;
-    position: relative;
-    display: block;
-    height: 60px;
-    width: 130px;
-    font-size: 15px;
-  }
-
-  .subMenu a{
-      display: flex;
-      position: relative;
-      height: 100%;
-      left: 0;
-  }
-
-  .menubar ul li:hover .subMenu{
-      display: flex;
-      position: absolute;
-  }
-
-  .menubar ul li.current .subMenu{
-      display: flex;
-      position: absolute;
-  } */
-
-  .menubar .layer span{
-      display: none;
-      visibility: hidden;
-      margin-right: 10px;
-  }
-
-  .menubar .layer label{
-      margin-left: 20px;
-      color: rgb(117,15,109);
-      font-weight: 600;
-  }
-
-  .menubar .logo-conatiner{
-      position: relative;
-      height: 100%;
-      display:flex;
-      justify-content:center;
-      align-items: center;
-  }
-
-
-  .menubar .title{
-    cursor: pointer;
-    font-size: 20px;
-    text-decoration: none !important;
-  }
-
-  .nuxt-link{
-    text-decoration: none;
-  }
-
-  .nuxt-link-active{
-    text-decoration:none;
-    cursor: pointer;
-  }
-
-  .menubar2 {
-      background-color: white;
-  }
-
-  .menubar2 .subMenu{
-      background-color: white;
-  }
-
-  .menubar2 ul li:hover{
-      background-color: #6d0e77;
-  }
-
-  .menubar2 ul li:hover >a{
-      color: white;
-  }
-
-}
-
-  .menubar1 {
-      background-color: rgba(255,255,255,0.7); 
-  }
-  .menubar1.expand {
-      background-color: rgb(255,255,255); 
-  }
-  .menubar1 .subMenu{
-      background-color: rgba(255,255,255,0.9);
-  }
-  .menubar1 ul li:hover{
-      background-color: rgb(147, 39, 159);
-  }
-  .menubar1 ul li:hover >a{
-      color: white;
-  }
-</style>
-
-<style scoped>
-.langBar{
-  width: max-content; height: 100%; display: flex; gap: 10px;
-  min-height: 20px;
-  position: fixed;
-  top: calc(100% - 40px); right: 5px;
-}
-
-.langBar div{
-  width: 35px; display: flex; justify-content: center; font-size: 14px; 
-  height: 35px;
-  color: #6d0e77;
-  cursor: pointer;
-  background: rgba(230, 230, 230, 0.7);
+.pc_menu_shopping_cart {
+  width: 48px;
+  height: 48px;
+  padding: 13px;
+  background-color: transparent;
   display: flex;
+  float: left;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  opacity: 0.9;
+  text-decoration: none;
+  fill: #6d0e77;
+  cursor: pointer;
 }
 
-.langBar div:hover, .langBar div.active{
-  background: #6d0e77;
+.pc_menu_shopping_cart:hover {
+  background-color: #6d0e77;
   color: white;
 }
 
-.rhs{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  height: 100%;
+.pc_menu_shopping_cart:hover svg {
+  fill: white;
 }
 
-.userMenuBtn{
-  height: 60px; width: 60px; justify-content: center; align-items: center; cursor: pointer;
+.pc_menu_lang_head {
+  width: 48px;
+  height: 48px;
+  padding: 0px 15px;
+  background-color: transparent;
   display: flex;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #6d0e77;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.pc_menu_lang_head:hover {
+  background-color: #6d0e77;
+  color: white;
+}
+
+.pc_menu_lang_dropdown_content {
+  display: none;
+  position: absolute;
+  top: 48px;
+  background-color: white;
+  box-shadow: 0px 1px 5px gray;
+  z-index: 99;
+}
+
+.pc_menu_lang_head:hover .pc_menu_lang_dropdown_content {
+  display: block;
+}
+
+.pc_menu_lang_button {
+  width: 48px;
+  height: 48px;
+  padding: 0px 15px;
+  background-color: transparent;
+  display: flex;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #6d0e77;
+  cursor: pointer;
+  font-size: 15px;
+  border-width: 0.5px;
+  border-top-style: solid;
+}
+
+.pc_menu_lang_button:hover {
+  background-color: #6d0e77;
+  color: white;
+}
+
+/* mobile menu */
+.mobile_menu_icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mobile_close_icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #6d0e77;
+  cursor: pointer;
+}
+
+.mobile_close_icon:hover {
+  background-color: #6d0e77;
+  fill: white;
+}
+
+.mobile_menu_background {
+  /* display: block; */
+  position: fixed;
+  top: 48px;
+  left: 0px;
+  width: 100%;
+  /* height: max-content; */
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: height 0.3s ease-out;
+}
+
+.mobile_menu_function_bar {
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile_lang {
+  width: fit-content;
+  height: 48px;
+  display: flex;
+
+}
+
+.mobile_lang_button {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6d0e77;
+  cursor: pointer;
+}
+
+.mobile_menu_button {
+  width: 100%;
+  min-height: 48px;
+  padding: 0px 0px 0px 15px;
+  background-color: transparent;
+  display: flex;
+  float: left;
+  justify-content: left;
+  align-items: center;
+  text-decoration: none;
+  color: #6d0e77;
+  cursor: pointer;
+  font-size: 15px;
+  border-bottom: 1px solid rgb(184, 184, 184);
+}
+
+.mobile_menu_button:hover {
+  background-color: #6d0e77;
+  color: white;
+}
+
+.mobile_lang_button:hover {
+  background-color: #6d0e77;
+  color: white;
+}
+
+.mobile_expend_icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #6d0e77;
+}
+
+.mobile_menu_button:hover .mobile_expend_icon {
+  fill: white;
+}
+
+.mobile_menu_button:hover .border {
+  border: 1px solid white;
+}
+
+.mobile_menu_collapsibles {
+  display: block;
+  background-color: transparent;
+  transition: background-color 0.3s ease-out;
+
+}
+
+.mobile_menu_collapsibles_expend {
+  height: 0px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: height 0.3s ease-out;
+}
+
+@media screen and (min-width: 1200px) {
+  .pc_menu {
+    display: block;
+  }
+
+  .mobile_menu {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1199.9px) {
-  .langBar.hideWhenNeed{
+
+  .charity_number {
+    /* max-width: 150px; */
     display: none;
+  }
+
+  .pc_menu {
+    display: none;
+  }
+
+  .mobile_menu {
+    display: block;
   }
 }
 </style>

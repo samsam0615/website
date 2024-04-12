@@ -16,8 +16,9 @@
         width: 100%; 
         display: flex; 
         justify-content: center;
+        text-align: center;
         gap: 10px; 
-        top: 60px; 
+        top: 48px; 
         position: sticky; 
         padding: 20px 0; 
         background: white; 

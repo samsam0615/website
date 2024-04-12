@@ -94,7 +94,7 @@ export default {
         'button2':'重置',
 
         detail : {
-            'phone': '联系电话：+852 6437 392',
+            'phone': '联系电话：+852 6437 3924',
             'email': "联系电邮：info{'@'}eduairhk.com",
             'address': '地址: 香港科学园16W栋2楼237室'
         }
@@ -134,7 +134,9 @@ export default {
             title :'「iCar达人」工作坊',
             subtitle : '「智」为未来暑期训练营 2023',
             date : '2023 年 7 月 18 - 19 日'
-        }
+        },
+
+        more :'更多>>',
     },
   
        

@@ -3,11 +3,12 @@
     <div class="description-image-container">
       <img :src='image' >
     </div>
-    <div class="title">
+    <!-- <div class="title"> -->
+    <div class="title font-picture-frame-title">
       <label>{{title}}</label>
     </div>
     <div class="overlay">
-      <div class="text">
+      <div class="font-picture-frame-text">
         <slot/>
       </div>
     </div>
@@ -25,6 +26,7 @@ export default {
 
 .picture-frame-container{
   display: flex;
+  text-align: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -55,9 +57,9 @@ export default {
   padding: 0 0 25px;
 }
 
-.description-box-title label{
+/* .description-box-title label{
   font-size: 30px;
-}
+} */
 
 .description-container-wrapper{
   display: flex;
@@ -72,9 +74,9 @@ export default {
   padding-top: 30px;
 }
 
-.picture-frame-container .title label{
+/* .picture-frame-container .title label{
     font-size: 25px;
-}
+} */
 
 
 
@@ -94,7 +96,7 @@ export default {
 
 .overlay div {
   color: black;
-  font-size: 25px;
+  /* font-size: 25px; */
   position: absolute;
   width: 80%;
   top: 50%;
@@ -119,7 +121,7 @@ export default {
 }
 
 .picture-frame-container:hover .overlay{
-    opacity: 0.8;
+    opacity: 0.85;
     border-radius: 20px;
 }
 

@@ -12,51 +12,51 @@
         <div style="width: 100%; padding: 10px 20px; max-width: 1024px;">
                 <div style="display: flex; max-width: 1024px; justify-content: flex-start; align-content: flex-start; align-items: flex-end; flex-wrap: wrap; gap: 20px; padding-top: 20px">
                     <Gallery2
-                        style="border: 3px solid #6F8FB8; cursor: pointer" :color="'#6F8FB8'" :urlColor="'#6F8FB8'"
+                        style="cursor: pointer" :color="'#6F8FB8'" :urlColor="'#6F8FB8'"
                         :height="330"
                         :title="'3D 畫圖及打印'"
                         :url="'/course/1'" @click.stop="navigateTo('/course/1')"
                         :image="'/course/1.jpg'">
                     </Gallery2>
                     <Gallery2 
-                        style="border: 3px solid #896A4B; cursor: pointer" :color="'#896A4B'" :urlColor="'#896A4B'"
+                        style="cursor: pointer" :color="'#896A4B'" :urlColor="'#896A4B'"
                         :height="330"
                         :title="'人工智能簡介及體驗'"
                         :url="'/course/2'" @click.stop="navigateTo('/course/2')"
                         :image="'/course/2.jpg'">
                     </Gallery2>
                     <Gallery2 :height="330"
-                        style="border: 3px solid #6F8E30; cursor: pointer" :color="'#6F8E30'" :urlColor="'#6F8E30'"
+                        style="cursor: pointer" :color="'#6F8E30'" :urlColor="'#6F8E30'"
                         :title="'無人機I (基本概念與單飛)'"
                         :url="'/course/3'" @click.stop="navigateTo('/course/3')"
                         :image="'/course/3.jpg'">
                     </Gallery2>
                     <Gallery2 :height="330"
-                        style="border: 3px solid #228099; cursor: pointer" :color="'#228099'" :urlColor="'#228099'"
+                        style=" cursor: pointer" :color="'#228099'" :urlColor="'#228099'"
                         :title="'無人機II (人工智能 X 無人機)'"
                         :url="'/course/4'" @click.stop="navigateTo('/course/4')"
                         :image="'/course/4.jpg'">
                     </Gallery2>
                     <Gallery2 :height="330"
-                        style="border: 3px solid #225991; cursor: pointer" :color="'#225991'" :urlColor="'#225991'"
+                        style=" cursor: pointer" :color="'#225991'" :urlColor="'#225991'"
                         :title="'人工智能小車'"
                         :url="'/course/5'" @click.stop="navigateTo('/course/5')"
                         :image="'/course/5.jpg'">
                     </Gallery2>
                     <Gallery2 :height="330"
-                        style="border: 3px solid #CE915B; cursor: pointer" :color="'#CE915B'" :urlColor="'#CE915B'"
+                        style="cursor: pointer" :color="'#CE915B'" :urlColor="'#CE915B'"
                         :title="'入門編程班 (Microbit X 積木編程)'"
                         :url="'/course/6'" @click.stop="navigateTo('/course/6')"
                         :image="'/course/6.jpg'">
                     </Gallery2>
                     <Gallery2 :height="330"
-                        style="border: 3px solid #73608E; cursor: pointer" :color="'#73608E'" :urlColor="'#73608E'"
+                        style=" cursor: pointer" :color="'#73608E'" :urlColor="'#73608E'"
                         :title="'Microbit 2 (智能小車)'"
                         :url="'/course/7'" @click.stop="navigateTo('/course/7')"
                         :image="'/course/7.jpg'">
                     </Gallery2>
                     <Gallery2 :height="330"
-                        style="border: 3px solid #992724; cursor: pointer" :color="'#992724'" :urlColor="'#992724'"
+                        style="cursor: pointer" :color="'#992724'" :urlColor="'#992724'"
                         :title="'iPort (模型訓練與AI實踐體驗)'"
                         :url="'/course/8'" @click.stop="navigateTo('/course/8')"
                         :image="'/course/8.jpg'">
@@ -69,9 +69,11 @@
 <style scoped>
 .banner{
     width: 100%; 
-    height: 330px; 
+    height: 300px; 
     overflow: hidden; 
     position: relative;
+    background-size: cover;
+    background-position: center;
     background-image: url('~/assets/banner4.jpg');
 
 }
