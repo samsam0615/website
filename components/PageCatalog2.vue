@@ -148,7 +148,7 @@ export default {
     position: -webkit-sticky;
     position: sticky;
     width: 100%;
-    top: 60px;
+    top: 48px;
     padding-bottom: 0;
     height: 120px;
     /* background: rgba(200, 200, 200, 0.5); */

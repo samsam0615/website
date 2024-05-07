@@ -205,6 +205,12 @@ export default {
       name: 'Tensorflow Playground',
       url: 'http://playground.tensorflow.org',
       description: '在Tensorflow Playground 中，用戶可調整深度神經網絡的層數、神經元數量、激勵函數、學習率等常見神經網絡訓練參數，觀察不同數值對AI識別器模型的表現有何影響。'
+    },
+    {
+      imageURL: '',
+      name: 'Scikit-learn',
+      url: 'https://scikit-learn.org/stable/',
+      description: 'Scikit-learn是一個流行的Python機器學習函式庫，提供了各種機器學習算法和工具，包括分類、回歸、聚類等。它易於使用且功能豐富，廣泛應用於數據分析和機器學習領域。'
     }
   ]
 }
