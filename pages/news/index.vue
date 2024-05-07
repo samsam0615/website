@@ -46,10 +46,12 @@
                 {{ $t('news.Area1.title') }} 🗓️</div>
             <div
                 style="display: flex; max-width: 1024px; justify-content: flex-start; align-content: flex-start; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+                <Gallery2 :title="$t('news.Area6.title')" :subtitle="$t('news.Area6.subtitle')" :url="'/news/6'" :image="'/event/event6/1.jpg'"
+                    :date="$t('news.Area6.date')">
+                </Gallery2>
                 <Gallery2 :title="$t('news.Area1.head')" :subtitle="''" :url="'/news/5'" :image="'/event/event5/1.jpg'"
                     :date="$t('news.Area1.date')">
                 </Gallery2>
-
                 <Gallery2 :title="$t('news.Area2.title')" :subtitle="$t('news.Area2.subtitle')" :url="'/news/4'"
                     :image="'/event/event4/1.jpg'" :date="$t('news.Area2.date')">
                 </Gallery2>
