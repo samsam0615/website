@@ -34,6 +34,9 @@
       <NuxtLink class="pc_menu_button" :to="{ name: 'course' }">
         {{ $t('navbar.course') }}
       </NuxtLink>
+      <!-- <NuxtLink class="pc_menu_button" :to="{ name: 'store' }">
+        {{ $t('navbar.store') }}
+      </NuxtLink> -->
       <NuxtLink class="pc_menu_button" :to="{ name: 'icar' }">
         {{ $t('navbar.icar') }}
       </NuxtLink>
@@ -43,13 +46,6 @@
       <NuxtLink class="pc_menu_button" to="/ishare">
         {{ $t('navbar.ishare') }}
       </NuxtLink>
-
-      <!-- <NuxtLink class="pc_menu_shopping_cart" :to="{ name: 'store' }">
-        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
-          <path
-            d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
-        </svg>
-      </NuxtLink> -->
 
       <div class="pc_menu_button pc_menu_dropdown_head">
         <div>
@@ -67,6 +63,14 @@
           </a>
         </div>
       </div>
+
+      <NuxtLink class="pc_menu_shopping_cart" :to="{ name: 'store' }">
+        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+          <path
+            d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
+        </svg>
+      </NuxtLink>
+
 
 
       <div class="pc_menu_lang_head" v-show="false">
@@ -104,6 +108,7 @@
                 d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
             </svg>
           </div>
+
 
           <div class="mobile_lang" v-show="false">
             <div class="mobile_lang_button" @click="setLocale('zh', true)" :class="{ active: $i18n.locale == 'zh' }">
@@ -149,6 +154,7 @@
         <NuxtLink class="mobile_menu_button" :to="{ name: 'course' }" @click="closeMobileMenu()">
           {{ $t('navbar.course') }}
         </NuxtLink>
+
         <NuxtLink class="mobile_menu_button" :to="{ name: 'icar' }" @click="closeMobileMenu()">
           {{ $t('navbar.icar') }}
         </NuxtLink>
@@ -186,6 +192,13 @@
             </div>
           </div>
         </div>
+
+        <NuxtLink class="mobile_menu_button_shopping_cart" :to="{ name: 'store' }" @click="closeMobileMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+            <path
+              d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
+          </svg>
+        </NuxtLink>
 
 
 
@@ -645,6 +658,29 @@ export default {
   display: flex;
   flex-direction: column;
   transition: height 0.3s ease-out;
+}
+
+.mobile_menu_button_shopping_cart {
+  width: 100%;
+  height: 48px;
+  padding: 13px;
+  background-color: transparent;
+  display: flex;
+  float: left;
+  justify-content: left;
+  align-items: center;
+  text-decoration: none;
+  fill: #6d0e77;
+  cursor: pointer;
+}
+
+.mobile_menu_button_shopping_cart:hover {
+  background-color: #6d0e77;
+  color: white;
+}
+
+.mobile_menu_button_shopping_cart:hover svg {
+  fill: white;
 }
 
 @media screen and (min-width: 1200px) {
