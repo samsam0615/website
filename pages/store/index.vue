@@ -38,10 +38,10 @@
                             <div class="font-small" style="font-weight: 600; color: #6d0e77;">
                                 iCar套裝（獨家供應商）
                             </div>
-                            <div>
+                            <div class="font-mini">
                                 一年自攜保用，學校訂購可獲額外8折優惠
                             </div>
-                            <div style="padding-left: 20px; height: 150px;">
+                            <div style="padding-left: 20px; height: 200px;">
                                 <div class="font-mini" v-for="t in icar_subtitle" :key="t" style="display: list-item;">
                                     {{ t }}
                                 </div>
@@ -68,11 +68,12 @@
                             <div class="font-small" style="font-weight: 600; color: #6d0e77;">
                                 iPort套裝（原型版）（獨家供應商）
                             </div>
-                            <div>
+                            <div class="font-mini">
                                 一年自攜保用，學校訂購可獲額外8折優惠
                             </div>
-                            <div style="padding-left: 20px; height: 150px;">
-                                <div class="font-mini" v-for="t in iport_subtitle" :key="t" style="display: list-item;">
+                            <div style="padding-left: 20px; height: 200px;">
+                                <div class="font-mini" v-for="t in iport_subtitle" :key="t"
+                                    style="display: list-item;">
                                     {{ t }}
                                 </div>
                             </div>
@@ -98,7 +99,7 @@
                             <div class="font-small" style="font-weight: 600; color: #6d0e77;">
                                 micro:bit V2全新裸板
                             </div>
-                            <div>
+                            <div class="font-mini">
                                 一年自攜保用，不含配件
                             </div>
                             <!-- <div style="padding-left: 20px; height: 200px;">
@@ -127,7 +128,7 @@
                             <div class="font-small" style="font-weight: 600; color: #6d0e77;">
                                 Huskylens Pro SEN0336全新裸板
                             </div>
-                            <div>
+                            <div class="font-mini">
                                 一年自攜保用，不含配件
                             </div>
                             <!-- <div style="padding-left: 20px; height: 200px;">
@@ -183,7 +184,6 @@ export default {
             iport_subtitle: [
                 'iPort x 1',
                 '燈制開關 (Switch Box) x 1',
-                'USB x 1',
                 '180馬達×1',
                 '360馬達×1',
                 '延長線 x 1',
