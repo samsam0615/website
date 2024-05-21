@@ -58,6 +58,8 @@ export default {
                 { title: this.$t('event_4_vue.photo_date[10]'), img: '/event/20240301.jpg' },
                 { title: this.$t('event_4_vue.photo_date[11]'), img: '/event/20240308.jpg' },
                 { title: this.$t('event_4_vue.photo_date[12]'), img: '/event/20240315.jpg' },
+                { title: this.$t('event_4_vue.photo_date[13]'), img: '/event/20240412.jpg' },
+                { title: this.$t('event_4_vue.photo_date[14]'), img: '/event/20240502.jpg' },
             ]
         }
     }
