@@ -39,7 +39,7 @@
                                 iCar套裝（獨家供應商）
                             </div>
                             <div class="font-mini">
-                                一年自攜保用，學校訂購可獲額外8折優惠
+                                一年自攜保用
                             </div>
                             <div style="padding-left: 20px; height: 200px;">
                                 <div class="font-mini" v-for="t in icar_subtitle" :key="t" style="display: list-item;">
@@ -48,14 +48,24 @@
                             </div>
                         </div>
                     </div>
-                    <div style="padding: 10px">
-                        <div style="color:  #ffa500; line-height: 30px; cursor: pointer; text-decoration: none; text-align: end;
-                            font-size: x-large; cursor: default !important;">
-                            <span style="color: lightgray; text-decoration: line-through;">HKD$1650</span>
-                            HKD$1320
-                        </div>
-                        <div style="color: #ffa500; text-align: end; font-size:xx-small;">
-                            只限學校
+                    <div style="padding: 10px; background-color: transparent;">
+                        <div style="display: flex; justify-content: space-between;flex-direction: row;">
+                            <div style="display: flex; flex-direction: column; justify-content:end; ">
+                                <div style="">
+                                    正價
+                                </div>
+                                <div style="">
+                                    HKD$1650
+                                </div>
+                            </div>
+                            <div style="color: #ffa500; font-size:x-large;">
+                                <div style="">
+                                    學校優惠價
+                                </div>
+                                <div style="text-align: end; ">
+                                    HKD$1320
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -69,24 +79,33 @@
                                 iPort套裝（原型版）（獨家供應商）
                             </div>
                             <div class="font-mini">
-                                一年自攜保用，學校訂購可獲額外8折優惠
+                                一年自攜保用
                             </div>
                             <div style="padding-left: 20px; height: 200px;">
-                                <div class="font-mini" v-for="t in iport_subtitle" :key="t"
-                                    style="display: list-item;">
+                                <div class="font-mini" v-for="t in iport_subtitle" :key="t" style="display: list-item;">
                                     {{ t }}
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div style="padding: 10px">
-                        <div style="color:  #ffa500; line-height: 30px; cursor: pointer; text-decoration: none; text-align: end;
-                            font-size: x-large; cursor: default !important;">
-                            <span style="color: lightgray; text-decoration: line-through;">HKD$1199</span>
-                            HKD$959
-                        </div>
-                        <div style="color: #ffa500; text-align: end; font-size:xx-small;">
-                            只限學校
+                    <div style="padding: 10px; background-color: transparent;">
+                        <div style="display: flex; justify-content: space-between;flex-direction: row;">
+                            <div style="display: flex; flex-direction: column; justify-content:end; ">
+                                <div style="">
+                                    正價
+                                </div>
+                                <div style="">
+                                    HKD$1199
+                                </div>
+                            </div>
+                            <div style="color: #ffa500; font-size:x-large;">
+                                <div style="">
+                                    學校優惠價
+                                </div>
+                                <div style="text-align: end; ">
+                                    HKD$959
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -18,19 +18,19 @@
         </div>
         <div class="responsive-div" style="">
           <div style="width: 300px; height: 300px;"> 
-            <img :src="'/image/event7.jpg'" style="width: 100%; aspect-ratio: 3 / 2" />
+            <img :src="'/event/event6/1.jpg'" style="width: 100%; aspect-ratio: 3 / 2" />
             <div style="text-align: justify;">
               {{$t('homepage.area1.content1')}}
             </div>
           </div>
           <div style="width: 300px; height: 300px"> 
-            <img :src="'/image/event1.jpg'" style="width: 100%; aspect-ratio: 3 / 2" />
+            <img :src="'/event/event5/1.jpg'" style="width: 100%; aspect-ratio: 3 / 2" />
             <div style="text-align: justify;">
               {{$t('homepage.area1.content2')}}
             </div>
           </div>
           <div style="width: 300px; height: 300px"> 
-            <img :src="'/image/event6.jpg'" style="width: 100%; aspect-ratio: 3 / 2" />
+            <img :src="'/event/event4/1.jpg'" style="width: 100%; aspect-ratio: 3 / 2" />
             <div style="text-align: justify;">
               {{$t('homepage.area1.content3')}}
             </div>
